@@ -1,4 +1,4 @@
-﻿<%--
+<%--
 /*
  * Copyright (c) 2014 by OpeneGovPlatform (http:////openegovplatform.org).
  * 
@@ -26,7 +26,7 @@ A. Hướng dẫn cài đặt và phát triển
 3. Tham khảo cách cấu hình cài đặt môi trường phát triển Liferay cùng Eclipse tại link:
     http://www.liferay.com/community/wiki/-/wiki/Main/Liferay+IDE+Getting+Started+Tutorial
 4. Checkout module cùng với loại dự án của liferay là :  "Liferay Project" và chọn Plugin type là "Portlet" tại đỉa chị:
-   https://github.com/openegovplatform/CMON-App/tree/master/egov-citizen-portlet
+   https://github.com/openegovplatform/CMON-App/tree/master/cmon-app-portlet
 5. Lấy script tạo database và master data với script cho mysql tại địa chỉ
    https://github.com/openegovplatform/Data-Model/tree/master/db-create-scripts
 6. Cấu hình datasource cho ứng dụng đến database chuẩn  trong file portal-setup-wizard.properties trong thư mục
