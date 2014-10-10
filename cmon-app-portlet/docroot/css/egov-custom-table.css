@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+table.egov-table  td a:link, table.egov-table  td a:visited {
+	color: #075d9a;
+	text-decoration: none;
+}

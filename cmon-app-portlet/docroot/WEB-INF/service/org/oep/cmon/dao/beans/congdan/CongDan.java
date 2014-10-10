@@ -1,0 +1,46 @@
+package org.oep.cmon.dao.beans.congdan;
+
+public interface CongDan {
+	public void setCongDanId(long congDanId);
+	public long getCongDanId();
+	public void setHo(String ho);
+	public String getHo();
+	public void setDem(String dem);
+	public String getDem();
+	public void setTen(String ten);
+	public String getTen();
+	public void setGioiTinhId(int gioiTinhId);
+	public int getGioiTinhId();
+	public void setSoCMND(String soCMND);
+	public String getSoCMND();
+	public void setNgaySinh(java.util.Date ngaySinh);
+	public java.util.Date getNgaySinh();
+	public void setDienThoaiCoDinh(String dienThoaiCoDinh);
+	public String getDienThoaiCoDinh();
+	public void setDienThoaiDiDong(String dienThoaiDiDong);
+	public String getDienThoaiDiDong();
+	public void setEmail(String email);
+	public String getEmail();
+	public void setTinhDiaChiId(Long tinhDiaChiId);
+	public Long getTinhDiaChiId(boolean notNull);
+	public void setTenTinhDiaChi(String tenTinhDiaChi);
+	public String getTenTinhDiaChi();
+	public void setHuyenDiaChiId(Long huyenDiaChiId);
+	public Long getHuyenDiaChiId(boolean notNull);
+	public void setTenHuyenDiaChi(String tenHuyenDiaChi);
+	public String getTenHuyenDiaChi();
+	public void setXaDiaChiId(Long xaDiaChiId);
+	public Long getXaDiaChiId(boolean notNull);
+	public void setTenXaDiaChi(String tenXaDiaChi);
+	public String getTenXaDiaChi();
+	public void setDiaChiChiTiet(String diaChiChiTiet);
+	public String getDiaChiChiTiet();
+	public void setHoTenDayDu(String hoTenDayDu);
+	public String getHoTenDayDu();
+	public void setDiaChiDayDu(String diaChiDayDu);
+	public String getDiaChiDayDu();
+	public void setDienThoai(String dienThoai);
+	public String getDienThoai();
+	public void setTaiKhoanNguoiDungId(Long taiKhoanNguoiDungId);
+	public Long getTaiKhoanNguoiDungId(boolean notNull);
+}

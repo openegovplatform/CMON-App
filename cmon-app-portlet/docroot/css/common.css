@@ -1,0 +1,67 @@
+/*----- reset -----*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, address, em, img, strong, dl, dt, dd, ul, li, fieldset,
+form, label, legend{border:0;font-family:inherit;font-size:100%;margin:0;outline:0;padding:0}
+:focus{outline:0}
+/*----- common -----*/
+body{background:url(../images/bg-header.png) repeat;color:#000;font:normal normal 100% Tahoma, Helvetica, sans-serif;line-height:1.5em}
+input, select, textarea{color:#38444f;font:normal normal 16px Arial, Helvetica, sans-serif;margin:0}
+a:link, a:visited{color:#1977c7;text-decoration:none}
+a:hover{color:#f58634}
+.clear{clear:both}
+.wd-center{margin:0 auto;font-size:0.75em;padding:0 24px}
+/*----- Header -----*/
+#wd-head-container{background:url(../images/bg-header.png) repeat-x;color:#fff;min-width:978px;}
+#wd-head-container .wd-center{position:relative;height:76px}
+#wd-head-container.wd-header-login .wd-center{height:55px}
+#wd-logo{position:absolute;left:24px;top:15px;width:253px;height:32px;background:url(../images/logo.png) no-repeat;text-indent:-1985em;font-size:0;overflow:hidden;line-height:25px}
+#wd-head-container.wd-header-login #wd-logo{width:220px;height:26px;background:url(../images/logo-login.png) no-repeat}
+#wd-slogan{position:absolute;left:24px;top:48px;width:253px;height:14px;background:url(../images/slogan.png) no-repeat;text-indent:-1985em;font-size:0;overflow:hidden;line-height:25px}
+#wd-project-name{position:absolute;right:24px;top:16px;width:504px;height:26px;background:url(../images/project-name.png) no-repeat;text-indent:-1985em;font-size:0;overflow:hidden;line-height:26px}
+#wd-head-container.wd-header-login #wd-project-name{left:256px;top:20px;width:354px;height:20px;background:url(../images/project-name-login.png) no-repeat}
+#wd-head-container .wd-register-login{list-style:none;position:absolute;right:18px;top:42px}
+#wd-head-container .wd-register-login li{display:inline;border-left:1px solid #fff;padding:0 7px 0 8px}
+#wd-head-container .wd-register-login li.first-child{border:none}
+#wd-head-container .wd-register-login li a{color:#fff;font-weight:bold}
+#wd-head-container .wd-register-login li a:hover{color:#f58634}
+#wd-function-user{position:relative;float:right;margin-top:10px;z-index:20}
+#wd-function-user .wd-user{padding:5px 10px 5px 5px;background-color:#50607e;overflow:hidden;color:#fff;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;min-width:185px;max-width:400px}
+#wd-function-user .wd-user div{overflow:hidden;width:auto;float:right}
+#wd-function-user .wd-user p{float:left}
+#wd-function-user .wd-user p.wd-notification{line-height:23px;padding:0 8px;background-color:#f58634;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;margin-right:4px;display:inline}
+#wd-function-user .wd-user p.wd-avatar{width:25px;height:23px;margin-right:10px;display:inline}
+#wd-function-user .wd-user p.wd-name{line-height:23px;text-transform:capitalize;margin-right:9px;display:inline}
+#wd-function-user .wd-user p.wd-button{height:23px;width:14px;background:url(../images/arrow-down.png) center center no-repeat;float:right}
+#wd-function-user .wd-user p.wd-button a{height:23px;width:14px;display:block;background:url(../images/arrow-down.png) center center no-repeat}
+#wd-function-user .wd-function{background-color:#3f4f6d;-moz-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;display:none;position:absolute;top:33px;right:0;padding-bottom:10px;width:200px}
+#wd-function-user .wd-function p{text-align:center}
+#wd-function-user .wd-function ul{list-style:none;padding-bottom:8px;position:relative}
+#wd-function-user .wd-function ul li{padding-left:13px;font-weight:bold;font-size:11px;background:url(../images/arrow-function-user-2.png) 11px 10px no-repeat;line-height:21px;position:relative;text-align:left;padding:2px 16px 2px 23px;border-bottom:1px solid #53617c;cursor:pointer}
+#wd-function-user .wd-function ul li:hover{background-color:#2b3850}
+#wd-function-user .wd-function ul li:hover a{color:#fff}
+#wd-function-user .wd-function ul li:hover ul.wd-sub-citizen li a{color:#A0CEFF}
+#wd-function-user .wd-function ul li a{color:#a0ceff}
+#wd-function-user .wd-function p a.wd-button{padding:6px 13px;text-transform:capitalize;background-color:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px}
+#wd-function-user .wd-function p a.wd-button.wd-change-pass{margin-right:1px}
+#wd-function-user .wd-function p a.wd-button:hover{background-color:#6CB000}
+#wd-function-user .wd-function .wd-sub-citizen{background:#3F4F6D;display:none;position:absolute;right:201px;top:-1px;border:1px solid #3F4F6D;padding:0px;width:140px}
+#wd-function-user .wd-function .wd-sub-citizen li a{display:block}
+#wd-function-user .wd-function .wd-sub-citizen li{background:none;padding:2px 2px 2px 13px;border-bottom:1px solid #53617c;text-align:left}
+#wd-function-user .wd-function .wd-sub-citizen li a.wd-current{color:#F58634 !important}
+#wd-function-user .wd-function ul li:hover .wd-sub-citizen,#wd-function-user .wd-function ul.wd-sub-citizen li:hover .wd-sub-citizen{display:block !important}
+/*----- Content -----*/
+#wd-content-container{background:#e3ebed;padding:12px 0}
+#wd-content-container.wd-content-no-login{background:url(../images/bg-content-login.jpg) center top no-repeat}
+.wd-main-content.brms{vertical-align:top;overflow:hidden;height:100%}
+/*----- Footer -----*/
+#wd-footer-container{clear:left;color:#fff;background-color:#29354b;min-width:978px;overflow:hidden;background:url(../images/bg-header.png) repeat}
+#wd-footer-container .wd-center p.wd-copy{float:right;text-transform:capitalize;padding-top:28px;font-weight:bold}
+#wd-footer-container .wd-center .wd-left-footer{float:left;width:50%;padding:8px 0;line-height:17px}
+#wd-footer-container .wd-center .wd-left-footer p{color:#49b0ff}
+#wd-footer-container .wd-center .wd-left-footer p span{color:#5b6e90}
+#wd-footer-container .wd-center .wd-left-footer ul{list-style:none;overflow:hidden;margin-top:4px}
+#wd-footer-container .wd-center .wd-left-footer ul li{float:left;color:#fff;padding-right:3px;line-height:14px}
+/*----- Container Portlet -----*/
+.wd-container-portlet{border:1px solid #5c677b;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}
+.wd-container-portlet h2.wd-title-portlet{color:#fff;font-size:13px;padding:7px 10px 7px 28px;background:#5c677b url(../images/arrow-title-portlet.png) 12px 14px no-repeat}
+
+

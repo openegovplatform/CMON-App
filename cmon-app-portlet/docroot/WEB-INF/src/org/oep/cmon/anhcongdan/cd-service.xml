@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.anhcongdan">
+	<author>BinhNT</author>
+	<namespace>cd</namespace>
+
+	<entity name="AnhCongDan" local-service="true" remote-service="false"
+		table="CMON_VIEW_CONGDAN" data-source="cmonDataSource">
+
+		<!-- PK fields -->
+		<column name="id" db-name="ID" type="long" primary="true" />
+
+		<column name="ma"                        db-name="MA"                       type="String"   />
+		
+		<column name="email"                        db-name="EMAIL"                       type="String"  />
+		<column name="anh"                        db-name="ANH"                       type="String"  />
+		
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+		
+
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		
+		<finder name="Email" return-type="Collection">
+			<finder-column name="email" />
+		</finder>
+
+	</entity>
+	
+
+</service-builder>

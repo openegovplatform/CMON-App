@@ -1,0 +1,105 @@
+/*----- Tabs -----*/
+#wd-tab-data .wd-list-item{list-style:none;overflow:hidden;margin-bottom:-1px;z-index:10;position:relative}
+#wd-tab-data .wd-list-item li{float:left;margin-right:2px}
+#wd-tab-data .wd-list-item li a{float:left;font-weight:bolder;padding:10px 20px;border:1px solid #e3ebed;border-bottom:none;color:#000;font-size:15px;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0}
+#wd-tab-data .wd-list-item li a.wd-current,#wd-tab-data .wd-list-item li a:hover{background-color:#fff;border:1px solid #d1d9da;border-bottom:none;color:#3a88cb}
+#wd-tab-data .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}
+/*----- Accordion -----*/
+.wd-accordion .wd-content {background-color:#fff;padding:0 0 5px 0}
+.wd-accordion h4 {background:#48566f url(../images/accordion-close.png) no-repeat right center;border-bottom:#fff solid 2px !important;border-left:none !important;border-right:none !important;color:#fff;cursor:pointer;line-height:19px;overflow:hidden;padding:10px 75px 10px 10px;display:block;text-transform:uppercase}
+.wd-accordion h4.ui-state-hover,.wd-accordion h4.ui-state-active{background-color:#3a88cb}
+.wd-accordion h4.ui-state-active{background:#3a88cb url(../images/accordion-open.png) no-repeat right center;border-bottom:none}
+.wd-accordion .ui-icon {float:left;background:url(../images/accordion-title.png) no-repeat !important;width:13px;height:13px;margin:3px 10px 0 0 !important;position:static !important}
+.wd-accordion table.wd-table-content{width:100%;background-color:#d3d3d3}
+.wd-accordion table.wd-table-content td.wd-table-34{width:24px;text-align:center}
+.wd-accordion table.wd-table-content td{padding:6px 9px;background-color:#fff}
+.wd-accordion table.wd-table-content td a:hover{text-decoration:underline;color:#1977c7}
+.wd-accordion .ui-widget-content{border:none}
+/*-----  -----*/
+.wd-table-content tr:hover td{background:#fff8db}
+.wd-table-content tr:hover td div.icon{display:block !important}
+/*----- profile -----*/
+.wd-profile .img-profile{float:left;margin-right:20px;padding:5px;background:#f2f2f2}
+.wd-profile .wd-profile-content{overflow:hidden}
+.wd-profile .wd-profile-content p{font-weight:bold}
+.wd-profile .wd-profile-content p span{font-weight:normal}
+/*----- list-transaction -----*/
+#wd-content-container{overflow:hidden}
+.wd-list-transaction{margin:0 auto}
+.wd-list-transaction .wd-search-filter{overflow:hidden}
+.wd-list-transaction .wd-search-filter .wd-filter{float:right;padding:12px 0 10px 0}
+.wd-list-transaction .wd-search-filter .wd-filter div.selector{background:#fff;width:260px;height:33px}
+.wd-list-transaction .wd-search-filter .wd-filter div.selector select{width:260px;height:33px}
+.wd-list-transaction .wd-search-filter .wd-filter div.selector select option{background:#fff;border:none}
+.wd-list-transaction .wd-search-filter .wd-filter div.selector span{width:233px;height:29px;padding:2px 10px;line-height:29px}
+.wd-list-transaction .wd-search-filter .wd-quick-search{float:left}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table{border-collapse:collapse;text-align:center;margin:0 auto;width:100%}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table thead{background:#5C677B;color:#fff;font-weight:bold}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td{border:1px solid #D3D3D3;padding:5px 10px}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td.wd-tl-left{text-align:left}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td a{font-weight:bold}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td span.wd-color-red{color:#ff0000}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td span.wd-color-blue{color:#0087c7}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td a.wd-ico-status{display:block;width:24px;height:24px;background:url(../images/ico-status.png) no-repeat;margin:0 auto}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td a.wd-ico-status-02{background-position:0 -24px}
+.wd-list-transaction .wd-list-transaction-form .wd-list-transaction-table tr td a.wd-ico-status-03{background-position:0 -48px}
+.wd-list-transaction .wd-paging {margin-top:5px}
+.wd-list-transaction .wd-paging .wd-page{padding:0 10px 0 6px}
+.wd-list-transaction .wd-paging{padding:4px 0;text-align:right;color:#000}
+.wd-list-transaction .wd-paging span{text-align:center;overflow:hidden;font-weight:bold}
+.wd-list-transaction .wd-paging a{color:#990000;text-decoration:none;font-weight:bold;padding:5px 11px 7px 11px}
+.wd-list-transaction .wd-paging .wd-next{background:url(../images/arrow-paging.png) no-repeat -29px 1px}
+.wd-list-transaction .wd-paging span.wd-prev {background:url(../images/arrow-paging.png) no-repeat;padding:4px 13px 7px 13px}
+/*----- change password -----*/
+#wd-change-password{border:4px solid #3c4a64;width:508px;background:#fff;border-radius:7px}
+#wd-change-password h2{padding:15px 15px;background:#333f57;text-transform:uppercase;color:#fff;font-size:21px;font-weight:normal}
+#wd-change-password fieldset{width:340px;margin:0 auto}
+#wd-change-password fieldset label{display:block;padding-top:5px;font-weight:bold;font-size:14px}
+#wd-change-password fieldset .wd-input input{width:100%;border:1px solid #cacaca;padding:6px}
+#wd-change-password fieldset p{color:#8d8d8d;font-weight:bold;font-size:12px;padding-top:10px}
+#wd-change-password fieldset p span{font-weight:normal}
+#wd-change-password fieldset .wd-submit{padding:18px 0;text-align:center}
+#wd-change-password fieldset .wd-submit .wd-button{background:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;padding:10px 10px;width:145px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-change-password fieldset .wd-submit .wd-button:hover{background:#48689a}
+#wd-change-password fieldset .wd-submit .wd-button-reset{width:89px;margin:0 !important}
+/*----- change password success-----*/
+#wd-change-password div.wd-border-green{background:#edf8ce;border:1px dashed #3ab648;margin:100px 20px;padding:20px 10px;;text-align:center;border-radius:3px}
+#wd-change-password div.wd-border-green p.color-green{color:#2e8600;font-size:14px;font-weight:bold}
+#wd-change-password div.wd-border-green p.email{color:#000;font-size:11px}
+/*----- fancybox -----*/
+#fancybox-content{border:none !important;padding:0 !important}
+#fancybox-outer{background:none !important}
+#fancybox-close{background:url(../images/fancybox-change-pass-close.png) no-repeat !important;top:19px !important;right:32px !important;width:21px !important;height:21px !important}
+/*----- details -----*/
+.wd-details .wd-details-content{border-top:1px solid #e5e5e5;margin:10px}
+.wd-details a.wd-detail-back{background:url(../images/bullet-details-back.png) no-repeat 0 center;font-weight:bold;padding:0 0 0 14px;margin-left:10px}
+.wd-details h2.wd-title-details{text-transform:uppercase;font-family:Microsoft Sans Serif;font-size:20px;padding:15px 0}
+.wd-details table{border-collapse:collapse;width:100%;font-size:14px}
+.wd-details table tr td{border:1px solid #d3d3d3;border-collapse:collapse;padding:6px 12px}
+.wd-details table tr td.wd-fw-bold{font-weight:bold}
+.wd-details table tr td .wd-color-blue{color:#3a87cb;font-weight:bold}
+.wd-details table tr td p.wd-bg-green{background:url(../images/bg-status-document-list.png) no-repeat 0 0;display:block;width:103px;height:21px;font-size:11px;color:#fff;text-align:center;line-height:21px}
+.wd-details table tr td fieldset .wd-bg-upload{background:url(../images/bg-detail-download.png) no-repeat 0 0;position:relative;overflow:hidden;width:100px;height:24px; display:block;}
+.wd-details table tr td fieldset .wd-bg-upload input{opacity:0;filter:alpha(opacity=0);cursor:pointer;left:-69px;font-size:23px;position:absolute}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.csms">
+	<author>NAM</author>
+	<namespace>CZ</namespace>   
+    <entity name="AnhChanDungYeuCauDangKyCongDan" local-service="true" remote-service="false"
+     	table="csms_yeucaudangkycongdan" data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long" primary="true"></column>
+       	<column name="AnhChanDung" db-name="ANHCHANDUNG" type="String" ></column>
+    </entity>
+</service-builder>

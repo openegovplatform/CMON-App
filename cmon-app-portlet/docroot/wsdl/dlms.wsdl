@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TaoMoiHoSo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dongBoQuyTrinh" type="tns:DongBoQuyTrinh"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DongBoQuyTrinh">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DonViNhanHSo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HoDemNLX1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TenNLX1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HoVaTen1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MaQuocTich1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySinh1" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiTT1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiTT_MaDVHC1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiTT_MaDVQL1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiCT1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiCT_MaDVHC1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiCT_MaDVQL1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SoCMT1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NgayCapCMT1" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TrangThai1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GioiTinh1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HoVaTenIn1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SoHoSo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MaSoGTVT1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MaDVNhanHSo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NgayNhanHSo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NguoiNhanHSo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NgayHenTra1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MaLoaiHs1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TT_XuLy1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SoGPLXDaCo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HangGPLXDaCo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DonViCapGPLXDaCo1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NoiCapGPLXDaCo1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NgayCapGPLXDaCo1" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NgayHHGPLXDaCo1" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NgayTTGPLXDaCo1" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HangGPLX1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GiayCNSK1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LyDoCapDoi1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MucDichCapDoi1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GhiChu1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MaHTCap1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Transfer_flag1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NamcapLandau1" type="s:int"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaoMoiHoSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaoMoiHoSoResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaiAnhDinhKem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadDocumentsAttach" type="tns:UploadDocumentsAttach"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UploadDocumentsAttach">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaDK" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TenAnh" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaiAnhDinhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaiAnhDinhKemResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaiAnhChanDung">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadImagePortrait" type="tns:UploadImagePortrait"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UploadImagePortrait">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaDK" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaiAnhChanDungResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaiAnhChanDungResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTrangThaiHoSo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maDK" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTrangThaiHoSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTrangThaiHoSoResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TaoMoiHoSoSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoMoiHoSo"/>
+  </wsdl:message>
+  <wsdl:message name="TaoMoiHoSoSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoMoiHoSoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TaiAnhDinhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:TaiAnhDinhKem"/>
+  </wsdl:message>
+  <wsdl:message name="TaiAnhDinhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:TaiAnhDinhKemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TaiAnhChanDungSoapIn">
+    <wsdl:part name="parameters" element="tns:TaiAnhChanDung"/>
+  </wsdl:message>
+  <wsdl:message name="TaiAnhChanDungSoapOut">
+    <wsdl:part name="parameters" element="tns:TaiAnhChanDungResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetTrangThaiHoSoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTrangThaiHoSo"/>
+  </wsdl:message>
+  <wsdl:message name="GetTrangThaiHoSoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTrangThaiHoSoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="TaoMoiHoSo">
+      <wsdl:input message="tns:TaoMoiHoSoSoapIn"/>
+      <wsdl:output message="tns:TaoMoiHoSoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhDinhKem">
+      <wsdl:input message="tns:TaiAnhDinhKemSoapIn"/>
+      <wsdl:output message="tns:TaiAnhDinhKemSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhChanDung">
+      <wsdl:input message="tns:TaiAnhChanDungSoapIn"/>
+      <wsdl:output message="tns:TaiAnhChanDungSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrangThaiHoSo">
+      <wsdl:input message="tns:GetTrangThaiHoSoSoapIn"/>
+      <wsdl:output message="tns:GetTrangThaiHoSoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TaoMoiHoSo">
+      <soap:operation soapAction="http://tempuri.org/TaoMoiHoSo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhDinhKem">
+      <soap:operation soapAction="http://tempuri.org/TaiAnhDinhKem" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhChanDung">
+      <soap:operation soapAction="http://tempuri.org/TaiAnhChanDung" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrangThaiHoSo">
+      <soap:operation soapAction="http://tempuri.org/GetTrangThaiHoSo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TaoMoiHoSo">
+      <soap12:operation soapAction="http://tempuri.org/TaoMoiHoSo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhDinhKem">
+      <soap12:operation soapAction="http://tempuri.org/TaiAnhDinhKem" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaiAnhChanDung">
+      <soap12:operation soapAction="http://tempuri.org/TaiAnhChanDung" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrangThaiHoSo">
+      <soap12:operation soapAction="http://tempuri.org/GetTrangThaiHoSo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:52986/TichHopMotCua/Service.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:52986/TichHopMotCua/Service.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

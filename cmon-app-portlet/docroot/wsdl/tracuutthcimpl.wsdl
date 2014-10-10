@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TraCuuTTHCImplService" targetNamespace="http://tracuutthc.touchscreen.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://tracuutthc.touchscreen.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://tracuutthc.touchscreen.sharedservice.dtt.vn/" schemaLocation="tracuutthcimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getNhomTTHCByIdCoQuanResponse">
+    <wsdl:part name="parameters" element="tns:getNhomTTHCByIdCoQuanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTTHCByIdNhomTTHC">
+    <wsdl:part name="parameters" element="tns:getTTHCByIdNhomTTHC">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNhomTTHCByIdCoQuan">
+    <wsdl:part name="parameters" element="tns:getNhomTTHCByIdCoQuan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyByIdCapCoQuan">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyByIdCapCoQuan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTTHCByIdNhomTTHCResponse">
+    <wsdl:part name="parameters" element="tns:getTTHCByIdNhomTTHCResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllCapCoQuanQuanLy">
+    <wsdl:part name="parameters" element="tns:getAllCapCoQuanQuanLy">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllCapCoQuanQuanLyResponse">
+    <wsdl:part name="parameters" element="tns:getAllCapCoQuanQuanLyResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyByIdCapCoQuanResponse">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyByIdCapCoQuanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTTHCByIdTTHCResponse">
+    <wsdl:part name="parameters" element="tns:getTTHCByIdTTHCResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTTHCByIdTTHC">
+    <wsdl:part name="parameters" element="tns:getTTHCByIdTTHC">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TraCuuTTHCService">
+    <wsdl:operation name="getTTHCByIdNhomTTHC">
+      <wsdl:input name="getTTHCByIdNhomTTHC" message="tns:getTTHCByIdNhomTTHC">
+    </wsdl:input>
+      <wsdl:output name="getTTHCByIdNhomTTHCResponse" message="tns:getTTHCByIdNhomTTHCResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyByIdCapCoQuan">
+      <wsdl:input name="getCoQuanQuanLyByIdCapCoQuan" message="tns:getCoQuanQuanLyByIdCapCoQuan">
+    </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyByIdCapCoQuanResponse" message="tns:getCoQuanQuanLyByIdCapCoQuanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTTHCByIdTTHC">
+      <wsdl:input name="getTTHCByIdTTHC" message="tns:getTTHCByIdTTHC">
+    </wsdl:input>
+      <wsdl:output name="getTTHCByIdTTHCResponse" message="tns:getTTHCByIdTTHCResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNhomTTHCByIdCoQuan">
+      <wsdl:input name="getNhomTTHCByIdCoQuan" message="tns:getNhomTTHCByIdCoQuan">
+    </wsdl:input>
+      <wsdl:output name="getNhomTTHCByIdCoQuanResponse" message="tns:getNhomTTHCByIdCoQuanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCapCoQuanQuanLy">
+      <wsdl:input name="getAllCapCoQuanQuanLy" message="tns:getAllCapCoQuanQuanLy">
+    </wsdl:input>
+      <wsdl:output name="getAllCapCoQuanQuanLyResponse" message="tns:getAllCapCoQuanQuanLyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TraCuuTTHCImplServiceSoapBinding" type="tns:TraCuuTTHCService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getTTHCByIdNhomTTHC">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTTHCByIdNhomTTHC">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTTHCByIdNhomTTHCResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyByIdCapCoQuan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCoQuanQuanLyByIdCapCoQuan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyByIdCapCoQuanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTTHCByIdTTHC">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTTHCByIdTTHC">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTTHCByIdTTHCResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNhomTTHCByIdCoQuan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getNhomTTHCByIdCoQuan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNhomTTHCByIdCoQuanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCapCoQuanQuanLy">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllCapCoQuanQuanLy">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllCapCoQuanQuanLyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TraCuuTTHCImplService">
+    <wsdl:port name="TraCuuTTHCImplPort" binding="tns:TraCuuTTHCImplServiceSoapBinding">
+      <soap:address location="http://localhost:9090/TraCuuTTHCImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

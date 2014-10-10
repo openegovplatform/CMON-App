@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.thamso">
+	<author>LIEMNN</author>
+	<namespace>DNG</namespace>
+	
+	<entity name="ThamSo" local-service="true" remote-service="false"  table="CMON_THAMSO"  data-source="egovDataSource" cache-enabled="false">
+		<column name="Id" db-name="ID" type="long" primary="true"></column>
+		<column name="Ten" db-name="TEN" type="String"></column>
+		<column name="giaTri" db-name="GIATRI" type="String"></column>
+		<column name="kieuDuLieu" db-name="KIEUDULIEU" type="int"></column>		
+		<column name="Mota" db-name="MOTA" type="String"></column>
+		<column name="UngDungId" db-name="UNGDUNGID" type="Long" convert-null="false" ></column>
+		<column name="HeThongId" db-name="HETHONGID" type="Long" convert-null="false" ></column>
+		<column name="NgayTao" db-name="NGAYTAO" type="Date"></column>
+		<column name="NguoiTao" db-name="NGUOITAO" type="String"></column>
+		<column name="NgaySua" db-name="NGAYSUA" type="Date"></column>
+		<column name="NguoiSua" db-name="NGUOISUA" type="String"></column>
+		<column name="DaXoa" db-name="DAXOA" type="int"></column>
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="Ten" />
+		</order>
+
+		<!-- Finder methods -->
+				
+		<finder name="Ten" return-type="ThamSo">
+			<finder-column name="Ten" />
+		</finder>	
+		<finder name="DaXoa" return-type="Collection">
+			<finder-column name="DaXoa" />
+		</finder>	
+		<finder name="GiaTri" return-type="ThamSo" where="daXoa = 0">
+			<finder-column name="giaTri"/>
+		</finder>
+	</entity>	
+	<entity name="AnhXa" local-service="true" remote-service="false"  table="CMON_DANHMUCANHXA"  data-source="egovDataSource" cache-enabled="false">
+		<column name="Id" db-name="ID" type="long" primary="true"></column>
+		<column name="maDNG" db-name="MADNG" type="String" convert-null="false"></column>
+		<column name="tenDNG" db-name="TENDNG" type="String" convert-null="false"></column>
+		<column name="maKhac" db-name="MAKHAC" type="String"></column>		
+		<column name="tenKhac" db-name="TENKHAC" type="String"></column>
+		<column name="tenBang" db-name="TENBANG" type="String"></column>
+		<column name="UngDungId" db-name="DANHMUCUNGDUNGID" type="long"></column>
+		
+		<column name="NgayTao" db-name="NGAYTAO" type="Date"></column>
+		<column name="NguoiTao" db-name="NGUOITAO" type="String"></column>
+		<column name="NgaySua" db-name="NGAYSUA" type="Date"></column>
+		<column name="NguoiSua" db-name="NGUOISUA" type="String"></column>
+		<column name="DaXoa" db-name="DAXOA" type="int"></column>
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="Id" />
+		</order>
+
+		<!-- Finder methods -->
+				
+		<finder name="UngDung" return-type="Collection">
+			<finder-column name="UngDungId" />
+		</finder>	
+		<finder name="tenBang" return-type="Collection">
+			<finder-column name="tenBang" />
+		</finder>	
+		<finder name="UD_TB" return-type="Collection">
+			<finder-column name="UngDungId" />
+			<finder-column name="tenBang" />
+		</finder>
+		<finder name="UD_TB_MaDNG" return-type="Collection">
+			<finder-column name="UngDungId" />
+			<finder-column name="tenBang" />
+			<finder-column name="maDNG" />			
+		</finder>
+	</entity>	
+</service-builder>

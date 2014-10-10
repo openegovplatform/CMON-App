@@ -1,0 +1,107 @@
+/*----- Citizen register -----*/
+#wd-citizen-register{margin:56px auto;width:595px;font-family:Tahoma}
+#wd-citizen-register h2{background:#323f57;color:#fff;text-transform:uppercase;font-size:18px;font-weight:bold;padding:15px}
+#wd-citizen-register fieldset{border:1px solid #dedede;background:#fff;padding:20px 0}
+#wd-citizen-register fieldset .center{margin:0 auto;width:378px;position:relative}
+#wd-citizen-register fieldset sup,#wd-citizen-register-2 fieldset sup{color:#ff0000}
+#wd-citizen-register fieldset p,#wd-citizen-register-2 fieldset p{text-align:right;color:#717171;font-size:12px;margin:0}
+#wd-citizen-register fieldset label,#wd-citizen-register-2 fieldset label{color:#010101;font-size:14px;display:block;padding:10px 0 4px 0;line-height:22px;margin:0 !important}
+#wd-citizen-register fieldset label em{font-size:12px}
+#wd-citizen-register fieldset input[type=text],#wd-citizen-register-2 fieldset input[type=text]{border:1px solid #e0e0e0;width:355px;padding:10px;border-radius:3px}
+#wd-citizen-register fieldset input[type=text]:focus,#wd-citizen-register-2 fieldset input[type=text]:focus{border:1px solid #f58634}
+#wd-citizen-register fieldset select{border:1px solid #e0e0e0 !important;width:376px;height:38px;padding:10px}
+#wd-citizen-register fieldset select option{border:1px solid #e0e0e0;background:#fff}
+#wd-citizen-register div.selector span{width:345px}
+#wd-citizen-register fieldset .wd-submit,#wd-citizen-register-2 fieldset .wd-submit{padding:18px 0}
+#wd-citizen-register fieldset .wd-submit .wd-button,#wd-citizen-register-2 fieldset .wd-button{background:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;text-transform:uppercase;padding:13px 10px;width:186px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-citizen-register fieldset .wd-submit .wd-button:hover,#wd-citizen-register-2 fieldset .wd-button:hover{background:#48689a}
+#wd-citizen-register fieldset .wd-submit .wd-button-reset,#wd-citizen-register-2 fieldset .wd-button-reset{width:171px;margin:0 !important}
+#wd-citizen-register fieldset .trans{background:url(../images/trans.png) repeat;width:377px;min-height:220px;position:absolute;top:114px;left:0;z-index:100}
+#wd-citizen-register fieldset .error{background:#fff3f3;border:1px dashed #ff0000;padding:28px}
+#wd-citizen-register fieldset .error p{color:#000;font-size:12px;font-weight:bold;text-align:center}
+#wd-citizen-register fieldset .error p.fw-normal{font-weight:normal}
+#wd-citizen-register fieldset .error p.fw-normal a{font-weight:bold}
+/*----- Citizen-register Tab -----*/
+#wd-citizen-register-2 .wd-list-item{list-style:none;overflow:hidden;z-index:10;position:relative;border:1px solid #dedede;border-bottom:none;border-left:none}
+#wd-citizen-register-2 .wd-list-item li{float:left;background:url(../images/bg-citizen-tab.png) repeat-x;width:50%}
+#wd-citizen-register-2 .wd-list-item li a{font-weight:bolder;padding:10px 58px;color:#9b9b9b;font-size:15px;display:block;text-align:center}
+#wd-citizen-register-2 .wd-list-item li a.wd-current,#wd-citizen-register-2 .wd-list-item li a:hover{background:url(../images/bg-citizen-tab-hover.png) repeat-x;border:1px solid #dedede;border-top:none;border-bottom:none;border-left:none;border-right:none;color:#000}
+#wd-citizen-register-2 .wd-list-item li a.wd-current{border-right:1px solid #dedede;border-left:1px solid #dedede}
+#wd-citizen-register-2 .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff}
+/*----- Citizen-register cocmnd -----*/
+#wd-citizen-register-2{background:#fff;margin:56px auto;width:869px;font-family:Tahoma}
+#wd-citizen-register-2 fieldset{padding:10px 56px;border:1px solid #dedede}
+#wd-citizen-register-2 fieldset label{padding:5px 0 3px 0}
+#wd-citizen-register-2 fieldset input[type=text]{width:345px}
+#wd-citizen-register-2 .wd-fleft{float:left}
+#wd-citizen-register-2 .wd-fright{float:right}
+#wd-citizen-register-2 fieldset .wd-submit{width:396px;margin:13px auto}
+#wd-citizen-register-2 fieldset .wd-button{margin-right:18px}
+#wd-citizen-register-2 .wd-text-captcha{float:left;font-weight:bold;margin:25px 20px 0 0;text-align:center;width:367px;position:relative}
+#wd-citizen-register-2 div.wd-input-captcha input {background:none repeat scroll 0 0 transparent;color:#808080;float:right;font-size:14px}
+#wd-citizen-register-2 .wd-fimg img{right:10px !important}
+/*----- Citizen-register success -----*/
+.wd-citizen-register-success{background:#fff;font-family:Tahoma;width:662px;margin:115px auto;padding:50px;border:2px dashed #39b54a;text-align:center;font-size:14px}
+.wd-citizen-register-success p.title{text-transform:uppercase;color:#5bb503;font-size:22px;font-weight:bold}
+.wd-citizen-register-success p.mail{padding:4px 0 30px 0;border-bottom:1px solid #dedede}
+.wd-citizen-register-success .fw-bold{font-weight:bold;padding-top:25px}
+.wd-citizen-register-success p.w365{width:385px;margin:0 auto;font-size:12px}
+.wd-citizen-register-success p span{font-weight:bold}
+/*----- Citizen-register chuacocmnd -----*/
+#wd-citizen-register-2 .fieldset-citizen-register-2{position:relative}
+#wd-citizen-register-2 .fieldset-citizen-register-2 div.selector,#wd-citizen-register-2 .fieldset-citizen-register-2 select{border:1px solid #E0E0E0;height:38px;width:110px;font-size:13px;background:#fff;padding:8px 7px 8px 4px;border-radius:3px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 div.selector select option{background:#fff}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input{overflow:hidden;position:relative;float:left;padding-right:20px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 div.selector span{padding:1px 17px 2px 7px;width:76px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-2{overflow:hidden;width:367px;float:left;padding-right:20px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-2 .wd-input,#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-3 .wd-input{float:left;padding-right:18px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-2 .wd-input input[type=text]{width:95px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-3 .wd-input input[type=text]{width:170px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-3 div.selector{width:155px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-3 div.selector span{padding:1px 29px 3px 9px;width:108px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-3 div.selector select{width:155px;height:37px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-upload-avatar{background:url(../images/button-upload.png) no-repeat;float:right;width:183px;height:33px;display:block;overflow:hidden;position:relative}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-upload-avatar:hover{background:url(../images/button-upload.png) no-repeat 0 -34px;cursor:pointer}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input input.type-file{opacity:0;filter:alpha(opacity=0);cursor:pointer;width:183px;height:33px;position:absolute;top:0;left:0;font-size:65px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .ui-datepicker-trigger{position:absolute;top:43px;right:29px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-avatar{float:right !important;width:300px !important}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .w385{width:385px}
+/*#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-leveleducation div.selector select,#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-leveleducation div.selector{width:367px !important;height:36px}*/
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-leveleducation  select{width:367px !important;height:39px;padding:8px 7px 8px 4px;border-radius:3px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-leveleducation div.selector span{width:333px;height:36px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-place .wd-gselect{float:left !important;padding-right:19px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-input-color input{color:#808080}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-refresh{background:url(../images/ico-refresh.png) no-repeat;position:absolute;right:79px;top:16px;width:17px;height:17px;text-indent:-19999px}
+#wd-citizen-register-2 .fieldset-citizen-register-2 .wd-calendar{background:url(../images/ico-calendar.png) no-repeat 342px center}
+/*----- upload photo -----*/
+#wd-citizen-register-2 .wd-border-color{border:1px solid #39B54A;width:415px;margin:50px auto;padding:60px 0 30px 0;text-align:center;position:relative}
+#wd-citizen-register-2 .wd-border-color h2.wd-title-upload{position:absolute;top:-14px;left:88px;padding:0 10px;font-size:17px;font-weight:bold;background-color:#fff;text-align:center}
+#wd-citizen-register-2 .wd-border-color p{text-align:center}
+#wd-citizen-register-2 .wd-border-color .img-upload-photo{width:147px;height:147px}
+#wd-citizen-register-2 .wd-border-color span{color:#a1a1a1}
+#wd-citizen-register-2 .wd-border-color .wd-submit{margin:0 auto;width:286px}
+#wd-citizen-register-2 .wd-border-color .wd-submit .bg-upload{background:url(../images/button_uploadphoto.png) no-repeat 1px 0;float:left;display:block;overflow:hidden;position:relative;width:88px;height:33px;margin-right:10px}
+#wd-citizen-register-2 .wd-border-color .wd-submit .bg-upload:hover{background:url(../images/button_uploadphoto.png) no-repeat 1px -34px}
+#wd-citizen-register-2 .wd-border-color .wd-submit .wd-back{background:url(../images/button_back.png) no-repeat;display:block;float:left;overflow:hidden;width:88px;height:33px;text-indent:-19999px;border:none;cursor:pointer;margin-right:10px}
+#wd-citizen-register-2 .wd-border-color .wd-submit .wd-back:hover{background:url(../images/button_back.png) no-repeat 0 bottom}
+#wd-citizen-register-2 .wd-border-color .wd-submit .wd-continue{background:url(../images/button_continue.png) no-repeat;display:block;overflow:hidden;width:88px;height:33px;text-indent:-19999px;border:none;cursor:pointer}
+
+#wd-citizen-register-2 .wd-border-color .wd-submit .wd-upload-file{opacity:0;filter:alpha(opacity=0);position:absolute;left:-538px;font-size:40px;cursor:pointer}
+/*----- error -----*/
+#wd-citizen-register-2 div.wd-message-error{background:url("../images/ico-message-error.png") no-repeat scroll 9px center #FFD3D3;border:1px solid #EB0000;border-radius:4px 4px 4px 4px;clear:both;color:#000000;font-weight:bold;margin-top:25px;padding:6px 10px 7px 42px}
+#wd-citizen-register-2 fieldset .trans{background:url(../images/trans.png) repeat;width:754px;height:67%;position:absolute;top:128px;z-index:100}
+#wd-citizen-register-2 fieldset .error{background:#fff3f3;border:1px dashed #ff0000;padding:28px;width:365px;margin:0 auto}
+#wd-citizen-register-2 fieldset .error p{color:#000;font-size:12px;font-weight:bold;text-align:center}
+#wd-citizen-register-2 fieldset .error p.fw-normal{font-weight:normal}
+#wd-citizen-register-2 fieldset .error p.fw-normal a{font-weight:bold}
+/*----- datepicker -----*/
+.ui-datepicker{font-size:13px !important}
+.ui-datepicker th,.ui-datepicker .ui-datepicker-buttonpane{padding:0 !important;margin:0 !important}
+.ui-datepicker td span, .ui-datepicker td a{padding:1px !important}
+.ui-icon{background:url(../images/ui-icons_ffffff_256x240.png) no-repeat !important}
+.ui-icon-circle-triangle-w{background-position:-80px -193px !important}
+.ui-icon-circle-triangle-e{background-position:-48px -193px !important}
+
+.fpadding-right{padding-right:0 !important}
+.fpadding-bottom{padding-bottom:19px}
+.wd-group-input{overflow:hidden;}

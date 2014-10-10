@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>QuanLyTaiKhoanPortlet</portlet-name>
+		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>TraCuuHoSoPortlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>TraCuuHoSoPortlet</portlet-name>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/customEgovTheme.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/customEgovTheme.js</header-portlet-javascript>
+		<css-class-wrapper>TraCuuHoSoPortlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>RutHoSoPortlet</portlet-name>
+	</portlet>
+	<portlet>
+		<portlet-name>HoSoChungThucPortlet</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.portlet.hosochungthuc.Configuration</configuration-action-class>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/customEgovTheme.css</header-portlet-css>
+		<header-portlet-javascript>/js/redefine_cmon_function.js</header-portlet-javascript>
+		<!-- <header-portlet-javascript>/js/egovUI.js</header-portlet-javascript> -->
+		<header-portlet-javascript>/js/customEgovTheme.js</header-portlet-javascript>
+		<css-class-wrapper>HoSoChungThuc-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>HoSoLienThongPortlet</portlet-name>
+		<configuration-action-class>vn.dtt.cmon.portlet.hosolienthong.Config</configuration-action-class>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/customEgovTheme.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/customEgovTheme.js</header-portlet-javascript>
+		<css-class-wrapper>HoSoLienThongPortlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>CanBo2NhomThuTucPortlet</portlet-name>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/customEgovTheme.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/customEgovTheme.js</header-portlet-javascript>
+		<css-class-wrapper>CanBo2NhomThuTucPortlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>HoSoTrucTiepPortlet</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/customEgovTheme.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/customEgovTheme.js</header-portlet-javascript>
+		<css-class-wrapper>HoSoTrucTiep-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>common-db</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>common-db-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>transactionportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.portlet.transaction.action.CustomConfigurationAction</configuration-action-class>
+		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<footer-portlet-javascript> /js/main.js </footer-portlet-javascript>
+		<css-class-wrapper>
+			transactionportlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>cmon_menuportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/common.css</header-portlet-css>
+		<header-portlet-css>/css/uniform.default.css</header-portlet-css>
+		<header-portlet-css>/css/css-left-content.css</header-portlet-css>
+		<css-class-wrapper>menuportlet-portlet</css-class-wrapper>
+	</portlet>
+
+
+	<portlet>
+		<portlet-name>userendorseportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			userendorseportlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>ipmslistportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.portlet.ipmslist.action.Configuration</configuration-action-class>
+		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>ipmslistportlet-portlet</css-class-wrapper>
+	</portlet>
+
+	<!-- Admin portlet -->
+	<portlet>
+		<portlet-name>AdminPortlet</portlet-name>
+		<icon>/icon.png</icon>
+		<!-- <scheduler-entry> <scheduler-description>This scheduler is used to 
+			run integration with OSS JOB</scheduler-description> <scheduler-event-listener-class>vn.dtt.cmon.job.exe.OSSIntegrationExe</scheduler-event-listener-class> 
+			<trigger> <simple> <simple-trigger-value>180</simple-trigger-value> <time-unit>minute</time-unit> 
+			</simple> </trigger> </scheduler-entry> -->
+		<instanceable>false</instanceable>
+		<private-session-attributes>false</private-session-attributes>
+		<css-class-wrapper>adminportlet-portlet</css-class-wrapper>
+	</portlet>
+	
+	
+	<portlet>
+		<portlet-name>User registration portlet</portlet-name>
+		<icon>/icon.png</icon>
+		
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>  
+ 		<friendly-url-mapping>dang-ky-cong-dan</friendly-url-mapping>  
+  		<friendly-url-routes>vn/dtt/cmon/userreg/portlet/controller/friendly-url-router.xml</friendly-url-routes>  
+  		
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			user registration portlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	
+	
+	
+	<portlet>
+		<portlet-name>Citizen Profile Portlet</portlet-name>
+		<icon>/icon.png</icon>
+
+		<!-- BinhNT Add 21-05-2013 -->
+		<scheduler-entry>
+			<scheduler-description>This scheduler is used to run receipt job</scheduler-description>
+			<scheduler-event-listener-class>vn.dtt.cmon.job.exe.ReceiptScheduler</scheduler-event-listener-class>
+			<trigger>
+				<!-- You can even have a simple scheduler running every hour,minute,seonds 
+					by specifying it as <simple> <simple-trigger-value>15</simple-trigger-value> 
+					<time-unit>minute</time-unit> </simple> -->
+				<!-- This (<cron-trigger-value>0 0 0 * * ?</cron-trigger-value>) indicates 
+					that the scheduler will run every night at 00 hrs. -->
+				<cron>
+					<cron-trigger-value>0 10 16 * * ?</cron-trigger-value> <!-- Day la 16h:10 -->
+				</cron>
+				<!-- <simple> <simple-trigger-value>5</simple-trigger-value> <time-unit>minute</time-unit> 
+					</simple> -->
+			</trigger>
+		</scheduler-entry>
+		<!-- End BinhNT -->
+
+		<!-- BinhNT Add 17-10-2013 -->
+		<scheduler-entry>
+			<scheduler-description>This scheduler is used to run receipt job</scheduler-description>
+			<scheduler-event-listener-class>vn.dtt.cmon.job.exe.OSSIntegrationExe</scheduler-event-listener-class>
+			<trigger>
+				<simple>
+					<simple-trigger-value>1</simple-trigger-value>
+					<time-unit>minute</time-unit>
+				</simple>
+
+			</trigger>
+		</scheduler-entry>
+		<!-- End BinhNT -->
+
+		<!-- BinhNT Add 17-10-2013 -->
+		<scheduler-entry>
+			<scheduler-description>This scheduler is used to run receipt job</scheduler-description>
+			<scheduler-event-listener-class>vn.dtt.cmon.job.exe.GiayPhepLaiXeJa</scheduler-event-listener-class>
+			<trigger>
+				<simple>
+					<simple-trigger-value>5</simple-trigger-value>
+					<time-unit>minute</time-unit>
+				</simple>
+
+			</trigger>
+		</scheduler-entry>
+		<!-- End BinhNT -->
+		<!-- ThanhNH Add 18-07-2014 -->
+		<scheduler-entry>
+			<scheduler-description>This scheduler is used to run receipt job</scheduler-description>
+			<scheduler-event-listener-class>vn.dtt.cmon.report.portlet.util.ReportScheduler</scheduler-event-listener-class>
+			<trigger>
+				<simple>
+					<simple-trigger-value>30</simple-trigger-value>
+					<time-unit>minute</time-unit>
+				</simple>
+			</trigger>
+		</scheduler-entry>
+		<!-- End ThanhNH -->
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			citizen profile portlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>settingdocument</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>settingdocument-portlet</css-class-wrapper>
+	</portlet>
+
+	<portlet>
+		<portlet-name>timhosoaction</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>timhosoaction-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>thutuchanhchinh</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>thutuchanhchinh-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>citizendocument</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>citizendocument-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>officerdocument</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>officerdocument-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>thamsoportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>thamsoportlet-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>quanlyvaitroportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/jquery.alphanumeric.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			quan ly vai tro portlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>tainguyen</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>tainguyen-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>mappingportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>mappingportlet-portlet</css-class-wrapper>
+	</portlet>
+
+	<portlet>
+		<portlet-name>thongtinthanhtoanportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.ttthanhtoan.portlet.action.ThongTinThanhToanConfigurationActionImpl</configuration-action-class>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-css>/css/core.css</header-portlet-css>
+		<header-portlet-css>/css/egovUI.css</header-portlet-css>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/egovUI.js</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			thongtinthanhtoanportlet-portlet
+		</css-class-wrapper>
+	</portlet>
+
+	<portlet>
+		<portlet-name>taocongdan</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>taocongdan-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>systemresourceportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			systemresourceportlet-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Report</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.report.portlet.action.ReportConfigurationActionImpl</configuration-action-class>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-css>/css/jquery.multiselect.css</header-portlet-css>
+		<header-portlet-css>/css/jquery.multiselect.filter.css</header-portlet-css>
+		<header-portlet-css>/css/jquery-ui.css</header-portlet-css>
+
+		<header-portlet-javascript>/js/jquery.multiselect.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/dnict.js</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>Report-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>ReportAdmin</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-css>/css/jquery.multiselect.css</header-portlet-css>
+		<header-portlet-css>/css/jquery.multiselect.filter.css</header-portlet-css>
+		<header-portlet-css>/css/jquery-ui.css</header-portlet-css>
+		<header-portlet-javascript>/js/jquery.multiselect.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/dnict.js</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>ReportAdmin-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Tracuumanhinhcamung</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>vn.dtt.cmon.touchscreen.portlet.action.TouchscreenConfigurationActionImpl</configuration-action-class>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/bootstrap.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/templatemo_style.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/owl.theme.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/owl.carousel.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/search.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/touchscreen/css/styles.css</header-portlet-css>
+
+		<footer-portlet-javascript>/html/portlet/touchscreen/js/jquery.min.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/html/portlet/touchscreen/js/bootstrap.min.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/html/portlet/touchscreen/js/owl.carousel.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/html/portlet/touchscreen/js/templatemo_script.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/html/portlet/touchscreen/js/keyboard.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/js/dnict.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>Tracuumanhinhcamung-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Dichvucongmanhinhtrunggian</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-css>/html/portlet/dichvucongmanhinhtrunggian/css/common.css</header-portlet-css>
+		<footer-portlet-javascript>/html/portlet/dichvucongmanhinhtrunggian/js/jquery-1.8.2.min.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/html/portlet/dichvucongmanhinhtrunggian/js/common.js</footer-portlet-javascript>
+		<css-class-wrapper>Dichvucongmanhinhtrunggian-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Congchuc</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<css-class-wrapper>Canbo-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>Xacthucdoanhnghiep</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<css-class-wrapper>Xacthucdoanhnghiep-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

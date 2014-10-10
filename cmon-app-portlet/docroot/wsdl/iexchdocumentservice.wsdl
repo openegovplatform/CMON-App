@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ExchDocumentServiceImplService" targetNamespace="http://hoso.provider.exch.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://hoso.provider.exch.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://hoso.provider.exch.sharedservice.dtt.vn/" schemaLocation="iexchdocumentservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="updateSendSignal">
+    <wsdl:part name="parameters" element="tns:updateSendSignal">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="moveToCommunicationLayer">
+    <wsdl:part name="parameters" element="tns:moveToCommunicationLayer">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateResult">
+    <wsdl:part name="parameters" element="tns:updateResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countDocumentResponse">
+    <wsdl:part name="parameters" element="tns:countDocumentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateResultResponse">
+    <wsdl:part name="parameters" element="tns:updateResultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSendSignalResponse">
+    <wsdl:part name="parameters" element="tns:updateSendSignalResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pushDocumentResponse">
+    <wsdl:part name="parameters" element="tns:pushDocumentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pullDocumentResponse">
+    <wsdl:part name="parameters" element="tns:pullDocumentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateStatus">
+    <wsdl:part name="parameters" element="tns:updateStatus">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateStatusResponse">
+    <wsdl:part name="parameters" element="tns:updateStatusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countDocument">
+    <wsdl:part name="parameters" element="tns:countDocument">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="moveToCommunicationLayerResponse">
+    <wsdl:part name="parameters" element="tns:moveToCommunicationLayerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pushDocument">
+    <wsdl:part name="parameters" element="tns:pushDocument">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pullDocument">
+    <wsdl:part name="parameters" element="tns:pullDocument">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IExchDocumentService">
+    <wsdl:operation name="updateResult">
+      <wsdl:input name="updateResult" message="tns:updateResult">
+    </wsdl:input>
+      <wsdl:output name="updateResultResponse" message="tns:updateResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="moveToCommunicationLayer">
+      <wsdl:input name="moveToCommunicationLayer" message="tns:moveToCommunicationLayer">
+    </wsdl:input>
+      <wsdl:output name="moveToCommunicationLayerResponse" message="tns:moveToCommunicationLayerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStatus">
+      <wsdl:input name="updateStatus" message="tns:updateStatus">
+    </wsdl:input>
+      <wsdl:output name="updateStatusResponse" message="tns:updateStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSendSignal">
+      <wsdl:input name="updateSendSignal" message="tns:updateSendSignal">
+    </wsdl:input>
+      <wsdl:output name="updateSendSignalResponse" message="tns:updateSendSignalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pushDocument">
+      <wsdl:input name="pushDocument" message="tns:pushDocument">
+    </wsdl:input>
+      <wsdl:output name="pushDocumentResponse" message="tns:pushDocumentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pullDocument">
+      <wsdl:input name="pullDocument" message="tns:pullDocument">
+    </wsdl:input>
+      <wsdl:output name="pullDocumentResponse" message="tns:pullDocumentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countDocument">
+      <wsdl:input name="countDocument" message="tns:countDocument">
+    </wsdl:input>
+      <wsdl:output name="countDocumentResponse" message="tns:countDocumentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExchDocumentServiceImplServiceSoapBinding" type="tns:IExchDocumentService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="moveToCommunicationLayer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="moveToCommunicationLayer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="moveToCommunicationLayerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pushDocument">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pushDocument">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pushDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSendSignal">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateSendSignal">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateSendSignalResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countDocument">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="countDocument">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="countDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pullDocument">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pullDocument">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pullDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExchDocumentServiceImplService">
+    <wsdl:port name="ExchDocumentServiceImplPort" binding="tns:ExchDocumentServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/ExchDocumentServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,99 @@
+/* ._outer .line {
+	margin: 0;
+}
+._wrapper {
+	width: 95%;
+}
+body._outer .line:hover {
+	background-color: transparent;
+}	 */
+
+.border {
+	border: 1px solid #000;
+}
+.borderleft {
+	border-left: 1px solid #000;
+}
+.bordertop {
+	border-top: 1px solid #000;
+}
+.line-to-cut {
+	border-left: 1px dashed #000;
+}
+.underline {
+	display: inline-block;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #000000;	
+}
+.ghi-chu {
+	line-height: 1.8em;
+}
+@media print {
+	
+	table {	
+	page-break-inside:avoid;
+	page-break-after:always;
+	border:solid #000 !important;
+    border-width:1px 0 0 1px !important;
+	}
+	
+	th {
+	
+    border:solid #000 !important;
+    border-width:0 1px 1px 0 !important;
+    border-top:1px solid black;width:1.5in;
+    border-left:1px solid black;width:1.5in;
+    border-right:1px solid black;width:1.5in;
+    border-bottom:1px solid black;width:1.5in;
+	}
+	
+	td {
+	
+    border:solid #000 !important;
+    border-width:0 1px 1px 0 !important;
+    border-top:1px solid black;width:1.5in;
+    border-left:1px solid black;width:1.5in;
+    border-right:1px solid black;width:1.5in;
+    border-bottom:1px solid black;width:1.5in;
+    margin-top: 20pt;
+	}
+	
+	._outer.preview label.egov-label {
+		font-size: 9pt;
+	}
+	 ._outer .item {
+		margin: 0;
+		line-height: 0.8em;
+	}
+	.sobiennhan {
+		margin-top: 1pt !important;
+	}
+	.septop5 {
+		margin-top: 3pt !important;
+	}
+	.septop10 {
+		margin-top: 5pt !important;
+	}
+	.septop20 {
+		margin-top: 10pt !important;
+	}
+	.sepbot10 {
+		margin-bottom: 5pt !important;
+	}
+	.border {
+		border: 1pt solid #000000;
+	}
+	.borderleft {
+		border-left: 1pt solid #000;
+	}
+	.bordertop {
+		border-top: 1pt solid #000;
+	}
+	.line-to-cut {
+		border-left: 1pt dashed #000;
+	}
+	.underline {
+		padding-bottom: 1pt;
+		border-bottom: 1pt solid #000000;	
+	}
+}

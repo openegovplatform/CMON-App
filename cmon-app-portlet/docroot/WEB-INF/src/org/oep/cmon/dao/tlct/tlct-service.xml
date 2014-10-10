@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.tlct">
+	<author>Liemnn</author>
+	<namespace>EGOV</namespace>
+
+	<entity name="TaiLieuChungThuc" local-service="true"
+		remote-service="false" table="CMON_NOILUUTRUTAILIEU" data-source="egovDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ten" db-name="TENTAILIEU" type="String" />
+		<column name="ghiChu" db-name="GHICHU" type="String" />
+		<column name="noiLuuTruId" db-name="NOILUUTRUID" type="long" />
+		<column name="ngayUpload" db-name="NGAYUPLOAD" type="Date" />
+		
+		<column name="phienBan" db-name="PHIENBAN" type="int" />
+		<column name="ngayDuyet" db-name="NGAYDUYET" type="Date" />
+		<column name="hieuLucTuNgay" db-name="HIEULUCTUNGAY" type="Date" />
+		<column name="hieuLucDenNgay" db-name="HIEULUCDENNGAY" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="danhMucGiayToId" db-name="DANHMUCGIAYTOID"  type="Long"  convert-null="false" />
+		
+		<column name="trangThai" db-name="TRANGTHAI" type="int" />
+		<column name="chuSohuuId" db-name="CHUSOHUUID"  type="Long"  convert-null="false"/>
+		<column name="nguoiUploadId" db-name="NGUOIUPLOADID" type="Long"  convert-null="false"/>
+		<column name="nguoiduyetId" db-name="NGUOIDUYETID" type="Long"  convert-null="false"/>
+		<column name="hoSoTTHCCId" db-name="HOSOTTHCCONGID" type="Long"  convert-null="false"/>
+		<column name="maUngDung" db-name="MAUNGDUNG" type="String" />
+		<column name="loai" db-name="LOAI" type="int" />
+		
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="phienBan" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="HosotthcCongIdAndLoai" return-type="Collection">
+			<finder-column name="hoSoTTHCCId" />
+			<finder-column name="loai" />
+		</finder>
+
+		<finder name="noiLuuTruId" return-type="TaiLieuChungThuc">
+			<finder-column name="noiLuuTruId" />
+		</finder>
+	<!-- 	<finder name="danhMucGiayToId" return-type="Collection">
+			<finder-column name="danhMucGiayToId" />
+		</finder>
+		<finder name="PhienBanMoiNhat" return-type="Collection">
+			<finder-column name="danhMucGiayToId" />	
+			<finder-column name="chuSohuuId" />
+			
+		</finder>
+		<finder name="PhienBan" return-type="TaiLieuChungThuc">
+			<finder-column name="danhMucGiayToId" />
+			<finder-column name="phienBan" />	
+			<finder-column name="nguoiUploadId" />
+			
+		</finder>
+		<finder name="HosotthcCongIdAndTen" return-type="TaiLieuChungThuc">
+			<finder-column name="hoSoTTHCCId" />
+			<finder-column name="ten" />
+		</finder>
+        <finder name="hosoId" return-type="Collection">
+            <finder-column name="hoSoTTHCCId"></finder-column>
+        </finder> -->
+		
+	</entity>
+	
+	<entity name="DanhMucGiayTo" local-service="true"
+		remote-service="false" table="CMON_DANHMUCGIAYTO"
+		 data-source="egovDataSource" cache-enabled="false">
+		 
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="mota" db-name="MOTA" type="String" />
+		<column name="gioiHanDungLuong" db-name="GIOIHANDUNGLUONG" type="long" />
+		<column name="kieuTaiLieu" db-name="KIEUTAILIEU" type="String" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="phienBan" db-name="PHIENBAN" type="long" />
+		<column name="tailieuThayTheId" db-name="THAYTHETAILIEUID" type="Long"  convert-null="false" />
+		
+		
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+	
+		<finder name="Ma" return-type="DanhMucGiayTo" where="daXoa = 0">
+			<finder-column name="ma" />
+		</finder>
+		
+        <finder name="ByMa" return-type="DanhMucGiayTo">
+            <finder-column name="ma"></finder-column>
+        </finder>
+        <finder name="TrangThai" return-type="Collection">
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+	
+	</entity>
+	<entity name="LichSuGiayToDinhKem" local-service="true"
+		remote-service="false" table="CMON_LICHSUGIAYTODINHKEM" data-source="egovDataSource">
+		<!--PK fields -->
+		<column name="id" type="long" db-name="ID" primary="true"/>
+		<!--Audit fields -->
+		<column name="giayToDinhKemHoSoId" db-name="GIAYTODINHKEMHOSOID" 	type="Long"  convert-null="false"/>
+		<column name="hanhDong" db-name="HANHDONG" type="int"/>
+		<column name="nguoiTao" db-name="NGUOITAO" type="String"/>
+		<column name="noiLuuTruTaiLieuId" db-name="NOILUUTRUTAILIEUID"		type="long"></column>
+		<column name="ngayTao" db-name="NGAYTAO" type="Date"/>
+		<column name="tenTaiLieu" db-name="TENTAILIEU" type="String"/>
+		
+        <order by="asc">
+            <order-column name="id" order-by="asc"/>
+        </order>
+        <finder name="ByGiayToDinhKemHoSoId" return-type="Collection">
+            <finder-column name="giayToDinhKemHoSoId"/>
+        </finder>
+        <finder name="ByNoiLuuTruTaiLieuId" return-type="Collection">
+            <finder-column name="noiLuuTruTaiLieuId"/>
+        </finder>
+	</entity>
+</service-builder>

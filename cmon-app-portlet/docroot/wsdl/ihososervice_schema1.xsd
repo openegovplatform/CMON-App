@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://hoso.provider.bpm.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://hoso.provider.bpm.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="addCapNhatKetQua" type="tns:addCapNhatKetQua"/>
+<xs:element name="addCapNhatKetQuaResponse" type="tns:addCapNhatKetQuaResponse"/>
+<xs:element name="addYKienTraoDoi" type="tns:addYKienTraoDoi"/>
+<xs:element name="addYKienTraoDoiResponse" type="tns:addYKienTraoDoiResponse"/>
+<xs:element name="capNhatTrangThaiHoSo" type="tns:capNhatTrangThaiHoSo"/>
+<xs:element name="capNhatTrangThaiHoSoResponse" type="tns:capNhatTrangThaiHoSoResponse"/>
+<xs:element name="getYKienTraoDoiTheoHoSoTTHCId" type="tns:getYKienTraoDoiTheoHoSoTTHCId"/>
+<xs:element name="getYKienTraoDoiTheoHoSoTTHCIdResponse" type="tns:getYKienTraoDoiTheoHoSoTTHCIdResponse"/>
+<xs:element name="getYKienTraoDoiTheoId" type="tns:getYKienTraoDoiTheoId"/>
+<xs:element name="getYKienTraoDoiTheoIdResponse" type="tns:getYKienTraoDoiTheoIdResponse"/>
+<xs:element name="updateCapNhatKetQua" type="tns:updateCapNhatKetQua"/>
+<xs:element name="updateCapNhatKetQuaResponse" type="tns:updateCapNhatKetQuaResponse"/>
+<xs:element name="updateYKienTraoDoi" type="tns:updateYKienTraoDoi"/>
+<xs:element name="updateYKienTraoDoiResponse" type="tns:updateYKienTraoDoiResponse"/>
+<xs:complexType name="addCapNhatKetQua">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:capNhatKetQuaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="capNhatKetQuaSoap">
+    <xs:sequence>
+      <xs:element name="banGhiId" type="xs:long"/>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="hanhDong" type="xs:int"/>
+      <xs:element name="hosoTTHCCId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="tenBang" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addCapNhatKetQuaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:capNhatKetQuaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateCapNhatKetQua">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:capNhatKetQuaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateCapNhatKetQuaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:capNhatKetQuaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getYKienTraoDoiTheoHoSoTTHCId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getYKienTraoDoiTheoHoSoTTHCIdResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="yKienTraoDoiSoap">
+    <xs:sequence>
+      <xs:element name="chaiId" type="xs:long"/>
+      <xs:element name="hoSoTTHCCongId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="nguoiGuiId" type="xs:long"/>
+      <xs:element name="nguoiNhanId" type="xs:long"/>
+      <xs:element minOccurs="0" name="noiDungYKien" type="xs:string"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="thoiGianGuiYKien" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tieuDe" type="xs:string"/>
+      <xs:element name="trangThai" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="capNhatTrangThaiHoSo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+      <xs:element name="arg2" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="capNhatTrangThaiHoSoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addYKienTraoDoi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addYKienTraoDoiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateYKienTraoDoi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateYKienTraoDoiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getYKienTraoDoiTheoId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getYKienTraoDoiTheoIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:yKienTraoDoiSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

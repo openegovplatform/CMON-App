@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="vn.dtt.dlms.dao.capgiaypheplaixe">
+	<author>AnhNT</author>
+	<namespace>dlms</namespace>
+
+
+	<entity name="CapGiayPhepLaiXe" local-service="true" remote-service="false"
+		table="DLMS_CAPGIAYPHEPLAIXE"  data-source="egovDataSource" cache-enabled="false">
+		
+		<column name="id" 							db-name="ID" 					type="long"  primary="true"/>
+		
+		<column name="idCoQuanQuanLy"             	db-name="COQUANQUANLYID"               type="long"   />
+		
+		<column name="idCongDan"             		db-name="CONGDANID"               type="long"   />
+		                                                          
+		<column name="idLoaiHoSo"                   db-name="LOAIHOSOID"                     type="long"/>
+		<column name="soHoSo"                    	db-name="SOHOSO"                      type="long"/>
+		
+		<column name="hoVaTen"                   	db-name="HOVATEN"                     type="String"/>
+		<column name="ngaySinh"                     db-name="NGAYSINH"                        type="Date"/>                                                           
+		<column name="idGioiTinh"                	db-name="GIOITINHID"                  type="long"/>
+		<column name="idQuocTich"                  	db-name="QUOCTICHID"                    type="long"/>
+		
+		<column name="soCMND"           			db-name="SOCMND"             		type="String"/>
+		<column name="ngayCapCMND"                	db-name="NGAYCAPCMND"                  type="Date"/>
+		<column name="idNoiCapCMND"               	db-name="NOICAPCMNDID"                 type="long"/>
+		
+		<column name="soHoChieu"              		db-name="SOHOCHIEU"               type="String"/>
+  		<column name="ngayCapHoChieu"                db-name="NGAYCAPHOCHIEU"                  type="Date"/>
+ 		<column name="noiCapHoChieu"                db-name="NOICAPHOCHIEU"                 type="long"/>
+		
+		<column name="dienThoai"            		db-name="DIENTHOAI"              	type="String"/>
+		<column name="email"                   		db-name="EMAIL"                     type="String"/>
+		<column name="ghiChu"  						db-name="GHICHU"    				type="String"/>
+		
+		<column name="idTinhThuongTru"              db-name="TINHTHUONGTRUID"                 type="long"/>
+		<column name="idHuyenThuongTru"             db-name="HUYENTHUONGTRUID"                 type="long"/>
+		<column name="idXaThuongTru"               	db-name="XATHUONGTRUID"                 type="long"/>
+		<column name="diaChiThuongTru"            	db-name="DIACHITHUONGTRU"                 type="String"/>
+		
+		<column name="idTinhCuTru"              	db-name="TINHCUTRUID"                 type="long"/>
+		<column name="idHuyenCuTru"             	db-name="HUYENCUTRUID"                 type="long"/>
+		<column name="idXaCuTru"               		db-name="XACUTRUID"                 type="long"/>
+		<column name="diaChiCuTru"            		db-name="DIACHICUTRU"                 type="String"/>
+		
+		<column name="soGiayPhepLaiXe"              db-name="SOGIAYPHEPLAIXE"                 type="String"/>
+		<column name="idHangGiayPhepLaiXe"          db-name="HANGGIAYPHEPLAIXEID"                 type="long"/>
+		<column name="idDonViCapGPLX"          		db-name="DONVICAPGPLXID"                 type="long"/>
+		
+		<column name="ngayCapGPLX"                	db-name="NGAYCAPGPLX"                  type="Date"/>
+		<column name="idNoiCapGPLX"               	db-name="NOICAPGPLXID"                 type="long"/>
+		<column name="ngayDauSatHach"               db-name="NGAYDAUSATHACH"                  type="Date"/>
+		
+		<column name="idNoiHocLaiXe"               	db-name="NOIHOCLAIXEID"                  type="long"/>
+		<column name="namHocLaiXe"               	db-name="NAMHOCLAIXE"                  type="int"/>
+		
+		<column name="namTrungTuyenHangCaoNhat"  	db-name="NAMTRUNGTUYENHANGCAONHAT"        type="int"/>
+		
+		<column name="lyDoHoc"              		db-name="LYDOHOC"                 type="String"/>
+		<column name="mucDichHoc"              		db-name="MUCDICHHOC"                 type="String"/>
+		
+		<column name="soNamLaiXe"              		db-name="SONAMLAIXE"                 type="double"/>
+		<column name="soKmLaiXe"              		db-name="SOKMLAIXE"                 type="double"/>
+		<column name="ngayTraGPLX"               	db-name="NGAYTRAGPLX"                  type="Date"/>
+		
+		<column name="idLyDoCapDoiLaiGPLX"          db-name="LYDOCAPDOILAIGPLXID"         type="long"/>
+		<column name="lyDo"          db-name="LYDO"         type="String"/>
+		
+		<column name="ngayTao"                      db-name="NGAYTAO"                 type="Date"/>
+		<column name="ngaySua"                      db-name="NGAYSUA"                 type="Date"/>
+		<column name="nguoiTao"                     db-name="NGUOITAO"                type="String"/>
+		<column name="nguoiSua"                     db-name="NGUOISUA"                type="String"/>
+		<column name="xoa"                          db-name="XOA"                     type="int"/>
+		
+	<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+		
+	</entity>
+			
+</service-builder>

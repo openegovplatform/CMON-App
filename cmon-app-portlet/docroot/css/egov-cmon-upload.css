@@ -1,0 +1,261 @@
+
+label.egov-label{
+	font-size: 14px;
+	font-style:normal;
+}
+label.egov-label-bold{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+label.egov-label-red{
+	font-size: 13px; 	
+	font-weight: bold;
+	color: red;
+}
+
+label.egov-message-error{
+	font-size: 14px;
+	font-weight: normal;
+	color: red;
+}
+label.egov-message-success{
+	font-size: 14px;
+	font-weight: normal;
+	color: green;
+}
+
+label.egov-label-note{
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+label.egov-label-header{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.egov-calendar{
+	border: 1px solid rgb(224,224,224);
+	padding:6px;
+	color:black;
+	font-style:normal;
+	margin:5px 5px 0 0;
+	font-size: 14px;
+	background:url(../images/ico-calendar.png) no-repeat right center;
+}
+
+.egov-calendar:focus{
+	border: 1px solid rgb(245,134,52);
+	
+}
+
+
+.egov-button{
+	padding:12px;
+	padding-left:12px;
+	padding-right:12px;
+	clear:both;
+	text-align:center;
+	margin:0 auto;
+	background:#f58634;
+	cursor:pointer;
+	color:#fff !important;
+	border:none;
+	font-weight:bold;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	font-size:15px;
+	text-transform:uppercase;
+	margin-right:8px;
+	text-shadow:0 0 #fff
+	
+}
+
+.egov-inputfield-search{
+	border: 1px solid rgb(224,224,224);
+	padding:6px 6px 6px 6px;
+	
+	color:black;
+	font-style:normal;
+	margin:0px 0px 0 0;
+	font-size: 14px;
+	height: 19px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	
+}
+.egov-inputfield-search:FOCUS{
+	border: 1px solid rgb(245,134,52);
+	
+}
+
+.egov-button-search{
+	background:url(../images/search.png) no-repeat;
+	width:35px;
+	height:36px;
+	
+	margin:0 auto;
+	cursor:pointer;
+	border:none;
+	font-weight:bold;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	 border-radius:1px;
+	 padding-bottom: 5px;
+	  
+	
+	
+}
+.egov-button:hover{
+	background:#48689a;
+}
+
+
+.egov-button-normal{
+	padding:7px;
+	clear:both;
+	text-align:center;
+	margin:0 auto;
+	background:#f58634;
+	cursor:pointer;
+	color:#fff !important;
+	border:none;
+	font-weight:bold;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	font-size:13px;
+	
+	text-shadow:0 0 #fff
+	
+}
+
+.egov-button-normal:hover{
+	background:#48689a;
+}
+
+span.egov-uploadfile{
+	background:url(../images/button_uploadphoto.png) no-repeat 0px 0;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	width:88px;
+	height:33px;
+	margin-right:10px
+}
+
+span.egov-uploadfile input{
+	opacity:0;filter:alpha(opacity=0);position:absolute;left:-538px;font-size:40px;cursor:pointer;
+}
+
+/**table for egov**/
+
+table.egov-table {
+	border-collapse:collapse;
+	text-align:center;
+	margin:0 auto;
+	
+	
+}
+table.egov-table th{
+	background:#5C677B;
+	color:#fff;
+	font-weight:bold;
+	border:1px solid #D3D3D3;
+	font: Tahoma, Helvetica, sans-serif;
+	font-size: 13px;
+	height: 30px;
+	text-align:center;
+}
+table.egov-table td{
+	border:1px solid #D3D3D3;
+	padding:5px 10px;
+	font: Tahoma, Helvetica, sans-serif;
+	font-size: 12px;
+}
+table.egov-table td a{
+	font-weight:normal !important;
+	text-decoration: none;
+}
+
+table.egov-table td a.bold{
+	font-weight:bold !important;
+	text-decoration: none;
+}
+table.egov-table td a:HOVER{
+	font-weight:normal !important;
+	color: #f58634;
+	text-decoration: underline;
+}
+table.egov-table td a.bold:HOVER{
+	font-weight:bold !important;
+	color: #f58634;
+	text-decoration: underline;
+}
+
+.uploadblock {
+	 	margin-top: 25px;
+}
+ .uploadblock  div strong {
+ 	width: 144px;
+ 	display: block;
+ 	float: left;
+ }
+
+ .uploadblock  div  {
+ 	clear: both;
+	line-height: 25px;
+ }
+ 
+.egov-button.upload {
+	height: 32px;
+	font-size: 14px;
+	width: 66px;
+	padding: 0;
+	text-transform: capitalize;
+	margin-top: 10px;
+}
+
+.container-uploadblock {
+	min-width: 500px;
+	font-size: 0.75em;
+	background: #e3ebed;
+	padding-left: 44px;
+}
+
+.form-container  {
+	min-width: 589px;
+	font-size: 0.75em;
+	padding: 36px;
+}
+
+.form-container div {
+	line-height: 37px;
+	clear: both;
+}
+
+.form-container div input[type='text'] {
+	line-height: 28px;
+	width: 221px;
+}
+
+ .form-container  div strong {
+	display: block;
+	float: left;
+	width: 183px;
+ }
+ 
+ .submit-result-popup {
+	line-height: 35px;
+	vertical-align: middle;
+	font-size: 14px;
+	border: 1px solid rgb(216, 213, 213);
+	background: antiquewhite;
+	margin-top: 15px;
+	text-align: center;
+	color: green;
+}
+ 

@@ -1,0 +1,231 @@
+/*----- wd-configuration-document -----*/
+#wd-configuration{min-width:600px;background:#fff;padding:15px;overflow:hidden}
+#wd-configuration ul{background:#e7e7e7;list-style:none;overflow:hidden}
+#wd-configuration ul li{float:left;font-weight:bold;font-size:18px;border-right:1px solid #e7e7e7}
+#wd-configuration ul.document-bg-ul{background:none}
+#wd-configuration ul li a.document-wd-title-form-01{color:#fff;background:#3a87cb;padding:11px 35px;display:block}
+#wd-configuration ul li a.document-wd-title-form-02{color:#b8b8b8;background:#e7e7e7;padding:11px 35px;display:block}
+#wd-configuration ul li a.document-wd-title-form-01:hover, #wd-configuration ul li a.document-wd-title-form-02:hover{color:#fff;background:#3a87cb}
+#wd-configuration .document-wd-configuration-document, #wd-configuration .document-wd-configuration-template{border:1px solid #cfcfcf}
+#wd-configuration .document-wd-head-line{padding:30px 20px 0 20px;overflow:hidden}
+#wd-configuration .document-wd-head-line p{float:left;color:#000;font-size:16px;font-weight:bold}
+#wd-configuration .document-wd-head-line .document-wd-fl-right{float:right;width:330px}
+#wd-configuration .document-wd-head-line .document-wd-fl-right a.wd-add-new{float:left;background:#f58634 url(../images/ico-add.png) no-repeat 7px 5px;border:1px solid #e16b13;padding:0 16px 2px 30px;font-size:14px;font-weight:bold;color:#fff;border-radius:3px;margin-right:6px}
+#wd-configuration .document-wd-head-line .document-wd-fl-right a.wd-add-new:hover{background-color:#73bf06;border:1px solid #65a010}
+#wd-configuration .wd-input select{width:206px;padding:4px;border:1px solid #CACACA}
+#wd-configuration .document-wd-configuration-table{padding:10px 20px}
+#wd-configuration .document-wd-configuration-table table{border-collapse:collapse;text-align:center;margin:0 auto;width:100%}
+#wd-configuration .document-wd-configuration-table table thead{background:#5C677B;color:#fff;font-size:11px;font-weight:bold;text-align:center}
+#wd-configuration .document-wd-configuration-table table tr td{border:1px solid #D3D3D3;padding:5px 10px}
+#wd-configuration .document-wd-configuration-table table tr td.document-wd-tl-left{text-align:left}
+#wd-configuration .document-wd-configuration-table table tr td a{background:url(../images/ico-modify-cancel.png) no-repeat;text-indent:-19999px;float:left;width:16px;height:16px;margin:3px 5px}
+#wd-configuration .document-wd-configuration-table table tr td a.wd-ico-modify{background-position:0 0;margin-left:12px}
+#wd-configuration .document-wd-configuration-table table tr td a.wd-ico-cancel{background-position:-17px 0}
+#wd-configuration .document-wd-configuration-table table tr td p.wd-bg-used{background:url(../images/bg-p-configuration.png) no-repeat;font-size:11px;color:#fff;width:83px;height:21px;display:block;line-height:21px;margin:0 auto}
+#wd-configuration .document-wd-configuration-table table tr td p.wd-used{background-position:0 0}
+#wd-configuration .document-wd-configuration-table table tr td p.wd-not-used{background-position:0 -23px}
+#wd-configuration .document-wd-paging {margin-top:5px}
+#wd-configuration .document-wd-paging .wd-page{padding:0 10px 0 6px}
+#wd-configuration .document-wd-paging{padding:4px 0;text-align:right;color:#000}
+#wd-configuration .document-wd-paging span{text-align:center;overflow:hidden;font-weight:bold}
+#wd-configuration .document-wd-paging a{color:#990000;text-decoration:none;font-weight:bold;padding:5px 11px 7px 11px}
+#wd-configuration .document-wd-paging .wd-next{background:url(../images/arrow-paging.png) no-repeat -29px 1px}
+#wd-configuration .document-wd-paging span.wd-prev {background:url(../images/arrow-paging.png) no-repeat;padding:4px 13px 7px 13px}
+/*----- wd-fancy-configuration-document -----*/
+#wd-fancy-configuration-document{border:4px solid #3c4a64;width:643px;background:#fff;border-radius:7px}
+#wd-fancy-configuration-document h2{padding:15px 15px;background:#333f57;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold}
+#wd-fancy-configuration-document fieldset{width:643px;margin:0 auto;padding:30px 0 10px 0}
+#wd-fancy-configuration-document fieldset p.wd-pd-left{padding-left:50px;padding-bottom:10px;font-size:14px;font-weight:bold}
+#wd-fancy-configuration-document fieldset .wd-input{clear:both;padding:4px 0;position:relative;overflow:hidden}
+#wd-fancy-configuration-document fieldset .wd-input label{float:left;padding:4px 10px;font-weight:bold;font-size:12px;width:155px;text-align:right}
+#wd-fancy-configuration-document fieldset .wd-input input{padding:8px;border:1px solid #cacaca;font-size:14px}
+#wd-fancy-configuration-document fieldset .wd-input input.wd-input-document{width:340px}
+#wd-fancy-configuration-document fieldset .wd-input input.wd-input-id{width:175px}
+#wd-fancy-configuration-document fieldset .wd-input span.wd-remarks{font-size:12px;color:#000;font-style:italic}
+#wd-fancy-configuration-document fieldset .wd-input select{padding:6px 5px;width:193px;border:1px solid #CACACA}
+#wd-fancy-configuration-document fieldset .wd-input div.wd-arrow-table{position:absolute;top:40%;left:379px;background:url(../images/arrow-table.png) no-repeat center center;width:31px;height:23px}
+#wd-fancy-configuration-document fieldset .wd-input table{border-collapse:collapse;border:1px solid #cacaca;float:left;width:193px;position:relative}
+#wd-fancy-configuration-document fieldset .wd-input table.wd-table-left{margin-right:50px}
+#wd-fancy-configuration-document fieldset .wd-input table tr td{border:1px solid #cacaca;font-size:11px;padding:0 0 0 6px}
+#wd-fancy-configuration-document fieldset .wd-input table tr td p.wd-arrow{position:relative !important;float:right;width:12px;height:24px}
+#wd-fancy-configuration-document fieldset .wd-input table tr td span.wd-fw-bold{font-weight:bold}
+#wd-fancy-configuration-document fieldset .wd-input table tr td.wd-tl-center{text-align:center;padding:0}
+#wd-fancy-configuration-document fieldset .wd-input table tr td input[type=checkbox]{float:left;border:none;margin:6px 4px 2px 0px;padding:0}
+#wd-fancy-configuration-document fieldset .wd-input table tr td a.wd-arrrow-up, #wd-fancy-configuration-document fieldset .wd-input table tr td a.wd-arrrow-down{background:url(../images/arrow-up-down-table.png) no-repeat;position:absolute;text-indent:-19999px;width:9px;height:5px}
+#wd-fancy-configuration-document fieldset .wd-input table tr td a.wd-arrrow-up{background-position:0 0;top:4px;right:5px}
+#wd-fancy-configuration-document fieldset .wd-input table tr td a.wd-arrrow-down{background-position:0 -11px;bottom:4px;right:5px}
+#wd-fancy-configuration-document fieldset label span{font-weight:normal}
+#wd-fancy-configuration-document fieldset .wd-submit{padding:18px 0;text-align:center}
+#wd-fancy-configuration-document fieldset .wd-submit .wd-button{background:#f58634;cursor:pointer;color:#fff !important;text-transform:uppercase;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;padding:10px 10px;width:145px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-fancy-configuration-document fieldset .wd-submit .wd-button:hover{background:#48689a}
+#wd-fancy-configuration-document fieldset .wd-submit .wd-button-reset{width:115px;margin:0 !important}
+/*----- wd-configuration-template -----*/
+#wd-configuration .document-wd-configuration-table table tr td.document-wd-list-file p{font-size:11px;line-height:15px}
+/*----- wd-fancy-configuration-template -----*/
+#wd-fancy-configuration-template{border:4px solid #3c4a64;width:643px;background:#fff;border-radius:7px}
+#wd-fancy-configuration-template h2{padding:15px 15px;background:#333f57;text-transform:uppercase;color:#fff;font-size:18px;font-weight:bold}
+#wd-fancy-configuration-template fieldset{width:643px;margin:0 auto;padding:30px 0 10px 0}
+#wd-fancy-configuration-template fieldset p.wd-pd-left{padding-left:50px;padding-bottom:10px;font-size:14px;font-weight:bold}
+#wd-fancy-configuration-template fieldset .wd-input{clear:both;padding:4px 0;position:relative;overflow:hidden}
+#wd-fancy-configuration-template fieldset .wd-input label{float:left;padding:4px 10px;font-weight:bold;font-size:12px;width:155px;text-align:right}
+#wd-fancy-configuration-template fieldset .wd-input input{padding:8px;border:1px solid #cacaca;font-size:14px}
+#wd-fancy-configuration-template fieldset .wd-input input.wd-input-template{width:340px}
+#wd-fancy-configuration-template fieldset .wd-input input.wd-input-id{width:175px}
+#wd-fancy-configuration-template fieldset .wd-input select{padding:6px 5px;width:193px;border:1px solid #CACACA}
+#wd-fancy-configuration-template fieldset .wd-input div.wd-arrow-table{position:absolute;top:40%;left:379px;background:url(../images/arrow-table.png) no-repeat center center;width:31px;height:23px}
+#wd-fancy-configuration-template fieldset .wd-input table{border-collapse:collapse;border:1px solid #cacaca;float:left;width:193px;position:relative}
+#wd-fancy-configuration-template fieldset .wd-input table.wd-table-left{margin-right:50px}
+#wd-fancy-configuration-template fieldset .wd-input table tr td{border:1px solid #cacaca;font-size:11px;padding:0 0 0 6px}
+#wd-fancy-configuration-template fieldset .wd-input table tr td p.wd-arrow{position:relative !important;float:right;width:12px;height:24px}
+#wd-fancy-configuration-template fieldset .wd-input table tr td span.wd-fw-bold{font-weight:bold}
+#wd-fancy-configuration-template fieldset .wd-input table tr td.wd-tl-center{text-align:center;padding:0}
+#wd-fancy-configuration-template fieldset .wd-input table tr td input[type=checkbox]{float:left;border:none;margin:6px 4px 2px 0px;padding:0}
+#wd-fancy-configuration-template fieldset .wd-input table tr td a.wd-arrrow-up, #wd-fancy-configuration-template fieldset .wd-input table tr td a.wd-arrrow-down{background:url(../images/arrow-up-down-table.png) no-repeat;position:absolute;text-indent:-19999px;width:9px;height:5px}
+#wd-fancy-configuration-template fieldset .wd-input table tr td a.wd-arrrow-up{background-position:0 0;top:4px;right:5px}
+#wd-fancy-configuration-template fieldset .wd-input table tr td a.wd-arrrow-down{background-position:0 -11px;bottom:4px;right:5px}
+#wd-fancy-configuration-template fieldset label span{font-weight:normal}
+#wd-fancy-configuration-template fieldset .wd-submit{padding:18px 0;text-align:center}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button{background:#f58634;cursor:pointer;color:#fff !important;text-transform:uppercase;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;padding:10px 10px;width:145px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button:hover{background:#48689a}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button-reset{width:115px;margin:0 !important}
+/*----- fancybox -----*/
+#fancybox-content{border:none !important;padding:0 !important}
+#fancybox-outer{background:none !important}
+#fancybox-close{background:url(../images/fancybox-change-pass-close.png) no-repeat !important;top:19px !important;right:32px !important;width:21px !important;height:21px !important}
+#fancybox-wrap{z-index:2200}
+/*----- wd-document-list -----*/
+#wd-configuration .document-wd-document-list{border:1px solid #cfcfcf}
+#wd-configuration .document-wd-document-list p.wd-my-document{display:block;float:none;padding-bottom:10px}
+#wd-configuration .document-wd-document-list .document-wd-search{background:url(../images/bg-search-document.png) no-repeat;float:left;width:237px;height:27px;padding:1px;overflow:hidden}
+#wd-configuration .document-wd-document-list .document-wd-search .wd-input{float:left}
+#wd-configuration .document-wd-document-list .document-wd-search input{border:none !important;padding:5px 0 3px 5px;width:199px;background:none}
+#wd-configuration .document-wd-document-list .document-wd-search .wd-submit input{font-size:0;width:28px;height:26px;opacity:0;cursor:pointer;float:right}
+#wd-configuration .document-wd-document-list .document-wd-head-line .document-wd-fl-right{width:312px}
+#wd-configuration .document-wd-document-list .document-wd-head-line .document-wd-fl-right a.wd-add-new{background:#f58634 url(../images/arrow-upload-document.png) no-repeat 8px center;padding:0 16px 2px 33px}
+#wd-configuration .document-wd-document-list .document-wd-head-line .document-wd-fl-right a.wd-add-new:hover{background-color:#73bf06;border:1px solid #65a010}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td p.wd-bg-used, #wd-configuration .document-wd-document-history .document-wd-document-table table tr td p.wd-bg-used, #wd-configuration .document-wd-manager-table table tr td p.wd-bg-used{background:url(../images/bg-status-document-list.png) no-repeat;width:106px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td p.wd-bg-green, #wd-configuration .document-wd-document-history .document-wd-document-table table tr td p.wd-bg-green, #wd-configuration .document-wd-manager-table table tr td p.wd-bg-green{background-position:0 0}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td p.wd-bg-red, #wd-configuration .document-wd-manager-table table tr td p.wd-bg-red{background-position:0 -23px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td p.wd-bg-gray, #wd-configuration .document-wd-manager-table table tr td p.wd-bg-gray{background-position:0 -46px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td p.wd-bg-blue, #wd-configuration .document-wd-document-history .document-wd-document-table table tr td p.wd-bg-blue, #wd-configuration .document-wd-manager-table table tr td p.wd-bg-blue{background-position:0 -69px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td a.wd-ico-upload, #wd-configuration .document-wd-document-history .document-wd-document-table table tr td a.wd-ico-upload, #wd-configuration .document-wd-manager-profile-list .document-wd-manager-table table tr td a.wd-ico-upload{background-position:0 -16px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td a.wd-ico-history, #wd-configuration .document-wd-document-history .document-wd-document-table table tr td a.wd-ico-history, #wd-configuration .document-wd-manager-profile-list .document-wd-manager-table table tr td a.wd-ico-history{background-position:-24px -16px}
+#wd-configuration .document-wd-document-list .document-wd-document-table table tr td a.wd-ico-modify{margin-left:5px}
+/*fancy*/
+#wd-fancy-configuration-template.wd-fancy-document-list fieldset{width:580px !important;padding-top:20px}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input{float:left;clear:none !important;margin-right:20px;overflow:hidden}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input .wd-input-file{height:25px;width:320px !important}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input select{padding:4px 5px;width:193px;border:1px solid #CACACA}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input label{float:none !important;width:180px !important;display:block;text-align:left;padding:4px 0}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input.wd-input-select{padding-top:10px}
+#wd-fancy-configuration-template.wd-fancy-document-list .wd-input p.wd-suggestion{font-size:12px;width:318px;background:#fbf1d4;border:1px solid #e0d3ae;padding:5px 10px;margin-top:5px;line-height:15px}
+/*----- wd-document-history -----*/
+#wd-configuration .document-wd-document-history, #wd-configuration .document-wd-manager-profile{border:1px solid #cfcfcf;overflow:hidden}
+#wd-configuration .document-wd-document-history p.wd-my-document, #wd-configuration .document-wd-manager-profile p.wd-my-document{padding:10px 0 0 20px;color:#000;font-size:16px;font-weight:bold}
+#wd-configuration .document-wd-document-history .document-wd-document-table table tr td a.wd-ico-upload{margin-left:12px}
+#wd-configuration .document-wd-document-history .document-wd-back{color:#629d06;background:(../images/) no-repeat;float:left;padding:2px 0;font-size:14px}
+#wd-configuration .document-wd-document-history .document-wd-back:hover{color:#f9990d}
+/*----- wd-manager-profile -----*/
+#wd-configuration .document-wd-manager-profile{padding:20px}
+#wd-configuration .document-wd-manager-profile p.wd-my-document{padding-bottom:20px;float:none}
+#wd-configuration .document-wd-manager-profile a.img-manager{float:left;margin-left:45px;text-align:center}
+#wd-configuration .document-wd-manager-profile a.img-manager span{font-weight:bold;color:#000}
+#wd-configuration .document-wd-manager-profile a.img-manager:hover span{color:#f58635}
+#wd-configuration .document-wd-manager-profile img.img-manager-proflie-01, #wd-configuration .document-wd-manager-profile img.img-manager-proflie-02{display:block;border:1px solid #cacaca;padding:10px;margin-bottom:10px;border-radius:10px}
+#wd-configuration .document-wd-manager-profile img.img-manager-proflie-01:hover, #wd-configuration .document-wd-manager-profile img.img-manager-proflie-02:hover{border:1px solid #f58635;cursor:pointer}
+/*----- wd-manager -----*/
+#wd-configuration .document-wd-manager-profile-list{padding:0}
+#wd-configuration .document-wd-manager-profile-list p.wd-my-document{padding-bottom:20px;padding-left:0;float:none}
+#wd-configuration .document-wd-manager-profile-list p.wd-my-document span{font-size:19px}
+#wd-configuration .document-wd-manager-profile-list .document-wd-head-line{padding-top:10px}
+#wd-configuration .document-wd-manager-profile-list .document-wd-head-line .document-wd-fl-right{float:right;width:207px}
+#wd-configuration .document-wd-manager-profile-list .document-wd-search{background:url(../images/bg-search-document.png) no-repeat;float:left;width:237px;height:27px;padding:1px;overflow:hidden}
+#wd-configuration .document-wd-manager-profile-list .document-wd-search .wd-input{float:left}
+#wd-configuration .document-wd-manager-profile-list .document-wd-search input{border:none !important;padding:5px 0 3px 5px;width:199px;background:none;font-size:12px}
+#wd-configuration .document-wd-manager-profile-list .document-wd-search .wd-submit input{font-size:0;width:28px;height:26px;opacity:0;cursor:pointer;float:right}
+#wd-configuration .document-wd-manager-profile-list .document-wd-manager-table table tr td a{margin:0 5px}
+#wd-configuration .document-wd-manager-profile-list .document-wd-manager-table table tr td a.wd-ico-check{background-position:0 -32px}
+/*----- wd-fancy-document -----*/
+.wd-fancy-document fieldset p.wd-pd-left{padding-left:1px !important;padding-bottom:0px !important;overflow:hidden}
+.wd-fancy-document fieldset p.wd-pd-left span{padding:4px 0;font-size:17px;display:block}
+.wd-fancy-document fieldset p.wd-fw-normal label{font-size:12px}
+.wd-fancy-document fieldset p.wd-fw-normal span{font-size:14px;font-weight:normal}
+.wd-fancy-document fieldset label{float:left;padding:4px 10px;font-weight:bold;font-size:14px;width:155px;text-align:right}
+.wd-fancy-document fieldset .wd-input textarea{width:372px !important;height:100px !important;padding:4px;border:1px solid #cacaca}
+.wd-fancy-document fieldset .wd-input span.wd-span-datetime{padding:0 3px 0 8px;font-size:12px;font-weight:bold}
+/*----- wd-add-new-template -----*/
+#wd-add-new-template .wd-list-item{list-style:none;overflow:hidden;z-index:10;position:relative;border:1px solid #dedede;border-bottom:none;border-left:none}
+#wd-add-new-template .wd-list-item li{float:left;background:url(../images/bg-citizen-tab.png) repeat-x;width:50%}
+#wd-add-new-template .wd-list-item li a{font-weight:bolder;padding:10px 58px;color:#9b9b9b;font-size:15px;display:block;text-align:center}
+#wd-add-new-template .wd-list-item li a.wd-current,#wd-add-new-template .wd-list-item li a:hover{background:url(../images/bg-citizen-tab-hover.png) repeat-x;border:1px solid #dedede;border-top:none;border-bottom:none;border-left:none;border-right:none;color:#000}
+#wd-add-new-template .wd-list-item li a.wd-current{border-right:1px solid #dedede;border-left:1px solid #dedede}
+#wd-add-new-template .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff}
+#wd-add-new-template fieldset{padding:10px 56px;border:1px solid #dedede}
+#wd-add-new-template fieldset p.wd-pd-left{text-align:left;color:#000;font-size:14px;font-weight:bold;padding:15px 0 5px 0;margin:0}
+#wd-add-new-template fieldset label{color:#010101;font-size:14px;display:block;padding:10px 0 4px 0;line-height:22px;margin:0 !important}
+#wd-add-new-template fieldset input[type=text]{border:1px solid #e0e0e0;width:345px;padding:10px;border-radius:3px}
+#wd-add-new-template fieldset input[type=text]:focus{border:1px solid #f58634}
+#wd-add-new-template fieldset select{border:1px solid #e0e0e0;padding:9px;width:366px;border-radius:3px}
+#wd-add-new-template fieldset .wd-submit{padding:18px 0}
+#wd-add-new-template fieldset .wd-button{background:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;text-transform:uppercase;padding:13px 10px;width:186px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-add-new-template fieldset .wd-button:hover{background:#48689a}
+#wd-add-new-template{background:#fff;margin:56px auto;width:869px;font-family:Tahoma}
+#wd-add-new-template fieldset{padding:10px 56px;border:1p solid #dedede}
+#wd-add-new-template fieldset .wd-submit{width:187px;margin:13px auto}
+#wd-add-new-template .wd-add-new-template-content .wd-small-select{padding-top:10px}
+#wd-add-new-template .wd-add-new-template-content .wd-small-select .wd-input{padding-bottom:25px}
+#wd-add-new-template .wd-add-new-template-content .wd-small-select label{float:left;padding:5px 6px 5px 0}
+#wd-add-new-template .wd-add-new-template-content .wd-small-select select{width:348px}
+#wd-add-new-template .wd-add-new-template-content .wd-input{overflow:hidden;position:relative;float:left;padding-right:20px}
+#wd-add-new-template .wd-add-new-template-content .wd-input-2{overflow:hidden;width:367px;float:left;padding-right:20px}
+#wd-add-new-template .wd-add-new-template-content .wd-input-2 .wd-input input[type=text]{width:95px}
+#wd-add-new-template .wd-add-new-template-content .wd-input-3 .wd-input input[type=text]{width:170px}
+
+/*----- wd-add-new-document -----*/
+#wd-add-new-document .wd-list-item{list-style:none;overflow:hidden;z-index:10;position:relative;border:1px solid #dedede;border-bottom:none;border-left:none}
+#wd-add-new-document .wd-list-item li{float:left;background:url(../images/bg-citizen-tab.png) repeat-x;width:50%}
+#wd-add-new-document .wd-list-item li a{font-weight:bolder;padding:10px 58px;color:#9b9b9b;font-size:15px;display:block;text-align:center}
+#wd-add-new-document .wd-list-item li a.wd-current,#wd-add-new-document .wd-list-item li a:hover{background:url(../images/bg-citizen-tab-hover.png) repeat-x;border:1px solid #dedede;border-top:none;border-bottom:none;border-left:none;border-right:none;color:#000}
+#wd-add-new-document .wd-list-item li a.wd-current{border-right:1px solid #dedede;border-left:1px solid #dedede}
+#wd-add-new-document .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff}
+#wd-add-new-document fieldset{padding:10px 56px;border:1px solid #dedede}
+#wd-add-new-document fieldset p.wd-pd-left{text-align:left;color:#000;font-size:14px;font-weight:bold;padding:15px 0 5px 0;margin:0}
+#wd-add-new-document fieldset label{color:#010101;font-size:14px;display:block;padding:10px 0 4px 0;line-height:22px;margin:0 !important}
+#wd-add-new-document fieldset label em{font-size:12px}
+#wd-add-new-document fieldset input[type=text]{border:1px solid #e0e0e0;width:345px;padding:10px;border-radius:3px}
+#wd-add-new-document fieldset input[type=text]:focus{border:1px solid #f58634}
+#wd-add-new-document fieldset select{border:1px solid #e0e0e0;padding:9px;width:366px;border-radius:3px}
+#wd-add-new-document fieldset .wd-submit{padding:18px 0}
+#wd-add-new-document fieldset .wd-button{background:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;text-transform:uppercase;padding:10px;width:155px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-add-new-document fieldset .wd-button:hover{background:#48689a}
+#wd-add-new-document{background:#fff;margin:56px auto;width:869px;font-family:Tahoma}
+#wd-add-new-document fieldset{padding:10px 56px;border:1p solid #dedede}
+#wd-add-new-document fieldset .wd-submit{width:187px;margin:13px auto}
+#wd-add-new-document .wd-add-new-document-content .wd-small-select{padding-top:10px}
+#wd-add-new-document .wd-add-new-document-content .wd-small-select .wd-input{padding-bottom:25px}
+#wd-add-new-document .wd-add-new-document-content .wd-small-select label{float:left;padding:5px 6px 5px 0}
+#wd-add-new-document .wd-add-new-document-content .wd-small-select select{width:348px}
+#wd-add-new-document .wd-add-new-document-content .wd-input{overflow:hidden;position:relative;float:left;padding-right:20px}
+#wd-add-new-document .wd-add-new-document-content .wd-input p em{padding-left:15px}
+#wd-add-new-document .wd-add-new-document-content .wd-input-2{overflow:hidden;width:367px;float:left;padding-right:20px}
+#wd-add-new-document .wd-add-new-document-content .wd-input-2 .wd-input input[type=text]{width:95px}
+#wd-add-new-document .wd-add-new-document-content .wd-input-3 .wd-input input[type=text]{width:170px}
+#wd-add-new-document fieldset .wd-input table{border-collapse:collapse;border:1px solid #cacaca;width:193px;position:relative;margin-top:10px}
+#wd-add-new-document fieldset .wd-input table tr td{border:1px solid #cacaca;font-size:11px;padding:0 0 0 6px}
+#wd-add-new-document fieldset .wd-input table tr td p.wd-arrow{position:relative !important;float:right;width:12px;height:24px}
+#wd-add-new-document fieldset .wd-input table tr td span.wd-fw-bold{font-weight:bold}
+#wd-add-new-document fieldset .wd-input table tr td.wd-tl-center{text-align:center;padding:0}
+#wd-add-new-document fieldset .wd-input table tr td input[type=checkbox]{float:left;border:none;margin:6px 4px 2px 0px;padding:0}
+
+
+.fpadding-right{padding-right:0 !important}
+.fpadding-bottom{padding-bottom:19px}
+.wd-group-input{overflow:hidden;}
+.document-wd-calendar{background:url(../images/ico-calendar.png) no-repeat right center}
+/*----- datepicker -----*/
+.ui-datepicker{font-size:12px !important;z-index:2300}
+.ui-datepicker th,.ui-datepicker .ui-datepicker-buttonpane{padding:0 !important;margin:0 !important}
+.ui-datepicker td span, .ui-datepicker td a{padding:1px !important}
+.ui-icon{background:url(../images/ui-icons_ffffff_256x240.png) no-repeat !important}
+.ui-icon-circle-triangle-w{background-position:-80px -193px !important}
+.ui-icon-circle-triangle-e{background-position:-48px -193px !important}

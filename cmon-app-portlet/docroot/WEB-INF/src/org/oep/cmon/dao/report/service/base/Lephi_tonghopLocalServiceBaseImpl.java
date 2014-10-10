@@ -1,0 +1,1323 @@
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package org.oep.cmon.dao.report.service.base;
+
+import com.liferay.counter.service.CounterLocalService;
+
+import com.liferay.portal.kernel.bean.BeanReference;
+import com.liferay.portal.kernel.bean.IdentifiableBean;
+import com.liferay.portal.kernel.dao.jdbc.SqlUpdate;
+import com.liferay.portal.kernel.dao.jdbc.SqlUpdateFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.search.Indexer;
+import com.liferay.portal.kernel.search.IndexerRegistryUtil;
+import com.liferay.portal.kernel.search.SearchException;
+import com.liferay.portal.kernel.util.OrderByComparator;
+import com.liferay.portal.model.PersistedModel;
+import com.liferay.portal.service.PersistedModelLocalServiceRegistryUtil;
+import com.liferay.portal.service.ResourceLocalService;
+import com.liferay.portal.service.ResourceService;
+import com.liferay.portal.service.UserLocalService;
+import com.liferay.portal.service.UserService;
+import com.liferay.portal.service.persistence.ResourcePersistence;
+import com.liferay.portal.service.persistence.UserPersistence;
+
+import org.oep.cmon.dao.report.model.Lephi_tonghop;
+import org.oep.cmon.dao.report.service.BaocaochitietLocalService;
+import org.oep.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalService;
+import org.oep.cmon.dao.report.service.CongChuc2RoleLocalService;
+import org.oep.cmon.dao.report.service.DanhMucBaoCaoLocalService;
+import org.oep.cmon.dao.report.service.DanhMucRoleLocalService;
+import org.oep.cmon.dao.report.service.Lephi_chitietLocalService;
+import org.oep.cmon.dao.report.service.Lephi_linhvucLocalService;
+import org.oep.cmon.dao.report.service.Lephi_tonghopLocalService;
+import org.oep.cmon.dao.report.service.ReportThongKeLocalService;
+import org.oep.cmon.dao.report.service.ReportTongHopChiTietLocalService;
+import org.oep.cmon.dao.report.service.ReportTongHopLocalService;
+import org.oep.cmon.dao.report.service.Role2BaoCaoLocalService;
+import org.oep.cmon.dao.report.service.Role2DonViBaoCaoLocalService;
+import org.oep.cmon.dao.report.service.Role2NhomTTHCLocalService;
+import org.oep.cmon.dao.report.service.Role2TTHCLocalService;
+import org.oep.cmon.dao.report.service.persistence.BaocaochitietFinder;
+import org.oep.cmon.dao.report.service.persistence.BaocaochitietPersistence;
+import org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucFinder;
+import org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucPersistence;
+import org.oep.cmon.dao.report.service.persistence.CongChuc2RoleFinder;
+import org.oep.cmon.dao.report.service.persistence.CongChuc2RolePersistence;
+import org.oep.cmon.dao.report.service.persistence.DanhMucBaoCaoPersistence;
+import org.oep.cmon.dao.report.service.persistence.DanhMucRolePersistence;
+import org.oep.cmon.dao.report.service.persistence.Lephi_chitietFinder;
+import org.oep.cmon.dao.report.service.persistence.Lephi_chitietPersistence;
+import org.oep.cmon.dao.report.service.persistence.Lephi_linhvucPersistence;
+import org.oep.cmon.dao.report.service.persistence.Lephi_tonghopPK;
+import org.oep.cmon.dao.report.service.persistence.Lephi_tonghopPersistence;
+import org.oep.cmon.dao.report.service.persistence.ReportThongKeFinder;
+import org.oep.cmon.dao.report.service.persistence.ReportThongKePersistence;
+import org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietFinder;
+import org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietPersistence;
+import org.oep.cmon.dao.report.service.persistence.ReportTongHopFinder;
+import org.oep.cmon.dao.report.service.persistence.ReportTongHopPersistence;
+import org.oep.cmon.dao.report.service.persistence.Role2BaoCaoPersistence;
+import org.oep.cmon.dao.report.service.persistence.Role2DonViBaoCaoPersistence;
+import org.oep.cmon.dao.report.service.persistence.Role2NhomTTHCPersistence;
+import org.oep.cmon.dao.report.service.persistence.Role2TTHCPersistence;
+
+import java.io.Serializable;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+/**
+ * The base implementation of the lephi_tonghop local service.
+ *
+ * <p>
+ * This implementation exists only as a container for the default service methods generated by ServiceBuilder. All custom service methods should be put in {@link org.oep.cmon.dao.report.service.impl.Lephi_tonghopLocalServiceImpl}.
+ * </p>
+ *
+ * @author VIENPN
+ * @see org.oep.cmon.dao.report.service.impl.Lephi_tonghopLocalServiceImpl
+ * @see org.oep.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil
+ * @generated
+ */
+public abstract class Lephi_tonghopLocalServiceBaseImpl
+	implements Lephi_tonghopLocalService, IdentifiableBean {
+	/*
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never modify or reference this class directly. Always use {@link org.oep.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil} to access the lephi_tonghop local service.
+	 */
+
+	/**
+	 * Adds the lephi_tonghop to the database. Also notifies the appropriate model listeners.
+	 *
+	 * @param lephi_tonghop the lephi_tonghop
+	 * @return the lephi_tonghop that was added
+	 * @throws SystemException if a system exception occurred
+	 */
+	public Lephi_tonghop addLephi_tonghop(Lephi_tonghop lephi_tonghop)
+		throws SystemException {
+		lephi_tonghop.setNew(true);
+
+		lephi_tonghop = lephi_tonghopPersistence.update(lephi_tonghop, false);
+
+		Indexer indexer = IndexerRegistryUtil.getIndexer(getModelClassName());
+
+		if (indexer != null) {
+			try {
+				indexer.reindex(lephi_tonghop);
+			}
+			catch (SearchException se) {
+				if (_log.isWarnEnabled()) {
+					_log.warn(se, se);
+				}
+			}
+		}
+
+		return lephi_tonghop;
+	}
+
+	/**
+	 * Creates a new lephi_tonghop with the primary key. Does not add the lephi_tonghop to the database.
+	 *
+	 * @param lephi_tonghopPK the primary key for the new lephi_tonghop
+	 * @return the new lephi_tonghop
+	 */
+	public Lephi_tonghop createLephi_tonghop(Lephi_tonghopPK lephi_tonghopPK) {
+		return lephi_tonghopPersistence.create(lephi_tonghopPK);
+	}
+
+	/**
+	 * Deletes the lephi_tonghop with the primary key from the database. Also notifies the appropriate model listeners.
+	 *
+	 * @param lephi_tonghopPK the primary key of the lephi_tonghop
+	 * @throws PortalException if a lephi_tonghop with the primary key could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	public void deleteLephi_tonghop(Lephi_tonghopPK lephi_tonghopPK)
+		throws PortalException, SystemException {
+		Lephi_tonghop lephi_tonghop = lephi_tonghopPersistence.remove(lephi_tonghopPK);
+
+		Indexer indexer = IndexerRegistryUtil.getIndexer(getModelClassName());
+
+		if (indexer != null) {
+			try {
+				indexer.delete(lephi_tonghop);
+			}
+			catch (SearchException se) {
+				if (_log.isWarnEnabled()) {
+					_log.warn(se, se);
+				}
+			}
+		}
+	}
+
+	/**
+	 * Deletes the lephi_tonghop from the database. Also notifies the appropriate model listeners.
+	 *
+	 * @param lephi_tonghop the lephi_tonghop
+	 * @throws SystemException if a system exception occurred
+	 */
+	public void deleteLephi_tonghop(Lephi_tonghop lephi_tonghop)
+		throws SystemException {
+		lephi_tonghopPersistence.remove(lephi_tonghop);
+
+		Indexer indexer = IndexerRegistryUtil.getIndexer(getModelClassName());
+
+		if (indexer != null) {
+			try {
+				indexer.delete(lephi_tonghop);
+			}
+			catch (SearchException se) {
+				if (_log.isWarnEnabled()) {
+					_log.warn(se, se);
+				}
+			}
+		}
+	}
+
+	/**
+	 * Performs a dynamic query on the database and returns the matching rows.
+	 *
+	 * @param dynamicQuery the dynamic query
+	 * @return the matching rows
+	 * @throws SystemException if a system exception occurred
+	 */
+	@SuppressWarnings("rawtypes")
+	public List dynamicQuery(DynamicQuery dynamicQuery)
+		throws SystemException {
+		return lephi_tonghopPersistence.findWithDynamicQuery(dynamicQuery);
+	}
+
+	/**
+	 * Performs a dynamic query on the database and returns a range of the matching rows.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	 * </p>
+	 *
+	 * @param dynamicQuery the dynamic query
+	 * @param start the lower bound of the range of model instances
+	 * @param end the upper bound of the range of model instances (not inclusive)
+	 * @return the range of matching rows
+	 * @throws SystemException if a system exception occurred
+	 */
+	@SuppressWarnings("rawtypes")
+	public List dynamicQuery(DynamicQuery dynamicQuery, int start, int end)
+		throws SystemException {
+		return lephi_tonghopPersistence.findWithDynamicQuery(dynamicQuery,
+			start, end);
+	}
+
+	/**
+	 * Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	 * </p>
+	 *
+	 * @param dynamicQuery the dynamic query
+	 * @param start the lower bound of the range of model instances
+	 * @param end the upper bound of the range of model instances (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching rows
+	 * @throws SystemException if a system exception occurred
+	 */
+	@SuppressWarnings("rawtypes")
+	public List dynamicQuery(DynamicQuery dynamicQuery, int start, int end,
+		OrderByComparator orderByComparator) throws SystemException {
+		return lephi_tonghopPersistence.findWithDynamicQuery(dynamicQuery,
+			start, end, orderByComparator);
+	}
+
+	/**
+	 * Returns the number of rows that match the dynamic query.
+	 *
+	 * @param dynamicQuery the dynamic query
+	 * @return the number of rows that match the dynamic query
+	 * @throws SystemException if a system exception occurred
+	 */
+	public long dynamicQueryCount(DynamicQuery dynamicQuery)
+		throws SystemException {
+		return lephi_tonghopPersistence.countWithDynamicQuery(dynamicQuery);
+	}
+
+	public Lephi_tonghop fetchLephi_tonghop(Lephi_tonghopPK lephi_tonghopPK)
+		throws SystemException {
+		return lephi_tonghopPersistence.fetchByPrimaryKey(lephi_tonghopPK);
+	}
+
+	/**
+	 * Returns the lephi_tonghop with the primary key.
+	 *
+	 * @param lephi_tonghopPK the primary key of the lephi_tonghop
+	 * @return the lephi_tonghop
+	 * @throws PortalException if a lephi_tonghop with the primary key could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	public Lephi_tonghop getLephi_tonghop(Lephi_tonghopPK lephi_tonghopPK)
+		throws PortalException, SystemException {
+		return lephi_tonghopPersistence.findByPrimaryKey(lephi_tonghopPK);
+	}
+
+	public PersistedModel getPersistedModel(Serializable primaryKeyObj)
+		throws PortalException, SystemException {
+		return lephi_tonghopPersistence.findByPrimaryKey(primaryKeyObj);
+	}
+
+	/**
+	 * Returns a range of all the lephi_tonghops.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	 * </p>
+	 *
+	 * @param start the lower bound of the range of lephi_tonghops
+	 * @param end the upper bound of the range of lephi_tonghops (not inclusive)
+	 * @return the range of lephi_tonghops
+	 * @throws SystemException if a system exception occurred
+	 */
+	public List<Lephi_tonghop> getLephi_tonghops(int start, int end)
+		throws SystemException {
+		return lephi_tonghopPersistence.findAll(start, end);
+	}
+
+	/**
+	 * Returns the number of lephi_tonghops.
+	 *
+	 * @return the number of lephi_tonghops
+	 * @throws SystemException if a system exception occurred
+	 */
+	public int getLephi_tonghopsCount() throws SystemException {
+		return lephi_tonghopPersistence.countAll();
+	}
+
+	/**
+	 * Updates the lephi_tonghop in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 *
+	 * @param lephi_tonghop the lephi_tonghop
+	 * @return the lephi_tonghop that was updated
+	 * @throws SystemException if a system exception occurred
+	 */
+	public Lephi_tonghop updateLephi_tonghop(Lephi_tonghop lephi_tonghop)
+		throws SystemException {
+		return updateLephi_tonghop(lephi_tonghop, true);
+	}
+
+	/**
+	 * Updates the lephi_tonghop in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	 *
+	 * @param lephi_tonghop the lephi_tonghop
+	 * @param merge whether to merge the lephi_tonghop with the current session. See {@link com.liferay.portal.service.persistence.BatchSession#update(com.liferay.portal.kernel.dao.orm.Session, com.liferay.portal.model.BaseModel, boolean)} for an explanation.
+	 * @return the lephi_tonghop that was updated
+	 * @throws SystemException if a system exception occurred
+	 */
+	public Lephi_tonghop updateLephi_tonghop(Lephi_tonghop lephi_tonghop,
+		boolean merge) throws SystemException {
+		lephi_tonghop.setNew(false);
+
+		lephi_tonghop = lephi_tonghopPersistence.update(lephi_tonghop, merge);
+
+		Indexer indexer = IndexerRegistryUtil.getIndexer(getModelClassName());
+
+		if (indexer != null) {
+			try {
+				indexer.reindex(lephi_tonghop);
+			}
+			catch (SearchException se) {
+				if (_log.isWarnEnabled()) {
+					_log.warn(se, se);
+				}
+			}
+		}
+
+		return lephi_tonghop;
+	}
+
+	/**
+	 * Returns the baocaochitiet local service.
+	 *
+	 * @return the baocaochitiet local service
+	 */
+	public BaocaochitietLocalService getBaocaochitietLocalService() {
+		return baocaochitietLocalService;
+	}
+
+	/**
+	 * Sets the baocaochitiet local service.
+	 *
+	 * @param baocaochitietLocalService the baocaochitiet local service
+	 */
+	public void setBaocaochitietLocalService(
+		BaocaochitietLocalService baocaochitietLocalService) {
+		this.baocaochitietLocalService = baocaochitietLocalService;
+	}
+
+	/**
+	 * Returns the baocaochitiet persistence.
+	 *
+	 * @return the baocaochitiet persistence
+	 */
+	public BaocaochitietPersistence getBaocaochitietPersistence() {
+		return baocaochitietPersistence;
+	}
+
+	/**
+	 * Sets the baocaochitiet persistence.
+	 *
+	 * @param baocaochitietPersistence the baocaochitiet persistence
+	 */
+	public void setBaocaochitietPersistence(
+		BaocaochitietPersistence baocaochitietPersistence) {
+		this.baocaochitietPersistence = baocaochitietPersistence;
+	}
+
+	/**
+	 * Returns the baocaochitiet finder.
+	 *
+	 * @return the baocaochitiet finder
+	 */
+	public BaocaochitietFinder getBaocaochitietFinder() {
+		return baocaochitietFinder;
+	}
+
+	/**
+	 * Sets the baocaochitiet finder.
+	 *
+	 * @param baocaochitietFinder the baocaochitiet finder
+	 */
+	public void setBaocaochitietFinder(BaocaochitietFinder baocaochitietFinder) {
+		this.baocaochitietFinder = baocaochitietFinder;
+	}
+
+	/**
+	 * Returns the cong chuc2 role local service.
+	 *
+	 * @return the cong chuc2 role local service
+	 */
+	public CongChuc2RoleLocalService getCongChuc2RoleLocalService() {
+		return congChuc2RoleLocalService;
+	}
+
+	/**
+	 * Sets the cong chuc2 role local service.
+	 *
+	 * @param congChuc2RoleLocalService the cong chuc2 role local service
+	 */
+	public void setCongChuc2RoleLocalService(
+		CongChuc2RoleLocalService congChuc2RoleLocalService) {
+		this.congChuc2RoleLocalService = congChuc2RoleLocalService;
+	}
+
+	/**
+	 * Returns the cong chuc2 role persistence.
+	 *
+	 * @return the cong chuc2 role persistence
+	 */
+	public CongChuc2RolePersistence getCongChuc2RolePersistence() {
+		return congChuc2RolePersistence;
+	}
+
+	/**
+	 * Sets the cong chuc2 role persistence.
+	 *
+	 * @param congChuc2RolePersistence the cong chuc2 role persistence
+	 */
+	public void setCongChuc2RolePersistence(
+		CongChuc2RolePersistence congChuc2RolePersistence) {
+		this.congChuc2RolePersistence = congChuc2RolePersistence;
+	}
+
+	/**
+	 * Returns the cong chuc2 role finder.
+	 *
+	 * @return the cong chuc2 role finder
+	 */
+	public CongChuc2RoleFinder getCongChuc2RoleFinder() {
+		return congChuc2RoleFinder;
+	}
+
+	/**
+	 * Sets the cong chuc2 role finder.
+	 *
+	 * @param congChuc2RoleFinder the cong chuc2 role finder
+	 */
+	public void setCongChuc2RoleFinder(CongChuc2RoleFinder congChuc2RoleFinder) {
+		this.congChuc2RoleFinder = congChuc2RoleFinder;
+	}
+
+	/**
+	 * Returns the co quan quan ly2 linh vuc local service.
+	 *
+	 * @return the co quan quan ly2 linh vuc local service
+	 */
+	public CoQuanQuanLy2LinhVucLocalService getCoQuanQuanLy2LinhVucLocalService() {
+		return coQuanQuanLy2LinhVucLocalService;
+	}
+
+	/**
+	 * Sets the co quan quan ly2 linh vuc local service.
+	 *
+	 * @param coQuanQuanLy2LinhVucLocalService the co quan quan ly2 linh vuc local service
+	 */
+	public void setCoQuanQuanLy2LinhVucLocalService(
+		CoQuanQuanLy2LinhVucLocalService coQuanQuanLy2LinhVucLocalService) {
+		this.coQuanQuanLy2LinhVucLocalService = coQuanQuanLy2LinhVucLocalService;
+	}
+
+	/**
+	 * Returns the co quan quan ly2 linh vuc persistence.
+	 *
+	 * @return the co quan quan ly2 linh vuc persistence
+	 */
+	public CoQuanQuanLy2LinhVucPersistence getCoQuanQuanLy2LinhVucPersistence() {
+		return coQuanQuanLy2LinhVucPersistence;
+	}
+
+	/**
+	 * Sets the co quan quan ly2 linh vuc persistence.
+	 *
+	 * @param coQuanQuanLy2LinhVucPersistence the co quan quan ly2 linh vuc persistence
+	 */
+	public void setCoQuanQuanLy2LinhVucPersistence(
+		CoQuanQuanLy2LinhVucPersistence coQuanQuanLy2LinhVucPersistence) {
+		this.coQuanQuanLy2LinhVucPersistence = coQuanQuanLy2LinhVucPersistence;
+	}
+
+	/**
+	 * Returns the co quan quan ly2 linh vuc finder.
+	 *
+	 * @return the co quan quan ly2 linh vuc finder
+	 */
+	public CoQuanQuanLy2LinhVucFinder getCoQuanQuanLy2LinhVucFinder() {
+		return coQuanQuanLy2LinhVucFinder;
+	}
+
+	/**
+	 * Sets the co quan quan ly2 linh vuc finder.
+	 *
+	 * @param coQuanQuanLy2LinhVucFinder the co quan quan ly2 linh vuc finder
+	 */
+	public void setCoQuanQuanLy2LinhVucFinder(
+		CoQuanQuanLy2LinhVucFinder coQuanQuanLy2LinhVucFinder) {
+		this.coQuanQuanLy2LinhVucFinder = coQuanQuanLy2LinhVucFinder;
+	}
+
+	/**
+	 * Returns the danh muc bao cao local service.
+	 *
+	 * @return the danh muc bao cao local service
+	 */
+	public DanhMucBaoCaoLocalService getDanhMucBaoCaoLocalService() {
+		return danhMucBaoCaoLocalService;
+	}
+
+	/**
+	 * Sets the danh muc bao cao local service.
+	 *
+	 * @param danhMucBaoCaoLocalService the danh muc bao cao local service
+	 */
+	public void setDanhMucBaoCaoLocalService(
+		DanhMucBaoCaoLocalService danhMucBaoCaoLocalService) {
+		this.danhMucBaoCaoLocalService = danhMucBaoCaoLocalService;
+	}
+
+	/**
+	 * Returns the danh muc bao cao persistence.
+	 *
+	 * @return the danh muc bao cao persistence
+	 */
+	public DanhMucBaoCaoPersistence getDanhMucBaoCaoPersistence() {
+		return danhMucBaoCaoPersistence;
+	}
+
+	/**
+	 * Sets the danh muc bao cao persistence.
+	 *
+	 * @param danhMucBaoCaoPersistence the danh muc bao cao persistence
+	 */
+	public void setDanhMucBaoCaoPersistence(
+		DanhMucBaoCaoPersistence danhMucBaoCaoPersistence) {
+		this.danhMucBaoCaoPersistence = danhMucBaoCaoPersistence;
+	}
+
+	/**
+	 * Returns the danh muc role local service.
+	 *
+	 * @return the danh muc role local service
+	 */
+	public DanhMucRoleLocalService getDanhMucRoleLocalService() {
+		return danhMucRoleLocalService;
+	}
+
+	/**
+	 * Sets the danh muc role local service.
+	 *
+	 * @param danhMucRoleLocalService the danh muc role local service
+	 */
+	public void setDanhMucRoleLocalService(
+		DanhMucRoleLocalService danhMucRoleLocalService) {
+		this.danhMucRoleLocalService = danhMucRoleLocalService;
+	}
+
+	/**
+	 * Returns the danh muc role persistence.
+	 *
+	 * @return the danh muc role persistence
+	 */
+	public DanhMucRolePersistence getDanhMucRolePersistence() {
+		return danhMucRolePersistence;
+	}
+
+	/**
+	 * Sets the danh muc role persistence.
+	 *
+	 * @param danhMucRolePersistence the danh muc role persistence
+	 */
+	public void setDanhMucRolePersistence(
+		DanhMucRolePersistence danhMucRolePersistence) {
+		this.danhMucRolePersistence = danhMucRolePersistence;
+	}
+
+	/**
+	 * Returns the lephi_chitiet local service.
+	 *
+	 * @return the lephi_chitiet local service
+	 */
+	public Lephi_chitietLocalService getLephi_chitietLocalService() {
+		return lephi_chitietLocalService;
+	}
+
+	/**
+	 * Sets the lephi_chitiet local service.
+	 *
+	 * @param lephi_chitietLocalService the lephi_chitiet local service
+	 */
+	public void setLephi_chitietLocalService(
+		Lephi_chitietLocalService lephi_chitietLocalService) {
+		this.lephi_chitietLocalService = lephi_chitietLocalService;
+	}
+
+	/**
+	 * Returns the lephi_chitiet persistence.
+	 *
+	 * @return the lephi_chitiet persistence
+	 */
+	public Lephi_chitietPersistence getLephi_chitietPersistence() {
+		return lephi_chitietPersistence;
+	}
+
+	/**
+	 * Sets the lephi_chitiet persistence.
+	 *
+	 * @param lephi_chitietPersistence the lephi_chitiet persistence
+	 */
+	public void setLephi_chitietPersistence(
+		Lephi_chitietPersistence lephi_chitietPersistence) {
+		this.lephi_chitietPersistence = lephi_chitietPersistence;
+	}
+
+	/**
+	 * Returns the lephi_chitiet finder.
+	 *
+	 * @return the lephi_chitiet finder
+	 */
+	public Lephi_chitietFinder getLephi_chitietFinder() {
+		return lephi_chitietFinder;
+	}
+
+	/**
+	 * Sets the lephi_chitiet finder.
+	 *
+	 * @param lephi_chitietFinder the lephi_chitiet finder
+	 */
+	public void setLephi_chitietFinder(Lephi_chitietFinder lephi_chitietFinder) {
+		this.lephi_chitietFinder = lephi_chitietFinder;
+	}
+
+	/**
+	 * Returns the lephi_linhvuc local service.
+	 *
+	 * @return the lephi_linhvuc local service
+	 */
+	public Lephi_linhvucLocalService getLephi_linhvucLocalService() {
+		return lephi_linhvucLocalService;
+	}
+
+	/**
+	 * Sets the lephi_linhvuc local service.
+	 *
+	 * @param lephi_linhvucLocalService the lephi_linhvuc local service
+	 */
+	public void setLephi_linhvucLocalService(
+		Lephi_linhvucLocalService lephi_linhvucLocalService) {
+		this.lephi_linhvucLocalService = lephi_linhvucLocalService;
+	}
+
+	/**
+	 * Returns the lephi_linhvuc persistence.
+	 *
+	 * @return the lephi_linhvuc persistence
+	 */
+	public Lephi_linhvucPersistence getLephi_linhvucPersistence() {
+		return lephi_linhvucPersistence;
+	}
+
+	/**
+	 * Sets the lephi_linhvuc persistence.
+	 *
+	 * @param lephi_linhvucPersistence the lephi_linhvuc persistence
+	 */
+	public void setLephi_linhvucPersistence(
+		Lephi_linhvucPersistence lephi_linhvucPersistence) {
+		this.lephi_linhvucPersistence = lephi_linhvucPersistence;
+	}
+
+	/**
+	 * Returns the lephi_tonghop local service.
+	 *
+	 * @return the lephi_tonghop local service
+	 */
+	public Lephi_tonghopLocalService getLephi_tonghopLocalService() {
+		return lephi_tonghopLocalService;
+	}
+
+	/**
+	 * Sets the lephi_tonghop local service.
+	 *
+	 * @param lephi_tonghopLocalService the lephi_tonghop local service
+	 */
+	public void setLephi_tonghopLocalService(
+		Lephi_tonghopLocalService lephi_tonghopLocalService) {
+		this.lephi_tonghopLocalService = lephi_tonghopLocalService;
+	}
+
+	/**
+	 * Returns the lephi_tonghop persistence.
+	 *
+	 * @return the lephi_tonghop persistence
+	 */
+	public Lephi_tonghopPersistence getLephi_tonghopPersistence() {
+		return lephi_tonghopPersistence;
+	}
+
+	/**
+	 * Sets the lephi_tonghop persistence.
+	 *
+	 * @param lephi_tonghopPersistence the lephi_tonghop persistence
+	 */
+	public void setLephi_tonghopPersistence(
+		Lephi_tonghopPersistence lephi_tonghopPersistence) {
+		this.lephi_tonghopPersistence = lephi_tonghopPersistence;
+	}
+
+	/**
+	 * Returns the report thong ke local service.
+	 *
+	 * @return the report thong ke local service
+	 */
+	public ReportThongKeLocalService getReportThongKeLocalService() {
+		return reportThongKeLocalService;
+	}
+
+	/**
+	 * Sets the report thong ke local service.
+	 *
+	 * @param reportThongKeLocalService the report thong ke local service
+	 */
+	public void setReportThongKeLocalService(
+		ReportThongKeLocalService reportThongKeLocalService) {
+		this.reportThongKeLocalService = reportThongKeLocalService;
+	}
+
+	/**
+	 * Returns the report thong ke persistence.
+	 *
+	 * @return the report thong ke persistence
+	 */
+	public ReportThongKePersistence getReportThongKePersistence() {
+		return reportThongKePersistence;
+	}
+
+	/**
+	 * Sets the report thong ke persistence.
+	 *
+	 * @param reportThongKePersistence the report thong ke persistence
+	 */
+	public void setReportThongKePersistence(
+		ReportThongKePersistence reportThongKePersistence) {
+		this.reportThongKePersistence = reportThongKePersistence;
+	}
+
+	/**
+	 * Returns the report thong ke finder.
+	 *
+	 * @return the report thong ke finder
+	 */
+	public ReportThongKeFinder getReportThongKeFinder() {
+		return reportThongKeFinder;
+	}
+
+	/**
+	 * Sets the report thong ke finder.
+	 *
+	 * @param reportThongKeFinder the report thong ke finder
+	 */
+	public void setReportThongKeFinder(ReportThongKeFinder reportThongKeFinder) {
+		this.reportThongKeFinder = reportThongKeFinder;
+	}
+
+	/**
+	 * Returns the report tong hop local service.
+	 *
+	 * @return the report tong hop local service
+	 */
+	public ReportTongHopLocalService getReportTongHopLocalService() {
+		return reportTongHopLocalService;
+	}
+
+	/**
+	 * Sets the report tong hop local service.
+	 *
+	 * @param reportTongHopLocalService the report tong hop local service
+	 */
+	public void setReportTongHopLocalService(
+		ReportTongHopLocalService reportTongHopLocalService) {
+		this.reportTongHopLocalService = reportTongHopLocalService;
+	}
+
+	/**
+	 * Returns the report tong hop persistence.
+	 *
+	 * @return the report tong hop persistence
+	 */
+	public ReportTongHopPersistence getReportTongHopPersistence() {
+		return reportTongHopPersistence;
+	}
+
+	/**
+	 * Sets the report tong hop persistence.
+	 *
+	 * @param reportTongHopPersistence the report tong hop persistence
+	 */
+	public void setReportTongHopPersistence(
+		ReportTongHopPersistence reportTongHopPersistence) {
+		this.reportTongHopPersistence = reportTongHopPersistence;
+	}
+
+	/**
+	 * Returns the report tong hop finder.
+	 *
+	 * @return the report tong hop finder
+	 */
+	public ReportTongHopFinder getReportTongHopFinder() {
+		return reportTongHopFinder;
+	}
+
+	/**
+	 * Sets the report tong hop finder.
+	 *
+	 * @param reportTongHopFinder the report tong hop finder
+	 */
+	public void setReportTongHopFinder(ReportTongHopFinder reportTongHopFinder) {
+		this.reportTongHopFinder = reportTongHopFinder;
+	}
+
+	/**
+	 * Returns the report tong hop chi tiet local service.
+	 *
+	 * @return the report tong hop chi tiet local service
+	 */
+	public ReportTongHopChiTietLocalService getReportTongHopChiTietLocalService() {
+		return reportTongHopChiTietLocalService;
+	}
+
+	/**
+	 * Sets the report tong hop chi tiet local service.
+	 *
+	 * @param reportTongHopChiTietLocalService the report tong hop chi tiet local service
+	 */
+	public void setReportTongHopChiTietLocalService(
+		ReportTongHopChiTietLocalService reportTongHopChiTietLocalService) {
+		this.reportTongHopChiTietLocalService = reportTongHopChiTietLocalService;
+	}
+
+	/**
+	 * Returns the report tong hop chi tiet persistence.
+	 *
+	 * @return the report tong hop chi tiet persistence
+	 */
+	public ReportTongHopChiTietPersistence getReportTongHopChiTietPersistence() {
+		return reportTongHopChiTietPersistence;
+	}
+
+	/**
+	 * Sets the report tong hop chi tiet persistence.
+	 *
+	 * @param reportTongHopChiTietPersistence the report tong hop chi tiet persistence
+	 */
+	public void setReportTongHopChiTietPersistence(
+		ReportTongHopChiTietPersistence reportTongHopChiTietPersistence) {
+		this.reportTongHopChiTietPersistence = reportTongHopChiTietPersistence;
+	}
+
+	/**
+	 * Returns the report tong hop chi tiet finder.
+	 *
+	 * @return the report tong hop chi tiet finder
+	 */
+	public ReportTongHopChiTietFinder getReportTongHopChiTietFinder() {
+		return reportTongHopChiTietFinder;
+	}
+
+	/**
+	 * Sets the report tong hop chi tiet finder.
+	 *
+	 * @param reportTongHopChiTietFinder the report tong hop chi tiet finder
+	 */
+	public void setReportTongHopChiTietFinder(
+		ReportTongHopChiTietFinder reportTongHopChiTietFinder) {
+		this.reportTongHopChiTietFinder = reportTongHopChiTietFinder;
+	}
+
+	/**
+	 * Returns the role2 bao cao local service.
+	 *
+	 * @return the role2 bao cao local service
+	 */
+	public Role2BaoCaoLocalService getRole2BaoCaoLocalService() {
+		return role2BaoCaoLocalService;
+	}
+
+	/**
+	 * Sets the role2 bao cao local service.
+	 *
+	 * @param role2BaoCaoLocalService the role2 bao cao local service
+	 */
+	public void setRole2BaoCaoLocalService(
+		Role2BaoCaoLocalService role2BaoCaoLocalService) {
+		this.role2BaoCaoLocalService = role2BaoCaoLocalService;
+	}
+
+	/**
+	 * Returns the role2 bao cao persistence.
+	 *
+	 * @return the role2 bao cao persistence
+	 */
+	public Role2BaoCaoPersistence getRole2BaoCaoPersistence() {
+		return role2BaoCaoPersistence;
+	}
+
+	/**
+	 * Sets the role2 bao cao persistence.
+	 *
+	 * @param role2BaoCaoPersistence the role2 bao cao persistence
+	 */
+	public void setRole2BaoCaoPersistence(
+		Role2BaoCaoPersistence role2BaoCaoPersistence) {
+		this.role2BaoCaoPersistence = role2BaoCaoPersistence;
+	}
+
+	/**
+	 * Returns the role2 don vi bao cao local service.
+	 *
+	 * @return the role2 don vi bao cao local service
+	 */
+	public Role2DonViBaoCaoLocalService getRole2DonViBaoCaoLocalService() {
+		return role2DonViBaoCaoLocalService;
+	}
+
+	/**
+	 * Sets the role2 don vi bao cao local service.
+	 *
+	 * @param role2DonViBaoCaoLocalService the role2 don vi bao cao local service
+	 */
+	public void setRole2DonViBaoCaoLocalService(
+		Role2DonViBaoCaoLocalService role2DonViBaoCaoLocalService) {
+		this.role2DonViBaoCaoLocalService = role2DonViBaoCaoLocalService;
+	}
+
+	/**
+	 * Returns the role2 don vi bao cao persistence.
+	 *
+	 * @return the role2 don vi bao cao persistence
+	 */
+	public Role2DonViBaoCaoPersistence getRole2DonViBaoCaoPersistence() {
+		return role2DonViBaoCaoPersistence;
+	}
+
+	/**
+	 * Sets the role2 don vi bao cao persistence.
+	 *
+	 * @param role2DonViBaoCaoPersistence the role2 don vi bao cao persistence
+	 */
+	public void setRole2DonViBaoCaoPersistence(
+		Role2DonViBaoCaoPersistence role2DonViBaoCaoPersistence) {
+		this.role2DonViBaoCaoPersistence = role2DonViBaoCaoPersistence;
+	}
+
+	/**
+	 * Returns the role2 nhom t t h c local service.
+	 *
+	 * @return the role2 nhom t t h c local service
+	 */
+	public Role2NhomTTHCLocalService getRole2NhomTTHCLocalService() {
+		return role2NhomTTHCLocalService;
+	}
+
+	/**
+	 * Sets the role2 nhom t t h c local service.
+	 *
+	 * @param role2NhomTTHCLocalService the role2 nhom t t h c local service
+	 */
+	public void setRole2NhomTTHCLocalService(
+		Role2NhomTTHCLocalService role2NhomTTHCLocalService) {
+		this.role2NhomTTHCLocalService = role2NhomTTHCLocalService;
+	}
+
+	/**
+	 * Returns the role2 nhom t t h c persistence.
+	 *
+	 * @return the role2 nhom t t h c persistence
+	 */
+	public Role2NhomTTHCPersistence getRole2NhomTTHCPersistence() {
+		return role2NhomTTHCPersistence;
+	}
+
+	/**
+	 * Sets the role2 nhom t t h c persistence.
+	 *
+	 * @param role2NhomTTHCPersistence the role2 nhom t t h c persistence
+	 */
+	public void setRole2NhomTTHCPersistence(
+		Role2NhomTTHCPersistence role2NhomTTHCPersistence) {
+		this.role2NhomTTHCPersistence = role2NhomTTHCPersistence;
+	}
+
+	/**
+	 * Returns the role2 t t h c local service.
+	 *
+	 * @return the role2 t t h c local service
+	 */
+	public Role2TTHCLocalService getRole2TTHCLocalService() {
+		return role2TTHCLocalService;
+	}
+
+	/**
+	 * Sets the role2 t t h c local service.
+	 *
+	 * @param role2TTHCLocalService the role2 t t h c local service
+	 */
+	public void setRole2TTHCLocalService(
+		Role2TTHCLocalService role2TTHCLocalService) {
+		this.role2TTHCLocalService = role2TTHCLocalService;
+	}
+
+	/**
+	 * Returns the role2 t t h c persistence.
+	 *
+	 * @return the role2 t t h c persistence
+	 */
+	public Role2TTHCPersistence getRole2TTHCPersistence() {
+		return role2TTHCPersistence;
+	}
+
+	/**
+	 * Sets the role2 t t h c persistence.
+	 *
+	 * @param role2TTHCPersistence the role2 t t h c persistence
+	 */
+	public void setRole2TTHCPersistence(
+		Role2TTHCPersistence role2TTHCPersistence) {
+		this.role2TTHCPersistence = role2TTHCPersistence;
+	}
+
+	/**
+	 * Returns the counter local service.
+	 *
+	 * @return the counter local service
+	 */
+	public CounterLocalService getCounterLocalService() {
+		return counterLocalService;
+	}
+
+	/**
+	 * Sets the counter local service.
+	 *
+	 * @param counterLocalService the counter local service
+	 */
+	public void setCounterLocalService(CounterLocalService counterLocalService) {
+		this.counterLocalService = counterLocalService;
+	}
+
+	/**
+	 * Returns the resource local service.
+	 *
+	 * @return the resource local service
+	 */
+	public ResourceLocalService getResourceLocalService() {
+		return resourceLocalService;
+	}
+
+	/**
+	 * Sets the resource local service.
+	 *
+	 * @param resourceLocalService the resource local service
+	 */
+	public void setResourceLocalService(
+		ResourceLocalService resourceLocalService) {
+		this.resourceLocalService = resourceLocalService;
+	}
+
+	/**
+	 * Returns the resource remote service.
+	 *
+	 * @return the resource remote service
+	 */
+	public ResourceService getResourceService() {
+		return resourceService;
+	}
+
+	/**
+	 * Sets the resource remote service.
+	 *
+	 * @param resourceService the resource remote service
+	 */
+	public void setResourceService(ResourceService resourceService) {
+		this.resourceService = resourceService;
+	}
+
+	/**
+	 * Returns the resource persistence.
+	 *
+	 * @return the resource persistence
+	 */
+	public ResourcePersistence getResourcePersistence() {
+		return resourcePersistence;
+	}
+
+	/**
+	 * Sets the resource persistence.
+	 *
+	 * @param resourcePersistence the resource persistence
+	 */
+	public void setResourcePersistence(ResourcePersistence resourcePersistence) {
+		this.resourcePersistence = resourcePersistence;
+	}
+
+	/**
+	 * Returns the user local service.
+	 *
+	 * @return the user local service
+	 */
+	public UserLocalService getUserLocalService() {
+		return userLocalService;
+	}
+
+	/**
+	 * Sets the user local service.
+	 *
+	 * @param userLocalService the user local service
+	 */
+	public void setUserLocalService(UserLocalService userLocalService) {
+		this.userLocalService = userLocalService;
+	}
+
+	/**
+	 * Returns the user remote service.
+	 *
+	 * @return the user remote service
+	 */
+	public UserService getUserService() {
+		return userService;
+	}
+
+	/**
+	 * Sets the user remote service.
+	 *
+	 * @param userService the user remote service
+	 */
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+
+	/**
+	 * Returns the user persistence.
+	 *
+	 * @return the user persistence
+	 */
+	public UserPersistence getUserPersistence() {
+		return userPersistence;
+	}
+
+	/**
+	 * Sets the user persistence.
+	 *
+	 * @param userPersistence the user persistence
+	 */
+	public void setUserPersistence(UserPersistence userPersistence) {
+		this.userPersistence = userPersistence;
+	}
+
+	public void afterPropertiesSet() {
+		PersistedModelLocalServiceRegistryUtil.register("org.oep.cmon.dao.report.model.Lephi_tonghop",
+			lephi_tonghopLocalService);
+	}
+
+	public void destroy() {
+		PersistedModelLocalServiceRegistryUtil.unregister(
+			"org.oep.cmon.dao.report.model.Lephi_tonghop");
+	}
+
+	/**
+	 * Returns the Spring bean ID for this bean.
+	 *
+	 * @return the Spring bean ID for this bean
+	 */
+	public String getBeanIdentifier() {
+		return _beanIdentifier;
+	}
+
+	/**
+	 * Sets the Spring bean ID for this bean.
+	 *
+	 * @param beanIdentifier the Spring bean ID for this bean
+	 */
+	public void setBeanIdentifier(String beanIdentifier) {
+		_beanIdentifier = beanIdentifier;
+	}
+
+	protected Class<?> getModelClass() {
+		return Lephi_tonghop.class;
+	}
+
+	protected String getModelClassName() {
+		return Lephi_tonghop.class.getName();
+	}
+
+	/**
+	 * Performs an SQL query.
+	 *
+	 * @param sql the sql query
+	 */
+	protected void runSQL(String sql) throws SystemException {
+		try {
+			DataSource dataSource = lephi_tonghopPersistence.getDataSource();
+
+			SqlUpdate sqlUpdate = SqlUpdateFactoryUtil.getSqlUpdate(dataSource,
+					sql, new int[0]);
+
+			sqlUpdate.update();
+		}
+		catch (Exception e) {
+			throw new SystemException(e);
+		}
+	}
+
+	@BeanReference(type = BaocaochitietLocalService.class)
+	protected BaocaochitietLocalService baocaochitietLocalService;
+	@BeanReference(type = BaocaochitietPersistence.class)
+	protected BaocaochitietPersistence baocaochitietPersistence;
+	@BeanReference(type = BaocaochitietFinder.class)
+	protected BaocaochitietFinder baocaochitietFinder;
+	@BeanReference(type = CongChuc2RoleLocalService.class)
+	protected CongChuc2RoleLocalService congChuc2RoleLocalService;
+	@BeanReference(type = CongChuc2RolePersistence.class)
+	protected CongChuc2RolePersistence congChuc2RolePersistence;
+	@BeanReference(type = CongChuc2RoleFinder.class)
+	protected CongChuc2RoleFinder congChuc2RoleFinder;
+	@BeanReference(type = CoQuanQuanLy2LinhVucLocalService.class)
+	protected CoQuanQuanLy2LinhVucLocalService coQuanQuanLy2LinhVucLocalService;
+	@BeanReference(type = CoQuanQuanLy2LinhVucPersistence.class)
+	protected CoQuanQuanLy2LinhVucPersistence coQuanQuanLy2LinhVucPersistence;
+	@BeanReference(type = CoQuanQuanLy2LinhVucFinder.class)
+	protected CoQuanQuanLy2LinhVucFinder coQuanQuanLy2LinhVucFinder;
+	@BeanReference(type = DanhMucBaoCaoLocalService.class)
+	protected DanhMucBaoCaoLocalService danhMucBaoCaoLocalService;
+	@BeanReference(type = DanhMucBaoCaoPersistence.class)
+	protected DanhMucBaoCaoPersistence danhMucBaoCaoPersistence;
+	@BeanReference(type = DanhMucRoleLocalService.class)
+	protected DanhMucRoleLocalService danhMucRoleLocalService;
+	@BeanReference(type = DanhMucRolePersistence.class)
+	protected DanhMucRolePersistence danhMucRolePersistence;
+	@BeanReference(type = Lephi_chitietLocalService.class)
+	protected Lephi_chitietLocalService lephi_chitietLocalService;
+	@BeanReference(type = Lephi_chitietPersistence.class)
+	protected Lephi_chitietPersistence lephi_chitietPersistence;
+	@BeanReference(type = Lephi_chitietFinder.class)
+	protected Lephi_chitietFinder lephi_chitietFinder;
+	@BeanReference(type = Lephi_linhvucLocalService.class)
+	protected Lephi_linhvucLocalService lephi_linhvucLocalService;
+	@BeanReference(type = Lephi_linhvucPersistence.class)
+	protected Lephi_linhvucPersistence lephi_linhvucPersistence;
+	@BeanReference(type = Lephi_tonghopLocalService.class)
+	protected Lephi_tonghopLocalService lephi_tonghopLocalService;
+	@BeanReference(type = Lephi_tonghopPersistence.class)
+	protected Lephi_tonghopPersistence lephi_tonghopPersistence;
+	@BeanReference(type = ReportThongKeLocalService.class)
+	protected ReportThongKeLocalService reportThongKeLocalService;
+	@BeanReference(type = ReportThongKePersistence.class)
+	protected ReportThongKePersistence reportThongKePersistence;
+	@BeanReference(type = ReportThongKeFinder.class)
+	protected ReportThongKeFinder reportThongKeFinder;
+	@BeanReference(type = ReportTongHopLocalService.class)
+	protected ReportTongHopLocalService reportTongHopLocalService;
+	@BeanReference(type = ReportTongHopPersistence.class)
+	protected ReportTongHopPersistence reportTongHopPersistence;
+	@BeanReference(type = ReportTongHopFinder.class)
+	protected ReportTongHopFinder reportTongHopFinder;
+	@BeanReference(type = ReportTongHopChiTietLocalService.class)
+	protected ReportTongHopChiTietLocalService reportTongHopChiTietLocalService;
+	@BeanReference(type = ReportTongHopChiTietPersistence.class)
+	protected ReportTongHopChiTietPersistence reportTongHopChiTietPersistence;
+	@BeanReference(type = ReportTongHopChiTietFinder.class)
+	protected ReportTongHopChiTietFinder reportTongHopChiTietFinder;
+	@BeanReference(type = Role2BaoCaoLocalService.class)
+	protected Role2BaoCaoLocalService role2BaoCaoLocalService;
+	@BeanReference(type = Role2BaoCaoPersistence.class)
+	protected Role2BaoCaoPersistence role2BaoCaoPersistence;
+	@BeanReference(type = Role2DonViBaoCaoLocalService.class)
+	protected Role2DonViBaoCaoLocalService role2DonViBaoCaoLocalService;
+	@BeanReference(type = Role2DonViBaoCaoPersistence.class)
+	protected Role2DonViBaoCaoPersistence role2DonViBaoCaoPersistence;
+	@BeanReference(type = Role2NhomTTHCLocalService.class)
+	protected Role2NhomTTHCLocalService role2NhomTTHCLocalService;
+	@BeanReference(type = Role2NhomTTHCPersistence.class)
+	protected Role2NhomTTHCPersistence role2NhomTTHCPersistence;
+	@BeanReference(type = Role2TTHCLocalService.class)
+	protected Role2TTHCLocalService role2TTHCLocalService;
+	@BeanReference(type = Role2TTHCPersistence.class)
+	protected Role2TTHCPersistence role2TTHCPersistence;
+	@BeanReference(type = CounterLocalService.class)
+	protected CounterLocalService counterLocalService;
+	@BeanReference(type = ResourceLocalService.class)
+	protected ResourceLocalService resourceLocalService;
+	@BeanReference(type = ResourceService.class)
+	protected ResourceService resourceService;
+	@BeanReference(type = ResourcePersistence.class)
+	protected ResourcePersistence resourcePersistence;
+	@BeanReference(type = UserLocalService.class)
+	protected UserLocalService userLocalService;
+	@BeanReference(type = UserService.class)
+	protected UserService userService;
+	@BeanReference(type = UserPersistence.class)
+	protected UserPersistence userPersistence;
+	private static Log _log = LogFactoryUtil.getLog(Lephi_tonghopLocalServiceBaseImpl.class);
+	private String _beanIdentifier;
+}

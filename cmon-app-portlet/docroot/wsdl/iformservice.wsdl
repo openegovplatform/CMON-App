@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="FormServiceImplService" targetNamespace="http://form.provider.cmon.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://form.provider.cmon.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://form.provider.cmon.sharedservice.dtt.vn/" schemaLocation="iformservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getDSDoiTuongSuDungResponse">
+    <wsdl:part name="parameters" element="tns:getDSDoiTuongSuDungResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSThuTucHanhChinhTheoNhom">
+    <wsdl:part name="parameters" element="tns:getDSThuTucHanhChinhTheoNhom">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSThuTucHanhChinhTheoNhomVaVaiTro">
+    <wsdl:part name="parameters" element="tns:getDSThuTucHanhChinhTheoNhomVaVaiTro">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUngDungTheoMa">
+    <wsdl:part name="parameters" element="tns:getUngDungTheoMa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThuTucHanhChinhTheoId">
+    <wsdl:part name="parameters" element="tns:getThuTucHanhChinhTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSUngDung">
+    <wsdl:part name="parameters" element="tns:getDSUngDung">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMaUngDungTheoQuyTrinh">
+    <wsdl:part name="parameters" element="tns:getMaUngDungTheoQuyTrinh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSNhomThuTucHanhChinh">
+    <wsdl:part name="parameters" element="tns:getDSNhomThuTucHanhChinh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSDoiTuongSuDung">
+    <wsdl:part name="parameters" element="tns:getDSDoiTuongSuDung">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMaUngDungTheoQuyTrinhResponse">
+    <wsdl:part name="parameters" element="tns:getMaUngDungTheoQuyTrinhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUngDungTheoMaResponse">
+    <wsdl:part name="parameters" element="tns:getUngDungTheoMaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSUngDungResponse">
+    <wsdl:part name="parameters" element="tns:getDSUngDungResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSThuTucHanhChinhTheoNhomVaVaiTroResponse">
+    <wsdl:part name="parameters" element="tns:getDSThuTucHanhChinhTheoNhomVaVaiTroResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThuTucHanhChinhTheoMaResponse">
+    <wsdl:part name="parameters" element="tns:getThuTucHanhChinhTheoMaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThuTucHanhChinhTheoMa">
+    <wsdl:part name="parameters" element="tns:getThuTucHanhChinhTheoMa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThuTucHanhChinhTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getThuTucHanhChinhTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSThuTucHanhChinhTheoNhomResponse">
+    <wsdl:part name="parameters" element="tns:getDSThuTucHanhChinhTheoNhomResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSNhomThuTucHanhChinhResponse">
+    <wsdl:part name="parameters" element="tns:getDSNhomThuTucHanhChinhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IFormService">
+    <wsdl:operation name="getUngDungTheoMa">
+      <wsdl:input name="getUngDungTheoMa" message="tns:getUngDungTheoMa">
+    </wsdl:input>
+      <wsdl:output name="getUngDungTheoMaResponse" message="tns:getUngDungTheoMaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSThuTucHanhChinhTheoNhom">
+      <wsdl:input name="getDSThuTucHanhChinhTheoNhom" message="tns:getDSThuTucHanhChinhTheoNhom">
+    </wsdl:input>
+      <wsdl:output name="getDSThuTucHanhChinhTheoNhomResponse" message="tns:getDSThuTucHanhChinhTheoNhomResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaUngDungTheoQuyTrinh">
+      <wsdl:input name="getMaUngDungTheoQuyTrinh" message="tns:getMaUngDungTheoQuyTrinh">
+    </wsdl:input>
+      <wsdl:output name="getMaUngDungTheoQuyTrinhResponse" message="tns:getMaUngDungTheoQuyTrinhResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSThuTucHanhChinhTheoNhomVaVaiTro">
+      <wsdl:input name="getDSThuTucHanhChinhTheoNhomVaVaiTro" message="tns:getDSThuTucHanhChinhTheoNhomVaVaiTro">
+    </wsdl:input>
+      <wsdl:output name="getDSThuTucHanhChinhTheoNhomVaVaiTroResponse" message="tns:getDSThuTucHanhChinhTheoNhomVaVaiTroResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSUngDung">
+      <wsdl:input name="getDSUngDung" message="tns:getDSUngDung">
+    </wsdl:input>
+      <wsdl:output name="getDSUngDungResponse" message="tns:getDSUngDungResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThuTucHanhChinhTheoMa">
+      <wsdl:input name="getThuTucHanhChinhTheoMa" message="tns:getThuTucHanhChinhTheoMa">
+    </wsdl:input>
+      <wsdl:output name="getThuTucHanhChinhTheoMaResponse" message="tns:getThuTucHanhChinhTheoMaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSNhomThuTucHanhChinh">
+      <wsdl:input name="getDSNhomThuTucHanhChinh" message="tns:getDSNhomThuTucHanhChinh">
+    </wsdl:input>
+      <wsdl:output name="getDSNhomThuTucHanhChinhResponse" message="tns:getDSNhomThuTucHanhChinhResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDoiTuongSuDung">
+      <wsdl:input name="getDSDoiTuongSuDung" message="tns:getDSDoiTuongSuDung">
+    </wsdl:input>
+      <wsdl:output name="getDSDoiTuongSuDungResponse" message="tns:getDSDoiTuongSuDungResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThuTucHanhChinhTheoId">
+      <wsdl:input name="getThuTucHanhChinhTheoId" message="tns:getThuTucHanhChinhTheoId">
+    </wsdl:input>
+      <wsdl:output name="getThuTucHanhChinhTheoIdResponse" message="tns:getThuTucHanhChinhTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FormServiceImplServiceSoapBinding" type="tns:IFormService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getDSThuTucHanhChinhTheoNhom">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSThuTucHanhChinhTheoNhom">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSThuTucHanhChinhTheoNhomResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUngDungTheoMa">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUngDungTheoMa">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUngDungTheoMaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaUngDungTheoQuyTrinh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMaUngDungTheoQuyTrinh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMaUngDungTheoQuyTrinhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSThuTucHanhChinhTheoNhomVaVaiTro">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSThuTucHanhChinhTheoNhomVaVaiTro">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSThuTucHanhChinhTheoNhomVaVaiTroResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSUngDung">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSUngDung">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSUngDungResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSNhomThuTucHanhChinh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSNhomThuTucHanhChinh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSNhomThuTucHanhChinhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThuTucHanhChinhTheoMa">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getThuTucHanhChinhTheoMa">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getThuTucHanhChinhTheoMaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDoiTuongSuDung">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSDoiTuongSuDung">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSDoiTuongSuDungResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThuTucHanhChinhTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getThuTucHanhChinhTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getThuTucHanhChinhTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FormServiceImplService">
+    <wsdl:port name="FormServiceImplPort" binding="tns:FormServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/FormServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

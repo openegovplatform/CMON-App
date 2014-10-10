@@ -1,0 +1,25 @@
+.underline {
+	display: inline-block;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #000000;	
+}
+._wrapper, .button-bar {
+	width: 86%;
+}
+.line {
+	margin: 0;
+}
+.item {
+	margin: 3px 0;
+}
+
+.huong-dan-vien {
+	margin-top: 5em;
+}
+
+@media print {
+	.underline {
+		padding-bottom: 1pt;
+		border-bottom: 1pt solid #000000;	
+	}
+}

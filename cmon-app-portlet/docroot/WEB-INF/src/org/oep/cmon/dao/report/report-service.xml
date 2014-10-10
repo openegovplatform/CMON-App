@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.report">
+	<author>VIENPN</author>
+	<namespace>DNICT</namespace>
+	<!--Huy Nguyen
+	 bao cao thong ke, tong hop-->
+	<entity name="ReportThongKe" local-service="true"
+		remote-service="false" table="CMON_RPTHONGKE" data-source="egovDataSource">
+		<column name="CAPCOQUANQUANLYID" db-name="CAPCOQUANQUANLYID"  type="long" primary="true" />
+		<column name="COQUANQUANLYID" db-name="COQUANQUANLYID" type="long" primary="true" />
+		<column name="THANG" db-name="THANG" type="int" primary="true" />
+		<column name="NAM" db-name="NAM" type="int" primary="true" />
+		<column name="TONGNHAN" db-name="TONGNHAN" type="long"/>
+		<column name="TIEPNHAN" db-name="TIEPNHAN" type="long"/>
+		<column name="TONDAU" db-name="TONDAU" type="long"/>
+		<column name="TONGDAGIAIQUYET" db-name="TONGDAGIAIQUYET" type="long"/>
+		<column name="SOM" db-name="SOM" type="long"/>
+		<column name="DUNG" db-name="DUNG" type="long"/>
+		<column name="TRE" db-name="TRE" type="long"/>
+		<column name="TONGDANGGIAIQUYET" db-name="TONGDANGGIAIQUYET" type="long"/>
+		<column name="CHUADENHAN" db-name="CHUADENHAN" type="long"/>
+		<column name="QUAHAN" db-name="QUAHAN" type="long"/>
+		<column name="RUTHOSO" db-name="RUTHOSO" type="long"/>
+		<column name="KHONGHOPLE" db-name="KHONGHOPLE" type="long"/>
+		<column name="TYLE" db-name="TYLE" type="double"/>
+		<column name="TONCUOI" db-name="TONCUOI" type="long"/>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="CAPCOQUANQUANLYID" />
+			<order-column name="COQUANQUANLYID" />
+		</order>
+	</entity>
+	
+	<entity name="ReportTongHop" local-service="true"
+		remote-service="false" table="CMON_RPTONGHOP" data-source="egovDataSource">
+		<column name="COQUANQUANLYID" db-name="COQUANQUANLYID" type="long" primary="true" />
+		<column name="NHOMTHUTUCHANHCHINHID" db-name="NHOMTHUTUCHANHCHINHID" type="long" primary="true" />
+		<column name="THANG" db-name="THANG" type="int" primary="true" />
+		<column name="NAM" db-name="NAM" type="int" primary="true" />
+		<column name="TONGNHAN" db-name="TONGNHAN" type="long"/>
+		<column name="TIEPNHAN" db-name="TIEPNHAN" type="long"/>
+		<column name="TONDAU" db-name="TONDAU" type="long"/>
+		<column name="TONGDAGIAIQUYET" db-name="TONGDAGIAIQUYET" type="long"/>
+		<column name="SOM" db-name="SOM" type="long"/>
+		<column name="DUNG" db-name="DUNG" type="long"/>
+		<column name="TRE" db-name="TRE" type="long"/>
+		<column name="TONGDANGGIAIQUYET" db-name="TONGDANGGIAIQUYET" type="long"/>
+		<column name="CHUADENHAN" db-name="CHUADENHAN" type="long"/>
+		<column name="QUAHAN" db-name="QUAHAN" type="long"/>
+		<column name="RUTHOSO" db-name="RUTHOSO" type="long"/>
+		<column name="KHONGHOPLE" db-name="KHONGHOPLE" type="long"/>
+		<column name="TYLE" db-name="TYLE" type="double"/>
+		<column name="TONCUOI" db-name="TONCUOI" type="long"/>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="COQUANQUANLYID" />
+			<order-column name="NHOMTHUTUCHANHCHINHID" />
+			<order-column name="THANG" />
+		</order>
+	</entity>
+	
+	<entity name="ReportTongHopChiTiet" local-service="true"
+		remote-service="false" table="CMON_RPTONGHOPCHITIET" data-source="egovDataSource">
+		<column name="COQUANQUANLYID" db-name="COQUANQUANLYID" type="long" primary="true" />
+		<column name="NHOMTHUTUCHANHCHINHID" db-name="NHOMTHUTUCHANHCHINHID" type="long" primary="true" />
+		<column name="THUTUCHANHCHINHID" db-name="THUTUCHANHCHINHID" type="long" primary="true" />
+		<column name="THANG" db-name="THANG" type="int" primary="true" />
+		<column name="NAM" db-name="NAM" type="int" primary="true" />
+		<column name="TONGNHAN" db-name="TONGNHAN" type="long"/>
+		<column name="TIEPNHAN" db-name="TIEPNHAN" type="long"/>
+		<column name="TONDAU" db-name="TONDAU" type="long"/>
+		<column name="TONGDAGIAIQUYET" db-name="TONGDAGIAIQUYET" type="long"/>
+		<column name="SOM" db-name="SOM" type="long"/>
+		<column name="DUNG" db-name="DUNG" type="long"/>
+		<column name="TRE" db-name="TRE" type="long"/>
+		<column name="TONGDANGGIAIQUYET" db-name="TONGDANGGIAIQUYET" type="long"/>
+		<column name="CHUADENHAN" db-name="CHUADENHAN" type="long"/>
+		<column name="QUAHAN" db-name="QUAHAN" type="long"/>
+		<column name="RUTHOSO" db-name="RUTHOSO" type="long"/>
+		<column name="KHONGHOPLE" db-name="KHONGHOPLE" type="long"/>
+		<column name="TYLE" db-name="TYLE" type="double"/>
+		<column name="TONCUOI" db-name="TONCUOI" type="long"/>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="COQUANQUANLYID" />
+			<order-column name="NHOMTHUTUCHANHCHINHID" />
+			<order-column name="THUTUCHANHCHINHID" />
+		</order>
+	</entity>
+	<!--ket thuc bao cao thong ke, tong hop  -->
+		
+	<entity name="Lephi_chitiet" local-service="true"
+		remote-service="false" table="Lephi_chitiet" data-source="egovDataSource">
+		<column name="ID"  type="long" primary="true" />
+		<column name="TENHOSO"  type="String" />
+		<column name="NGUOINOP"  type="String" />
+		<column name="CHUHOSO" type="String" />
+		<column name="DIACHI" type="String" />
+		<column name="SOBOHOSO" type="String" />
+		<column name="LEPHI" type="String" />
+		<column name="PHIHOSO" type="String" />
+		<column name="TONGLEPHI" type="String" />
+		<column name="GHICHU" type="String" />
+		<column name="NHOMTHUTUCHANHCHINHID" type="int" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="Lephi_linhvuc" local-service="true"
+		remote-service="false" table="Lephi_linhvuc" data-source="egovDataSource">
+		<column name="NHOMTHUTUCHANHCHINHID"  type="int" primary="true" />
+		<column name="TONGHOSO"  type="String" />
+		<column name="LEPHIHOSO" type="String" />
+		<column name="PHIHOSO" type="String" />
+		<column name="TONGLEPHI" type="String" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="NHOMTHUTUCHANHCHINHID" />
+		</order>
+	</entity>
+	
+	<entity name="Lephi_tonghop" local-service="true"
+		remote-service="false" table="Lephi_tonghop" data-source="egovDataSource">
+		<column name="NHOMTHUTUCHANHCHINHID"  type="int" primary="true" />
+		<column name="TONGHOSO"  type="String" />
+		<column name="LEPHI" type="String" />
+		<column name="PHIHOSO" type="String" />
+		<column name="TONGLEPHI" type="String" />
+		<column name="THANGNHAN" type="String" primary="true" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="NHOMTHUTUCHANHCHINHID" />
+		</order>
+	</entity>
+	
+	<entity name="DanhMucBaoCao" local-service="true"
+		remote-service="false" table="CMON_RPDANHMUCBAOCAO" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="TENBAOCAO" db-name="TENBAOCAO" type="String" />
+		<column name="DUONGDAN" db-name="DUONGDAN" type="String" />
+		<column name="ORDERS" db-name="ORDERS" type="int" />
+		<column name="STATUS" db-name="STATUS" type="int" />
+		<column name="PUBLISH" db-name="PUBLISH" type="int" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="DanhMucRole" local-service="true"
+		remote-service="false" table="CMON_RPDANHMUCROLE" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="NAME" db-name="NAME" type="String" />
+		<column name="ORDERS" db-name="ORDERS" type="int" />
+		<column name="STATUS" db-name="STATUS" type="int" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="Role2BaoCao" local-service="true"
+		remote-service="false" table="CMON_RPROLE2BAOCAO" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="RPDANHMUCROLEID" db-name="RPDANHMUCROLEID" type="long" />
+		<column name="RPDANHMUCBAOCAOID" db-name="BAOCAOID" type="long" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="Role2DonViBaoCao" local-service="true"
+		remote-service="false" table="CMON_RPROLE2DONVIBAOCAO" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="RPDANHMUCROLEID" db-name="RPDANHMUCROLEID" type="long" />
+		<column name="RPDANHMUCBAOCAOID" db-name="BAOCAOID" type="long" />
+		<column name="COQUANQUANLYID" db-name="DONVIID" type="long" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="Role2NhomTTHC" local-service="true"
+		remote-service="false" table="CMON_RPROLE2NHOMTTHC" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="RPDANHMUCROLEID" db-name="RPDANHMUCROLEID" type="long" />
+		<column name="RPDANHMUCBAOCAOID" db-name="BAOCAOID" type="long" />
+		<column name="NHOMTHUTUCHANHCHINHID" db-name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="CongChuc2Role" local-service="true"
+		remote-service="false" table="CMON_RPNGUOIDUNG2ROLE" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="CONGCHUCID" db-name="TAIKHOANNGUOIDUNGID" type="long" />
+		<column name="RPDANHMUCROLEID" db-name="RPDANHMUCROLEID" type="long" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="Role2TTHC" local-service="true"
+		remote-service="false" table="CMON_RPROLE2THUTUCHANHCHINH" data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true" />
+		<column name="RPDANHMUCROLEID" db-name="RPDANHMUCROLEID" type="long" />
+		<column name="RPDANHMUCBAOCAOID" db-name="BAOCAOID" type="long" />
+		<column name="THUTUCHANHCHINHID" db-name="THUTUCHANHCHINHID" type="long" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="ID" />
+		</order>
+	</entity>
+	
+	<entity name="CoQuanQuanLy2LinhVuc" local-service="true"
+		remote-service="false" data-source="egovDataSource">
+		<column name="NHOMTHUTUCHANHCHINHID"  type="long" primary="true" />
+		<column name="TENNHOMTTHC"  type="String" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="NHOMTHUTUCHANHCHINHID" />
+		</order>
+	</entity>
+	<entity name="Baocaochitiet" local-service="true" remote-service="false"
+	 data-source="egovDataSource">
+	 	<column name="LINHVUCID" type="long"/>
+		<column name="MASOHOSO" type="String" primary="true"/>
+		<column name="TEN" type="String" />
+		<column name="TRANGTHAI" type="String" />
+		<column name="DIACHIHIENNAY" type="String" />
+		<column name="DIENTHOAIDIDONG" type="String" />
+		
+		<column name="HOTENNGUOINOPHOSO" type="String" />
+		<column name="NGUOIDAIDIENPHAPLUAT" type="String" />
+		<column name="NGAYNHANHOSO" type="String" />
+		<column name="NGAYTRAKETQUA" type="String" />
+		<column name="NGAYHENTRAKETQUA" type="String" />
+		<column name="LINHVUC" type="String" />
+		<column name="GHICHU" type="String"/>
+	</entity>
+	
+</service-builder>

@@ -1,0 +1,98 @@
+._outer .line {
+	margin: 0;
+}
+._wrapper {
+	width: 95%;
+}
+body._outer .line:hover {
+	background-color: transparent;
+}	
+.khung-ky {
+	height: 145px;
+}
+.sobiennhan {
+	margin:0;
+}
+.border {
+	border: 1px solid #000;
+}
+.borderleft {
+	border-left: 1px solid #000;
+}
+.bordertop {
+	border-top: 1px solid #000;
+}
+.line-to-cut-left {
+	border-left: 1px dashed #000;
+}
+.line-to-cut-top {
+	border-top: 2px dashed #000;
+	margin-top: 20px;
+}
+.underline {
+	display: inline-block;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #000000;	
+}
+.ghi-chu {
+	line-height: 1.8em;
+}
+.ten-nguoi-nop {
+	margin-top: 75px !important;
+}
+.thoi-gian-tra {
+	margin-top: 37px !important;
+}
+.trang-doc {
+	width:60% !important;
+	margin: 0 auto !important;	
+}
+@media print {
+	._outer.preview label.egov-label {
+		font-size: 9pt;
+	}
+	 ._outer .item {
+		margin: 0;
+		line-height: 0.8em;
+	}
+	.khung-ky {
+		height: 70pt;
+	}
+	.sobiennhan {
+		margin-top: 1pt !important;
+	}
+	.septop5 {
+		margin-top: 3pt !important;
+	}
+	.septop10 {
+		margin-top: 5pt !important;
+	}
+	.septop20 {
+		margin-top: 10pt !important;
+	}
+	.sepbot10 {
+		margin-bottom: 5pt !important;
+	}
+	.border {
+		border: 1pt solid #000000;
+	}
+	.borderleft {
+		border-left: 1pt solid #000;
+	}
+	.bordertop {
+		border-top: 1pt solid #000;
+	}
+	.line-to-cut {
+		border-left: 1pt dashed #000;
+	}
+	.underline {
+		padding-bottom: 1pt;
+		border-bottom: 1pt solid #000000;	
+	}
+	.ten-nguoi-nop {
+		margin-top: 43pt !important;
+	}
+	.thoi-gian-tra {
+		margin-top: 22pt !important;
+	}
+}

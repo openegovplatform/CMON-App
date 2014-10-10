@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="OfficerServiceImplService" targetNamespace="http://officer.provider.cmon.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://officer.provider.cmon.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://officer.provider.cmon.sharedservice.dtt.vn/" schemaLocation="iofficerservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="yeuCauPhucHoiGiayToDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:yeuCauPhucHoiGiayToDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getURLCuaGiayToDinhKem">
+    <wsdl:part name="parameters" element="tns:getURLCuaGiayToDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGiayToDinhKemTheoHoSoId">
+    <wsdl:part name="parameters" element="tns:getDSGiayToDinhKemTheoHoSoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="uploadResponse">
+    <wsdl:part name="parameters" element="tns:uploadResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGiayToDinhKemTheoMaHoSo">
+    <wsdl:part name="parameters" element="tns:getDSGiayToDinhKemTheoMaHoSo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getURLCuaGiayToDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:getURLCuaGiayToDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSLichSuCuaGiayToDinhKem">
+    <wsdl:part name="parameters" element="tns:getDSLichSuCuaGiayToDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="yeuCauPhucHoiGiayToDinhKem">
+    <wsdl:part name="parameters" element="tns:yeuCauPhucHoiGiayToDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSLichSuCuaGiayToDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:getDSLichSuCuaGiayToDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGiayToDinhKemTheoMaHoSoResponse">
+    <wsdl:part name="parameters" element="tns:getDSGiayToDinhKemTheoMaHoSoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="yeuCauXoaGiayToDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:yeuCauXoaGiayToDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="xoaGiayToDinhKem">
+    <wsdl:part name="parameters" element="tns:xoaGiayToDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="yeuCauXoaGiayToDinhKem">
+    <wsdl:part name="parameters" element="tns:yeuCauXoaGiayToDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="xoaGiayToDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:xoaGiayToDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="upload">
+    <wsdl:part name="parameters" element="tns:upload">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGiayToDinhKemTheoHoSoIdResponse">
+    <wsdl:part name="parameters" element="tns:getDSGiayToDinhKemTheoHoSoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IOfficerService">
+    <wsdl:operation name="upload">
+      <wsdl:input name="upload" message="tns:upload">
+    </wsdl:input>
+      <wsdl:output name="uploadResponse" message="tns:uploadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLichSuCuaGiayToDinhKem">
+      <wsdl:input name="getDSLichSuCuaGiayToDinhKem" message="tns:getDSLichSuCuaGiayToDinhKem">
+    </wsdl:input>
+      <wsdl:output name="getDSLichSuCuaGiayToDinhKemResponse" message="tns:getDSLichSuCuaGiayToDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGiayToDinhKemTheoMaHoSo">
+      <wsdl:input name="getDSGiayToDinhKemTheoMaHoSo" message="tns:getDSGiayToDinhKemTheoMaHoSo">
+    </wsdl:input>
+      <wsdl:output name="getDSGiayToDinhKemTheoMaHoSoResponse" message="tns:getDSGiayToDinhKemTheoMaHoSoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xoaGiayToDinhKem">
+      <wsdl:input name="xoaGiayToDinhKem" message="tns:xoaGiayToDinhKem">
+    </wsdl:input>
+      <wsdl:output name="xoaGiayToDinhKemResponse" message="tns:xoaGiayToDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getURLCuaGiayToDinhKem">
+      <wsdl:input name="getURLCuaGiayToDinhKem" message="tns:getURLCuaGiayToDinhKem">
+    </wsdl:input>
+      <wsdl:output name="getURLCuaGiayToDinhKemResponse" message="tns:getURLCuaGiayToDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yeuCauXoaGiayToDinhKem">
+      <wsdl:input name="yeuCauXoaGiayToDinhKem" message="tns:yeuCauXoaGiayToDinhKem">
+    </wsdl:input>
+      <wsdl:output name="yeuCauXoaGiayToDinhKemResponse" message="tns:yeuCauXoaGiayToDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yeuCauPhucHoiGiayToDinhKem">
+      <wsdl:input name="yeuCauPhucHoiGiayToDinhKem" message="tns:yeuCauPhucHoiGiayToDinhKem">
+    </wsdl:input>
+      <wsdl:output name="yeuCauPhucHoiGiayToDinhKemResponse" message="tns:yeuCauPhucHoiGiayToDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGiayToDinhKemTheoHoSoId">
+      <wsdl:input name="getDSGiayToDinhKemTheoHoSoId" message="tns:getDSGiayToDinhKemTheoHoSoId">
+    </wsdl:input>
+      <wsdl:output name="getDSGiayToDinhKemTheoHoSoIdResponse" message="tns:getDSGiayToDinhKemTheoHoSoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OfficerServiceImplServiceSoapBinding" type="tns:IOfficerService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getDSLichSuCuaGiayToDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSLichSuCuaGiayToDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSLichSuCuaGiayToDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upload">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="upload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="uploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGiayToDinhKemTheoMaHoSo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSGiayToDinhKemTheoMaHoSo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSGiayToDinhKemTheoMaHoSoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xoaGiayToDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="xoaGiayToDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="xoaGiayToDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getURLCuaGiayToDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getURLCuaGiayToDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getURLCuaGiayToDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yeuCauPhucHoiGiayToDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="yeuCauPhucHoiGiayToDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="yeuCauPhucHoiGiayToDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yeuCauXoaGiayToDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="yeuCauXoaGiayToDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="yeuCauXoaGiayToDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGiayToDinhKemTheoHoSoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSGiayToDinhKemTheoHoSoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSGiayToDinhKemTheoHoSoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfficerServiceImplService">
+    <wsdl:port name="OfficerServiceImplPort" binding="tns:OfficerServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/officerservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://document.provider.cmon.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://document.provider.cmon.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="doDelete" type="tns:doDelete"/>
+<xs:element name="doDeleteById" type="tns:doDeleteById"/>
+<xs:element name="doDeleteByIdResponse" type="tns:doDeleteByIdResponse"/>
+<xs:element name="doDeleteResponse" type="tns:doDeleteResponse"/>
+<xs:element name="doUpload" type="tns:doUpload"/>
+<xs:element name="doUploadResponse" type="tns:doUploadResponse"/>
+<xs:element name="getDanhMucGiayTheoId" type="tns:getDanhMucGiayTheoId"/>
+<xs:element name="getDanhMucGiayTheoIdResponse" type="tns:getDanhMucGiayTheoIdResponse"/>
+<xs:element name="getIDTTHC2GiayTo" type="tns:getIDTTHC2GiayTo"/>
+<xs:element name="getIDTTHC2GiayToResponse" type="tns:getIDTTHC2GiayToResponse"/>
+<xs:element name="getPhienBanMoiNhatTheoGiayTo" type="tns:getPhienBanMoiNhatTheoGiayTo"/>
+<xs:element name="getPhienBanMoiNhatTheoGiayToResponse" type="tns:getPhienBanMoiNhatTheoGiayToResponse"/>
+<xs:element name="getPhienBanMoiNhatTheoMa" type="tns:getPhienBanMoiNhatTheoMa"/>
+<xs:element name="getPhienBanMoiNhatTheoMaResponse" type="tns:getPhienBanMoiNhatTheoMaResponse"/>
+<xs:element name="getPhienBanMoiNhatTheoTTHC2GiayTo" type="tns:getPhienBanMoiNhatTheoTTHC2GiayTo"/>
+<xs:element name="getPhienBanMoiNhatTheoTTHC2GiayToResponse" type="tns:getPhienBanMoiNhatTheoTTHC2GiayToResponse"/>
+<xs:element name="getTailieuDinhKemBoiId" type="tns:getTailieuDinhKemBoiId"/>
+<xs:element name="getTailieuDinhKemBoiIdResponse" type="tns:getTailieuDinhKemBoiIdResponse"/>
+<xs:element name="getTailieuDinhKemTheoPhienBan" type="tns:getTailieuDinhKemTheoPhienBan"/>
+<xs:element name="getTailieuDinhKemTheoPhienBanResponse" type="tns:getTailieuDinhKemTheoPhienBanResponse"/>
+<xs:element name="getThongTinTaiLieuDinhKem" type="tns:getThongTinTaiLieuDinhKem"/>
+<xs:element name="getThongTinTaiLieuDinhKemResponse" type="tns:getThongTinTaiLieuDinhKemResponse"/>
+<xs:complexType name="doDelete">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doDeleteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doUpload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element name="arg5" type="xs:boolean"/>
+      <xs:element name="arg6" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doUploadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultUpload"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="resultUpload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="document" type="tns:taiLieuChungThucSoap"/>
+      <xs:element minOccurs="0" name="fileId" type="xs:long"/>
+      <xs:element name="result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="thuTuc2GiayToId" type="xs:long"/>
+      <xs:element minOccurs="0" name="url" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="taiLieuChungThucSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chuSohuuId" type="xs:long"/>
+      <xs:element minOccurs="0" name="danhMucGiayToId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ghiChu" type="xs:string"/>
+      <xs:element minOccurs="0" name="hieuLucDenNgay" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="hieuLucTuNgay" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="hoSoTTHCCId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="loai" type="xs:int"/>
+      <xs:element minOccurs="0" name="maUngDung" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayDuyet" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayUpload" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiUploadId" type="xs:long"/>
+      <xs:element minOccurs="0" name="nguoiduyetId" type="xs:long"/>
+      <xs:element name="noiLuuTruId" type="xs:long"/>
+      <xs:element name="phienBan" type="xs:int"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+      <xs:element name="trangThai" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThongTinTaiLieuDinhKem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThongTinTaiLieuDinhKemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="taiLieuDinhKem">
+    <xs:complexContent>
+      <xs:extension base="tns:danhMucGiayToSoap">
+        <xs:sequence>
+          <xs:element name="batBuoc" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="taiLieuThayThe" type="tns:taiLieuDinhKem"/>
+          <xs:element minOccurs="0" name="tailieuChungThuc" type="tns:taiLieuChungThucSoap"/>
+          <xs:element minOccurs="0" name="thuTuc2GiayToId" type="xs:long"/>
+          <xs:element minOccurs="0" name="url" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="danhMucGiayToSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="gioiHanDungLuong" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="kieuTaiLieu" type="xs:string"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="mota" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="phienBan" type="xs:long"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="tailieuThayTheId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getIDTTHC2GiayTo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getIDTTHC2GiayToResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTailieuDinhKemTheoPhienBan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element name="arg2" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTailieuDinhKemTheoPhienBanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoGiayTo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoGiayToResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTailieuDinhKemBoiId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTailieuDinhKemBoiIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDanhMucGiayTheoId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDanhMucGiayTheoIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doDeleteById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doDeleteByIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoTTHC2GiayTo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoTTHC2GiayToResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoMa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPhienBanMoiNhatTheoMaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:taiLieuDinhKem"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

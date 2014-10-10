@@ -1,0 +1,1583 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="vn.dtt.cmon.dao.cc.service.ChucVuLocalService" class="vn.dtt.cmon.dao.cc.service.impl.ChucVuLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cc.service.ChucVuLocalServiceUtil" class="vn.dtt.cmon.dao.cc.service.ChucVuLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cc.service.ChucVuLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.persistence.ChucVuPersistence" class="vn.dtt.cmon.dao.cc.service.persistence.ChucVuPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.persistence.ChucVuFinder" class="vn.dtt.cmon.dao.cc.service.persistence.ChucVuFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.CongChucLocalService" class="vn.dtt.cmon.dao.cc.service.impl.CongChucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cc.service.CongChucLocalServiceUtil" class="vn.dtt.cmon.dao.cc.service.CongChucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cc.service.CongChucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.persistence.CongChucPersistence" class="vn.dtt.cmon.dao.cc.service.persistence.CongChucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.persistence.CongChucFinder" class="vn.dtt.cmon.dao.cc.service.persistence.CongChucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.CongChuc2NhomThuTucLocalService" class="vn.dtt.cmon.dao.cc.service.impl.CongChuc2NhomThuTucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cc.service.CongChuc2NhomThuTucLocalServiceUtil" class="vn.dtt.cmon.dao.cc.service.CongChuc2NhomThuTucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cc.service.CongChuc2NhomThuTucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cc.service.persistence.CongChuc2NhomThuTucPersistence" class="vn.dtt.cmon.dao.cc.service.persistence.CongChuc2NhomThuTucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.ChuyenMonLocalService" class="vn.dtt.cmon.dao.cd.service.impl.ChuyenMonLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.ChuyenMonLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.ChuyenMonLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.ChuyenMonLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.ChuyenMonPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.ChuyenMonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.ChuyenMonFinder" class="vn.dtt.cmon.dao.cd.service.persistence.ChuyenMonFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.CongDanLocalService" class="vn.dtt.cmon.dao.cd.service.impl.CongDanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.CongDanLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.CongDanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.CongDanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.CongDanPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.CongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.CongDanFinder" class="vn.dtt.cmon.dao.cd.service.persistence.CongDanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.DanTocLocalService" class="vn.dtt.cmon.dao.cd.service.impl.DanTocLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.DanTocLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.DanTocLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.DanTocLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.DanTocPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.DanTocPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.GioiTinhLocalService" class="vn.dtt.cmon.dao.cd.service.impl.GioiTinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.GioiTinhLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.GioiTinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.GioiTinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.GioiTinhPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.GioiTinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.HeThongLocalService" class="vn.dtt.cmon.dao.cd.service.impl.HeThongLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.HeThongLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.HeThongLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.HeThongLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.HeThongPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.HeThongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.HoChieuCMNDLocalService" class="vn.dtt.cmon.dao.cd.service.impl.HoChieuCMNDLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.HoChieuCMNDLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.HoChieuCMNDLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.HoChieuCMNDLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.HoChieuCMNDPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.HoChieuCMNDPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.NgheNghiepLocalService" class="vn.dtt.cmon.dao.cd.service.impl.NgheNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.NgheNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.NgheNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.NgheNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.NgheNghiepPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.NgheNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.QuanHeGiaDinhLocalService" class="vn.dtt.cmon.dao.cd.service.impl.QuanHeGiaDinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.QuanHeGiaDinhLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.QuanHeGiaDinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.QuanHeGiaDinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.QuanHeGiaDinhPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.QuanHeGiaDinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.TinhTrangHonNhanLocalService" class="vn.dtt.cmon.dao.cd.service.impl.TinhTrangHonNhanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.TinhTrangHonNhanLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.TinhTrangHonNhanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.TinhTrangHonNhanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.TinhTrangHonNhanPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.TinhTrangHonNhanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.TonGiaoLocalService" class="vn.dtt.cmon.dao.cd.service.impl.TonGiaoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.TonGiaoLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.TonGiaoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.TonGiaoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.TonGiaoPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.TonGiaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.TrinhDoChuyenMonLocalService" class="vn.dtt.cmon.dao.cd.service.impl.TrinhDoChuyenMonLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.TrinhDoChuyenMonLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.TrinhDoChuyenMonLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.TrinhDoChuyenMonLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.TrinhDoChuyenMonPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.TrinhDoChuyenMonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.TrinhDoHocVanLocalService" class="vn.dtt.cmon.dao.cd.service.impl.TrinhDoHocVanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.cd.service.TrinhDoHocVanLocalServiceUtil" class="vn.dtt.cmon.dao.cd.service.TrinhDoHocVanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.cd.service.TrinhDoHocVanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.cd.service.persistence.TrinhDoHocVanPersistence" class="vn.dtt.cmon.dao.cd.service.persistence.TrinhDoHocVanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalService" class="vn.dtt.cmon.dao.csms.service.impl.AnhChanDungYeuCauDangKyCongDanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalServiceUtil" class="vn.dtt.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.csms.service.persistence.AnhChanDungYeuCauDangKyCongDanPersistence" class="vn.dtt.cmon.dao.csms.service.persistence.AnhChanDungYeuCauDangKyCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.csms.service.YeuCauDangKyCongDanLocalService" class="vn.dtt.cmon.dao.csms.service.impl.YeuCauDangKyCongDanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.csms.service.YeuCauDangKyCongDanLocalServiceUtil" class="vn.dtt.cmon.dao.csms.service.YeuCauDangKyCongDanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.csms.service.YeuCauDangKyCongDanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanPersistence" class="vn.dtt.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanFinder" class="vn.dtt.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.anhcongdan.service.AnhCongDanLocalService" class="vn.dtt.cmon.anhcongdan.service.impl.AnhCongDanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.anhcongdan.service.AnhCongDanLocalServiceUtil" class="vn.dtt.cmon.anhcongdan.service.AnhCongDanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.anhcongdan.service.AnhCongDanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.anhcongdan.service.persistence.AnhCongDanPersistence" class="vn.dtt.cmon.anhcongdan.service.persistence.AnhCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.DoanhNghiepLocalService" class="vn.dtt.cmon.dao.dn.service.impl.DoanhNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.DoanhNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.DoanhNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.DoanhNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiepPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiepFinder" class="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiepFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalService" class="vn.dtt.cmon.dao.dn.service.impl.DoanhNghiep2NganhNgheLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiep2NganhNghePersistence" class="vn.dtt.cmon.dao.dn.service.persistence.DoanhNghiep2NganhNghePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.LoaiDoanhNghiepLocalService" class="vn.dtt.cmon.dao.dn.service.impl.LoaiDoanhNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.LoaiDoanhNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.LoaiDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.LoaiDoanhNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.LoaiDoanhNghiepPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.LoaiDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.NganhNgheKinhDoanhLocalService" class="vn.dtt.cmon.dao.dn.service.impl.NganhNgheKinhDoanhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.NganhNgheKinhDoanhLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.NganhNgheKinhDoanhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.NganhNgheKinhDoanhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.NganhNgheKinhDoanhPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.NganhNgheKinhDoanhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalService" class="vn.dtt.cmon.dao.dn.service.impl.TrangThaiDoanhNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.TrangThaiDoanhNghiepPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.TrangThaiDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDNLocalService" class="vn.dtt.cmon.dao.dn.service.impl.YeuCauDangKyDNLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDNLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDNLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDNLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.YeuCauDangKyDNPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.YeuCauDangKyDNPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalService" class="vn.dtt.cmon.dao.dn.service.impl.YeuCauDangKyDoanhNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dn.service.persistence.YeuCauDangKyDoanhNghiepPersistence" class="vn.dtt.cmon.dao.dn.service.persistence.YeuCauDangKyDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.CapNhatKetQuaLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.CapNhatKetQuaLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.CapNhatKetQuaLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.CapNhatKetQuaLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.CapNhatKetQuaLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.CapNhatKetQuaPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.CapNhatKetQuaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.CauHinhPortlet2ThuTucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.CauHinhPortlet2ThuTucPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.CauHinhPortlet2ThuTucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.DanhMucGiayTo2DoiTuongSuDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.DanhMucGiayTo2DoiTuongSuDungPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.DanhMucGiayTo2DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.DanhMucUngDungLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.DanhMucUngDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.DanhMucUngDungLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.DanhMucUngDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.DanhMucUngDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.DanhMucUngDungPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.DanhMucUngDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.DoiTuongSuDungLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.DoiTuongSuDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.DoiTuongSuDungLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.DoiTuongSuDungPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.NhomThuTucHanhChinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.NhomThuTucHanhChinhPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.NhomThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.ThuTuc2GiayToLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.ThuTuc2GiayToLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.ThuTuc2GiayToLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.ThuTuc2GiayToLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.ThuTuc2GiayToLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.ThuTuc2GiayToPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.ThuTuc2GiayToPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.ThuTuc2GiayToFinder" class="vn.dtt.cmon.dao.dvc.service.persistence.ThuTuc2GiayToFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.ThuTucHanhChinhLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.ThuTucHanhChinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.ThuTucHanhChinhLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.ThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.ThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.ThuTucHanhChinhPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.ThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.ThuTucHanhChinhFinder" class="vn.dtt.cmon.dao.dvc.service.persistence.ThuTucHanhChinhFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.TTHC2CoQuanQuanLyLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.TTHC2CoQuanQuanLyPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.TTHC2CoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.TTHC2DoiTuongSuDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.TTHC2DoiTuongSuDungPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.TTHC2DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.VanBanHuongDanLocalService" class="vn.dtt.cmon.dao.dvc.service.impl.VanBanHuongDanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.dvc.service.VanBanHuongDanLocalServiceUtil" class="vn.dtt.cmon.dao.dvc.service.VanBanHuongDanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.dvc.service.VanBanHuongDanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.dvc.service.persistence.VanBanHuongDanPersistence" class="vn.dtt.cmon.dao.dvc.service.persistence.VanBanHuongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemLocalService" class="vn.dtt.cmon.dao.hosohcc.service.impl.FileDinhKemLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemLocalServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemService" class="vn.dtt.cmon.dao.hosohcc.service.impl.FileDinhKemServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.FileDinhKemService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.FileDinhKemPersistence" class="vn.dtt.cmon.dao.hosohcc.service.persistence.FileDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.FileDinhKemFinder" class="vn.dtt.cmon.dao.hosohcc.service.persistence.FileDinhKemFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoAnhXaLocalService" class="vn.dtt.cmon.dao.hosohcc.service.impl.HoSoAnhXaLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoAnhXaLocalServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.HoSoAnhXaLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.HoSoAnhXaLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoAnhXaPersistence" class="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoAnhXaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongLocalService" class="vn.dtt.cmon.dao.hosohcc.service.impl.HoSoTTHCCongLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongLocalServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongService" class="vn.dtt.cmon.dao.hosohcc.service.impl.HoSoTTHCCongServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.HoSoTTHCCongService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongPersistence" class="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongFinder" class="vn.dtt.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.TrangThaiHoSoLocalService" class="vn.dtt.cmon.dao.hosohcc.service.impl.TrangThaiHoSoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.TrangThaiHoSoLocalServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.TrangThaiHoSoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.TrangThaiHoSoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.TrangThaiHoSoPersistence" class="vn.dtt.cmon.dao.hosohcc.service.persistence.TrangThaiHoSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.YKienTraoDoiLocalService" class="vn.dtt.cmon.dao.hosohcc.service.impl.YKienTraoDoiLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.YKienTraoDoiLocalServiceUtil" class="vn.dtt.cmon.dao.hosohcc.service.YKienTraoDoiLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosohcc.service.YKienTraoDoiLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.YKienTraoDoiPersistence" class="vn.dtt.cmon.dao.hosohcc.service.persistence.YKienTraoDoiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosohcc.service.persistence.YKienTraoDoiFinder" class="vn.dtt.cmon.dao.hosohcc.service.persistence.YKienTraoDoiFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.DanhSachJobLocalService" class="vn.dtt.cmon.dao.job.service.impl.DanhSachJobLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.job.service.DanhSachJobLocalServiceUtil" class="vn.dtt.cmon.dao.job.service.DanhSachJobLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.job.service.DanhSachJobLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.persistence.DanhSachJobPersistence" class="vn.dtt.cmon.dao.job.service.persistence.DanhSachJobPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.LogMailLocalService" class="vn.dtt.cmon.dao.job.service.impl.LogMailLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.job.service.LogMailLocalServiceUtil" class="vn.dtt.cmon.dao.job.service.LogMailLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.job.service.LogMailLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.persistence.LogMailPersistence" class="vn.dtt.cmon.dao.job.service.persistence.LogMailPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.TrangThaiJobLocalService" class="vn.dtt.cmon.dao.job.service.impl.TrangThaiJobLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.job.service.TrangThaiJobLocalServiceUtil" class="vn.dtt.cmon.dao.job.service.TrangThaiJobLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.job.service.TrangThaiJobLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.job.service.persistence.TrangThaiJobPersistence" class="vn.dtt.cmon.dao.job.service.persistence.TrangThaiJobPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.NguoiDung2VaiTroLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.NguoiDung2VaiTroLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.NguoiDung2VaiTroLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.NguoiDung2VaiTroLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.NguoiDung2VaiTroLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.NguoiDung2VaiTroPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.NguoiDung2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.NhomNguoiDungLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.NhomNguoiDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.NhomNguoiDungLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.NhomNguoiDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.NhomNguoiDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.NhomNguoiDungPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.NhomNguoiDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.TaiKhoanNguoiDungLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungFinder" class="vn.dtt.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiNguyenLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.TaiNguyenLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiNguyenLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.TaiNguyenLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.TaiNguyenLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyenPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyenFinder" class="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyenFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.TaiNguyen2VaiTroLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyen2VaiTroPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.TaiNguyen2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.VaiTroLocalService" class="vn.dtt.cmon.dao.nsd.service.impl.VaiTroLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.nsd.service.VaiTroLocalServiceUtil" class="vn.dtt.cmon.dao.nsd.service.VaiTroLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.nsd.service.VaiTroLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.nsd.service.persistence.VaiTroPersistence" class="vn.dtt.cmon.dao.nsd.service.persistence.VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.CapCoQuanQuanLyLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CapCoQuanQuanLyPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.CapCoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CapDonViHanhChinhLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.CapDonViHanhChinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CapDonViHanhChinhLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.CapDonViHanhChinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.CapDonViHanhChinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CapDonViHanhChinhPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.CapDonViHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.ChucVu2VaiTroLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.ChucVu2VaiTroLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.ChucVu2VaiTroLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.ChucVu2VaiTroLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.ChucVu2VaiTroLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.ChucVu2VaiTroPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.ChucVu2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.CoQuanHanhChinhSuNghiepLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepFinder" class="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CoQuanQuanLyLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.CoQuanQuanLyLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.CoQuanQuanLyLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.CoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.CoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanQuanLyPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanQuanLyFinder" class="vn.dtt.cmon.dao.qlhc.service.persistence.CoQuanQuanLyFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.DonViHanhChinhLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.DonViHanhChinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.DonViHanhChinhLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.DonViHanhChinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.DonViHanhChinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.DonViHanhChinhPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.DonViHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.DonViHanhChinhFinder" class="vn.dtt.cmon.dao.qlhc.service.persistence.DonViHanhChinhFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.QuocGiaLocalService" class="vn.dtt.cmon.dao.qlhc.service.impl.QuocGiaLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.qlhc.service.QuocGiaLocalServiceUtil" class="vn.dtt.cmon.dao.qlhc.service.QuocGiaLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.qlhc.service.QuocGiaLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.QuocGiaPersistence" class="vn.dtt.cmon.dao.qlhc.service.persistence.QuocGiaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.qlhc.service.persistence.QuocGiaFinder" class="vn.dtt.cmon.dao.qlhc.service.persistence.QuocGiaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.AnhXaLocalService" class="vn.dtt.cmon.dao.thamso.service.impl.AnhXaLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.thamso.service.AnhXaLocalServiceUtil" class="vn.dtt.cmon.dao.thamso.service.AnhXaLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.thamso.service.AnhXaLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.persistence.AnhXaPersistence" class="vn.dtt.cmon.dao.thamso.service.persistence.AnhXaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.persistence.AnhXaFinder" class="vn.dtt.cmon.dao.thamso.service.persistence.AnhXaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.ThamSoLocalService" class="vn.dtt.cmon.dao.thamso.service.impl.ThamSoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.thamso.service.ThamSoLocalServiceUtil" class="vn.dtt.cmon.dao.thamso.service.ThamSoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.thamso.service.ThamSoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.persistence.ThamSoPersistence" class="vn.dtt.cmon.dao.thamso.service.persistence.ThamSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.thamso.service.persistence.ThamSoFinder" class="vn.dtt.cmon.dao.thamso.service.persistence.ThamSoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.DanhMucGiayToLocalService" class="vn.dtt.cmon.dao.tlct.service.impl.DanhMucGiayToLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.tlct.service.DanhMucGiayToLocalServiceUtil" class="vn.dtt.cmon.dao.tlct.service.DanhMucGiayToLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.tlct.service.DanhMucGiayToLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.persistence.DanhMucGiayToPersistence" class="vn.dtt.cmon.dao.tlct.service.persistence.DanhMucGiayToPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.persistence.DanhMucGiayToFinder" class="vn.dtt.cmon.dao.tlct.service.persistence.DanhMucGiayToFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalService" class="vn.dtt.cmon.dao.tlct.service.impl.LichSuGiayToDinhKemLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalServiceUtil" class="vn.dtt.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.persistence.LichSuGiayToDinhKemPersistence" class="vn.dtt.cmon.dao.tlct.service.persistence.LichSuGiayToDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.TaiLieuChungThucLocalService" class="vn.dtt.cmon.dao.tlct.service.impl.TaiLieuChungThucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.tlct.service.TaiLieuChungThucLocalServiceUtil" class="vn.dtt.cmon.dao.tlct.service.TaiLieuChungThucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.tlct.service.TaiLieuChungThucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.persistence.TaiLieuChungThucPersistence" class="vn.dtt.cmon.dao.tlct.service.persistence.TaiLieuChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.tlct.service.persistence.TaiLieuChungThucFinder" class="vn.dtt.cmon.dao.tlct.service.persistence.TaiLieuChungThucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.ExchFileDinhKemLocalService" class="vn.dtt.exch.dao.hoso.service.impl.ExchFileDinhKemLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.ExchFileDinhKemLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.ExchFileDinhKemLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.ExchFileDinhKemLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.ExchFileDinhKemPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.ExchFileDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.HoSoMotCuaLocalService" class="vn.dtt.exch.dao.hoso.service.impl.HoSoMotCuaLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.HoSoMotCuaLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.HoSoMotCuaLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.HoSoMotCuaLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.HoSoMotCuaPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.HoSoMotCuaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.HoSoTrucTuyenLocalService" class="vn.dtt.exch.dao.hoso.service.impl.HoSoTrucTuyenLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.HoSoTrucTuyenLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.HoSoTrucTuyenLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.HoSoTrucTuyenLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.HoSoTrucTuyenPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.HoSoTrucTuyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.KetQuaHosoLocalService" class="vn.dtt.exch.dao.hoso.service.impl.KetQuaHosoLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.KetQuaHosoLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.KetQuaHosoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.KetQuaHosoLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.KetQuaHosoPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.KetQuaHosoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.TrangThaiHosoLocalService" class="vn.dtt.exch.dao.hoso.service.impl.TrangThaiHosoLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.TrangThaiHosoLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.TrangThaiHosoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.TrangThaiHosoLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.TrangThaiHosoPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.TrangThaiHosoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalService" class="vn.dtt.exch.dao.hoso.service.impl.UpdateHoSoTrucTuyenLocalServiceImpl" />
+	<bean id="vn.dtt.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalServiceUtil" class="vn.dtt.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalServiceUtil">
+		<property name="service" ref="vn.dtt.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalService" />
+	</bean>
+	<bean id="vn.dtt.exch.dao.hoso.service.persistence.UpdateHoSoTrucTuyenPersistence" class="vn.dtt.exch.dao.hoso.service.persistence.UpdateHoSoTrucTuyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalService" class="vn.dtt.cmon.dao.ttthanhtoan.service.impl.ThongTinThanhToanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalServiceUtil" class="vn.dtt.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanPersistence" class="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanFinder" class="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.TienTeLocalService" class="vn.dtt.cmon.dao.ttthanhtoan.service.impl.TienTeLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.TienTeLocalServiceUtil" class="vn.dtt.cmon.dao.ttthanhtoan.service.TienTeLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.ttthanhtoan.service.TienTeLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.TienTePersistence" class="vn.dtt.cmon.dao.ttthanhtoan.service.persistence.TienTePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.HoSoChungThucLocalService" class="vn.dtt.cmon.dao.chungthuc.service.impl.HoSoChungThucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.HoSoChungThucLocalServiceUtil" class="vn.dtt.cmon.dao.chungthuc.service.HoSoChungThucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.chungthuc.service.HoSoChungThucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.persistence.HoSoChungThucPersistence" class="vn.dtt.cmon.dao.chungthuc.service.persistence.HoSoChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.persistence.HoSoChungThucFinder" class="vn.dtt.cmon.dao.chungthuc.service.persistence.HoSoChungThucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.SoDanhMucLocalService" class="vn.dtt.cmon.dao.chungthuc.service.impl.SoDanhMucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.SoDanhMucLocalServiceUtil" class="vn.dtt.cmon.dao.chungthuc.service.SoDanhMucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.chungthuc.service.SoDanhMucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.persistence.SoDanhMucPersistence" class="vn.dtt.cmon.dao.chungthuc.service.persistence.SoDanhMucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalService" class="vn.dtt.cmon.dao.chungthuc.service.impl.ThanhPhanHoSoChungThucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalServiceUtil" class="vn.dtt.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.chungthuc.service.persistence.ThanhPhanHoSoChungThucPersistence" class="vn.dtt.cmon.dao.chungthuc.service.persistence.ThanhPhanHoSoChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosolienthong.service.HoSoLienThongLocalService" class="vn.dtt.cmon.dao.hosolienthong.service.impl.HoSoLienThongLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.hosolienthong.service.HoSoLienThongLocalServiceUtil" class="vn.dtt.cmon.dao.hosolienthong.service.HoSoLienThongLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.hosolienthong.service.HoSoLienThongLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosolienthong.service.persistence.HoSoLienThongPersistence" class="vn.dtt.cmon.dao.hosolienthong.service.persistence.HoSoLienThongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.hosolienthong.service.persistence.HoSoLienThongFinder" class="vn.dtt.cmon.dao.hosolienthong.service.persistence.HoSoLienThongFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.capgiaypheplaixe.service.CapGiayPhepLaiXeLocalService" class="vn.dtt.dlms.dao.capgiaypheplaixe.service.impl.CapGiayPhepLaiXeLocalServiceImpl" />
+	<bean id="vn.dtt.dlms.dao.capgiaypheplaixe.service.CapGiayPhepLaiXeLocalServiceUtil" class="vn.dtt.dlms.dao.capgiaypheplaixe.service.CapGiayPhepLaiXeLocalServiceUtil">
+		<property name="service" ref="vn.dtt.dlms.dao.capgiaypheplaixe.service.CapGiayPhepLaiXeLocalService" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.capgiaypheplaixe.service.persistence.CapGiayPhepLaiXePersistence" class="vn.dtt.dlms.dao.capgiaypheplaixe.service.persistence.CapGiayPhepLaiXePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.chitietgplx.service.ChiTietGPLXLocalService" class="vn.dtt.dlms.dao.chitietgplx.service.impl.ChiTietGPLXLocalServiceImpl" />
+	<bean id="vn.dtt.dlms.dao.chitietgplx.service.ChiTietGPLXLocalServiceUtil" class="vn.dtt.dlms.dao.chitietgplx.service.ChiTietGPLXLocalServiceUtil">
+		<property name="service" ref="vn.dtt.dlms.dao.chitietgplx.service.ChiTietGPLXLocalService" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.chitietgplx.service.persistence.ChiTietGPLXPersistence" class="vn.dtt.dlms.dao.chitietgplx.service.persistence.ChiTietGPLXPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.DonViGtvtLocalService" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.impl.DonViGtvtLocalServiceImpl" />
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.DonViGtvtLocalServiceUtil" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.DonViGtvtLocalServiceUtil">
+		<property name="service" ref="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.DonViGtvtLocalService" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.DonViGtvtPersistence" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.DonViGtvtPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.HangGiayPhepLaiXeLocalService" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.impl.HangGiayPhepLaiXeLocalServiceImpl" />
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.HangGiayPhepLaiXeLocalServiceUtil" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.HangGiayPhepLaiXeLocalServiceUtil">
+		<property name="service" ref="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.HangGiayPhepLaiXeLocalService" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.HangGiayPhepLaiXePersistence" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.HangGiayPhepLaiXePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.LyDoCapDoiCapLaiGPLXLocalService" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.impl.LyDoCapDoiCapLaiGPLXLocalServiceImpl" />
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.LyDoCapDoiCapLaiGPLXLocalServiceUtil" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.LyDoCapDoiCapLaiGPLXLocalServiceUtil">
+		<property name="service" ref="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.LyDoCapDoiCapLaiGPLXLocalService" />
+	</bean>
+	<bean id="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.LyDoCapDoiCapLaiGPLXPersistence" class="vn.dtt.dlms.dao.danhmucgiaypheplaixe.service.persistence.LyDoCapDoiCapLaiGPLXPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.BaocaochitietLocalService" class="vn.dtt.cmon.dao.report.service.impl.BaocaochitietLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.BaocaochitietLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.BaocaochitietLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.BaocaochitietLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.BaocaochitietPersistence" class="vn.dtt.cmon.dao.report.service.persistence.BaocaochitietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.BaocaochitietFinder" class="vn.dtt.cmon.dao.report.service.persistence.BaocaochitietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.CongChuc2RoleLocalService" class="vn.dtt.cmon.dao.report.service.impl.CongChuc2RoleLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.CongChuc2RoleLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.CongChuc2RoleLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.CongChuc2RoleLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.CongChuc2RolePersistence" class="vn.dtt.cmon.dao.report.service.persistence.CongChuc2RolePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.CongChuc2RoleFinder" class="vn.dtt.cmon.dao.report.service.persistence.CongChuc2RoleFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalService" class="vn.dtt.cmon.dao.report.service.impl.CoQuanQuanLy2LinhVucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucPersistence" class="vn.dtt.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucFinder" class="vn.dtt.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.DanhMucBaoCaoLocalService" class="vn.dtt.cmon.dao.report.service.impl.DanhMucBaoCaoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.DanhMucBaoCaoLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.DanhMucBaoCaoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.DanhMucBaoCaoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.DanhMucBaoCaoPersistence" class="vn.dtt.cmon.dao.report.service.persistence.DanhMucBaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.DanhMucRoleLocalService" class="vn.dtt.cmon.dao.report.service.impl.DanhMucRoleLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.DanhMucRoleLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.DanhMucRoleLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.DanhMucRoleLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.DanhMucRolePersistence" class="vn.dtt.cmon.dao.report.service.persistence.DanhMucRolePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_chitietLocalService" class="vn.dtt.cmon.dao.report.service.impl.Lephi_chitietLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_chitietLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Lephi_chitietLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Lephi_chitietLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Lephi_chitietPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Lephi_chitietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Lephi_chitietFinder" class="vn.dtt.cmon.dao.report.service.persistence.Lephi_chitietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_linhvucLocalService" class="vn.dtt.cmon.dao.report.service.impl.Lephi_linhvucLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_linhvucLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Lephi_linhvucLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Lephi_linhvucLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Lephi_linhvucPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Lephi_linhvucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_tonghopLocalService" class="vn.dtt.cmon.dao.report.service.impl.Lephi_tonghopLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Lephi_tonghopLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Lephi_tonghopPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Lephi_tonghopPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.ReportThongKeLocalService" class="vn.dtt.cmon.dao.report.service.impl.ReportThongKeLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.ReportThongKeLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.ReportThongKeLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.ReportThongKeLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportThongKePersistence" class="vn.dtt.cmon.dao.report.service.persistence.ReportThongKePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportThongKeFinder" class="vn.dtt.cmon.dao.report.service.persistence.ReportThongKeFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.ReportTongHopLocalService" class="vn.dtt.cmon.dao.report.service.impl.ReportTongHopLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.ReportTongHopLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.ReportTongHopLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.ReportTongHopLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopPersistence" class="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopFinder" class="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.ReportTongHopChiTietLocalService" class="vn.dtt.cmon.dao.report.service.impl.ReportTongHopChiTietLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.ReportTongHopChiTietLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.ReportTongHopChiTietLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.ReportTongHopChiTietLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopChiTietPersistence" class="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopChiTietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopChiTietFinder" class="vn.dtt.cmon.dao.report.service.persistence.ReportTongHopChiTietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Role2BaoCaoLocalService" class="vn.dtt.cmon.dao.report.service.impl.Role2BaoCaoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Role2BaoCaoLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Role2BaoCaoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Role2BaoCaoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Role2BaoCaoPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Role2BaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Role2DonViBaoCaoLocalService" class="vn.dtt.cmon.dao.report.service.impl.Role2DonViBaoCaoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Role2DonViBaoCaoLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Role2DonViBaoCaoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Role2DonViBaoCaoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Role2DonViBaoCaoPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Role2DonViBaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Role2NhomTTHCLocalService" class="vn.dtt.cmon.dao.report.service.impl.Role2NhomTTHCLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Role2NhomTTHCLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Role2NhomTTHCLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Role2NhomTTHCLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Role2NhomTTHCPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Role2NhomTTHCPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.Role2TTHCLocalService" class="vn.dtt.cmon.dao.report.service.impl.Role2TTHCLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.report.service.Role2TTHCLocalServiceUtil" class="vn.dtt.cmon.dao.report.service.Role2TTHCLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.report.service.Role2TTHCLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.report.service.persistence.Role2TTHCPersistence" class="vn.dtt.cmon.dao.report.service.persistence.Role2TTHCPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TouchScreenLocalService" class="vn.dtt.cmon.dao.touchscreen.service.impl.TouchScreenLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TouchScreenLocalServiceUtil" class="vn.dtt.cmon.dao.touchscreen.service.TouchScreenLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.touchscreen.service.TouchScreenLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.persistence.TouchScreenPersistence" class="vn.dtt.cmon.dao.touchscreen.service.persistence.TouchScreenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.persistence.TouchScreenFinder" class="vn.dtt.cmon.dao.touchscreen.service.persistence.TouchScreenFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalService" class="vn.dtt.cmon.dao.touchscreen.service.impl.TraCuuHoSoTTHCCongLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalServiceUtil" class="vn.dtt.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.persistence.TraCuuHoSoTTHCCongPersistence" class="vn.dtt.cmon.dao.touchscreen.service.persistence.TraCuuHoSoTTHCCongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalService" class="vn.dtt.cmon.dao.touchscreen.service.impl.TraCuuThuTucHanhChinhLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalServiceUtil" class="vn.dtt.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.touchscreen.service.persistence.TraCuuThuTucHanhChinhPersistence" class="vn.dtt.cmon.dao.touchscreen.service.persistence.TraCuuThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachCoQuanLocalService" class="vn.dtt.cmon.dao.kios.service.impl.DanhSachCoQuanLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachCoQuanLocalServiceUtil" class="vn.dtt.cmon.dao.kios.service.DanhSachCoQuanLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.kios.service.DanhSachCoQuanLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.persistence.DanhSachCoQuanPersistence" class="vn.dtt.cmon.dao.kios.service.persistence.DanhSachCoQuanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachHoSoLocalService" class="vn.dtt.cmon.dao.kios.service.impl.DanhSachHoSoLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachHoSoLocalServiceUtil" class="vn.dtt.cmon.dao.kios.service.DanhSachHoSoLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.kios.service.DanhSachHoSoLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.persistence.DanhSachHoSoPersistence" class="vn.dtt.cmon.dao.kios.service.persistence.DanhSachHoSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.persistence.DanhSachHoSoFinder" class="vn.dtt.cmon.dao.kios.service.persistence.DanhSachHoSoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachThongKeLocalService" class="vn.dtt.cmon.dao.kios.service.impl.DanhSachThongKeLocalServiceImpl" />
+	<bean id="vn.dtt.cmon.dao.kios.service.DanhSachThongKeLocalServiceUtil" class="vn.dtt.cmon.dao.kios.service.DanhSachThongKeLocalServiceUtil">
+		<property name="service" ref="vn.dtt.cmon.dao.kios.service.DanhSachThongKeLocalService" />
+	</bean>
+	<bean id="vn.dtt.cmon.dao.kios.service.persistence.DanhSachThongKePersistence" class="vn.dtt.cmon.dao.kios.service.persistence.DanhSachThongKePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.ChucVuLocalService" class="org.oep.cmon.dao.cc.service.impl.ChucVuLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cc.service.ChucVuLocalServiceUtil" class="org.oep.cmon.dao.cc.service.ChucVuLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cc.service.ChucVuLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.persistence.ChucVuPersistence" class="org.oep.cmon.dao.cc.service.persistence.ChucVuPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.persistence.ChucVuFinder" class="org.oep.cmon.dao.cc.service.persistence.ChucVuFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.CongChucLocalService" class="org.oep.cmon.dao.cc.service.impl.CongChucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cc.service.CongChucLocalServiceUtil" class="org.oep.cmon.dao.cc.service.CongChucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cc.service.CongChucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.persistence.CongChucPersistence" class="org.oep.cmon.dao.cc.service.persistence.CongChucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.persistence.CongChucFinder" class="org.oep.cmon.dao.cc.service.persistence.CongChucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.CongChuc2NhomThuTucLocalService" class="org.oep.cmon.dao.cc.service.impl.CongChuc2NhomThuTucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cc.service.CongChuc2NhomThuTucLocalServiceUtil" class="org.oep.cmon.dao.cc.service.CongChuc2NhomThuTucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cc.service.CongChuc2NhomThuTucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cc.service.persistence.CongChuc2NhomThuTucPersistence" class="org.oep.cmon.dao.cc.service.persistence.CongChuc2NhomThuTucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.ChuyenMonLocalService" class="org.oep.cmon.dao.cd.service.impl.ChuyenMonLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.ChuyenMonLocalServiceUtil" class="org.oep.cmon.dao.cd.service.ChuyenMonLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.ChuyenMonLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.ChuyenMonPersistence" class="org.oep.cmon.dao.cd.service.persistence.ChuyenMonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.ChuyenMonFinder" class="org.oep.cmon.dao.cd.service.persistence.ChuyenMonFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.CongDanLocalService" class="org.oep.cmon.dao.cd.service.impl.CongDanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.CongDanLocalServiceUtil" class="org.oep.cmon.dao.cd.service.CongDanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.CongDanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.CongDanPersistence" class="org.oep.cmon.dao.cd.service.persistence.CongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.CongDanFinder" class="org.oep.cmon.dao.cd.service.persistence.CongDanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.DanTocLocalService" class="org.oep.cmon.dao.cd.service.impl.DanTocLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.DanTocLocalServiceUtil" class="org.oep.cmon.dao.cd.service.DanTocLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.DanTocLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.DanTocPersistence" class="org.oep.cmon.dao.cd.service.persistence.DanTocPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.GioiTinhLocalService" class="org.oep.cmon.dao.cd.service.impl.GioiTinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.GioiTinhLocalServiceUtil" class="org.oep.cmon.dao.cd.service.GioiTinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.GioiTinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.GioiTinhPersistence" class="org.oep.cmon.dao.cd.service.persistence.GioiTinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.HeThongLocalService" class="org.oep.cmon.dao.cd.service.impl.HeThongLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.HeThongLocalServiceUtil" class="org.oep.cmon.dao.cd.service.HeThongLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.HeThongLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.HeThongPersistence" class="org.oep.cmon.dao.cd.service.persistence.HeThongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.HoChieuCMNDLocalService" class="org.oep.cmon.dao.cd.service.impl.HoChieuCMNDLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.HoChieuCMNDLocalServiceUtil" class="org.oep.cmon.dao.cd.service.HoChieuCMNDLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.HoChieuCMNDLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.HoChieuCMNDPersistence" class="org.oep.cmon.dao.cd.service.persistence.HoChieuCMNDPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.NgheNghiepLocalService" class="org.oep.cmon.dao.cd.service.impl.NgheNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.NgheNghiepLocalServiceUtil" class="org.oep.cmon.dao.cd.service.NgheNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.NgheNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.NgheNghiepPersistence" class="org.oep.cmon.dao.cd.service.persistence.NgheNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.QuanHeGiaDinhLocalService" class="org.oep.cmon.dao.cd.service.impl.QuanHeGiaDinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.QuanHeGiaDinhLocalServiceUtil" class="org.oep.cmon.dao.cd.service.QuanHeGiaDinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.QuanHeGiaDinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.QuanHeGiaDinhPersistence" class="org.oep.cmon.dao.cd.service.persistence.QuanHeGiaDinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.TinhTrangHonNhanLocalService" class="org.oep.cmon.dao.cd.service.impl.TinhTrangHonNhanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.TinhTrangHonNhanLocalServiceUtil" class="org.oep.cmon.dao.cd.service.TinhTrangHonNhanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.TinhTrangHonNhanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.TinhTrangHonNhanPersistence" class="org.oep.cmon.dao.cd.service.persistence.TinhTrangHonNhanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.TonGiaoLocalService" class="org.oep.cmon.dao.cd.service.impl.TonGiaoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.TonGiaoLocalServiceUtil" class="org.oep.cmon.dao.cd.service.TonGiaoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.TonGiaoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.TonGiaoPersistence" class="org.oep.cmon.dao.cd.service.persistence.TonGiaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.TrinhDoChuyenMonLocalService" class="org.oep.cmon.dao.cd.service.impl.TrinhDoChuyenMonLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.TrinhDoChuyenMonLocalServiceUtil" class="org.oep.cmon.dao.cd.service.TrinhDoChuyenMonLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.TrinhDoChuyenMonLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.TrinhDoChuyenMonPersistence" class="org.oep.cmon.dao.cd.service.persistence.TrinhDoChuyenMonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.TrinhDoHocVanLocalService" class="org.oep.cmon.dao.cd.service.impl.TrinhDoHocVanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.cd.service.TrinhDoHocVanLocalServiceUtil" class="org.oep.cmon.dao.cd.service.TrinhDoHocVanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.cd.service.TrinhDoHocVanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.cd.service.persistence.TrinhDoHocVanPersistence" class="org.oep.cmon.dao.cd.service.persistence.TrinhDoHocVanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.HoSoChungThucLocalService" class="org.oep.cmon.dao.chungthuc.service.impl.HoSoChungThucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.chungthuc.service.HoSoChungThucLocalServiceUtil" class="org.oep.cmon.dao.chungthuc.service.HoSoChungThucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.chungthuc.service.HoSoChungThucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.persistence.HoSoChungThucPersistence" class="org.oep.cmon.dao.chungthuc.service.persistence.HoSoChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.persistence.HoSoChungThucFinder" class="org.oep.cmon.dao.chungthuc.service.persistence.HoSoChungThucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.SoDanhMucLocalService" class="org.oep.cmon.dao.chungthuc.service.impl.SoDanhMucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.chungthuc.service.SoDanhMucLocalServiceUtil" class="org.oep.cmon.dao.chungthuc.service.SoDanhMucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.chungthuc.service.SoDanhMucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.persistence.SoDanhMucPersistence" class="org.oep.cmon.dao.chungthuc.service.persistence.SoDanhMucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalService" class="org.oep.cmon.dao.chungthuc.service.impl.ThanhPhanHoSoChungThucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalServiceUtil" class="org.oep.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.chungthuc.service.ThanhPhanHoSoChungThucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.chungthuc.service.persistence.ThanhPhanHoSoChungThucPersistence" class="org.oep.cmon.dao.chungthuc.service.persistence.ThanhPhanHoSoChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalService" class="org.oep.cmon.dao.csms.service.impl.AnhChanDungYeuCauDangKyCongDanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalServiceUtil" class="org.oep.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.csms.service.AnhChanDungYeuCauDangKyCongDanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.csms.service.persistence.AnhChanDungYeuCauDangKyCongDanPersistence" class="org.oep.cmon.dao.csms.service.persistence.AnhChanDungYeuCauDangKyCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.csms.service.YeuCauDangKyCongDanLocalService" class="org.oep.cmon.dao.csms.service.impl.YeuCauDangKyCongDanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.csms.service.YeuCauDangKyCongDanLocalServiceUtil" class="org.oep.cmon.dao.csms.service.YeuCauDangKyCongDanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.csms.service.YeuCauDangKyCongDanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanPersistence" class="org.oep.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanFinder" class="org.oep.cmon.dao.csms.service.persistence.YeuCauDangKyCongDanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.DoanhNghiepLocalService" class="org.oep.cmon.dao.dn.service.impl.DoanhNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.DoanhNghiepLocalServiceUtil" class="org.oep.cmon.dao.dn.service.DoanhNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.DoanhNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.DoanhNghiepPersistence" class="org.oep.cmon.dao.dn.service.persistence.DoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.DoanhNghiepFinder" class="org.oep.cmon.dao.dn.service.persistence.DoanhNghiepFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalService" class="org.oep.cmon.dao.dn.service.impl.DoanhNghiep2NganhNgheLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalServiceUtil" class="org.oep.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.DoanhNghiep2NganhNgheLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.DoanhNghiep2NganhNghePersistence" class="org.oep.cmon.dao.dn.service.persistence.DoanhNghiep2NganhNghePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.LoaiDoanhNghiepLocalService" class="org.oep.cmon.dao.dn.service.impl.LoaiDoanhNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.LoaiDoanhNghiepLocalServiceUtil" class="org.oep.cmon.dao.dn.service.LoaiDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.LoaiDoanhNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.LoaiDoanhNghiepPersistence" class="org.oep.cmon.dao.dn.service.persistence.LoaiDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.NganhNgheKinhDoanhLocalService" class="org.oep.cmon.dao.dn.service.impl.NganhNgheKinhDoanhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.NganhNgheKinhDoanhLocalServiceUtil" class="org.oep.cmon.dao.dn.service.NganhNgheKinhDoanhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.NganhNgheKinhDoanhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.NganhNgheKinhDoanhPersistence" class="org.oep.cmon.dao.dn.service.persistence.NganhNgheKinhDoanhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalService" class="org.oep.cmon.dao.dn.service.impl.TrangThaiDoanhNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalServiceUtil" class="org.oep.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.TrangThaiDoanhNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.TrangThaiDoanhNghiepPersistence" class="org.oep.cmon.dao.dn.service.persistence.TrangThaiDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.YeuCauDangKyDNLocalService" class="org.oep.cmon.dao.dn.service.impl.YeuCauDangKyDNLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.YeuCauDangKyDNLocalServiceUtil" class="org.oep.cmon.dao.dn.service.YeuCauDangKyDNLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.YeuCauDangKyDNLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.YeuCauDangKyDNPersistence" class="org.oep.cmon.dao.dn.service.persistence.YeuCauDangKyDNPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalService" class="org.oep.cmon.dao.dn.service.impl.YeuCauDangKyDoanhNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalServiceUtil" class="org.oep.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dn.service.YeuCauDangKyDoanhNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dn.service.persistence.YeuCauDangKyDoanhNghiepPersistence" class="org.oep.cmon.dao.dn.service.persistence.YeuCauDangKyDoanhNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.CapNhatKetQuaLocalService" class="org.oep.cmon.dao.dvc.service.impl.CapNhatKetQuaLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.CapNhatKetQuaLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.CapNhatKetQuaLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.CapNhatKetQuaLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.CapNhatKetQuaPersistence" class="org.oep.cmon.dao.dvc.service.persistence.CapNhatKetQuaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalService" class="org.oep.cmon.dao.dvc.service.impl.CauHinhPortlet2ThuTucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.CauHinhPortlet2ThuTucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.CauHinhPortlet2ThuTucPersistence" class="org.oep.cmon.dao.dvc.service.persistence.CauHinhPortlet2ThuTucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalService" class="org.oep.cmon.dao.dvc.service.impl.DanhMucGiayTo2DoiTuongSuDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.DanhMucGiayTo2DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.DanhMucGiayTo2DoiTuongSuDungPersistence" class="org.oep.cmon.dao.dvc.service.persistence.DanhMucGiayTo2DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.DanhMucUngDungLocalService" class="org.oep.cmon.dao.dvc.service.impl.DanhMucUngDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.DanhMucUngDungLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.DanhMucUngDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.DanhMucUngDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.DanhMucUngDungPersistence" class="org.oep.cmon.dao.dvc.service.persistence.DanhMucUngDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.DoiTuongSuDungLocalService" class="org.oep.cmon.dao.dvc.service.impl.DoiTuongSuDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.DoiTuongSuDungLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.DoiTuongSuDungPersistence" class="org.oep.cmon.dao.dvc.service.persistence.DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalService" class="org.oep.cmon.dao.dvc.service.impl.NhomThuTucHanhChinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.NhomThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.NhomThuTucHanhChinhPersistence" class="org.oep.cmon.dao.dvc.service.persistence.NhomThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.ThuTuc2GiayToLocalService" class="org.oep.cmon.dao.dvc.service.impl.ThuTuc2GiayToLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.ThuTuc2GiayToLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.ThuTuc2GiayToLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.ThuTuc2GiayToLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.ThuTuc2GiayToPersistence" class="org.oep.cmon.dao.dvc.service.persistence.ThuTuc2GiayToPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.ThuTuc2GiayToFinder" class="org.oep.cmon.dao.dvc.service.persistence.ThuTuc2GiayToFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.ThuTucHanhChinhLocalService" class="org.oep.cmon.dao.dvc.service.impl.ThuTucHanhChinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.ThuTucHanhChinhLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.ThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.ThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.ThuTucHanhChinhPersistence" class="org.oep.cmon.dao.dvc.service.persistence.ThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.ThuTucHanhChinhFinder" class="org.oep.cmon.dao.dvc.service.persistence.ThuTucHanhChinhFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalService" class="org.oep.cmon.dao.dvc.service.impl.TTHC2CoQuanQuanLyLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.TTHC2CoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.TTHC2CoQuanQuanLyPersistence" class="org.oep.cmon.dao.dvc.service.persistence.TTHC2CoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalService" class="org.oep.cmon.dao.dvc.service.impl.TTHC2DoiTuongSuDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.TTHC2DoiTuongSuDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.TTHC2DoiTuongSuDungPersistence" class="org.oep.cmon.dao.dvc.service.persistence.TTHC2DoiTuongSuDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.VanBanHuongDanLocalService" class="org.oep.cmon.dao.dvc.service.impl.VanBanHuongDanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.dvc.service.VanBanHuongDanLocalServiceUtil" class="org.oep.cmon.dao.dvc.service.VanBanHuongDanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.dvc.service.VanBanHuongDanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.dvc.service.persistence.VanBanHuongDanPersistence" class="org.oep.cmon.dao.dvc.service.persistence.VanBanHuongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.FileDinhKemLocalService" class="org.oep.cmon.dao.hosohcc.service.impl.FileDinhKemLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.FileDinhKemLocalServiceUtil" class="org.oep.cmon.dao.hosohcc.service.FileDinhKemLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.FileDinhKemLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.FileDinhKemService" class="org.oep.cmon.dao.hosohcc.service.impl.FileDinhKemServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.FileDinhKemServiceUtil" class="org.oep.cmon.dao.hosohcc.service.FileDinhKemServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.FileDinhKemService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.FileDinhKemPersistence" class="org.oep.cmon.dao.hosohcc.service.persistence.FileDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.FileDinhKemFinder" class="org.oep.cmon.dao.hosohcc.service.persistence.FileDinhKemFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoAnhXaLocalService" class="org.oep.cmon.dao.hosohcc.service.impl.HoSoAnhXaLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoAnhXaLocalServiceUtil" class="org.oep.cmon.dao.hosohcc.service.HoSoAnhXaLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.HoSoAnhXaLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.HoSoAnhXaPersistence" class="org.oep.cmon.dao.hosohcc.service.persistence.HoSoAnhXaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongLocalService" class="org.oep.cmon.dao.hosohcc.service.impl.HoSoTTHCCongLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongLocalServiceUtil" class="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongService" class="org.oep.cmon.dao.hosohcc.service.impl.HoSoTTHCCongServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongServiceUtil" class="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.HoSoTTHCCongService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongPersistence" class="org.oep.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongFinder" class="org.oep.cmon.dao.hosohcc.service.persistence.HoSoTTHCCongFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.TrangThaiHoSoLocalService" class="org.oep.cmon.dao.hosohcc.service.impl.TrangThaiHoSoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.TrangThaiHoSoLocalServiceUtil" class="org.oep.cmon.dao.hosohcc.service.TrangThaiHoSoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.TrangThaiHoSoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.TrangThaiHoSoPersistence" class="org.oep.cmon.dao.hosohcc.service.persistence.TrangThaiHoSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.YKienTraoDoiLocalService" class="org.oep.cmon.dao.hosohcc.service.impl.YKienTraoDoiLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosohcc.service.YKienTraoDoiLocalServiceUtil" class="org.oep.cmon.dao.hosohcc.service.YKienTraoDoiLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosohcc.service.YKienTraoDoiLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.YKienTraoDoiPersistence" class="org.oep.cmon.dao.hosohcc.service.persistence.YKienTraoDoiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosohcc.service.persistence.YKienTraoDoiFinder" class="org.oep.cmon.dao.hosohcc.service.persistence.YKienTraoDoiFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosolienthong.service.HoSoLienThongLocalService" class="org.oep.cmon.dao.hosolienthong.service.impl.HoSoLienThongLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.hosolienthong.service.HoSoLienThongLocalServiceUtil" class="org.oep.cmon.dao.hosolienthong.service.HoSoLienThongLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.hosolienthong.service.HoSoLienThongLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosolienthong.service.persistence.HoSoLienThongPersistence" class="org.oep.cmon.dao.hosolienthong.service.persistence.HoSoLienThongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.hosolienthong.service.persistence.HoSoLienThongFinder" class="org.oep.cmon.dao.hosolienthong.service.persistence.HoSoLienThongFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.DanhSachJobLocalService" class="org.oep.cmon.dao.job.service.impl.DanhSachJobLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.job.service.DanhSachJobLocalServiceUtil" class="org.oep.cmon.dao.job.service.DanhSachJobLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.job.service.DanhSachJobLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.persistence.DanhSachJobPersistence" class="org.oep.cmon.dao.job.service.persistence.DanhSachJobPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.LogMailLocalService" class="org.oep.cmon.dao.job.service.impl.LogMailLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.job.service.LogMailLocalServiceUtil" class="org.oep.cmon.dao.job.service.LogMailLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.job.service.LogMailLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.persistence.LogMailPersistence" class="org.oep.cmon.dao.job.service.persistence.LogMailPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.TrangThaiJobLocalService" class="org.oep.cmon.dao.job.service.impl.TrangThaiJobLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.job.service.TrangThaiJobLocalServiceUtil" class="org.oep.cmon.dao.job.service.TrangThaiJobLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.job.service.TrangThaiJobLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.job.service.persistence.TrangThaiJobPersistence" class="org.oep.cmon.dao.job.service.persistence.TrangThaiJobPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachCoQuanLocalService" class="org.oep.cmon.dao.kios.service.impl.DanhSachCoQuanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachCoQuanLocalServiceUtil" class="org.oep.cmon.dao.kios.service.DanhSachCoQuanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.kios.service.DanhSachCoQuanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.persistence.DanhSachCoQuanPersistence" class="org.oep.cmon.dao.kios.service.persistence.DanhSachCoQuanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachHoSoLocalService" class="org.oep.cmon.dao.kios.service.impl.DanhSachHoSoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachHoSoLocalServiceUtil" class="org.oep.cmon.dao.kios.service.DanhSachHoSoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.kios.service.DanhSachHoSoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.persistence.DanhSachHoSoPersistence" class="org.oep.cmon.dao.kios.service.persistence.DanhSachHoSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.persistence.DanhSachHoSoFinder" class="org.oep.cmon.dao.kios.service.persistence.DanhSachHoSoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachThongKeLocalService" class="org.oep.cmon.dao.kios.service.impl.DanhSachThongKeLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.kios.service.DanhSachThongKeLocalServiceUtil" class="org.oep.cmon.dao.kios.service.DanhSachThongKeLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.kios.service.DanhSachThongKeLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.kios.service.persistence.DanhSachThongKePersistence" class="org.oep.cmon.dao.kios.service.persistence.DanhSachThongKePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.NguoiDung2VaiTroLocalService" class="org.oep.cmon.dao.nsd.service.impl.NguoiDung2VaiTroLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.NguoiDung2VaiTroLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.NguoiDung2VaiTroLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.NguoiDung2VaiTroLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.NguoiDung2VaiTroPersistence" class="org.oep.cmon.dao.nsd.service.persistence.NguoiDung2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.NhomNguoiDungLocalService" class="org.oep.cmon.dao.nsd.service.impl.NhomNguoiDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.NhomNguoiDungLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.NhomNguoiDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.NhomNguoiDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.NhomNguoiDungPersistence" class="org.oep.cmon.dao.nsd.service.persistence.NhomNguoiDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalService" class="org.oep.cmon.dao.nsd.service.impl.TaiKhoanNguoiDungLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.TaiKhoanNguoiDungLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungPersistence" class="org.oep.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungFinder" class="org.oep.cmon.dao.nsd.service.persistence.TaiKhoanNguoiDungFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.TaiNguyenLocalService" class="org.oep.cmon.dao.nsd.service.impl.TaiNguyenLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.TaiNguyenLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.TaiNguyenLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.TaiNguyenLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.TaiNguyenPersistence" class="org.oep.cmon.dao.nsd.service.persistence.TaiNguyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.TaiNguyenFinder" class="org.oep.cmon.dao.nsd.service.persistence.TaiNguyenFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalService" class="org.oep.cmon.dao.nsd.service.impl.TaiNguyen2VaiTroLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.TaiNguyen2VaiTroLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.TaiNguyen2VaiTroPersistence" class="org.oep.cmon.dao.nsd.service.persistence.TaiNguyen2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.VaiTroLocalService" class="org.oep.cmon.dao.nsd.service.impl.VaiTroLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.nsd.service.VaiTroLocalServiceUtil" class="org.oep.cmon.dao.nsd.service.VaiTroLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.nsd.service.VaiTroLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.nsd.service.persistence.VaiTroPersistence" class="org.oep.cmon.dao.nsd.service.persistence.VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalService" class="org.oep.cmon.dao.qlhc.service.impl.CapCoQuanQuanLyLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.CapCoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CapCoQuanQuanLyPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.CapCoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.CapDonViHanhChinhLocalService" class="org.oep.cmon.dao.qlhc.service.impl.CapDonViHanhChinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.CapDonViHanhChinhLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.CapDonViHanhChinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.CapDonViHanhChinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CapDonViHanhChinhPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.CapDonViHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.ChucVu2VaiTroLocalService" class="org.oep.cmon.dao.qlhc.service.impl.ChucVu2VaiTroLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.ChucVu2VaiTroLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.ChucVu2VaiTroLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.ChucVu2VaiTroLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.ChucVu2VaiTroPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.ChucVu2VaiTroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalService" class="org.oep.cmon.dao.qlhc.service.impl.CoQuanHanhChinhSuNghiepLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.CoQuanHanhChinhSuNghiepLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepFinder" class="org.oep.cmon.dao.qlhc.service.persistence.CoQuanHanhChinhSuNghiepFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.CoQuanQuanLyLocalService" class="org.oep.cmon.dao.qlhc.service.impl.CoQuanQuanLyLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.CoQuanQuanLyLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.CoQuanQuanLyLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.CoQuanQuanLyLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CoQuanQuanLyPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.CoQuanQuanLyPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.CoQuanQuanLyFinder" class="org.oep.cmon.dao.qlhc.service.persistence.CoQuanQuanLyFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.DonViHanhChinhLocalService" class="org.oep.cmon.dao.qlhc.service.impl.DonViHanhChinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.DonViHanhChinhLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.DonViHanhChinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.DonViHanhChinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.DonViHanhChinhPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.DonViHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.DonViHanhChinhFinder" class="org.oep.cmon.dao.qlhc.service.persistence.DonViHanhChinhFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.QuocGiaLocalService" class="org.oep.cmon.dao.qlhc.service.impl.QuocGiaLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.qlhc.service.QuocGiaLocalServiceUtil" class="org.oep.cmon.dao.qlhc.service.QuocGiaLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.qlhc.service.QuocGiaLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.QuocGiaPersistence" class="org.oep.cmon.dao.qlhc.service.persistence.QuocGiaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.qlhc.service.persistence.QuocGiaFinder" class="org.oep.cmon.dao.qlhc.service.persistence.QuocGiaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.BaocaochitietLocalService" class="org.oep.cmon.dao.report.service.impl.BaocaochitietLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.BaocaochitietLocalServiceUtil" class="org.oep.cmon.dao.report.service.BaocaochitietLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.BaocaochitietLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.BaocaochitietPersistence" class="org.oep.cmon.dao.report.service.persistence.BaocaochitietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.BaocaochitietFinder" class="org.oep.cmon.dao.report.service.persistence.BaocaochitietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.CongChuc2RoleLocalService" class="org.oep.cmon.dao.report.service.impl.CongChuc2RoleLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.CongChuc2RoleLocalServiceUtil" class="org.oep.cmon.dao.report.service.CongChuc2RoleLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.CongChuc2RoleLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.CongChuc2RolePersistence" class="org.oep.cmon.dao.report.service.persistence.CongChuc2RolePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.CongChuc2RoleFinder" class="org.oep.cmon.dao.report.service.persistence.CongChuc2RoleFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalService" class="org.oep.cmon.dao.report.service.impl.CoQuanQuanLy2LinhVucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalServiceUtil" class="org.oep.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.CoQuanQuanLy2LinhVucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucPersistence" class="org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucFinder" class="org.oep.cmon.dao.report.service.persistence.CoQuanQuanLy2LinhVucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.DanhMucBaoCaoLocalService" class="org.oep.cmon.dao.report.service.impl.DanhMucBaoCaoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.DanhMucBaoCaoLocalServiceUtil" class="org.oep.cmon.dao.report.service.DanhMucBaoCaoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.DanhMucBaoCaoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.DanhMucBaoCaoPersistence" class="org.oep.cmon.dao.report.service.persistence.DanhMucBaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.DanhMucRoleLocalService" class="org.oep.cmon.dao.report.service.impl.DanhMucRoleLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.DanhMucRoleLocalServiceUtil" class="org.oep.cmon.dao.report.service.DanhMucRoleLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.DanhMucRoleLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.DanhMucRolePersistence" class="org.oep.cmon.dao.report.service.persistence.DanhMucRolePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Lephi_chitietLocalService" class="org.oep.cmon.dao.report.service.impl.Lephi_chitietLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Lephi_chitietLocalServiceUtil" class="org.oep.cmon.dao.report.service.Lephi_chitietLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Lephi_chitietLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Lephi_chitietPersistence" class="org.oep.cmon.dao.report.service.persistence.Lephi_chitietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Lephi_chitietFinder" class="org.oep.cmon.dao.report.service.persistence.Lephi_chitietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Lephi_linhvucLocalService" class="org.oep.cmon.dao.report.service.impl.Lephi_linhvucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Lephi_linhvucLocalServiceUtil" class="org.oep.cmon.dao.report.service.Lephi_linhvucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Lephi_linhvucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Lephi_linhvucPersistence" class="org.oep.cmon.dao.report.service.persistence.Lephi_linhvucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Lephi_tonghopLocalService" class="org.oep.cmon.dao.report.service.impl.Lephi_tonghopLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil" class="org.oep.cmon.dao.report.service.Lephi_tonghopLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Lephi_tonghopLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Lephi_tonghopPersistence" class="org.oep.cmon.dao.report.service.persistence.Lephi_tonghopPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.ReportThongKeLocalService" class="org.oep.cmon.dao.report.service.impl.ReportThongKeLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.ReportThongKeLocalServiceUtil" class="org.oep.cmon.dao.report.service.ReportThongKeLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.ReportThongKeLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportThongKePersistence" class="org.oep.cmon.dao.report.service.persistence.ReportThongKePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportThongKeFinder" class="org.oep.cmon.dao.report.service.persistence.ReportThongKeFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.ReportTongHopLocalService" class="org.oep.cmon.dao.report.service.impl.ReportTongHopLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.ReportTongHopLocalServiceUtil" class="org.oep.cmon.dao.report.service.ReportTongHopLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.ReportTongHopLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportTongHopPersistence" class="org.oep.cmon.dao.report.service.persistence.ReportTongHopPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportTongHopFinder" class="org.oep.cmon.dao.report.service.persistence.ReportTongHopFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.ReportTongHopChiTietLocalService" class="org.oep.cmon.dao.report.service.impl.ReportTongHopChiTietLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.ReportTongHopChiTietLocalServiceUtil" class="org.oep.cmon.dao.report.service.ReportTongHopChiTietLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.ReportTongHopChiTietLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietPersistence" class="org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietFinder" class="org.oep.cmon.dao.report.service.persistence.ReportTongHopChiTietFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Role2BaoCaoLocalService" class="org.oep.cmon.dao.report.service.impl.Role2BaoCaoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Role2BaoCaoLocalServiceUtil" class="org.oep.cmon.dao.report.service.Role2BaoCaoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Role2BaoCaoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Role2BaoCaoPersistence" class="org.oep.cmon.dao.report.service.persistence.Role2BaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Role2DonViBaoCaoLocalService" class="org.oep.cmon.dao.report.service.impl.Role2DonViBaoCaoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Role2DonViBaoCaoLocalServiceUtil" class="org.oep.cmon.dao.report.service.Role2DonViBaoCaoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Role2DonViBaoCaoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Role2DonViBaoCaoPersistence" class="org.oep.cmon.dao.report.service.persistence.Role2DonViBaoCaoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Role2NhomTTHCLocalService" class="org.oep.cmon.dao.report.service.impl.Role2NhomTTHCLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Role2NhomTTHCLocalServiceUtil" class="org.oep.cmon.dao.report.service.Role2NhomTTHCLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Role2NhomTTHCLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Role2NhomTTHCPersistence" class="org.oep.cmon.dao.report.service.persistence.Role2NhomTTHCPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.Role2TTHCLocalService" class="org.oep.cmon.dao.report.service.impl.Role2TTHCLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.report.service.Role2TTHCLocalServiceUtil" class="org.oep.cmon.dao.report.service.Role2TTHCLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.report.service.Role2TTHCLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.report.service.persistence.Role2TTHCPersistence" class="org.oep.cmon.dao.report.service.persistence.Role2TTHCPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.AnhXaLocalService" class="org.oep.cmon.dao.thamso.service.impl.AnhXaLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.thamso.service.AnhXaLocalServiceUtil" class="org.oep.cmon.dao.thamso.service.AnhXaLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.thamso.service.AnhXaLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.persistence.AnhXaPersistence" class="org.oep.cmon.dao.thamso.service.persistence.AnhXaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.persistence.AnhXaFinder" class="org.oep.cmon.dao.thamso.service.persistence.AnhXaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.ThamSoLocalService" class="org.oep.cmon.dao.thamso.service.impl.ThamSoLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.thamso.service.ThamSoLocalServiceUtil" class="org.oep.cmon.dao.thamso.service.ThamSoLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.thamso.service.ThamSoLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.persistence.ThamSoPersistence" class="org.oep.cmon.dao.thamso.service.persistence.ThamSoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.thamso.service.persistence.ThamSoFinder" class="org.oep.cmon.dao.thamso.service.persistence.ThamSoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.DanhMucGiayToLocalService" class="org.oep.cmon.dao.tlct.service.impl.DanhMucGiayToLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.tlct.service.DanhMucGiayToLocalServiceUtil" class="org.oep.cmon.dao.tlct.service.DanhMucGiayToLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.tlct.service.DanhMucGiayToLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.persistence.DanhMucGiayToPersistence" class="org.oep.cmon.dao.tlct.service.persistence.DanhMucGiayToPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.persistence.DanhMucGiayToFinder" class="org.oep.cmon.dao.tlct.service.persistence.DanhMucGiayToFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalService" class="org.oep.cmon.dao.tlct.service.impl.LichSuGiayToDinhKemLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalServiceUtil" class="org.oep.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.tlct.service.LichSuGiayToDinhKemLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.persistence.LichSuGiayToDinhKemPersistence" class="org.oep.cmon.dao.tlct.service.persistence.LichSuGiayToDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.TaiLieuChungThucLocalService" class="org.oep.cmon.dao.tlct.service.impl.TaiLieuChungThucLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.tlct.service.TaiLieuChungThucLocalServiceUtil" class="org.oep.cmon.dao.tlct.service.TaiLieuChungThucLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.tlct.service.TaiLieuChungThucLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.persistence.TaiLieuChungThucPersistence" class="org.oep.cmon.dao.tlct.service.persistence.TaiLieuChungThucPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.tlct.service.persistence.TaiLieuChungThucFinder" class="org.oep.cmon.dao.tlct.service.persistence.TaiLieuChungThucFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.TouchScreenLocalService" class="org.oep.cmon.dao.touchscreen.service.impl.TouchScreenLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.touchscreen.service.TouchScreenLocalServiceUtil" class="org.oep.cmon.dao.touchscreen.service.TouchScreenLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.touchscreen.service.TouchScreenLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.persistence.TouchScreenPersistence" class="org.oep.cmon.dao.touchscreen.service.persistence.TouchScreenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.persistence.TouchScreenFinder" class="org.oep.cmon.dao.touchscreen.service.persistence.TouchScreenFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalService" class="org.oep.cmon.dao.touchscreen.service.impl.TraCuuHoSoTTHCCongLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalServiceUtil" class="org.oep.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.touchscreen.service.TraCuuHoSoTTHCCongLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.persistence.TraCuuHoSoTTHCCongPersistence" class="org.oep.cmon.dao.touchscreen.service.persistence.TraCuuHoSoTTHCCongPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalService" class="org.oep.cmon.dao.touchscreen.service.impl.TraCuuThuTucHanhChinhLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalServiceUtil" class="org.oep.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.touchscreen.service.TraCuuThuTucHanhChinhLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.touchscreen.service.persistence.TraCuuThuTucHanhChinhPersistence" class="org.oep.cmon.dao.touchscreen.service.persistence.TraCuuThuTucHanhChinhPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalService" class="org.oep.cmon.dao.ttthanhtoan.service.impl.ThongTinThanhToanLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalServiceUtil" class="org.oep.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.ttthanhtoan.service.ThongTinThanhToanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanPersistence" class="org.oep.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanFinder" class="org.oep.cmon.dao.ttthanhtoan.service.persistence.ThongTinThanhToanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.TienTeLocalService" class="org.oep.cmon.dao.ttthanhtoan.service.impl.TienTeLocalServiceImpl" />
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.TienTeLocalServiceUtil" class="org.oep.cmon.dao.ttthanhtoan.service.TienTeLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.dao.ttthanhtoan.service.TienTeLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.dao.ttthanhtoan.service.persistence.TienTePersistence" class="org.oep.cmon.dao.ttthanhtoan.service.persistence.TienTePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.ExchFileDinhKemLocalService" class="org.oep.exch.dao.hoso.service.impl.ExchFileDinhKemLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.ExchFileDinhKemLocalServiceUtil" class="org.oep.exch.dao.hoso.service.ExchFileDinhKemLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.ExchFileDinhKemLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.ExchFileDinhKemPersistence" class="org.oep.exch.dao.hoso.service.persistence.ExchFileDinhKemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.HoSoMotCuaLocalService" class="org.oep.exch.dao.hoso.service.impl.HoSoMotCuaLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.HoSoMotCuaLocalServiceUtil" class="org.oep.exch.dao.hoso.service.HoSoMotCuaLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.HoSoMotCuaLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.HoSoMotCuaPersistence" class="org.oep.exch.dao.hoso.service.persistence.HoSoMotCuaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.HoSoTrucTuyenLocalService" class="org.oep.exch.dao.hoso.service.impl.HoSoTrucTuyenLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.HoSoTrucTuyenLocalServiceUtil" class="org.oep.exch.dao.hoso.service.HoSoTrucTuyenLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.HoSoTrucTuyenLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.HoSoTrucTuyenPersistence" class="org.oep.exch.dao.hoso.service.persistence.HoSoTrucTuyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.KetQuaHosoLocalService" class="org.oep.exch.dao.hoso.service.impl.KetQuaHosoLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.KetQuaHosoLocalServiceUtil" class="org.oep.exch.dao.hoso.service.KetQuaHosoLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.KetQuaHosoLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.KetQuaHosoPersistence" class="org.oep.exch.dao.hoso.service.persistence.KetQuaHosoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.TrangThaiHosoLocalService" class="org.oep.exch.dao.hoso.service.impl.TrangThaiHosoLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.TrangThaiHosoLocalServiceUtil" class="org.oep.exch.dao.hoso.service.TrangThaiHosoLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.TrangThaiHosoLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.TrangThaiHosoPersistence" class="org.oep.exch.dao.hoso.service.persistence.TrangThaiHosoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalService" class="org.oep.exch.dao.hoso.service.impl.UpdateHoSoTrucTuyenLocalServiceImpl" />
+	<bean id="org.oep.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalServiceUtil" class="org.oep.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalServiceUtil">
+		<property name="service" ref="org.oep.exch.dao.hoso.service.UpdateHoSoTrucTuyenLocalService" />
+	</bean>
+	<bean id="org.oep.exch.dao.hoso.service.persistence.UpdateHoSoTrucTuyenPersistence" class="org.oep.exch.dao.hoso.service.persistence.UpdateHoSoTrucTuyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="egovDataSource" />
+	</bean>
+	<bean id="org.oep.cmon.anhcongdan.service.AnhCongDanLocalService" class="org.oep.cmon.anhcongdan.service.impl.AnhCongDanLocalServiceImpl" />
+	<bean id="org.oep.cmon.anhcongdan.service.AnhCongDanLocalServiceUtil" class="org.oep.cmon.anhcongdan.service.AnhCongDanLocalServiceUtil">
+		<property name="service" ref="org.oep.cmon.anhcongdan.service.AnhCongDanLocalService" />
+	</bean>
+	<bean id="org.oep.cmon.anhcongdan.service.persistence.AnhCongDanPersistence" class="org.oep.cmon.anhcongdan.service.persistence.AnhCongDanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="cmonDataSource" />
+	</bean>
+</beans>

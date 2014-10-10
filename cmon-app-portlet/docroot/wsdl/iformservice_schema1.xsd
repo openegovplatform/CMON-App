@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://form.provider.cmon.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://form.provider.cmon.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="getDSDoiTuongSuDung" type="tns:getDSDoiTuongSuDung"/>
+<xs:element name="getDSDoiTuongSuDungResponse" type="tns:getDSDoiTuongSuDungResponse"/>
+<xs:element name="getDSNhomThuTucHanhChinh" type="tns:getDSNhomThuTucHanhChinh"/>
+<xs:element name="getDSNhomThuTucHanhChinhResponse" type="tns:getDSNhomThuTucHanhChinhResponse"/>
+<xs:element name="getDSThuTucHanhChinhTheoNhom" type="tns:getDSThuTucHanhChinhTheoNhom"/>
+<xs:element name="getDSThuTucHanhChinhTheoNhomResponse" type="tns:getDSThuTucHanhChinhTheoNhomResponse"/>
+<xs:element name="getDSThuTucHanhChinhTheoNhomVaVaiTro" type="tns:getDSThuTucHanhChinhTheoNhomVaVaiTro"/>
+<xs:element name="getDSThuTucHanhChinhTheoNhomVaVaiTroResponse" type="tns:getDSThuTucHanhChinhTheoNhomVaVaiTroResponse"/>
+<xs:element name="getDSUngDung" type="tns:getDSUngDung"/>
+<xs:element name="getDSUngDungResponse" type="tns:getDSUngDungResponse"/>
+<xs:element name="getMaUngDungTheoQuyTrinh" type="tns:getMaUngDungTheoQuyTrinh"/>
+<xs:element name="getMaUngDungTheoQuyTrinhResponse" type="tns:getMaUngDungTheoQuyTrinhResponse"/>
+<xs:element name="getThuTucHanhChinhTheoId" type="tns:getThuTucHanhChinhTheoId"/>
+<xs:element name="getThuTucHanhChinhTheoIdResponse" type="tns:getThuTucHanhChinhTheoIdResponse"/>
+<xs:element name="getThuTucHanhChinhTheoMa" type="tns:getThuTucHanhChinhTheoMa"/>
+<xs:element name="getThuTucHanhChinhTheoMaResponse" type="tns:getThuTucHanhChinhTheoMaResponse"/>
+<xs:element name="getUngDungTheoMa" type="tns:getUngDungTheoMa"/>
+<xs:element name="getUngDungTheoMaResponse" type="tns:getUngDungTheoMaResponse"/>
+<xs:complexType name="getUngDungTheoMa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getUngDungTheoMaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:danhMucUngDungSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="danhMucUngDungSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSThuTucHanhChinhTheoNhom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSThuTucHanhChinhTheoNhomResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:thuTucHanhChinhSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="thuTucHanhChinhSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cachThucHien" type="xs:string"/>
+      <xs:element minOccurs="0" name="canCuPhapLy" type="xs:string"/>
+      <xs:element name="canTichHop" type="xs:int"/>
+      <xs:element minOccurs="0" name="capCoQuanQuanLyId" type="xs:long"/>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element minOccurs="0" name="donViLePhi" type="xs:string"/>
+      <xs:element minOccurs="0" name="donViPhi" type="xs:string"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="lePhi" type="xs:long"/>
+      <xs:element minOccurs="0" name="linhVucThucHien" type="xs:string"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="maDNG" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="nhomThuTucHanhChinhId" type="xs:long"/>
+      <xs:element name="phi" type="xs:long"/>
+      <xs:element name="phienBan" type="xs:long"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element name="soNgayXuLy" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenMauDonToKhai" type="xs:string"/>
+      <xs:element minOccurs="0" name="thanhPhanHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="thuTucLienThongId" type="xs:long"/>
+      <xs:element name="trangThai" type="xs:int"/>
+      <xs:element minOccurs="0" name="trinhTuThucHien" type="xs:string"/>
+      <xs:element minOccurs="0" name="uengineProcessName" type="xs:string"/>
+      <xs:element minOccurs="0" name="yeuCauDieuKienThucHien" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getMaUngDungTheoQuyTrinh">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getMaUngDungTheoQuyTrinhResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSThuTucHanhChinhTheoNhomVaVaiTro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSThuTucHanhChinhTheoNhomVaVaiTroResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:thuTucHanhChinhSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSUngDung">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getDSUngDungResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:danhMucUngDungSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThuTucHanhChinhTheoMa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThuTucHanhChinhTheoMaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:thuTucHanhChinh"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="thuTucHanhChinh">
+    <xs:complexContent>
+      <xs:extension base="tns:thuTucHanhChinhSoap">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="taiLieuDinhKems" nillable="true" type="tns:taiLieuDinhKem"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="taiLieuDinhKem">
+    <xs:complexContent>
+      <xs:extension base="tns:danhMucGiayToSoap">
+        <xs:sequence>
+          <xs:element name="batBuoc" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="taiLieuThayThe" type="tns:taiLieuDinhKem"/>
+          <xs:element minOccurs="0" name="tailieuChungThuc" type="tns:taiLieuChungThucSoap"/>
+          <xs:element minOccurs="0" name="thuTuc2GiayToId" type="xs:long"/>
+          <xs:element minOccurs="0" name="url" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="danhMucGiayToSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="gioiHanDungLuong" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="kieuTaiLieu" type="xs:string"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="mota" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="phienBan" type="xs:long"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="tailieuThayTheId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="taiLieuChungThucSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chuSohuuId" type="xs:long"/>
+      <xs:element minOccurs="0" name="danhMucGiayToId" type="xs:long"/>
+      <xs:element minOccurs="0" name="ghiChu" type="xs:string"/>
+      <xs:element minOccurs="0" name="hieuLucDenNgay" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="hieuLucTuNgay" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="hoSoTTHCCId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="loai" type="xs:int"/>
+      <xs:element minOccurs="0" name="maUngDung" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayDuyet" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayUpload" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiUploadId" type="xs:long"/>
+      <xs:element minOccurs="0" name="nguoiduyetId" type="xs:long"/>
+      <xs:element name="noiLuuTruId" type="xs:long"/>
+      <xs:element name="phienBan" type="xs:int"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+      <xs:element name="trangThai" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSNhomThuTucHanhChinh">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSNhomThuTucHanhChinhResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:nhomThuTucHanhChinhSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="nhomThuTucHanhChinhSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="danhMucUngDungId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="phienBan" type="xs:long"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getDSDoiTuongSuDung">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getDSDoiTuongSuDungResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:doiTuongSuDungSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="doiTuongSuDungSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="ma" type="xs:string"/>
+      <xs:element minOccurs="0" name="mota" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ten" type="xs:string"/>
+      <xs:element name="trangThai" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThuTucHanhChinhTheoId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getThuTucHanhChinhTheoIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:thuTucHanhChinh"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

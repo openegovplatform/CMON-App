@@ -1,0 +1,11 @@
+Chào bạn $citizen_name !
+
+Cảm ơn bạn đã được cán bộ đăng kí tài khoản người dùng trên hệ thống của chúng tôi.
+Tài khoản đăng nhập của bạn là :$citizen_email 
+Mật khẩu của bạn là :$citizen_matKhau
+
+Đường dẫn đến cổng dịch vụ công trực tuyến: $uri để bạn đăng nhập tài khoản.
+
+Lưu ý: Cấm reply mail này dưới mọi hình thức
+
+Chính quyền điện tử Đà Nẵng.

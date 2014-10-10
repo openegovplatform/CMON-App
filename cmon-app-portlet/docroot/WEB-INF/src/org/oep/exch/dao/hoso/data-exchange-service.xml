@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.exch.dao.hoso">
+	<author>NAM</author>
+	<namespace>EXCH</namespace>	
+    <entity name="HoSoMotCua" local-service="true" remote-service="false" table="exch_hosomotcua" data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long" primary="true"></column>
+		<column name="NgayChuyen" db-name="NgayChuyen" type="Date"></column>
+		<column name="MaSoHoSo" db-name="MaSoHoSo" type="String"></column>
+		<column name="MaLoaiHoSo" db-name="MaLoaiHoSo" type="String"></column>
+		<column name="MaDonViTiepNhan" db-name="MaDonViTiepNhan" type="String"></column>
+		<column name="NgayNopHoSo" db-name="NgayNopHoSo" type="String"></column>
+		<column name="NgayHenTra" db-name="NgayHenTra" type="String"></column>
+		<column name="HoTenNguoiNop" db-name="HoTenNguoiNop" type="String"></column>
+		<column name="SoCmnd" db-name="SoCmnd" type="String"></column>
+		<column name="NgaySinh" db-name="NgaySinh" type="String"></column>
+		<column name="MaTinhThuongTru" db-name="MaTinhThuongTru" type="String"></column>
+		<column name="MoTaDiaChiThuongTru" db-name="MoTaDiaChiThuongTru" type="String"></column>
+		<column name="GioiTinh" db-name="GioiTinh" type="int"></column>
+		<column name="MaNguoiTiepNhan" db-name="MaNguoiTiepNhan" type="String"></column>
+		<column name="TenNguoiTiepNhan" db-name="TenNguoiTiepNhan" type="String"></column>
+		<column name="DonViCungCap" db-name="DonViCungCap" type="String"></column>
+		<column name="TrangThaiXuLy" db-name="TrangThaiXuLy" type="int"></column>
+		<column name="NgayXuLy" db-name="NgayXuLy" type="Date"></column>
+		<column name="LoiKhiXuLy" db-name="LoiKhiXuLy" type="String"></column>
+        <order by="asc">
+            <order-column name="id"></order-column>
+        </order>
+		<finder name="TrangThaiXuLy" return-type="Collection">
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+		
+		<finder name="MaSoHoSo" return-type="Collection">
+			<finder-column name="MaSoHoSo" />			
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+		
+		
+    </entity>
+    <entity name="HoSoTrucTuyen" local-service="true" remote-service="false" table="exch_hosotructuyen" data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long" primary="true"></column>
+		<column name="NgayTrichXuat" db-name="NgayTrichXuat" type="Date"></column>
+		<column name="OnlineId" db-name="HOSOTTHCCONGID" type="long"></column>
+		<column name="MaLoaiHoSo" db-name="MaLoaiHoSo" type="String"></column>
+		<column name="MaDonViTiepNhan" db-name="MaDonViTiepNhan" type="String"></column>
+		<column name="HoTenNguoiNop" db-name="HoTenNguoiNop" type="String"></column>
+		<column name="DiaChiNguoiNop" db-name="DiaChiNguoiNop" type="String"></column>
+		<column name="NgaySinh" db-name="NgaySinh" type="Date"></column>
+		<column name="SoCmnd" db-name="SoCmnd" type="String"></column>
+		<column name="Email" db-name="Email" type="String"></column>
+		<column name="SoDtDiDong" db-name="SoDtDiDong" type="String"></column>
+		<column name="SoDtCoDinh" db-name="SoDtCoDinh" type="String"></column>
+		<column name="NgayDangKyHoSo" db-name="NgayDangKyHoSo" type="Date"></column>
+		<column name="NoiChuyenHoSo" db-name="NoiChuyenHoSo" type="String"></column>
+		<column name="TrangThaiXuLy" db-name="TrangThaiXuLy" type="int"></column>
+		<column name="NgayChuyen" db-name="NgayChuyen" type="Date"></column>
+		<column name="GioiTinh" db-name="GioiTinh" type="int"></column>
+		<column name="ChuSoHuuHoSo" db-name="ChuSoHuuHoSo" type="String"></column>
+		<order by="asc">
+            <order-column name="id"></order-column>
+        </order>
+		<finder name="NoiChuyenHoSo" return-type="Collection">
+			<finder-column name="NoiChuyenHoSo" />
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+		<finder name="MaDonViTiepNhan" return-type="Collection">
+			<finder-column name="MaDonViTiepNhan" />
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+    </entity>
+        <entity name="UpdateHoSoTrucTuyen" local-service="true" remote-service="false" table="exch_hosotructuyen" data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long" primary="true"></column>	
+		<column name="TrangThaiXuLy" db-name="TrangThaiXuLy" type="int"></column>
+		<column name="NgayChuyen" db-name="NgayChuyen" type="Date"></column>
+    </entity>
+    
+	<entity name="ExchFileDinhKem" local-service="true" remote-service="false" table="exch_filedinhkem" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long" primary="true"></column>
+		<column name="OnlineId" db-name="HOSOTTHCCONGID" type="long"></column>
+		<column name="TenTaiLieuDinhKem" db-name="TenTaiLieuDinhKem" type="String"></column>
+		<column name="UrlTaiLieuDinhKem" db-name="UrlTaiLieuDinhKem" type="String"></column>
+		<column name="TenFile" db-name="TenFile" type="String"></column>		
+		<finder name="OnlineId" return-type="Collection">
+			<finder-column name="OnlineId" />
+		</finder>
+    </entity>
+	<entity name="TrangThaiHoso" local-service="true" remote-service="false" table="exch_trangthaihoso" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long" primary="true"></column>
+		<column name="NgayChuyen" db-name="NgayChuyen" type="Date"></column>
+		<column name="OnlineId" db-name="HOSOTTHCCONGID" type="long"></column>
+		<column name="MaSoHoSo" db-name="MaSoHoSo" type="String"></column>
+		<column name="NgayHenTra" db-name="NgayHenTra" type="String"></column>
+		<column name="MaNguoiXuLyHienTai" db-name="MaNguoiXuLyHienTai" type="String"></column>
+		<column name="TenNguoiXuLyHienTai" db-name="TenNguoiXuLyHienTai" type="String"></column>
+		<column name="TenPhongBanXuLyHienTai" db-name="TenPhongBanXuLyHienTai" type="String"></column>
+		<column name="NgayGioLuanChuyen" db-name="NgayGioLuanChuyen" type="String"></column>
+		<column name="SoGioYeuCauXuLy" db-name="SoGioYeuCauXuLy" type="int"></column>
+		<column name="NoiDungYeuCauXuLy" db-name="NoiDungYeuCauXuLy" type="String"></column>
+		<column name="SoGioThucHien" db-name="SoGioThucHien" type="int"></column>
+		<column name="TrangThaiHienTai" db-name="TrangThaiHienTai" type="int"></column>
+		<column name="MaNguoiXuLyKeTiep" db-name="MaNguoiXuLyKeTiep" type="String"></column>
+		<column name="TenNguoiXuLyKeTiep" db-name="TenNguoiXuLyKeTiep" type="String"></column>
+		<column name="TenPhongBanXuLyKeTiep" db-name="TenPhongBanXuLyKeTiep" type="String"></column>
+		<column name="TrangThaiKeTiep" db-name="TrangThaiKeTiep" type="int"></column>
+		<column name="DonViCungCap" db-name="DonViCungCap" type="String"></column>
+		<column name="TrangThaiXuLy" db-name="TrangThaiXuLy" type="int"></column>
+		<column name="NgayXuLy" db-name="NgayXuLy" type="Date"></column>
+		<column name="LoiKhiXuLy" db-name="LoiKhiXuLy" type="String"></column>
+		<order by="asc">
+            <order-column name="id"></order-column>
+        </order>
+		<finder name="TrangThaiXuLy" return-type="Collection">
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+    </entity>
+	<entity name="KetQuaHoso" local-service="true" remote-service="false" table="exch_ketquahoso" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long" primary="true"></column>
+		<column name="NgayChuyen" db-name="NgayChuyen" type="Date"></column>
+		<column name="MaSoHoSo" db-name="MaSoHoSo" type="String"></column>
+		<column name="TenNguoiNhanKetQua" db-name="TenNguoiNhanKetQua" type="String"></column>
+		<column name="NgayNhanKetQua" db-name="NgayNhanKetQua" type="String"></column>
+		<column name="LePhiHoSo" db-name="LePhiHoSo" type="int"></column>
+		<column name="PhiXuLyHoSo" db-name="PhiXuLyHoSo" type="int"></column>
+		<column name="NgayHoanThanh" db-name="NgayHoanThanh" type="String"></column>
+		<column name="MaCanBoTraKetQua" db-name="MaCanBoTraKetQua" type="String"></column>
+		<column name="TenCanBoTraKetQua" db-name="TenCanBoTraKetQua" type="String"></column>
+		<column name="DonViCungCap" db-name="DonViCungCap" type="String"></column>
+		<column name="TrangThaiXuLy" db-name="TrangThaiXuLy" type="int"></column>
+		<column name="NgayXuLy" db-name="NgayXuLy" type="Date"></column>
+		<column name="LoiKhiXuLy" db-name="LoiKhiXuLy" type="String"></column>
+		<order by="asc">
+            <order-column name="id"></order-column>
+        </order>
+		<finder name="TrangThaiXuLy" return-type="Collection">
+			<finder-column name="TrangThaiXuLy" />
+		</finder>
+    </entity>
+</service-builder>

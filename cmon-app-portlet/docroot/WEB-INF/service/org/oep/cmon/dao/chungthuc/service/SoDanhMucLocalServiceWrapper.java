@@ -1,0 +1,350 @@
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package org.oep.cmon.dao.chungthuc.service;
+
+import com.liferay.portal.service.ServiceWrapper;
+
+/**
+ * <p>
+ * This class is a wrapper for {@link SoDanhMucLocalService}.
+ * </p>
+ *
+ * @author    vietho
+ * @see       SoDanhMucLocalService
+ * @generated
+ */
+public class SoDanhMucLocalServiceWrapper implements SoDanhMucLocalService,
+	ServiceWrapper<SoDanhMucLocalService> {
+	public SoDanhMucLocalServiceWrapper(
+		SoDanhMucLocalService soDanhMucLocalService) {
+		_soDanhMucLocalService = soDanhMucLocalService;
+	}
+
+	/**
+	* Adds the so danh muc to the database. Also notifies the appropriate model listeners.
+	*
+	* @param soDanhMuc the so danh muc
+	* @return the so danh muc that was added
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc addSoDanhMuc(
+		org.oep.cmon.dao.chungthuc.model.SoDanhMuc soDanhMuc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.addSoDanhMuc(soDanhMuc);
+	}
+
+	/**
+	* Creates a new so danh muc with the primary key. Does not add the so danh muc to the database.
+	*
+	* @param id the primary key for the new so danh muc
+	* @return the new so danh muc
+	*/
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc createSoDanhMuc(long id) {
+		return _soDanhMucLocalService.createSoDanhMuc(id);
+	}
+
+	/**
+	* Deletes the so danh muc with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param id the primary key of the so danh muc
+	* @throws PortalException if a so danh muc with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public void deleteSoDanhMuc(long id)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		_soDanhMucLocalService.deleteSoDanhMuc(id);
+	}
+
+	/**
+	* Deletes the so danh muc from the database. Also notifies the appropriate model listeners.
+	*
+	* @param soDanhMuc the so danh muc
+	* @throws SystemException if a system exception occurred
+	*/
+	public void deleteSoDanhMuc(
+		org.oep.cmon.dao.chungthuc.model.SoDanhMuc soDanhMuc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		_soDanhMucLocalService.deleteSoDanhMuc(soDanhMuc);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns the matching rows.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.dynamicQuery(dynamicQuery);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns a range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @return the range of matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end) throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.dynamicQuery(dynamicQuery, start, end);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.dynamicQuery(dynamicQuery, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the number of rows that match the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the number of rows that match the dynamic query
+	* @throws SystemException if a system exception occurred
+	*/
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.dynamicQueryCount(dynamicQuery);
+	}
+
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc fetchSoDanhMuc(long id)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.fetchSoDanhMuc(id);
+	}
+
+	/**
+	* Returns the so danh muc with the primary key.
+	*
+	* @param id the primary key of the so danh muc
+	* @return the so danh muc
+	* @throws PortalException if a so danh muc with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc getSoDanhMuc(long id)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMuc(id);
+	}
+
+	public com.liferay.portal.model.PersistedModel getPersistedModel(
+		java.io.Serializable primaryKeyObj)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	/**
+	* Returns a range of all the so danh mucs.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set.
+	* </p>
+	*
+	* @param start the lower bound of the range of so danh mucs
+	* @param end the upper bound of the range of so danh mucs (not inclusive)
+	* @return the range of so danh mucs
+	* @throws SystemException if a system exception occurred
+	*/
+	public java.util.List<org.oep.cmon.dao.chungthuc.model.SoDanhMuc> getSoDanhMucs(
+		int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMucs(start, end);
+	}
+
+	/**
+	* Returns the number of so danh mucs.
+	*
+	* @return the number of so danh mucs
+	* @throws SystemException if a system exception occurred
+	*/
+	public int getSoDanhMucsCount()
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMucsCount();
+	}
+
+	/**
+	* Updates the so danh muc in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param soDanhMuc the so danh muc
+	* @return the so danh muc that was updated
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc updateSoDanhMuc(
+		org.oep.cmon.dao.chungthuc.model.SoDanhMuc soDanhMuc)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.updateSoDanhMuc(soDanhMuc);
+	}
+
+	/**
+	* Updates the so danh muc in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param soDanhMuc the so danh muc
+	* @param merge whether to merge the so danh muc with the current session. See {@link com.liferay.portal.service.persistence.BatchSession#update(com.liferay.portal.kernel.dao.orm.Session, com.liferay.portal.model.BaseModel, boolean)} for an explanation.
+	* @return the so danh muc that was updated
+	* @throws SystemException if a system exception occurred
+	*/
+	public org.oep.cmon.dao.chungthuc.model.SoDanhMuc updateSoDanhMuc(
+		org.oep.cmon.dao.chungthuc.model.SoDanhMuc soDanhMuc, boolean merge)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.updateSoDanhMuc(soDanhMuc, merge);
+	}
+
+	/**
+	* Returns the Spring bean ID for this bean.
+	*
+	* @return the Spring bean ID for this bean
+	*/
+	public java.lang.String getBeanIdentifier() {
+		return _soDanhMucLocalService.getBeanIdentifier();
+	}
+
+	/**
+	* Sets the Spring bean ID for this bean.
+	*
+	* @param beanIdentifier the Spring bean ID for this bean
+	*/
+	public void setBeanIdentifier(java.lang.String beanIdentifier) {
+		_soDanhMucLocalService.setBeanIdentifier(beanIdentifier);
+	}
+
+	/**
+	* This is fucntion get SoDanhMuc by tthcId
+	* Version: 1.0
+	*
+	* History:
+	*   DATE        AUTHOR      DESCRIPTION
+	*  -------------------------------------------------
+	*  3-March-2013  Nam Dinh    Create new
+	*
+	* @param long tthcId
+	* @return List<SoDanhMuc>
+	*/
+	public java.util.List<org.oep.cmon.dao.chungthuc.model.SoDanhMuc> getSoDanhMucByTTHCID(
+		long tthcId) throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMucByTTHCID(tthcId);
+	}
+
+	/**
+	* This is fucntion find SoDanhMuc by tthcId, coQuanId
+	* Version: 1.0
+	*
+	* History:
+	*   DATE        AUTHOR      DESCRIPTION
+	*  -------------------------------------------------
+	*  3-March-2013  Nam Dinh    Create new
+	*
+	* @param long tthcId, long coQuanId
+	* @return List<SoDanhMuc>
+	*/
+	public java.util.List<org.oep.cmon.dao.chungthuc.model.SoDanhMuc> getSoDanhMucByTTHCIDAndCQQLID(
+		long tthcId, long coQuanId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMucByTTHCIDAndCQQLID(tthcId,
+			coQuanId);
+	}
+
+	/**
+	* This is fucntion find SoDanhMuc by coQuanId and paging
+	* Version: 1.0
+	*
+	* History:
+	*   DATE        AUTHOR      DESCRIPTION
+	*  -------------------------------------------------
+	*  3-March-2013  Nam Dinh    Create new
+	*
+	* @param long coQuanId, int start, int end
+	* @return List<SoDanhMuc>
+	*/
+	public java.util.List<org.oep.cmon.dao.chungthuc.model.SoDanhMuc> getSoDanhMucByCoQuanQuanLyId(
+		long coQuanId, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.getSoDanhMucByCoQuanQuanLyId(coQuanId,
+			start, end);
+	}
+
+	/**
+	* This is fucntion count SoDanhMuc by coQuanId
+	* Version: 1.0
+	*
+	* History:
+	*   DATE        AUTHOR      DESCRIPTION
+	*  -------------------------------------------------
+	*  3-March-2013  Nam Dinh    Create new
+	*
+	* @param long coQuanId
+	* @return List<SoDanhMuc>
+	*/
+	public int countSoDanhMucByCoQuanQuanLyId(long coQuanId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _soDanhMucLocalService.countSoDanhMucByCoQuanQuanLyId(coQuanId);
+	}
+
+	/**
+	 * @deprecated Renamed to {@link #getWrappedService}
+	 */
+	public SoDanhMucLocalService getWrappedSoDanhMucLocalService() {
+		return _soDanhMucLocalService;
+	}
+
+	/**
+	 * @deprecated Renamed to {@link #setWrappedService}
+	 */
+	public void setWrappedSoDanhMucLocalService(
+		SoDanhMucLocalService soDanhMucLocalService) {
+		_soDanhMucLocalService = soDanhMucLocalService;
+	}
+
+	public SoDanhMucLocalService getWrappedService() {
+		return _soDanhMucLocalService;
+	}
+
+	public void setWrappedService(SoDanhMucLocalService soDanhMucLocalService) {
+		_soDanhMucLocalService = soDanhMucLocalService;
+	}
+
+	private SoDanhMucLocalService _soDanhMucLocalService;
+}

@@ -1,0 +1,3101 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="vn.dtt.cmon.dao.cc.model.ChucVu">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienBan" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cc.model.CongChuc">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="hoVaTen" type="String" />
+		<field name="ngaySinh" type="Date" />
+		<field name="soCmnd" type="String" />
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="noiCapCmnd" type="String" />
+		<field name="gioiTinhId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="nguoiSua" type="String" />
+		<field name="chucVuId" type="long" />
+		<field name="coQuanQuanLyId" type="long" />
+		<field name="nguoiTao" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cc.model.CongChuc2NhomThuTuc">
+		<field name="id" type="long" />
+		<field name="congChucId" type="long" />
+		<field name="nhomThuTucId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="duocPhepEditCongDan" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.ChuyenMon">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienban" type="long" />
+		<field name="ngaytao" type="Date" />
+		<field name="nguoitao" type="String" />
+		<field name="ngaysua" type="Date" />
+		<field name="nguoisua" type="String" />
+		<field name="daxoa" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.CongDan">
+		<field name="id" type="long" />
+		<field name="ma" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="ho" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="dem" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="ten" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="ngaySinh" type="Date" />
+		<field name="soCmnd" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="ghiChuCmnd" type="String" />
+		<field name="soHoChieu" type="String" />
+		<field name="ngayCapHoChieu" type="Date" />
+		<field name="ngayHetHanHoChieu" type="Date" />
+		<field name="noiCapHoChieuId" type="Long" />
+		<field name="ghiChuHoChieu" type="String" />
+		<field name="soBaoHiemYTe" type="String" />
+		<field name="maSoThueCaNhan" type="String" />
+		<field name="diaChiThuongTru" type="String" />
+		<field name="diaChiHienNay" type="String" />
+		<field name="dienThoaiCoDinh" type="String" />
+		<field name="dienThoaiDiDong" type="String" />
+		<field name="hoTenCha" type="String" />
+		<field name="hoTenMe" type="String" />
+		<field name="hoTenVoHoacChong" type="String" />
+		<field name="soHoKhau" type="String" />
+		<field name="laChuHo" type="int" />
+		<field name="tinhTrangHonNhanId" type="Long" />
+		<field name="email" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="trinhDoChuyenMonId" type="Long" />
+		<field name="soDinhDanhChaId" type="Long" />
+		<field name="soDinhDanhVoHoacChongId" type="Long" />
+		<field name="danTocId" type="Long" />
+		<field name="diaChiHienNayHuyenId" type="Long" />
+		<field name="diaChiHienNayTinhId" type="Long" />
+		<field name="diaChiHienNayXaId" type="Long" />
+		<field name="diaChiThuongTruHuyenId" type="Long" />
+		<field name="diaChiThuongTruTinhId" type="Long" />
+		<field name="diaChiThuongTruXaId" type="Long" />
+		<field name="gioiTinh" type="int" />
+		<field name="ngheNghiepId" type="Long" />
+		<field name="noiSinhHuyenId" type="Long" />
+		<field name="noiSinhTinhId" type="Long" />
+		<field name="noiSinhXaId" type="Long" />
+		<field name="noiSinhChiTiet" type="String" />
+		<field name="noiCapCmndId" type="Long" />
+		<field name="tonGiaoId" type="Long" />
+		<field name="soDinhDanhMeId" type="Long" />
+		<field name="trinhDoHocVanId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="quanHeChuHoId" type="Long" />
+		<field name="quocTichId" type="Long" />
+		<field name="doanhNghiepId" type="Long" />
+		<field name="tenDayDu" type="String">
+			<hint name="upper-case">true</hint>
+		</field>
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="fax" type="String" />
+		<field name="website" type="String" />
+		<field name="tinhtrang" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.DanToc">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienBan" type="long" />
+		<field name="laThieuSo" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="tenKhac" type="String" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.GioiTinh">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.HeThong">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.HoChieuCMND">
+		<field name="id" type="long" />
+		<field name="so" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="noiCapId" type="Long" />
+		<field name="noiCap" type="String" />
+		<field name="giChu" type="String" />
+		<field name="loai" type="int" />
+		<field name="trangThai" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="congDanID" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.NgheNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.QuanHeGiaDinh">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.TinhTrangHonNhan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.TonGiao">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.TrinhDoChuyenMon">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="chuyenMonId" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.cd.model.TrinhDoHocVan">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.csms.model.AnhChanDungYeuCauDangKyCongDan">
+		<field name="id" type="long" />
+		<field name="AnhChanDung" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.csms.model.YeuCauDangKyCongDan">
+		<field name="id" type="long" />
+		<field name="NgayYeuCau" type="Date" />
+		<field name="SoCmnd" type="String" />
+		<field name="NgayCapCmnd" type="Date" />
+		<field name="IDNoiCapCmnd" type="Long" />
+		<field name="GhiChuCmnd" type="String" />
+		<field name="Email" type="String" />
+		<field name="HoCongDan" type="String" />
+		<field name="HoVaTen" type="String" />
+		<field name="TenDem" type="String" />
+		<field name="TenCongDan" type="String" />
+		<field name="NgaySinh" type="Date" />
+		<field name="GioiTinh" type="int" />
+		<field name="IDDanToc" type="Long" />
+		<field name="IDQuocTich" type="Long" />
+		<field name="IDTonGiao" type="Long" />
+		<field name="DienThoaiCoDinh" type="String" />
+		<field name="DienThoaiDiDong" type="String" />
+		<field name="IDTrinhDoHocVan" type="Long" />
+		<field name="SoHoChieu" type="String" />
+		<field name="NgayCapHoChieu" type="Date" />
+		<field name="IDNoiCapHoChieu" type="Long" />
+		<field name="NgayHetHanHoChieu" type="Date" />
+		<field name="GhiChuHoChieu" type="String" />
+		<field name="SoBaoHiemYte" type="String" />
+		<field name="MaSoThueCaNhan" type="String" />
+		<field name="IDNgheNghiep" type="Long" />
+		<field name="IDTrinhDoChuyenMon" type="Long" />
+		<field name="TinhTrangHonNhan" type="Long" />
+		<field name="HoVaTenCha" type="String" />
+		<field name="HoVaTenMe" type="String" />
+		<field name="HoVaTenVoChong" type="String" />
+		<field name="SoHoKhau" type="String" />
+		<field name="ChuHo" type="int" />
+		<field name="IDQuanHe" type="Long" />
+		<field name="IDTinhThanhNoiSinh" type="Long" />
+		<field name="IDQuanHuyenNoiSinh" type="Long" />
+		<field name="IDPhuongXaNoiSinh" type="Long" />
+		<field name="MoTaDiaChiNoiSinh" type="String" />
+		<field name="IDTinhThanhThuongTru" type="Long" />
+		<field name="IDQuanHuyenThuongTru" type="Long" />
+		<field name="IDPhuongXaThuongTru" type="Long" />
+		<field name="MoTaDiaChiThuongTru" type="String" />
+		<field name="IDTinhThanhHienTai" type="Long" />
+		<field name="IDQuanHuyenHienTai" type="Long" />
+		<field name="IDPhuongXaHienTai" type="Long" />
+		<field name="MoTaDiaChiHienTai" type="String" />
+		<field name="MaXacNhan" type="String" />
+		<field name="NgayChungThuc" type="Date" />
+		<field name="NguoiChungThuc" type="String" />
+		<field name="MaCongDanCha" type="String" />
+		<field name="MaCongDanMe" type="String" />
+		<field name="MaCongDanVoChong" type="String" />
+		<field name="MaCongDan" type="String" />
+		<field name="LoaiYeuCau" type="int" />
+		<field name="TrangThaiYeuCau" type="int" />
+		<field name="NgayTao" type="Date" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NguoiSua" type="String" />
+		<field name="Xoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.job.model.DanhSachJob">
+		<field name="ID" type="long" />
+		<field name="JobClass" type="String" />
+		<field name="JobId" type="int" />
+		<field name="JobName" type="String" />
+		<field name="Description" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.job.model.LogMail">
+		<field name="id" type="long" />
+		<field name="type" type="String" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="createTime" type="Date" />
+		<field name="status" type="int" />
+		<field name="description" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.job.model.TrangThaiJob">
+		<field name="ID" type="long" />
+		<field name="JobId" type="int" />
+		<field name="JobName" type="String" />
+		<field name="StartTime" type="Date" />
+		<field name="EndTime" type="Date" />
+		<field name="Status" type="int" />
+		<field name="RunMode" type="int" />
+		<field name="Message" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.NguoiDung2VaiTro">
+		<field name="id" type="long" />
+		<field name="vaiTroId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.NhomNguoiDung">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.TaiKhoanNguoiDung">
+		<field name="id" type="long" />
+		<field name="tenDangNhap" type="String" />
+		<field name="matKhau" type="String" />
+		<field name="tenNguoiDung" type="String" />
+		<field name="cauHoiMatKhau" type="String" />
+		<field name="cauTraLoiMatKhau" type="String" />
+		<field name="email" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.TaiNguyen">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="loai" type="int" />
+		<field name="giaTri" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="ungDungId" type="Long" />
+		<field name="heThongId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.TaiNguyen2VaiTro">
+		<field name="id" type="long" />
+		<field name="taiNguyenId" type="Long" />
+		<field name="vaiTroId" type="Long" />
+		<field name="hanhDong" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.nsd.model.VaiTro">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ungDungId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.CapCoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="cap" type="long" />
+		<field name="chaId" type="Long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="phienBan" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.CapDonViHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="cap" type="long" />
+		<field name="phienBan" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="mota" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.ChucVu2VaiTro">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="vaiTroId" type="Long" />
+		<field name="coQuanQuanLyId" type="Long" />
+		<field name="chucVuId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.CoQuanHanhChinhSuNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soDTDuongDayNong" type="String" />
+		<field name="noiBo" type="long" />
+		<field name="chucNang" type="String" />
+		<field name="tongSoCBNV" type="long" />
+		<field name="soDT" type="String" />
+		<field name="fax" type="String" />
+		<field name="email" type="String" />
+		<field name="tongSoGiuongBenh" type="long" />
+		<field name="viDo" type="String" />
+		<field name="kinhDo" type="String" />
+		<field name="diaChiCoQuanHCSNXaId" type="long" />
+		<field name="tuyenId" type="long" />
+		<field name="diaChiCoQuanHCSNTinhId" type="long" />
+		<field name="nguoiDaiDienId" type="long" />
+		<field name="diaChiCoQuanHCSNHuyenId" type="long" />
+		<field name="hangId" type="long" />
+		<field name="coQuanQuanLyId" type="String" />
+		<field name="loaiId" type="String" />
+		<field name="soQdThanhLap" type="String" />
+		<field name="moTaDiaChi" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.CoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="email" type="String" />
+		<field name="fax" type="String" />
+		<field name="website" type="String" />
+		<field name="noiBo" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="daXoa" type="int" />
+		<field name="donViHanhChinhId" type="Long" />
+		<field name="capCoQuanQuanlyId" type="Long" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="merchant" type="String" />
+		<field name="accessCode" type="String" />
+		<field name="secureSecret" type="String" />
+		<field name="maCapSoBienNhan" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.DonViHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="phienBan" type="long" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="capDonViHanhChinhId" type="long" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="quocGiaId" type="long" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.qlhc.model.QuocGia">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="phienBan" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.thamso.model.AnhXa">
+		<field name="Id" type="long" />
+		<field name="maDNG" type="String" />
+		<field name="tenDNG" type="String" />
+		<field name="maKhac" type="String" />
+		<field name="tenKhac" type="String" />
+		<field name="tenBang" type="String" />
+		<field name="UngDungId" type="long" />
+		<field name="NgayTao" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiSua" type="String" />
+		<field name="DaXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.thamso.model.ThamSo">
+		<field name="Id" type="long" />
+		<field name="Ten" type="String" />
+		<field name="giaTri" type="String" />
+		<field name="kieuDuLieu" type="int" />
+		<field name="Mota" type="String" />
+		<field name="UngDungId" type="Long" />
+		<field name="HeThongId" type="Long" />
+		<field name="NgayTao" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiSua" type="String" />
+		<field name="DaXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.tlct.model.DanhMucGiayTo">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="mota" type="String" />
+		<field name="gioiHanDungLuong" type="long" />
+		<field name="kieuTaiLieu" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="tailieuThayTheId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.tlct.model.LichSuGiayToDinhKem">
+		<field name="id" type="long" />
+		<field name="giayToDinhKemHoSoId" type="Long" />
+		<field name="hanhDong" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="noiLuuTruTaiLieuId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="tenTaiLieu" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.tlct.model.TaiLieuChungThuc">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="ngayUpload" type="Date" />
+		<field name="phienBan" type="int" />
+		<field name="ngayDuyet" type="Date" />
+		<field name="hieuLucTuNgay" type="Date" />
+		<field name="hieuLucDenNgay" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="danhMucGiayToId" type="Long" />
+		<field name="trangThai" type="int" />
+		<field name="chuSohuuId" type="Long" />
+		<field name="nguoiUploadId" type="Long" />
+		<field name="nguoiduyetId" type="Long" />
+		<field name="hoSoTTHCCId" type="Long" />
+		<field name="maUngDung" type="String" />
+		<field name="loai" type="int" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.ExchFileDinhKem">
+		<field name="id" type="long" />
+		<field name="OnlineId" type="long" />
+		<field name="TenTaiLieuDinhKem" type="String" />
+		<field name="UrlTaiLieuDinhKem" type="String" />
+		<field name="TenFile" type="String" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.HoSoMotCua">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="MaLoaiHoSo" type="String" />
+		<field name="MaDonViTiepNhan" type="String" />
+		<field name="NgayNopHoSo" type="String" />
+		<field name="NgayHenTra" type="String" />
+		<field name="HoTenNguoiNop" type="String" />
+		<field name="SoCmnd" type="String" />
+		<field name="NgaySinh" type="String" />
+		<field name="MaTinhThuongTru" type="String" />
+		<field name="MoTaDiaChiThuongTru" type="String" />
+		<field name="GioiTinh" type="int" />
+		<field name="MaNguoiTiepNhan" type="String" />
+		<field name="TenNguoiTiepNhan" type="String" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.HoSoTrucTuyen">
+		<field name="id" type="long" />
+		<field name="NgayTrichXuat" type="Date" />
+		<field name="OnlineId" type="long" />
+		<field name="MaLoaiHoSo" type="String" />
+		<field name="MaDonViTiepNhan" type="String" />
+		<field name="HoTenNguoiNop" type="String" />
+		<field name="DiaChiNguoiNop" type="String" />
+		<field name="NgaySinh" type="Date" />
+		<field name="SoCmnd" type="String" />
+		<field name="Email" type="String" />
+		<field name="SoDtDiDong" type="String" />
+		<field name="SoDtCoDinh" type="String" />
+		<field name="NgayDangKyHoSo" type="Date" />
+		<field name="NoiChuyenHoSo" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="GioiTinh" type="int" />
+		<field name="ChuSoHuuHoSo" type="String" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.KetQuaHoso">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="TenNguoiNhanKetQua" type="String" />
+		<field name="NgayNhanKetQua" type="String" />
+		<field name="LePhiHoSo" type="int" />
+		<field name="PhiXuLyHoSo" type="int" />
+		<field name="NgayHoanThanh" type="String" />
+		<field name="MaCanBoTraKetQua" type="String" />
+		<field name="TenCanBoTraKetQua" type="String" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.TrangThaiHoso">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="OnlineId" type="long" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="NgayHenTra" type="String" />
+		<field name="MaNguoiXuLyHienTai" type="String" />
+		<field name="TenNguoiXuLyHienTai" type="String" />
+		<field name="TenPhongBanXuLyHienTai" type="String" />
+		<field name="NgayGioLuanChuyen" type="String" />
+		<field name="SoGioYeuCauXuLy" type="int" />
+		<field name="NoiDungYeuCauXuLy" type="String" />
+		<field name="SoGioThucHien" type="int" />
+		<field name="TrangThaiHienTai" type="int" />
+		<field name="MaNguoiXuLyKeTiep" type="String" />
+		<field name="TenNguoiXuLyKeTiep" type="String" />
+		<field name="TenPhongBanXuLyKeTiep" type="String" />
+		<field name="TrangThaiKeTiep" type="int" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="vn.dtt.exch.dao.hoso.model.UpdateHoSoTrucTuyen">
+		<field name="id" type="long" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayChuyen" type="Date" />
+	</model>
+	<model name="vn.dtt.cmon.dao.ttthanhtoan.model.ThongTinThanhToan">
+		<field name="id" type="long" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="taiKhoanNguoiDungNopId" type="Long" />
+		<field name="taiKhoanNguoiDungNhanId" type="Long" />
+		<field name="loaiThanhToan" type="long" />
+		<field name="tenNguoiNopTien" type="String" />
+		<field name="tenCanBoNhanTien" type="String" />
+		<field name="xacNhan" type="long" />
+		<field name="loaiPhi" type="long" />
+		<field name="soTien" type="long" />
+		<field name="ngayThuTien" type="Date" />
+		<field name="ngayXacNhan" type="Date" />
+		<field name="ngayChuyenTien" type="Date" />
+		<field name="yKien" type="String" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="vn.dtt.cmon.dao.ttthanhtoan.model.TienTe">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="tyGia" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.chungthuc.model.HoSoChungThuc">
+		<field name="hoSoChungThucId" type="long" />
+		<field name="tenChungThuc" type="String" />
+		<field name="soChungThuc" type="String" />
+		<field name="ngayNopHoSo" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="trangThaiHoSo" type="int" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="canBoTiepNhanId" type="Long" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="mucDichChungThuc" type="String" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="soBoHoSo" type="int" />
+		<field name="soTo" type="int" />
+		<field name="truongHop" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="ngaySinhNguoiNop" type="Date" />
+		<field name="soCMNDNguoiNop" type="String" />
+		<field name="gioiTinhNguoiNop" type="int" />
+		<field name="tenCanBoKy" type="String" />
+		<field name="chucVuCanBoKyId" type="Long" />
+		<field name="soDanhMucId" type="Long" />
+		<field name="thuongTruTinhId" type="Long" />
+		<field name="thuongTruHuyenId" type="Long" />
+		<field name="thuongTruXaId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.chungthuc.model.SoDanhMuc">
+		<field name="id" type="long" />
+		<field name="tenSo" type="String" />
+		<field name="soSo" type="String" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="nam" type="Long" />
+		<field name="theoQuyetDinh" type="String" />
+		<field name="coQuanQuanLiId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.chungthuc.model.ThanhPhanHoSoChungThuc">
+		<field name="thanhPhanHoSoId" type="long" />
+		<field name="tieuDe" type="String" />
+		<field name="moTa" type="String" />
+		<field name="hoSoChungThucId" type="Long" />
+		<field name="thuTuc2GiayToId" type="Long" />
+		<field name="noiLuuTruHoSoDinhKemId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.CapNhatKetQua">
+		<field name="id" type="long" />
+		<field name="tenBang" type="String" />
+		<field name="banGhiId" type="long" />
+		<field name="hanhDong" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="hosoTTHCCId" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.CauHinhPortlet2ThuTuc">
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="portletId" type="long" />
+		<field name="portletName" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.DanhMucGiayTo2DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="loaiGiayToId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.DanhMucUngDung">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+		<field name="nguoiTao" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="mota" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="trangThai" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.NhomThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="danhMucUngDungId" type="long" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.ThuTuc2GiayTo">
+		<field name="id" type="long" />
+		<field name="ghiChu" type="String" />
+		<field name="batBuoc" type="int" />
+		<field name="thuTuHienThi" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="danhMucGiayToId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="giaidoan" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.ThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soNgayXuLy" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="nhomThuTucHanhChinhId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="canTichHop" type="int" />
+		<field name="trinhTuThucHien" type="String" />
+		<field name="cachThucHien" type="String" />
+		<field name="thanhPhanHoSo" type="String" />
+		<field name="lePhi" type="long" />
+		<field name="donViLePhi" type="String" />
+		<field name="phi" type="long" />
+		<field name="donViPhi" type="String" />
+		<field name="tenMauDonToKhai" type="String" />
+		<field name="yeuCauDieuKienThucHien" type="String" />
+		<field name="canCuPhapLy" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+		<field name="linhVucThucHien" type="String" />
+		<field name="maDNG" type="String" />
+		<field name="uengineProcessName" type="String" />
+		<field name="thuTucLienThongId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.TTHC2CoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="soNgayXyLy" type="int" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="coQuanQuanLyId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="phi" type="int" />
+		<field name="lePhi" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.TTHC2DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dvc.model.VanBanHuongDan">
+		<field name="id" type="long" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="tenTaiLieu" type="String" />
+		<field name="moTa" type="String" />
+		<field name="loaiTaiLieu" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosohcc.model.FileDinhKem">
+		<field name="id" type="long" />
+		<field name="soBanGiay" type="long" />
+		<field name="daDoiChieu" type="int" />
+		<field name="trangThaiHoSoTaiThoiDiemDinhKem" type="int" />
+		<field name="noiLuuTruTaiLieuId" type="Long" />
+		<field name="canBoId" type="Long" />
+		<field name="hoSoTTHCCongId" type="Long" />
+		<field name="thuTuc2GiayToId" type="Long" />
+		<field name="danhMucGiayToId" type="Long" />
+		<field name="ngayUpload" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiUpload" type="String" />
+		<field name="maLoaiTaiLieuDuocThayThe" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+		<field name="daTra" type="int" />
+		<field name="banChinh" type="long" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosohcc.model.HoSoAnhXa">
+		<field name="id" type="long" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="maHoSo" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="ngayTao" type="Date" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosohcc.model.HoSoTTHCCong">
+		<field name="id" type="long" />
+		<field name="maSoHoSo" type="String" />
+		<field name="ngayNopHoSo" type="Date" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="ngayNopHoSoGoc" type="Date" />
+		<field name="ngayHenNopHoSoGoc" type="Date" />
+		<field name="tenCanBoTiepNhan" type="String" />
+		<field name="chucVuCanBoTiepNhan" type="String" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="tenCanBoTraKetQua" type="String" />
+		<field name="chucVuCanBoTraKetQua" type="String" />
+		<field name="hoTenNguoiNhanKetQua" type="String" />
+		<field name="diaChiThuongTruNguoiNhanKQ" type="String" />
+		<field name="soDienThoaiNguoiNhan" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="lanCap" type="long" />
+		<field name="tenCoQuanCap" type="String" />
+		<field name="hieuLucTuNgay" type="Date" />
+		<field name="hieuLucDenNgay" type="Date" />
+		<field name="trangThaiHoSo" type="int" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="congDanNopId" type="Long" />
+		<field name="diaChiThuongTruNguoiNhanKQId" type="Long" />
+		<field name="coQuanTiepNhanId" type="Long" />
+		<field name="canBoTraKetQuaId" type="Long" />
+		<field name="canBoTiepNhanId" type="Long" />
+		<field name="diaChiThuongTruNguoiNopId" type="Long" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="phongBanXuLyHienThoiId" type="Long" />
+		<field name="tenPhongBanXuLyHienThoi" type="String" />
+		<field name="canBoXuLyHienThoiId" type="Long" />
+		<field name="tenCanBoXuLyHienThoi" type="String" />
+		<field name="danhGiaKetQua" type="int" />
+		<field name="ghiChu" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="yeuCauHuyHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="tenBangChuaHoSo" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="soBoHoSo" type="int" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="trichYeu" type="String" />
+		<field name="ngayHenTBThue" type="Date" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="maUngDung" type="String" />
+		<field name="daGuiGiayHen" type="int" />
+		<field name="nguoiDaiDienPhapLuat" type="String" />
+		<field name="nguoiDaiDienPhapLuatId" type="Long" />
+		<field name="chuyenSangMotCua" type="int" />
+		<field name="doiTuongCanXuLyId" type="Long" />
+		<field name="lyDo" type="String" />
+		<field name="moTaThanhPhanHoSo" type="String" />
+		<field name="lienKetThanhPhanHoSo" type="String" />
+		<field name="soNgayXuLy" type="Long" />
+		<field name="daTraKetQuaTrucTuyen" type="Long" />
+		<field name="eMailNguoiNhan" type="String" />
+		<field name="ngaySinhNguoiNhan" type="Date" />
+		<field name="dienThoiCoDinhNguoiNhan" type="String" />
+		<field name="cmndNguoiNhan" type="String" />
+		<field name="gioiTinh" type="int" />
+		<field name="dungXuLy" type="boolean" />
+		<field name="ngayBoSung" type="Date" />
+		<field name="ghiChuGiayToDinhKem" type="String" />
+		<field name="daDangKyNhanSMS" type="int" />
+		<field name="daDangKyChuyenPhatNhanh" type="int" />
+		<field name="diaChiChuHoSo" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosohcc.model.TrangThaiHoSo">
+		<field name="id" type="long" />
+		<field name="trangThai" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosohcc.model.YKienTraoDoi">
+		<field name="id" type="long" />
+		<field name="tieuDe" type="String" />
+		<field name="noiDungYKien" type="String" />
+		<field name="thoiGianGuiYKien" type="Date" />
+		<field name="trangThai" type="long" />
+		<field name="hoSoTTHCCongId" type="Long" />
+		<field name="nguoiNhanId" type="Long" />
+		<field name="nguoiGuiId" type="Long" />
+		<field name="chaiId" type="Long" />
+		<field name="noiLuuTruId" type="Long" />
+		<field name="loai" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.DoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="tenTiengNuocNgoai" type="String" />
+		<field name="tenVietTat" type="String" />
+		<field name="diaChiDoanhNghiep" type="String" />
+		<field name="dienThoaiDoanhNghiep" type="String" />
+		<field name="fax" type="String" />
+		<field name="emailDoanhNghiep" type="String" />
+		<field name="website" type="String" />
+		<field name="tongSoVon" type="long" />
+		<field name="moTaNganhNgheKinhDoanh" type="String" />
+		<field name="soGCNDKKD" type="String" />
+		<field name="ngayCapGCNDKKD" type="Date" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="ngayDieuLeDuocThongQua" type="Date" />
+		<field name="tenChiNhanh" type="String" />
+		<field name="diaChiChiNhanh" type="String" />
+		<field name="tenVanPhongDaiDien" type="String" />
+		<field name="diaChiVanPhongDaiDien" type="String" />
+		<field name="ngayBatDauTamNgung" type="Date" />
+		<field name="ngayKetThucTamNgung" type="Date" />
+		<field name="lyDoTamNgung" type="String" />
+		<field name="ngayChamDutHoatDongKD" type="Date" />
+		<field name="loai" type="long" />
+		<field name="diaChiDoanhNghiepHuyenId" type="Long" />
+		<field name="diaChiDoanhNghiepTinhId" type="Long" />
+		<field name="diaChiDoanhNghiepXaId" type="Long" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="nguoiDaiDienId" type="Long" />
+		<field name="trangThaiDoanhNghiepId" type="Long" />
+		<field name="vonDieuLe" type="long" />
+		<field name="vonToiThieuMotXaVien" type="long" />
+		<field name="ghiChu" type="String" />
+		<field name="quocGiaId" type="Long" />
+		<field name="coQuanCapId" type="Long" />
+		<field name="tenCoQuanCap" type="long" />
+		<field name="soLanDieuChinh" type="String" />
+		<field name="ngayDieuChinh" type="Date" />
+		<field name="chucVuNguoiDaiDien" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="tenDiaDiemKinhDoanh" type="String" />
+		<field name="ngayDangKyKinhDoanh" type="Date" />
+		<field name="loaiHinhDoanhNghiepId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.DoanhNghiep2NganhNghe">
+		<field name="id" type="long" />
+		<field name="laNganhChinh" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="doanhNghiepId" type="long" />
+		<field name="nganhNgheId" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.LoaiDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="phienBan" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.NganhNgheKinhDoanh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="chaId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="cap" type="long" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.TrangThaiDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.YeuCauDangKyDN">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="maGiayPhep" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="email" type="String" />
+		<field name="hoNguoiDaiDien" type="String" />
+		<field name="tenDemNguoiDaiDien" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="soCmnd" type="String" />
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="noiCapCmndId" type="Long" />
+		<field name="moTa" type="String" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="truSoTinhId" type="Long" />
+		<field name="truSoHuyenId" type="Long" />
+		<field name="truSoXaId" type="Long" />
+		<field name="truSo" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="loaiHinhDoanhNghiepId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.dn.model.YeuCauDangKyDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="maGiayPhep" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="email" type="String" />
+		<field name="hoNguoiDaiDien" type="String" />
+		<field name="tenDemNguoiDaiDien" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="soCMND" type="String" />
+		<field name="ngayCapCMND" type="Date" />
+		<field name="noiCapCMND" type="String" />
+		<field name="moTaNganhNgheKinhDoanh" type="String" />
+		<field name="loaiHinhDoanhNghiep" type="String" />
+		<field name="truSo" type="String" />
+		<field name="truSoXaId" type="long" />
+		<field name="truSoHuyenId" type="long" />
+		<field name="truSoTinhId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.hosolienthong.model.HoSoLienThong">
+		<field name="id" type="long" />
+		<field name="hoSoId" type="long" />
+		<field name="coQuanGuiId" type="long" />
+		<field name="coQuanNhanId" type="long" />
+		<field name="thuTucGuiId" type="long" />
+		<field name="thuTucNhanId" type="long" />
+		<field name="maSoBienNhanLucGui" type="String" />
+		<field name="maSoBienNhanLucNhan" type="String" />
+		<field name="canBoGuiId" type="long" />
+		<field name="canBoNhanId" type="Long" />
+		<field name="ngayGui" type="Date" />
+		<field name="ngayNhan" type="Date" />
+		<field name="hoTenCanBoGui" type="String" />
+		<field name="hoTenCanBoNhan" type="String" />
+		<field name="canBoNopHoSoGiayId" type="Long" />
+		<field name="hoTenCanBoNopHoSoGiay" type="String" />
+		<field name="trangThaiLienThong" type="int" />
+		<field name="ghiChuGuiLienThong" type="String" />
+		<field name="hoTenCongDanNop" type="String" />
+		<field name="diaChiDayDuCongDanNop" type="String" />
+		<field name="ngayTuChoi" type="Date" />
+		<field name="ngayNoiNhanTraKetQua" type="Date" />
+		<field name="ngayNoiGuiNhanKetQua" type="Date" />
+		<field name="canBoTiepNhanNoiGuiId" type="long" />
+		<field name="hoTenCanBoTiepNhanNoiGui" type="String" />
+		<field name="tenCoQuanGui" type="String" />
+		<field name="tenThuTucGui" type="String" />
+		<field name="tenCoQuanNhan" type="String" />
+		<field name="tenThuTucNhan" type="String" />
+		<field name="thuTuLienThong" type="int" />
+		<field name="ngayNoiNhanHenTra" type="Date" />
+		<field name="soNgayNoiNhanXuLyDuKien" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="vn.dtt.dlms.dao.capgiaypheplaixe.model.CapGiayPhepLaiXe">
+		<field name="id" type="long" />
+		<field name="idCoQuanQuanLy" type="long" />
+		<field name="idCongDan" type="long" />
+		<field name="idLoaiHoSo" type="long" />
+		<field name="soHoSo" type="long" />
+		<field name="hoVaTen" type="String" />
+		<field name="ngaySinh" type="Date" />
+		<field name="idGioiTinh" type="long" />
+		<field name="idQuocTich" type="long" />
+		<field name="soCMND" type="String" />
+		<field name="ngayCapCMND" type="Date" />
+		<field name="idNoiCapCMND" type="long" />
+		<field name="soHoChieu" type="String" />
+		<field name="ngayCapHoChieu" type="Date" />
+		<field name="noiCapHoChieu" type="long" />
+		<field name="dienThoai" type="String" />
+		<field name="email" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="idTinhThuongTru" type="long" />
+		<field name="idHuyenThuongTru" type="long" />
+		<field name="idXaThuongTru" type="long" />
+		<field name="diaChiThuongTru" type="String" />
+		<field name="idTinhCuTru" type="long" />
+		<field name="idHuyenCuTru" type="long" />
+		<field name="idXaCuTru" type="long" />
+		<field name="diaChiCuTru" type="String" />
+		<field name="soGiayPhepLaiXe" type="String" />
+		<field name="idHangGiayPhepLaiXe" type="long" />
+		<field name="idDonViCapGPLX" type="long" />
+		<field name="ngayCapGPLX" type="Date" />
+		<field name="idNoiCapGPLX" type="long" />
+		<field name="ngayDauSatHach" type="Date" />
+		<field name="idNoiHocLaiXe" type="long" />
+		<field name="namHocLaiXe" type="int" />
+		<field name="namTrungTuyenHangCaoNhat" type="int" />
+		<field name="lyDoHoc" type="String" />
+		<field name="mucDichHoc" type="String" />
+		<field name="soNamLaiXe" type="double" />
+		<field name="soKmLaiXe" type="double" />
+		<field name="ngayTraGPLX" type="Date" />
+		<field name="idLyDoCapDoiLaiGPLX" type="long" />
+		<field name="lyDo" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+	</model>
+	<model name="vn.dtt.dlms.dao.chitietgplx.model.ChiTietGPLX">
+		<field name="id" type="long" />
+		<field name="idGPLX" type="long" />
+		<field name="soGPLX" type="String" />
+		<field name="idHangGPLX" type="long" />
+		<field name="idNoiCapGPLX" type="long" />
+		<field name="idNoiCapGPLXNuocNgoai" type="long" />
+		<field name="ngayCapGPLX" type="Date" />
+		<field name="ngayTrungTuyen" type="Date" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="idNoiHocLaiXe" type="long" />
+		<field name="idNoiHocLaiXeNuocNgoai" type="long" />
+		<field name="namHocLaiXe" type="long" />
+		<field name="noiHocLaiXeNuocNgoai" type="String" />
+		<field name="noiHocLaiXe" type="String" />
+		<field name="noiCapGPLXNuocNgoai" type="String" />
+		<field name="noiCapGPLX" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="vn.dtt.dlms.dao.danhmucgiaypheplaixe.model.DonViGtvt">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="coQuanQl" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="fax" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="lanhDao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+	</model>
+	<model name="vn.dtt.dlms.dao.danhmucgiaypheplaixe.model.HangGiayPhepLaiXe">
+		<field name="id" type="long" />
+		<field name="tenHang" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+		<field name="ma" type="String" />
+	</model>
+	<model name="vn.dtt.dlms.dao.danhmucgiaypheplaixe.model.LyDoCapDoiCapLaiGPLX">
+		<field name="id" type="long" />
+		<field name="lyDo" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Baocaochitiet">
+		<field name="LINHVUCID" type="long" />
+		<field name="MASOHOSO" type="String" />
+		<field name="TEN" type="String" />
+		<field name="TRANGTHAI" type="String" />
+		<field name="DIACHIHIENNAY" type="String" />
+		<field name="DIENTHOAIDIDONG" type="String" />
+		<field name="HOTENNGUOINOPHOSO" type="String" />
+		<field name="NGUOIDAIDIENPHAPLUAT" type="String" />
+		<field name="NGAYNHANHOSO" type="String" />
+		<field name="NGAYTRAKETQUA" type="String" />
+		<field name="NGAYHENTRAKETQUA" type="String" />
+		<field name="LINHVUC" type="String" />
+		<field name="GHICHU" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.CongChuc2Role">
+		<field name="ID" type="long" />
+		<field name="CONGCHUCID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.CoQuanQuanLy2LinhVuc">
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="TENNHOMTTHC" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.DanhMucBaoCao">
+		<field name="ID" type="long" />
+		<field name="TENBAOCAO" type="String" />
+		<field name="DUONGDAN" type="String" />
+		<field name="ORDERS" type="int" />
+		<field name="STATUS" type="int" />
+		<field name="PUBLISH" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.DanhMucRole">
+		<field name="ID" type="long" />
+		<field name="NAME" type="String" />
+		<field name="ORDERS" type="int" />
+		<field name="STATUS" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Lephi_chitiet">
+		<field name="ID" type="long" />
+		<field name="TENHOSO" type="String" />
+		<field name="NGUOINOP" type="String" />
+		<field name="CHUHOSO" type="String" />
+		<field name="DIACHI" type="String" />
+		<field name="SOBOHOSO" type="String" />
+		<field name="LEPHI" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+		<field name="GHICHU" type="String" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Lephi_linhvuc">
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+		<field name="TONGHOSO" type="String" />
+		<field name="LEPHIHOSO" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Lephi_tonghop">
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+		<field name="TONGHOSO" type="String" />
+		<field name="LEPHI" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+		<field name="THANGNHAN" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.ReportThongKe">
+		<field name="CAPCOQUANQUANLYID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.ReportTongHop">
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.ReportTongHopChiTiet">
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="THUTUCHANHCHINHID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Role2BaoCao">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Role2DonViBaoCao">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Role2NhomTTHC">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.report.model.Role2TTHC">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="THUTUCHANHCHINHID" type="long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.touchscreen.model.TouchScreen">
+		<field name="ID" type="long" />
+		<field name="NAME" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.touchscreen.model.TraCuuHoSoTTHCCong">
+		<field name="id" type="long" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThaiHoSoTen" type="String" />
+	</model>
+	<model name="vn.dtt.cmon.dao.touchscreen.model.TraCuuThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soNgayXuLy" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="nhomThuTucHanhChinhId" type="long" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="canTichHop" type="int" />
+		<field name="trinhTuThucHien" type="String" />
+		<field name="cachThucHien" type="String" />
+		<field name="thanhPhanHoSo" type="String" />
+		<field name="lePhi" type="long" />
+		<field name="donViLePhi" type="String" />
+		<field name="phi" type="long" />
+		<field name="donViPhi" type="String" />
+		<field name="tenMauDonToKhai" type="String" />
+		<field name="yeuCauDieuKienThucHien" type="String" />
+		<field name="canCuPhapLy" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+		<field name="linhVucThucHien" type="String" />
+		<field name="maDNG" type="String" />
+		<field name="uengineProcessName" type="String" />
+		<field name="thuTucLienThongId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.kios.model.DanhSachCoQuan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="chaId" type="Long" />
+		<field name="tenCapCoQuanQuanly" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+	</model>
+	<model name="vn.dtt.cmon.dao.kios.model.DanhSachHoSo">
+		<field name="id" type="long" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThaiHoSoTen" type="String" />
+		<field name="rNum" type="int" />
+	</model>
+	<model name="vn.dtt.cmon.dao.kios.model.DanhSachThongKe">
+		<field name="CAPCOQUANQUANLYID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+		<field name="TENCAPCOQUANQUANLY" type="String" />
+		<field name="TENCOQUANQUANLY" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.cc.model.ChucVu">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienBan" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.cc.model.CongChuc">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="hoVaTen" type="String" />
+		<field name="ngaySinh" type="Date" />
+		<field name="soCmnd" type="String" />
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="noiCapCmnd" type="String" />
+		<field name="gioiTinhId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="nguoiSua" type="String" />
+		<field name="chucVuId" type="long" />
+		<field name="coQuanQuanLyId" type="long" />
+		<field name="nguoiTao" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.cc.model.CongChuc2NhomThuTuc">
+		<field name="id" type="long" />
+		<field name="congChucId" type="long" />
+		<field name="nhomThuTucId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="duocPhepEditCongDan" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.ChuyenMon">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienban" type="long" />
+		<field name="ngaytao" type="Date" />
+		<field name="nguoitao" type="String" />
+		<field name="ngaysua" type="Date" />
+		<field name="nguoisua" type="String" />
+		<field name="daxoa" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.CongDan">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ho" type="String" />
+		<field name="dem" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngaySinh" type="Date" />
+		<field name="soCmnd" type="String" />
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="ghiChuCmnd" type="String" />
+		<field name="soHoChieu" type="String" />
+		<field name="ngayCapHoChieu" type="Date" />
+		<field name="ngayHetHanHoChieu" type="Date" />
+		<field name="noiCapHoChieuId" type="Long" />
+		<field name="ghiChuHoChieu" type="String" />
+		<field name="soBaoHiemYTe" type="String" />
+		<field name="maSoThueCaNhan" type="String" />
+		<field name="diaChiThuongTru" type="String" />
+		<field name="diaChiHienNay" type="String" />
+		<field name="dienThoaiCoDinh" type="String" />
+		<field name="dienThoaiDiDong" type="String" />
+		<field name="hoTenCha" type="String" />
+		<field name="hoTenMe" type="String" />
+		<field name="hoTenVoHoacChong" type="String" />
+		<field name="soHoKhau" type="String" />
+		<field name="laChuHo" type="int" />
+		<field name="tinhTrangHonNhanId" type="Long" />
+		<field name="email" type="String" />
+		<field name="trinhDoChuyenMonId" type="Long" />
+		<field name="soDinhDanhChaId" type="Long" />
+		<field name="soDinhDanhVoHoacChongId" type="Long" />
+		<field name="danTocId" type="Long" />
+		<field name="diaChiHienNayHuyenId" type="Long" />
+		<field name="diaChiHienNayTinhId" type="Long" />
+		<field name="diaChiHienNayXaId" type="Long" />
+		<field name="diaChiThuongTruHuyenId" type="Long" />
+		<field name="diaChiThuongTruTinhId" type="Long" />
+		<field name="diaChiThuongTruXaId" type="Long" />
+		<field name="gioiTinh" type="int" />
+		<field name="ngheNghiepId" type="Long" />
+		<field name="noiSinhHuyenId" type="Long" />
+		<field name="noiSinhTinhId" type="Long" />
+		<field name="noiSinhXaId" type="Long" />
+		<field name="noiSinhChiTiet" type="String" />
+		<field name="noiCapCmndId" type="Long" />
+		<field name="tonGiaoId" type="Long" />
+		<field name="soDinhDanhMeId" type="Long" />
+		<field name="trinhDoHocVanId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="quanHeChuHoId" type="Long" />
+		<field name="quocTichId" type="Long" />
+		<field name="doanhNghiepId" type="Long" />
+		<field name="tenDayDu" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="fax" type="String" />
+		<field name="website" type="String" />
+		<field name="tinhtrang" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.DanToc">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="phienBan" type="long" />
+		<field name="laThieuSo" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="tenKhac" type="String" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.GioiTinh">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.HeThong">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.HoChieuCMND">
+		<field name="id" type="long" />
+		<field name="so" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="noiCapId" type="Long" />
+		<field name="noiCap" type="String" />
+		<field name="giChu" type="String" />
+		<field name="loai" type="int" />
+		<field name="trangThai" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="congDanID" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.NgheNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.QuanHeGiaDinh">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.TinhTrangHonNhan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.TonGiao">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.TrinhDoChuyenMon">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="chuyenMonId" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.cd.model.TrinhDoHocVan">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.chungthuc.model.HoSoChungThuc">
+		<field name="hoSoChungThucId" type="long" />
+		<field name="tenChungThuc" type="String" />
+		<field name="soChungThuc" type="String" />
+		<field name="ngayNopHoSo" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="trangThaiHoSo" type="int" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="canBoTiepNhanId" type="Long" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="mucDichChungThuc" type="String" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="soBoHoSo" type="int" />
+		<field name="soTo" type="int" />
+		<field name="truongHop" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="ngaySinhNguoiNop" type="Date" />
+		<field name="soCMNDNguoiNop" type="String" />
+		<field name="gioiTinhNguoiNop" type="int" />
+		<field name="tenCanBoKy" type="String" />
+		<field name="chucVuCanBoKyId" type="Long" />
+		<field name="soDanhMucId" type="Long" />
+		<field name="thuongTruTinhId" type="Long" />
+		<field name="thuongTruHuyenId" type="Long" />
+		<field name="thuongTruXaId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.chungthuc.model.SoDanhMuc">
+		<field name="id" type="long" />
+		<field name="tenSo" type="String" />
+		<field name="soSo" type="String" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="nam" type="Long" />
+		<field name="theoQuyetDinh" type="String" />
+		<field name="coQuanQuanLiId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.chungthuc.model.ThanhPhanHoSoChungThuc">
+		<field name="thanhPhanHoSoId" type="long" />
+		<field name="tieuDe" type="String" />
+		<field name="moTa" type="String" />
+		<field name="hoSoChungThucId" type="Long" />
+		<field name="thuTuc2GiayToId" type="Long" />
+		<field name="noiLuuTruHoSoDinhKemId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.csms.model.AnhChanDungYeuCauDangKyCongDan">
+		<field name="id" type="long" />
+		<field name="AnhChanDung" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.csms.model.YeuCauDangKyCongDan">
+		<field name="id" type="long" />
+		<field name="NgayYeuCau" type="Date" />
+		<field name="SoCmnd" type="String" />
+		<field name="NgayCapCmnd" type="Date" />
+		<field name="IDNoiCapCmnd" type="Long" />
+		<field name="GhiChuCmnd" type="String" />
+		<field name="Email" type="String" />
+		<field name="HoCongDan" type="String" />
+		<field name="HoVaTen" type="String" />
+		<field name="TenDem" type="String" />
+		<field name="TenCongDan" type="String" />
+		<field name="NgaySinh" type="Date" />
+		<field name="GioiTinh" type="int" />
+		<field name="IDDanToc" type="Long" />
+		<field name="IDQuocTich" type="Long" />
+		<field name="IDTonGiao" type="Long" />
+		<field name="DienThoaiCoDinh" type="String" />
+		<field name="DienThoaiDiDong" type="String" />
+		<field name="IDTrinhDoHocVan" type="Long" />
+		<field name="SoHoChieu" type="String" />
+		<field name="NgayCapHoChieu" type="Date" />
+		<field name="IDNoiCapHoChieu" type="Long" />
+		<field name="NgayHetHanHoChieu" type="Date" />
+		<field name="GhiChuHoChieu" type="String" />
+		<field name="SoBaoHiemYte" type="String" />
+		<field name="MaSoThueCaNhan" type="String" />
+		<field name="IDNgheNghiep" type="Long" />
+		<field name="IDTrinhDoChuyenMon" type="Long" />
+		<field name="TinhTrangHonNhan" type="Long" />
+		<field name="HoVaTenCha" type="String" />
+		<field name="HoVaTenMe" type="String" />
+		<field name="HoVaTenVoChong" type="String" />
+		<field name="SoHoKhau" type="String" />
+		<field name="ChuHo" type="int" />
+		<field name="IDQuanHe" type="Long" />
+		<field name="IDTinhThanhNoiSinh" type="Long" />
+		<field name="IDQuanHuyenNoiSinh" type="Long" />
+		<field name="IDPhuongXaNoiSinh" type="Long" />
+		<field name="MoTaDiaChiNoiSinh" type="String" />
+		<field name="IDTinhThanhThuongTru" type="Long" />
+		<field name="IDQuanHuyenThuongTru" type="Long" />
+		<field name="IDPhuongXaThuongTru" type="Long" />
+		<field name="MoTaDiaChiThuongTru" type="String" />
+		<field name="IDTinhThanhHienTai" type="Long" />
+		<field name="IDQuanHuyenHienTai" type="Long" />
+		<field name="IDPhuongXaHienTai" type="Long" />
+		<field name="MoTaDiaChiHienTai" type="String" />
+		<field name="MaXacNhan" type="String" />
+		<field name="NgayChungThuc" type="Date" />
+		<field name="NguoiChungThuc" type="String" />
+		<field name="MaCongDanCha" type="String" />
+		<field name="MaCongDanMe" type="String" />
+		<field name="MaCongDanVoChong" type="String" />
+		<field name="MaCongDan" type="String" />
+		<field name="LoaiYeuCau" type="int" />
+		<field name="TrangThaiYeuCau" type="int" />
+		<field name="NgayTao" type="Date" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NguoiSua" type="String" />
+		<field name="Xoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.DoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="tenTiengNuocNgoai" type="String" />
+		<field name="tenVietTat" type="String" />
+		<field name="diaChiDoanhNghiep" type="String" />
+		<field name="dienThoaiDoanhNghiep" type="String" />
+		<field name="fax" type="String" />
+		<field name="emailDoanhNghiep" type="String" />
+		<field name="website" type="String" />
+		<field name="tongSoVon" type="long" />
+		<field name="moTaNganhNgheKinhDoanh" type="String" />
+		<field name="soGCNDKKD" type="String" />
+		<field name="ngayCapGCNDKKD" type="Date" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="ngayDieuLeDuocThongQua" type="Date" />
+		<field name="tenChiNhanh" type="String" />
+		<field name="diaChiChiNhanh" type="String" />
+		<field name="tenVanPhongDaiDien" type="String" />
+		<field name="diaChiVanPhongDaiDien" type="String" />
+		<field name="ngayBatDauTamNgung" type="Date" />
+		<field name="ngayKetThucTamNgung" type="Date" />
+		<field name="lyDoTamNgung" type="String" />
+		<field name="ngayChamDutHoatDongKD" type="Date" />
+		<field name="loai" type="long" />
+		<field name="diaChiDoanhNghiepHuyenId" type="Long" />
+		<field name="diaChiDoanhNghiepTinhId" type="Long" />
+		<field name="diaChiDoanhNghiepXaId" type="Long" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="nguoiDaiDienId" type="Long" />
+		<field name="trangThaiDoanhNghiepId" type="Long" />
+		<field name="vonDieuLe" type="long" />
+		<field name="vonToiThieuMotXaVien" type="long" />
+		<field name="ghiChu" type="String" />
+		<field name="quocGiaId" type="Long" />
+		<field name="coQuanCapId" type="Long" />
+		<field name="tenCoQuanCap" type="long" />
+		<field name="soLanDieuChinh" type="String" />
+		<field name="ngayDieuChinh" type="Date" />
+		<field name="chucVuNguoiDaiDien" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="tenDiaDiemKinhDoanh" type="String" />
+		<field name="ngayDangKyKinhDoanh" type="Date" />
+		<field name="loaiHinhDoanhNghiepId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.DoanhNghiep2NganhNghe">
+		<field name="id" type="long" />
+		<field name="laNganhChinh" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="doanhNghiepId" type="long" />
+		<field name="nganhNgheId" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.LoaiDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="phienBan" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.NganhNgheKinhDoanh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="chaId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="cap" type="long" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.TrangThaiDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.YeuCauDangKyDN">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="maGiayPhep" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="email" type="String" />
+		<field name="hoNguoiDaiDien" type="String" />
+		<field name="tenDemNguoiDaiDien" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="soCmnd" type="String" />
+		<field name="ngayCapCmnd" type="Date" />
+		<field name="noiCapCmndId" type="Long" />
+		<field name="moTa" type="String" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="truSoTinhId" type="Long" />
+		<field name="truSoHuyenId" type="Long" />
+		<field name="truSoXaId" type="Long" />
+		<field name="truSo" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="loaiHinhDoanhNghiepId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.dn.model.YeuCauDangKyDoanhNghiep">
+		<field name="id" type="long" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="ten" type="String" />
+		<field name="maSoThue" type="String" />
+		<field name="maGiayPhep" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="email" type="String" />
+		<field name="hoNguoiDaiDien" type="String" />
+		<field name="tenDemNguoiDaiDien" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="soCMND" type="String" />
+		<field name="ngayCapCMND" type="Date" />
+		<field name="noiCapCMND" type="String" />
+		<field name="moTaNganhNgheKinhDoanh" type="String" />
+		<field name="loaiHinhDoanhNghiep" type="String" />
+		<field name="truSo" type="String" />
+		<field name="truSoXaId" type="long" />
+		<field name="truSoHuyenId" type="long" />
+		<field name="truSoTinhId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.CapNhatKetQua">
+		<field name="id" type="long" />
+		<field name="tenBang" type="String" />
+		<field name="banGhiId" type="long" />
+		<field name="hanhDong" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="hosoTTHCCId" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.CauHinhPortlet2ThuTuc">
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="portletId" type="long" />
+		<field name="portletName" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.DanhMucGiayTo2DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="loaiGiayToId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.DanhMucUngDung">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+		<field name="nguoiTao" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="mota" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="trangThai" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.NhomThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiSua" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="danhMucUngDungId" type="long" />
+		<field name="phienBan" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.ThuTuc2GiayTo">
+		<field name="id" type="long" />
+		<field name="ghiChu" type="String" />
+		<field name="batBuoc" type="int" />
+		<field name="thuTuHienThi" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="danhMucGiayToId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="giaidoan" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.ThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soNgayXuLy" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="nhomThuTucHanhChinhId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="canTichHop" type="int" />
+		<field name="trinhTuThucHien" type="String" />
+		<field name="cachThucHien" type="String" />
+		<field name="thanhPhanHoSo" type="String" />
+		<field name="lePhi" type="long" />
+		<field name="donViLePhi" type="String" />
+		<field name="phi" type="long" />
+		<field name="donViPhi" type="String" />
+		<field name="tenMauDonToKhai" type="String" />
+		<field name="yeuCauDieuKienThucHien" type="String" />
+		<field name="canCuPhapLy" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+		<field name="linhVucThucHien" type="String" />
+		<field name="maDNG" type="String" />
+		<field name="uengineProcessName" type="String" />
+		<field name="thuTucLienThongId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.TTHC2CoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="soNgayXyLy" type="int" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="coQuanQuanLyId" type="long" />
+		<field name="trangThai" type="int" />
+		<field name="phi" type="int" />
+		<field name="lePhi" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.TTHC2DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+		<field name="loaiDoiTuongId" type="long" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.dvc.model.VanBanHuongDan">
+		<field name="id" type="long" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="tenTaiLieu" type="String" />
+		<field name="moTa" type="String" />
+		<field name="loaiTaiLieu" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="thuTucHanhChinhId" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.hosohcc.model.FileDinhKem">
+		<field name="id" type="long" />
+		<field name="soBanGiay" type="long" />
+		<field name="daDoiChieu" type="int" />
+		<field name="trangThaiHoSoTaiThoiDiemDinhKem" type="int" />
+		<field name="noiLuuTruTaiLieuId" type="Long" />
+		<field name="canBoId" type="Long" />
+		<field name="hoSoTTHCCongId" type="Long" />
+		<field name="thuTuc2GiayToId" type="Long" />
+		<field name="danhMucGiayToId" type="Long" />
+		<field name="ngayUpload" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiUpload" type="String" />
+		<field name="maLoaiTaiLieuDuocThayThe" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="xoa" type="int" />
+		<field name="daTra" type="int" />
+		<field name="banChinh" type="long" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.hosohcc.model.HoSoAnhXa">
+		<field name="id" type="long" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="maHoSo" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="ngayTao" type="Date" />
+	</model>
+	<model name="org.oep.cmon.dao.hosohcc.model.HoSoTTHCCong">
+		<field name="id" type="long" />
+		<field name="maSoHoSo" type="String" />
+		<field name="ngayNopHoSo" type="Date" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="ngayNopHoSoGoc" type="Date" />
+		<field name="ngayHenNopHoSoGoc" type="Date" />
+		<field name="tenCanBoTiepNhan" type="String" />
+		<field name="chucVuCanBoTiepNhan" type="String" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="tenCanBoTraKetQua" type="String" />
+		<field name="chucVuCanBoTraKetQua" type="String" />
+		<field name="hoTenNguoiNhanKetQua" type="String" />
+		<field name="diaChiThuongTruNguoiNhanKQ" type="String" />
+		<field name="soDienThoaiNguoiNhan" type="String" />
+		<field name="ngayCap" type="Date" />
+		<field name="lanCap" type="long" />
+		<field name="tenCoQuanCap" type="String" />
+		<field name="hieuLucTuNgay" type="Date" />
+		<field name="hieuLucDenNgay" type="Date" />
+		<field name="trangThaiHoSo" type="int" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="thuTucHanhChinhId" type="Long" />
+		<field name="congDanNopId" type="Long" />
+		<field name="diaChiThuongTruNguoiNhanKQId" type="Long" />
+		<field name="coQuanTiepNhanId" type="Long" />
+		<field name="canBoTraKetQuaId" type="Long" />
+		<field name="canBoTiepNhanId" type="Long" />
+		<field name="diaChiThuongTruNguoiNopId" type="Long" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="phongBanXuLyHienThoiId" type="Long" />
+		<field name="tenPhongBanXuLyHienThoi" type="String" />
+		<field name="canBoXuLyHienThoiId" type="Long" />
+		<field name="tenCanBoXuLyHienThoi" type="String" />
+		<field name="danhGiaKetQua" type="int" />
+		<field name="ghiChu" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="yeuCauHuyHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="tenBangChuaHoSo" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="soBoHoSo" type="int" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="trichYeu" type="String" />
+		<field name="ngayHenTBThue" type="Date" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="maUngDung" type="String" />
+		<field name="daGuiGiayHen" type="int" />
+		<field name="nguoiDaiDienPhapLuat" type="String" />
+		<field name="nguoiDaiDienPhapLuatId" type="Long" />
+		<field name="chuyenSangMotCua" type="int" />
+		<field name="doiTuongCanXuLyId" type="Long" />
+		<field name="lyDo" type="String" />
+		<field name="moTaThanhPhanHoSo" type="String" />
+		<field name="lienKetThanhPhanHoSo" type="String" />
+		<field name="soNgayXuLy" type="Long" />
+		<field name="daTraKetQuaTrucTuyen" type="Long" />
+		<field name="eMailNguoiNhan" type="String" />
+		<field name="ngaySinhNguoiNhan" type="Date" />
+		<field name="dienThoiCoDinhNguoiNhan" type="String" />
+		<field name="cmndNguoiNhan" type="String" />
+		<field name="gioiTinh" type="int" />
+		<field name="dungXuLy" type="boolean" />
+		<field name="ngayBoSung" type="Date" />
+		<field name="ghiChuGiayToDinhKem" type="String" />
+		<field name="daDangKyNhanSMS" type="int" />
+		<field name="daDangKyChuyenPhatNhanh" type="int" />
+		<field name="diaChiChuHoSo" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.hosohcc.model.TrangThaiHoSo">
+		<field name="id" type="long" />
+		<field name="trangThai" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.hosohcc.model.YKienTraoDoi">
+		<field name="id" type="long" />
+		<field name="tieuDe" type="String" />
+		<field name="noiDungYKien" type="String" />
+		<field name="thoiGianGuiYKien" type="Date" />
+		<field name="trangThai" type="long" />
+		<field name="hoSoTTHCCongId" type="Long" />
+		<field name="nguoiNhanId" type="Long" />
+		<field name="nguoiGuiId" type="Long" />
+		<field name="chaiId" type="Long" />
+		<field name="noiLuuTruId" type="Long" />
+		<field name="loai" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.hosolienthong.model.HoSoLienThong">
+		<field name="id" type="long" />
+		<field name="hoSoId" type="long" />
+		<field name="coQuanGuiId" type="long" />
+		<field name="coQuanNhanId" type="long" />
+		<field name="thuTucGuiId" type="long" />
+		<field name="thuTucNhanId" type="long" />
+		<field name="maSoBienNhanLucGui" type="String" />
+		<field name="maSoBienNhanLucNhan" type="String" />
+		<field name="canBoGuiId" type="long" />
+		<field name="canBoNhanId" type="Long" />
+		<field name="ngayGui" type="Date" />
+		<field name="ngayNhan" type="Date" />
+		<field name="hoTenCanBoGui" type="String" />
+		<field name="hoTenCanBoNhan" type="String" />
+		<field name="canBoNopHoSoGiayId" type="Long" />
+		<field name="hoTenCanBoNopHoSoGiay" type="String" />
+		<field name="trangThaiLienThong" type="int" />
+		<field name="ghiChuGuiLienThong" type="String" />
+		<field name="hoTenCongDanNop" type="String" />
+		<field name="diaChiDayDuCongDanNop" type="String" />
+		<field name="ngayTuChoi" type="Date" />
+		<field name="ngayNoiNhanTraKetQua" type="Date" />
+		<field name="ngayNoiGuiNhanKetQua" type="Date" />
+		<field name="canBoTiepNhanNoiGuiId" type="long" />
+		<field name="hoTenCanBoTiepNhanNoiGui" type="String" />
+		<field name="tenCoQuanGui" type="String" />
+		<field name="tenThuTucGui" type="String" />
+		<field name="tenCoQuanNhan" type="String" />
+		<field name="tenThuTucNhan" type="String" />
+		<field name="thuTuLienThong" type="int" />
+		<field name="ngayNoiNhanHenTra" type="Date" />
+		<field name="soNgayNoiNhanXuLyDuKien" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.job.model.DanhSachJob">
+		<field name="ID" type="long" />
+		<field name="JobClass" type="String" />
+		<field name="JobId" type="int" />
+		<field name="JobName" type="String" />
+		<field name="Description" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.job.model.LogMail">
+		<field name="id" type="long" />
+		<field name="type" type="String" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="createTime" type="Date" />
+		<field name="status" type="int" />
+		<field name="description" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.job.model.TrangThaiJob">
+		<field name="ID" type="long" />
+		<field name="JobId" type="int" />
+		<field name="JobName" type="String" />
+		<field name="StartTime" type="Date" />
+		<field name="EndTime" type="Date" />
+		<field name="Status" type="int" />
+		<field name="RunMode" type="int" />
+		<field name="Message" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.kios.model.DanhSachCoQuan">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="chaId" type="Long" />
+		<field name="tenCapCoQuanQuanly" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.kios.model.DanhSachHoSo">
+		<field name="id" type="long" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThaiHoSoTen" type="String" />
+		<field name="rNum" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.kios.model.DanhSachThongKe">
+		<field name="CAPCOQUANQUANLYID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+		<field name="TENCAPCOQUANQUANLY" type="String" />
+		<field name="TENCOQUANQUANLY" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.NguoiDung2VaiTro">
+		<field name="id" type="long" />
+		<field name="vaiTroId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.NhomNguoiDung">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.TaiKhoanNguoiDung">
+		<field name="id" type="long" />
+		<field name="tenDangNhap" type="String" />
+		<field name="matKhau" type="String" />
+		<field name="tenNguoiDung" type="String" />
+		<field name="cauHoiMatKhau" type="String" />
+		<field name="cauTraLoiMatKhau" type="String" />
+		<field name="email" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="loaiDoiTuongId" type="Long" />
+		<field name="taiKhoanNguoiDungId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.TaiNguyen">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="loai" type="int" />
+		<field name="giaTri" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+		<field name="ungDungId" type="Long" />
+		<field name="heThongId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.TaiNguyen2VaiTro">
+		<field name="id" type="long" />
+		<field name="taiNguyenId" type="Long" />
+		<field name="vaiTroId" type="Long" />
+		<field name="hanhDong" type="int" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.nsd.model.VaiTro">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="ungDungId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.CapCoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="cap" type="long" />
+		<field name="chaId" type="Long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="phienBan" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.CapDonViHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="cap" type="long" />
+		<field name="phienBan" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="mota" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.ChucVu2VaiTro">
+		<field name="id" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="vaiTroId" type="Long" />
+		<field name="coQuanQuanLyId" type="Long" />
+		<field name="chucVuId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.CoQuanHanhChinhSuNghiep">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soDTDuongDayNong" type="String" />
+		<field name="noiBo" type="long" />
+		<field name="chucNang" type="String" />
+		<field name="tongSoCBNV" type="long" />
+		<field name="soDT" type="String" />
+		<field name="fax" type="String" />
+		<field name="email" type="String" />
+		<field name="tongSoGiuongBenh" type="long" />
+		<field name="viDo" type="String" />
+		<field name="kinhDo" type="String" />
+		<field name="diaChiCoQuanHCSNXaId" type="long" />
+		<field name="tuyenId" type="long" />
+		<field name="diaChiCoQuanHCSNTinhId" type="long" />
+		<field name="nguoiDaiDienId" type="long" />
+		<field name="diaChiCoQuanHCSNHuyenId" type="long" />
+		<field name="hangId" type="long" />
+		<field name="coQuanQuanLyId" type="String" />
+		<field name="loaiId" type="String" />
+		<field name="soQdThanhLap" type="String" />
+		<field name="moTaDiaChi" type="String" />
+		<field name="tenNguoiDaiDien" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.CoQuanQuanLy">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="email" type="String" />
+		<field name="fax" type="String" />
+		<field name="website" type="String" />
+		<field name="noiBo" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="daXoa" type="int" />
+		<field name="donViHanhChinhId" type="Long" />
+		<field name="capCoQuanQuanlyId" type="Long" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="merchant" type="String" />
+		<field name="accessCode" type="String" />
+		<field name="secureSecret" type="String" />
+		<field name="maCapSoBienNhan" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.DonViHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="phienBan" type="long" />
+		<field name="daXoa" type="int" />
+		<field name="ngaySua" type="Date" />
+		<field name="capDonViHanhChinhId" type="long" />
+		<field name="chaId" type="Long" />
+		<field name="nguoiTao" type="String" />
+		<field name="quocGiaId" type="long" />
+		<field name="nguoiSua" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.qlhc.model.QuocGia">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="phienBan" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Baocaochitiet">
+		<field name="LINHVUCID" type="long" />
+		<field name="MASOHOSO" type="String" />
+		<field name="TEN" type="String" />
+		<field name="TRANGTHAI" type="String" />
+		<field name="DIACHIHIENNAY" type="String" />
+		<field name="DIENTHOAIDIDONG" type="String" />
+		<field name="HOTENNGUOINOPHOSO" type="String" />
+		<field name="NGUOIDAIDIENPHAPLUAT" type="String" />
+		<field name="NGAYNHANHOSO" type="String" />
+		<field name="NGAYTRAKETQUA" type="String" />
+		<field name="NGAYHENTRAKETQUA" type="String" />
+		<field name="LINHVUC" type="String" />
+		<field name="GHICHU" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.CongChuc2Role">
+		<field name="ID" type="long" />
+		<field name="CONGCHUCID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.CoQuanQuanLy2LinhVuc">
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="TENNHOMTTHC" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.DanhMucBaoCao">
+		<field name="ID" type="long" />
+		<field name="TENBAOCAO" type="String" />
+		<field name="DUONGDAN" type="String" />
+		<field name="ORDERS" type="int" />
+		<field name="STATUS" type="int" />
+		<field name="PUBLISH" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.DanhMucRole">
+		<field name="ID" type="long" />
+		<field name="NAME" type="String" />
+		<field name="ORDERS" type="int" />
+		<field name="STATUS" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Lephi_chitiet">
+		<field name="ID" type="long" />
+		<field name="TENHOSO" type="String" />
+		<field name="NGUOINOP" type="String" />
+		<field name="CHUHOSO" type="String" />
+		<field name="DIACHI" type="String" />
+		<field name="SOBOHOSO" type="String" />
+		<field name="LEPHI" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+		<field name="GHICHU" type="String" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Lephi_linhvuc">
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+		<field name="TONGHOSO" type="String" />
+		<field name="LEPHIHOSO" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Lephi_tonghop">
+		<field name="NHOMTHUTUCHANHCHINHID" type="int" />
+		<field name="TONGHOSO" type="String" />
+		<field name="LEPHI" type="String" />
+		<field name="PHIHOSO" type="String" />
+		<field name="TONGLEPHI" type="String" />
+		<field name="THANGNHAN" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.ReportThongKe">
+		<field name="CAPCOQUANQUANLYID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.ReportTongHop">
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.ReportTongHopChiTiet">
+		<field name="COQUANQUANLYID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+		<field name="THUTUCHANHCHINHID" type="long" />
+		<field name="THANG" type="int" />
+		<field name="NAM" type="int" />
+		<field name="TONGNHAN" type="long" />
+		<field name="TIEPNHAN" type="long" />
+		<field name="TONDAU" type="long" />
+		<field name="TONGDAGIAIQUYET" type="long" />
+		<field name="SOM" type="long" />
+		<field name="DUNG" type="long" />
+		<field name="TRE" type="long" />
+		<field name="TONGDANGGIAIQUYET" type="long" />
+		<field name="CHUADENHAN" type="long" />
+		<field name="QUAHAN" type="long" />
+		<field name="RUTHOSO" type="long" />
+		<field name="KHONGHOPLE" type="long" />
+		<field name="TYLE" type="double" />
+		<field name="TONCUOI" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Role2BaoCao">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Role2DonViBaoCao">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="COQUANQUANLYID" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Role2NhomTTHC">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="NHOMTHUTUCHANHCHINHID" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.report.model.Role2TTHC">
+		<field name="ID" type="long" />
+		<field name="RPDANHMUCROLEID" type="long" />
+		<field name="RPDANHMUCBAOCAOID" type="long" />
+		<field name="THUTUCHANHCHINHID" type="long" />
+	</model>
+	<model name="org.oep.cmon.dao.thamso.model.AnhXa">
+		<field name="Id" type="long" />
+		<field name="maDNG" type="String" />
+		<field name="tenDNG" type="String" />
+		<field name="maKhac" type="String" />
+		<field name="tenKhac" type="String" />
+		<field name="tenBang" type="String" />
+		<field name="UngDungId" type="long" />
+		<field name="NgayTao" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiSua" type="String" />
+		<field name="DaXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.thamso.model.ThamSo">
+		<field name="Id" type="long" />
+		<field name="Ten" type="String" />
+		<field name="giaTri" type="String" />
+		<field name="kieuDuLieu" type="int" />
+		<field name="Mota" type="String" />
+		<field name="UngDungId" type="Long" />
+		<field name="HeThongId" type="Long" />
+		<field name="NgayTao" type="Date" />
+		<field name="NguoiTao" type="String" />
+		<field name="NgaySua" type="Date" />
+		<field name="NguoiSua" type="String" />
+		<field name="DaXoa" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.tlct.model.DanhMucGiayTo">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="mota" type="String" />
+		<field name="gioiHanDungLuong" type="long" />
+		<field name="kieuTaiLieu" type="String" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="tailieuThayTheId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.tlct.model.LichSuGiayToDinhKem">
+		<field name="id" type="long" />
+		<field name="giayToDinhKemHoSoId" type="Long" />
+		<field name="hanhDong" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="noiLuuTruTaiLieuId" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="tenTaiLieu" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.tlct.model.TaiLieuChungThuc">
+		<field name="id" type="long" />
+		<field name="ten" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="ngayUpload" type="Date" />
+		<field name="phienBan" type="int" />
+		<field name="ngayDuyet" type="Date" />
+		<field name="hieuLucTuNgay" type="Date" />
+		<field name="hieuLucDenNgay" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="danhMucGiayToId" type="Long" />
+		<field name="trangThai" type="int" />
+		<field name="chuSohuuId" type="Long" />
+		<field name="nguoiUploadId" type="Long" />
+		<field name="nguoiduyetId" type="Long" />
+		<field name="hoSoTTHCCId" type="Long" />
+		<field name="maUngDung" type="String" />
+		<field name="loai" type="int" />
+	</model>
+	<model name="org.oep.cmon.dao.touchscreen.model.TouchScreen">
+		<field name="ID" type="long" />
+		<field name="NAME" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.touchscreen.model.TraCuuHoSoTTHCCong">
+		<field name="id" type="long" />
+		<field name="ngayNhanHoSo" type="Date" />
+		<field name="tenCoQuanTiepNhan" type="String" />
+		<field name="tenThuTucHanhChinh" type="String" />
+		<field name="ngayHenTraKetQua" type="Date" />
+		<field name="ngayTraKetQua" type="Date" />
+		<field name="hoTenNguoiNopHoSo" type="String" />
+		<field name="diaChiThuongTruNguoiNop" type="String" />
+		<field name="soDienThoaiDiDongNguoiNop" type="String" />
+		<field name="ngayKetThucXuLy" type="Date" />
+		<field name="loaiHoSo" type="int" />
+		<field name="maSoBienNhan" type="String" />
+		<field name="chuSoHuu" type="String" />
+		<field name="lePhi" type="int" />
+		<field name="phiHoSo" type="int" />
+		<field name="emailNguoiNop" type="String" />
+		<field name="soDienThoaiCoDinhNguoiNop" type="String" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThaiHoSoTen" type="String" />
+	</model>
+	<model name="org.oep.cmon.dao.touchscreen.model.TraCuuThuTucHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="soNgayXuLy" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+		<field name="daXoa" type="int" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="nhomThuTucHanhChinhId" type="long" />
+		<field name="nhomThuTucHanhChinhTen" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="long" />
+		<field name="canTichHop" type="int" />
+		<field name="trinhTuThucHien" type="String" />
+		<field name="cachThucHien" type="String" />
+		<field name="thanhPhanHoSo" type="String" />
+		<field name="lePhi" type="long" />
+		<field name="donViLePhi" type="String" />
+		<field name="phi" type="long" />
+		<field name="donViPhi" type="String" />
+		<field name="tenMauDonToKhai" type="String" />
+		<field name="yeuCauDieuKienThucHien" type="String" />
+		<field name="canCuPhapLy" type="String" />
+		<field name="capCoQuanQuanLyId" type="Long" />
+		<field name="linhVucThucHien" type="String" />
+		<field name="maDNG" type="String" />
+		<field name="uengineProcessName" type="String" />
+		<field name="thuTucLienThongId" type="Long" />
+	</model>
+	<model name="org.oep.cmon.dao.ttthanhtoan.model.ThongTinThanhToan">
+		<field name="id" type="long" />
+		<field name="hoSoTTHCCongId" type="long" />
+		<field name="taiKhoanNguoiDungNopId" type="Long" />
+		<field name="taiKhoanNguoiDungNhanId" type="Long" />
+		<field name="loaiThanhToan" type="long" />
+		<field name="tenNguoiNopTien" type="String" />
+		<field name="tenCanBoNhanTien" type="String" />
+		<field name="xacNhan" type="long" />
+		<field name="loaiPhi" type="long" />
+		<field name="soTien" type="long" />
+		<field name="ngayThuTien" type="Date" />
+		<field name="ngayXacNhan" type="Date" />
+		<field name="ngayChuyenTien" type="Date" />
+		<field name="yKien" type="String" />
+		<field name="noiLuuTruId" type="long" />
+		<field name="nguoiTao" type="String" />
+		<field name="nguoiSua" type="String" />
+		<field name="ngayTao" type="Date" />
+		<field name="ngaySua" type="Date" />
+	</model>
+	<model name="org.oep.cmon.dao.ttthanhtoan.model.TienTe">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="tyGia" type="long" />
+		<field name="ngayTao" type="Date" />
+		<field name="nguoiTao" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="nguoiSua" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="phienBan" type="int" />
+		<field name="daXoa" type="int" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.ExchFileDinhKem">
+		<field name="id" type="long" />
+		<field name="OnlineId" type="long" />
+		<field name="TenTaiLieuDinhKem" type="String" />
+		<field name="UrlTaiLieuDinhKem" type="String" />
+		<field name="TenFile" type="String" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.HoSoMotCua">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="MaLoaiHoSo" type="String" />
+		<field name="MaDonViTiepNhan" type="String" />
+		<field name="NgayNopHoSo" type="String" />
+		<field name="NgayHenTra" type="String" />
+		<field name="HoTenNguoiNop" type="String" />
+		<field name="SoCmnd" type="String" />
+		<field name="NgaySinh" type="String" />
+		<field name="MaTinhThuongTru" type="String" />
+		<field name="MoTaDiaChiThuongTru" type="String" />
+		<field name="GioiTinh" type="int" />
+		<field name="MaNguoiTiepNhan" type="String" />
+		<field name="TenNguoiTiepNhan" type="String" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.HoSoTrucTuyen">
+		<field name="id" type="long" />
+		<field name="NgayTrichXuat" type="Date" />
+		<field name="OnlineId" type="long" />
+		<field name="MaLoaiHoSo" type="String" />
+		<field name="MaDonViTiepNhan" type="String" />
+		<field name="HoTenNguoiNop" type="String" />
+		<field name="DiaChiNguoiNop" type="String" />
+		<field name="NgaySinh" type="Date" />
+		<field name="SoCmnd" type="String" />
+		<field name="Email" type="String" />
+		<field name="SoDtDiDong" type="String" />
+		<field name="SoDtCoDinh" type="String" />
+		<field name="NgayDangKyHoSo" type="Date" />
+		<field name="NoiChuyenHoSo" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="GioiTinh" type="int" />
+		<field name="ChuSoHuuHoSo" type="String" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.KetQuaHoso">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="TenNguoiNhanKetQua" type="String" />
+		<field name="NgayNhanKetQua" type="String" />
+		<field name="LePhiHoSo" type="int" />
+		<field name="PhiXuLyHoSo" type="int" />
+		<field name="NgayHoanThanh" type="String" />
+		<field name="MaCanBoTraKetQua" type="String" />
+		<field name="TenCanBoTraKetQua" type="String" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.TrangThaiHoso">
+		<field name="id" type="long" />
+		<field name="NgayChuyen" type="Date" />
+		<field name="OnlineId" type="long" />
+		<field name="MaSoHoSo" type="String" />
+		<field name="NgayHenTra" type="String" />
+		<field name="MaNguoiXuLyHienTai" type="String" />
+		<field name="TenNguoiXuLyHienTai" type="String" />
+		<field name="TenPhongBanXuLyHienTai" type="String" />
+		<field name="NgayGioLuanChuyen" type="String" />
+		<field name="SoGioYeuCauXuLy" type="int" />
+		<field name="NoiDungYeuCauXuLy" type="String" />
+		<field name="SoGioThucHien" type="int" />
+		<field name="TrangThaiHienTai" type="int" />
+		<field name="MaNguoiXuLyKeTiep" type="String" />
+		<field name="TenNguoiXuLyKeTiep" type="String" />
+		<field name="TenPhongBanXuLyKeTiep" type="String" />
+		<field name="TrangThaiKeTiep" type="int" />
+		<field name="DonViCungCap" type="String" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayXuLy" type="Date" />
+		<field name="LoiKhiXuLy" type="String" />
+	</model>
+	<model name="org.oep.exch.dao.hoso.model.UpdateHoSoTrucTuyen">
+		<field name="id" type="long" />
+		<field name="TrangThaiXuLy" type="int" />
+		<field name="NgayChuyen" type="Date" />
+	</model>
+	<model name="org.oep.cmon.anhcongdan.model.AnhCongDan">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="email" type="String" />
+		<field name="anh" type="String" />
+	</model>
+</model-hints>

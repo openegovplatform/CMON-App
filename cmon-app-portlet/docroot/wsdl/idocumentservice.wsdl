@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DocumentServiceImplService" targetNamespace="http://document.provider.cmon.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://document.provider.cmon.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://document.provider.cmon.sharedservice.dtt.vn/" schemaLocation="idocumentservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getPhienBanMoiNhatTheoMa">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoMa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhienBanMoiNhatTheoMaResponse">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoMaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThongTinTaiLieuDinhKemResponse">
+    <wsdl:part name="parameters" element="tns:getThongTinTaiLieuDinhKemResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTailieuDinhKemTheoPhienBanResponse">
+    <wsdl:part name="parameters" element="tns:getTailieuDinhKemTheoPhienBanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getThongTinTaiLieuDinhKem">
+    <wsdl:part name="parameters" element="tns:getThongTinTaiLieuDinhKem">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIDTTHC2GiayToResponse">
+    <wsdl:part name="parameters" element="tns:getIDTTHC2GiayToResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doDeleteById">
+    <wsdl:part name="parameters" element="tns:doDeleteById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doDeleteResponse">
+    <wsdl:part name="parameters" element="tns:doDeleteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doUpload">
+    <wsdl:part name="parameters" element="tns:doUpload">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhMucGiayTheoId">
+    <wsdl:part name="parameters" element="tns:getDanhMucGiayTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doDelete">
+    <wsdl:part name="parameters" element="tns:doDelete">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTailieuDinhKemTheoPhienBan">
+    <wsdl:part name="parameters" element="tns:getTailieuDinhKemTheoPhienBan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhienBanMoiNhatTheoGiayToResponse">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoGiayToResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTailieuDinhKemBoiIdResponse">
+    <wsdl:part name="parameters" element="tns:getTailieuDinhKemBoiIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhienBanMoiNhatTheoTTHC2GiayTo">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoTTHC2GiayTo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhienBanMoiNhatTheoGiayTo">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoGiayTo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPhienBanMoiNhatTheoTTHC2GiayToResponse">
+    <wsdl:part name="parameters" element="tns:getPhienBanMoiNhatTheoTTHC2GiayToResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhMucGiayTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getDanhMucGiayTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTailieuDinhKemBoiId">
+    <wsdl:part name="parameters" element="tns:getTailieuDinhKemBoiId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIDTTHC2GiayTo">
+    <wsdl:part name="parameters" element="tns:getIDTTHC2GiayTo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doUploadResponse">
+    <wsdl:part name="parameters" element="tns:doUploadResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doDeleteByIdResponse">
+    <wsdl:part name="parameters" element="tns:doDeleteByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IDocumentService">
+    <wsdl:operation name="doDelete">
+      <wsdl:input name="doDelete" message="tns:doDelete">
+    </wsdl:input>
+      <wsdl:output name="doDeleteResponse" message="tns:doDeleteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doUpload">
+      <wsdl:input name="doUpload" message="tns:doUpload">
+    </wsdl:input>
+      <wsdl:output name="doUploadResponse" message="tns:doUploadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinTaiLieuDinhKem">
+      <wsdl:input name="getThongTinTaiLieuDinhKem" message="tns:getThongTinTaiLieuDinhKem">
+    </wsdl:input>
+      <wsdl:output name="getThongTinTaiLieuDinhKemResponse" message="tns:getThongTinTaiLieuDinhKemResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIDTTHC2GiayTo">
+      <wsdl:input name="getIDTTHC2GiayTo" message="tns:getIDTTHC2GiayTo">
+    </wsdl:input>
+      <wsdl:output name="getIDTTHC2GiayToResponse" message="tns:getIDTTHC2GiayToResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTailieuDinhKemTheoPhienBan">
+      <wsdl:input name="getTailieuDinhKemTheoPhienBan" message="tns:getTailieuDinhKemTheoPhienBan">
+    </wsdl:input>
+      <wsdl:output name="getTailieuDinhKemTheoPhienBanResponse" message="tns:getTailieuDinhKemTheoPhienBanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoGiayTo">
+      <wsdl:input name="getPhienBanMoiNhatTheoGiayTo" message="tns:getPhienBanMoiNhatTheoGiayTo">
+    </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoGiayToResponse" message="tns:getPhienBanMoiNhatTheoGiayToResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTailieuDinhKemBoiId">
+      <wsdl:input name="getTailieuDinhKemBoiId" message="tns:getTailieuDinhKemBoiId">
+    </wsdl:input>
+      <wsdl:output name="getTailieuDinhKemBoiIdResponse" message="tns:getTailieuDinhKemBoiIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhMucGiayTheoId">
+      <wsdl:input name="getDanhMucGiayTheoId" message="tns:getDanhMucGiayTheoId">
+    </wsdl:input>
+      <wsdl:output name="getDanhMucGiayTheoIdResponse" message="tns:getDanhMucGiayTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doDeleteById">
+      <wsdl:input name="doDeleteById" message="tns:doDeleteById">
+    </wsdl:input>
+      <wsdl:output name="doDeleteByIdResponse" message="tns:doDeleteByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoTTHC2GiayTo">
+      <wsdl:input name="getPhienBanMoiNhatTheoTTHC2GiayTo" message="tns:getPhienBanMoiNhatTheoTTHC2GiayTo">
+    </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoTTHC2GiayToResponse" message="tns:getPhienBanMoiNhatTheoTTHC2GiayToResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoMa">
+      <wsdl:input name="getPhienBanMoiNhatTheoMa" message="tns:getPhienBanMoiNhatTheoMa">
+    </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoMaResponse" message="tns:getPhienBanMoiNhatTheoMaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DocumentServiceImplServiceSoapBinding" type="tns:IDocumentService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="doDelete">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doDelete">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doDeleteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doUpload">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doUpload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doUploadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinTaiLieuDinhKem">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getThongTinTaiLieuDinhKem">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getThongTinTaiLieuDinhKemResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIDTTHC2GiayTo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getIDTTHC2GiayTo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIDTTHC2GiayToResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoGiayTo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPhienBanMoiNhatTheoGiayTo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoGiayToResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTailieuDinhKemTheoPhienBan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTailieuDinhKemTheoPhienBan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTailieuDinhKemTheoPhienBanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTailieuDinhKemBoiId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTailieuDinhKemBoiId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTailieuDinhKemBoiIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doDeleteById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doDeleteById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doDeleteByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhMucGiayTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhMucGiayTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhMucGiayTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoTTHC2GiayTo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPhienBanMoiNhatTheoTTHC2GiayTo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoTTHC2GiayToResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhienBanMoiNhatTheoMa">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPhienBanMoiNhatTheoMa">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPhienBanMoiNhatTheoMaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentServiceImplService">
+    <wsdl:port name="DocumentServiceImplPort" binding="tns:DocumentServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/DocumentServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="vn.dtt.dlms.dao.danhmucgiaypheplaixe">
+	<author>AnhNT</author>
+	<namespace>ipms</namespace>
+	
+	<entity name="HangGiayPhepLaiXe" local-service="true" remote-service="false"
+		table="DLMS_HANGGPLX"  data-source="egovDataSource">
+		<column name="id" 								db-name="ID" 	                  type="long"  primary="true"/>
+		<column name="tenHang"           				db-name= "TEN"            	      type="String"  />
+		<column name="ngayTao"                          db-name="NGAYTAO"                 type="Date"/>
+		<column name="ngaySua"                          db-name="NGAYSUA"                 type="Date"/>
+		<column name="nguoiTao"                         db-name="NGUOITAO"                type="String"/>
+		<column name="nguoiSua"                         db-name="NGUOISUA"                type="String"/>
+		<column name="xoa"                              db-name="DAXOA"                   type="int"/>
+		<column name="ma"                               db-name="MA"                      type="String"/>
+	<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+	</entity>
+	
+	<entity name="LyDoCapDoiCapLaiGPLX" local-service="true" remote-service="false"
+		table="DLMS_LYDOCAPDOICAPLAI"  data-source="egovDataSource">
+		<column name="id" 								db-name="ID" 	              type="long"  primary="true"/>
+		<column name="lyDo"           					db-name= "LYDO"            type="String"  />
+		<column name="ngayTao"                         db-name="NGAYTAO"                 type="Date"/>
+		<column name="ngaySua"                         db-name="NGAYSUA"                 type="Date"/>
+		<column name="nguoiTao"                        db-name="NGUOITAO"                type="String"/>
+		<column name="nguoiSua"                        db-name="NGUOISUA"                type="String"/>
+		<column name="xoa"                             db-name="DAXOA"                     type="int"/>
+	<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+	</entity>
+	
+	<entity name="DonViGtvt" local-service="true" remote-service="false"
+		table="DLMS_DONVIGTVT"  data-source="egovDataSource">
+		<column name="id" 								db-name="ID" 	              type="long"  primary="true"/>
+		<column name="ma"           				db-name= "MA"            type="String"  />
+		<column name="ten"           				db-name= "TEN"            type="String"  />
+		<column name="coQuanQl"           				db-name= "COQUANQL"            type="String"  />
+		<column name="dienThoai"           				db-name= "DIENTHOAI"            type="String"  />
+		<column name="fax"           				db-name= "FAX"            type="String"  />
+		<column name="diaChi"           				db-name= "DIACHI"            type="String"  />
+		<column name="lanhDao"           				db-name= "LANHDAO"            type="String"  />
+		<column name="ngayTao"                         db-name="NGAYTAO"                 type="Date"/>
+		<column name="ngaySua"                         db-name="NGAYSUA"                 type="Date"/>
+		<column name="nguoiTao"                        db-name="NGUOITAO"                type="String"/>
+		<column name="nguoiSua"                        db-name="NGUOISUA"                type="String"/>
+		<column name="xoa"                             db-name="DAXOA"                     type="int"/>
+	<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+	</entity>
+			
+</service-builder>

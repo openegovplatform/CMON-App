@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.ttthanhtoan">
+	<author>Thanhdd</author>
+	<namespace>EGOV</namespace>
+
+	<entity name="ThongTinThanhToan" local-service="true" remote-service="false"
+		table="CMON_THONGTINTHANHTOAN"  data-source="egovDataSource">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="hoSoTTHCCongId" db-name="HOSOTTHCCONGID" type="long" />
+		<column name="taiKhoanNguoiDungNopId" db-name="TAIKHOANNGUOIDUNGNOPID" type="Long" convert-null="false" />
+		<column name="taiKhoanNguoiDungNhanId" db-name="TAIKHOANNGUOIDUNGNHANID" type="Long" convert-null="false" />
+		<column name="loaiThanhToan" db-name="LOAITHANHTOAN " type="long" />
+		<column name="tenNguoiNopTien" db-name="TENNGUOINOPTIEN " type="String" />
+		<column name="tenCanBoNhanTien" db-name="TENCANBONHANTIEN " type="String" />
+		<column name="xacNhan" db-name="XACNHAN" type="long" />		
+		
+		<column name="loaiPhi" db-name="LOAIPHI" type="long" />
+		<column name="soTien" db-name="SOTIEN " type="long" />
+		<column name="ngayThuTien" db-name="NGAYTHUTIEN" type="Date" />
+		<column name="ngayXacNhan" db-name="NGAYXACNHAN "  type="Date" />
+		<column name="ngayChuyenTien" db-name="NGAYCHUYENTIEN "  type="Date" />
+		<column name="yKien" db-name="YKIEN " type="String" />
+		<column name="noiLuuTruId" db-name="NOILUUTRUID " type="long" />
+		
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="HoSoTTHCCongId" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+		</finder>
+				
+	</entity>
+
+	<entity name="TienTe" local-service="true" remote-service="false"
+		table="CMON_NGOAITE" data-source="egovDataSource">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma"             db-name="MA"              type="String"          />
+		<column name="ten"            db-name="TEN"             type="String"       />
+		<column name="tyGia"          db-name="TYGIA"           type="long"       /> 
+		<column name="ngayTao"        db-name="NGAYTAO"         type="Date"           />
+		<column name="nguoiTao"       db-name="NGUOITAO"        type="String"   />
+		<column name="ngaySua"        db-name="NGAYSUA"         type="Date"           />
+		<column name="nguoiSua"       db-name="NGUOISUA"        type="String"   />
+		<column name="trangThai"      db-name="TRANGTHAI"       type="int"    />    
+		<column name="phienBan"       db-name="PHIENBAN"        type="int"    />    
+		<column name="daXoa"          db-name="DAXOA"           type="int"        />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+
+	</entity>
+	
+
+</service-builder>

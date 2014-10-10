@@ -1,0 +1,64 @@
+/*----- Tabs -----*/
+#wd-tab-data .wd-list-item{list-style:none;overflow:hidden;margin-bottom:-1px;z-index:10;position:relative}
+#wd-tab-data .wd-list-item li{float:left;margin-right:2px}
+#wd-tab-data .wd-list-item li a{float:left;font-weight:bolder;padding:10px 20px;border:1px solid #e3ebed;border-bottom:none;color:#000;font-size:15px;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0}
+#wd-tab-data .wd-list-item li a span{font-weight:normal;color:#000}
+#wd-tab-data .wd-list-item li a.wd-current,#wd-tab-data .wd-list-item li a:hover{background-color:#fff;border:1px solid #d1d9da;border-bottom:none;color:#3a88cb}
+#wd-tab-data .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}
+/*----- User CBNN - new-profile -----*/
+#wd-content-container{overflow:hidden}
+.wd-bg-title-01{background:url(../images/bg-title-01.png) no-repeat 0 center!important}
+.wd-bg-title-02{background:url(../images/bg-title-02.png) no-repeat 0 center!important}
+.wd-new-profile{margin:0 auto}
+.wd-new-profile .wd-search-filter{overflow:hidden}
+.wd-new-profile .wd-search-filter .wd-quick-search fieldset{background:url(../images/bg-quick-search-confirm.png) no-repeat;width:266px;height:28px}
+.wd-new-profile .wd-search-filter .wd-quick-search fieldset input[type=text]{width:213px;height:18px;font-size:12px;padding:5px}
+.wd-new-profile .wd-search-filter .wd-quick-search .wd-submit-search{height:25px;overflow:hidden}
+.wd-new-profile .wd-search-filter .wd-filter{float:right;padding:12px 0 10px 0}
+.wd-new-profile .wd-search-filter .wd-filter div.selector,.wd-new-profile .wd-division div.selector{background:#fff;width:157px;height:30px}
+.wd-new-profile .wd-search-filter .wd-filter div.selector select,.wd-new-profile .wd-division div.selector select{width:157px;height:30px}
+.wd-new-profile .wd-search-filter .wd-filter div.selector select option,.wd-new-profile .wd-division div.selector select option{background:#fff;border:none;padding:5px 8px}
+.wd-new-profile .wd-search-filter .wd-filter div.selector span,.wd-new-profile .wd-division div.selector span{width:129px;height:26px;padding:0 10px;line-height:29px}
+.wd-new-profile .wd-search-filter .wd-quick-search{float:left}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table{border-collapse:collapse;text-align:center;margin:0 auto;width:100%}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table thead{background:#5C677B;color:#fff;font-weight:bold}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table tr td{border:1px solid #D3D3D3;padding:5px 10px}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table tr td.wd-tl-left{text-align:left}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table tr td a.wd-task{background:url(../images/ico-task.png) no-repeat;display:block;width:16px;height:16px;margin-left:18px}
+.wd-new-profile .wd-new-profile-form .wd-new-profile-table tr td.wd-font-bold a{font-weight:bold !important}
+.wd-new-profile .wd-paging {margin-top:5px}
+.wd-new-profile .wd-paging .wd-page{padding:0 10px 0 6px}
+.wd-new-profile .wd-paging{padding:4px 0;text-align:right;color:#000}
+.wd-new-profile .wd-paging span{text-align:center;overflow:hidden;font-weight:bold}
+.wd-new-profile .wd-paging a{color:#990000;text-decoration:none;font-weight:bold;padding:5px 11px 7px 11px}
+.wd-new-profile .wd-paging .wd-next{background:url(../images/arrow-paging.png) no-repeat -29px 1px}
+.wd-new-profile .wd-paging span.wd-prev {background:url(../images/arrow-paging.png) no-repeat;padding:4px 13px 7px 13px}
+/*----- Egov Screen User CBNN-xacthucmaso-hoantat -----*/
+.wd-citizen-register-success{background:#fff;font-family:Tahoma;width:662px;margin:115px auto;padding:50px;border:2px dashed #39b54a;text-align:center;font-size:14px}
+.wd-citizen-register-success p.title{text-transform:uppercase;color:#5bb503;font-size:20px;font-weight:bold;margin-bottom:10px}
+.wd-citizen-register-success .wd-code-success{width:304px;margin:8px auto;position:relative}
+.wd-citizen-register-success .wd-code-success .wd-status{background:url(../images/ico-check-03.png) no-repeat;width:32px;height:32px;position:absolute;top:11px;right:-47px}
+.wd-citizen-register-success .wd-code-success p.wd-bg-code{background:url(../images/bg-code-confirm-success.png) no-repeat;width:304px;font-size:30px;font-weight:bold;padding:15px 0;text-align:center;letter-spacing:6px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

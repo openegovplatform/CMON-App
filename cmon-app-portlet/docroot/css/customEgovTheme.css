@@ -1,0 +1,331 @@
+.egov-container a:link
+,.egov-container a:visited
+,.ui-dialog a:link
+,.ui-dialog a:visited
+{
+	color: #075d9a;
+	text-decoration: none;
+}
+.egov-container a:link:hover
+,.egov-container a:visited:hover
+,.ui-dialog a:visited:hover
+,.ui-dialog a:visited:hover
+{
+	color: #075d9a;
+	text-decoration: underline;
+}
+/* jquery ui customization  */
+body .ui-dialog {
+	font-size: 0.75em;
+	font-family: Tahoma,Helvetica,sans-serif;
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 10px -1px #555555;
+	-moz-box-shadow: 3px 3px 10px -1px #555555;
+	-webkit-box-shadow: 3px 3px 10px -1px #555555;
+}
+body .ui-dialog .ui-icon-closethick {
+	background-image: url("/dng67-dichvucong-theme/images/ui-icons_ffffff_256x240.png");
+	background-position: -98px -130px;
+}
+body .ui-dialog-titlebar {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+body .ui-dialog input,
+body .ui-dialog select,
+body .ui-dialog textarea,
+body .ui-dialog button {
+	color: #38444F;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:14px
+}
+body .ui-dialog .ui-dialog-content {
+	padding: 0;
+}
+body .ui-timepicker-table td a {
+  width: auto;
+}
+body .ui-timepicker-table th.periods {
+  vertical-align: middle;
+}
+.monthpicker-div .ui-datepicker-calendar {
+	display: none;
+}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+	clear: both;
+	display: block !important;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+body .ui-datepicker select.ui-datepicker-month,
+body .ui-datepicker select.ui-datepicker-year {
+	width: auto;
+}
+
+/* egov-theme customization  */
+body .egov-inputfield,
+body .egov-calendar,
+body .egov-select,
+body .egov-textarea,
+body .egov-timepicker,
+body .egov-multi-select 
+{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100% !important;
+	min-height: 32px !important;
+	box-shadow: 0 0 0 !important;
+	-moz-box-shadow: 0 0 0 !important;
+	-webkit-box-shadow: 0 0 0 !important;
+}
+body .egov-inputfield,
+body .egov-calendar,
+body .egov-select,
+body .egov-timepicker,
+body .egov-multi-select 
+{
+	height: auto !important;
+}
+body .egov-inputfield.small,
+body .egov-calendar.small,
+body .egov-select.small,
+body .egov-textarea.small,
+body .egov-timepicker.small,
+body .egov-multi-select.small 
+{
+	min-height: 25px !important;
+	padding: 2px 5px;
+}
+
+.firefox .egov-select {
+	padding-top: 5px;
+}
+.chrome .egov-select {
+	padding-top: 4px;
+}
+body .egov-inputfield[disabled],body .egov-inputfield.disabled,
+body .egov-inputfield[readonly],
+body .egov-timepicker[readonly],
+body .egov-timepicker[disabled],body .egov-timepicker.disabled,
+body .egov-calendar[disabled],body .egov-calendar.disabled,
+body .egov-calendar[readonly],
+body .egov-select[disabled],body .egov-select.disabled,
+body .egov-select[readonly],
+body .egov-textarea[disabled],body .egov-textarea.disabled,
+body .egov-textarea[readonly],
+body .egov-multi-select[disabled],body .egov-multi-select.disabled,
+body .egov-multi-select[readonly]
+{
+	background-color: #F5F5F5 !important;
+	cursor: default;
+}
+body .egov-button[disabled],body .egov-button.disabled,
+body .egov-button-search[disabled],body .egov-button-search.disabled,
+body .egov-button-normal[disabled],body .egov-button-normal.disabled
+{
+    background-color: #A0A0A0  !important;
+    border-color: #A0A0A0  !important;
+    cursor: default;
+}
+.egov-button.small, .egov-button-normal.small {
+	padding: 3px 8px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+body .egov-button-search.small {
+	padding: 0;
+	width: 38px;
+}
+body .egov-button, body .egov-button-normal {
+	color: #FFFFFF !important;
+	font-family: arial,sans-serif !important;
+	font-size: 12px !important;
+	vertical-align: middle;
+}
+body .egov-button:hover,
+body .egov-button-normal:hover {
+	text-decoration: none !important;
+}
+.button-bar {
+	clear: both;
+	margin: 20px auto 15px;
+}
+.button-bar .egov-button, .button-bar .egov-button-normal {
+	margin-left: 10px;
+}
+.button-bar .egov-button:first-child, .button-bar .egov-button-normal:first-child {
+	margin-left: 5px;
+}
+body div.checker + .egov-label
+, body div.radio + .egov-label
+, body div.checker + .egov-label-bold
+, body div.radio + .egov-label-bold
+{
+	vertical-align: middle;
+}
+body div.checker.disabled + .egov-label, body div.radio.disabled + .egov-label {
+	cursor: default;
+}
+.result-grid-ctn {
+	margin: 15px 5px;
+	clear: both;
+}
+.result-grid {
+	width: 100%;
+}
+.result-grid.egov-table td a {
+	padding: 0;
+	margin: 0;
+}
+table.result-grid  {
+	border-color: #005a93;
+}
+table.result-grid tr th {
+	border-color: #282828 #AAAAAA;
+	white-space: normal;
+}
+table.result-grid tr th:first-child {
+	border-left-color: #005a93;
+}
+table.result-grid tr th:last-child {
+	border-right-color: #005a93;
+}
+table.egov-table-form tr td {
+	padding-left: 5px !important; 
+	padding-right: 5px !important; 
+}
+body .egov-container table.result-grid.egov-table td {
+	padding: 7px !important;
+	line-height: inherit;
+	border: 1px solid #D6D6D6 !important;
+	vertical-align: middle;
+}
+table.result-grid.egov-table .egov-label
+,table.result-grid.egov-table a {
+	line-height: 1.4em;
+}
+#egov-content-container table.result-grid.egov-table {
+	background-color: transparent;
+}
+.egov-radio, .egov-checkbox {
+	cursor: pointer;
+}
+.egov-radio[disabled], .egov-radio.disabled, 
+.egov-checkbox[disabled],.egov-checkbox.disabled
+{
+	cursor: default;
+}
+.egov-upload-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+}
+.egov-upload-wrapper span.egov-uploadfile {
+	margin: 0;
+	padding: 0;
+	position: static;
+	vertical-align: inherit;
+	display: table-cell;
+	vertical-align: middle;
+}
+.egov-upload-wrapper.disabled span.egov-uploadfile {
+	background: none repeat scroll 0 0 #B0B0B0 !important;
+	border-color: #B0B0B0 !important;
+	cursor: default;
+}
+.egov-upload-wrapper .button-content {
+	background-attachment: scroll;
+	background-position: 8px center;
+	background-repeat: no-repeat;
+	font-size: inherit;
+	height: auto;
+	line-height: 2.5em !important;
+	padding: 0 8px 0 25px;
+	white-space: nowrap;
+}
+.egov-upload-wrapper .filename {
+	display: table-cell;
+	padding: 0 8px;
+	vertical-align: middle;
+	white-space: nowrap;
+	max-width: 200px;
+}
+.egov-upload-wrapper .filename a {
+	margin: 0;
+	padding: 0;
+}
+label[for] {
+	cursor: pointer;
+}
+a:hover .egov-label {
+	cursor: pointer;
+}
+.lv1-title {
+	font-size: 22px;
+	min-height: 1.5em;
+	line-height: 1.5em;
+	padding: 25px 0;
+	text-align: center;
+	margin: 0;
+}
+.lv1-title-text {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Tahoma;
+}
+.group-title {
+	background-color: #D8D6FF;
+	clear: both;
+	color: #17253e;
+	font-size: 18px;
+	min-height: 1.5em;
+	line-height: 1.5em;
+	margin: 10px 0;
+	padding: 7px 0 7px 5px;
+}
+.lv2-title-text {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Tahoma;
+}
+.lv3-title {
+	font-size: 16px;
+	margin: 10px 0;
+	padding: 3px 0 3px 5px;
+}
+.lv3-title-text {
+	font-weight: bold;
+	font-family: Tahoma;
+}
+.hint {
+	color: #555 !important;
+	font-style: italic !important;
+}
+.highlight {
+	background-color: #f5ff58 !important; 
+	font-weight: bold;
+}
+.egov-ol {
+	margin-left: 1em;
+	list-style-position: inside; 
+	list-style-type: decimal;
+}
+.egov-ol li, .egov-ul li {
+	margin: 5px 0;
+}
+.egov-ol li:first-child, .egov-ul li:first-child {
+	margin-top: 0;
+} 
+.egov-ol li:last-child, .egov-ul li:last-child {
+	margin-bottom: 0;
+} 
+.stop-deny {
+	background: url("../images/dungxuly.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.nhanketqua {
+	background: url("../images/nhanketqua.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://hoso.provider.exch.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://hoso.provider.exch.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="countDocument" type="tns:countDocument"/>
+<xs:element name="countDocumentResponse" type="tns:countDocumentResponse"/>
+<xs:element name="moveToCommunicationLayer" type="tns:moveToCommunicationLayer"/>
+<xs:element name="moveToCommunicationLayerResponse" type="tns:moveToCommunicationLayerResponse"/>
+<xs:element name="pullDocument" type="tns:pullDocument"/>
+<xs:element name="pullDocumentResponse" type="tns:pullDocumentResponse"/>
+<xs:element name="pushDocument" type="tns:pushDocument"/>
+<xs:element name="pushDocumentResponse" type="tns:pushDocumentResponse"/>
+<xs:element name="updateResult" type="tns:updateResult"/>
+<xs:element name="updateResultResponse" type="tns:updateResultResponse"/>
+<xs:element name="updateSendSignal" type="tns:updateSendSignal"/>
+<xs:element name="updateSendSignalResponse" type="tns:updateSendSignalResponse"/>
+<xs:element name="updateStatus" type="tns:updateStatus"/>
+<xs:element name="updateStatusResponse" type="tns:updateStatusResponse"/>
+<xs:complexType name="updateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:documentResultSoapList"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="documentResultSoapList">
+    <xs:complexContent>
+      <xs:extension base="tns:authSoap">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="documentResultSoapList" nillable="true" type="tns:documentResultSoap"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="authSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="userName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="documentResultSoap">
+    <xs:sequence>
+      <xs:element name="lePhiHoSo" type="xs:int"/>
+      <xs:element minOccurs="0" name="maCanBoTraKetQua" type="xs:string"/>
+      <xs:element minOccurs="0" name="maSoHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayHoanThanh" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayNhanKetQua" type="xs:string"/>
+      <xs:element name="phiXuLyHoSo" type="xs:int"/>
+      <xs:element minOccurs="0" name="tenCanBoTraKetQua" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenNguoiNhanKetQua" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:responseSignalSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="responseSignalSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="errMsg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="moveToCommunicationLayer">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="moveToCommunicationLayerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:responseSignalSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:documentStatusSoapList"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="documentStatusSoapList">
+    <xs:complexContent>
+      <xs:extension base="tns:authSoap">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="documentStatusSoapList" nillable="true" type="tns:documentStatusSoap"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="documentStatusSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maNguoiXuLyHienTai" type="xs:string"/>
+      <xs:element minOccurs="0" name="maNguoiXuLyKeTiep" type="xs:string"/>
+      <xs:element minOccurs="0" name="maSoHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayGioLuanChuyen" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayHenTra" type="xs:string"/>
+      <xs:element minOccurs="0" name="noiDungYeuCauXuLy" type="xs:string"/>
+      <xs:element name="onlineId" type="xs:long"/>
+      <xs:element name="soGioThucHien" type="xs:int"/>
+      <xs:element name="soGioYeuCauXuLy" type="xs:int"/>
+      <xs:element minOccurs="0" name="tenNguoiXuLyHienTai" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenNguoiXuLyKeTiep" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenPhongBanXuLyHienTai" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenPhongBanXuLyKeTiep" type="xs:string"/>
+      <xs:element name="trangThaiHienTai" type="xs:int"/>
+      <xs:element name="trangThaiKeTiep" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:responseSignalSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateSendSignal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:onlineRecordSoapList"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="onlineRecordSoapList">
+    <xs:complexContent>
+      <xs:extension base="tns:authSoap">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="idList" nillable="true" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="updateSendSignalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:responseSignalSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="pushDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ossDocumentSoapList"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="ossDocumentSoapList">
+    <xs:complexContent>
+      <xs:extension base="tns:authSoap">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ossDocumentSoapList" nillable="true" type="tns:ossDocumentSoap"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="ossDocumentSoap">
+    <xs:sequence>
+      <xs:element name="gioiTinh" type="xs:int"/>
+      <xs:element minOccurs="0" name="hoTenNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="maDonViTiepNhan" type="xs:string"/>
+      <xs:element minOccurs="0" name="maLoaiHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="maNguoiTiepNhan" type="xs:string"/>
+      <xs:element minOccurs="0" name="maSoHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="maTinhThuongTru" type="xs:string"/>
+      <xs:element minOccurs="0" name="moTaDiaChiThuongTru" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayHenTra" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayNopHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySinh" type="xs:string"/>
+      <xs:element minOccurs="0" name="soCmnd" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenNguoiTiepNhan" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="pushDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:responseSignalSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="pullDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:pullerSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="pullerSoap">
+    <xs:complexContent>
+      <xs:extension base="tns:authSoap">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="maDonViTiepNhan" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="pullDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:onlineDocumentSoapList"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="onlineDocumentSoapList">
+    <xs:complexContent>
+      <xs:extension base="tns:responseSignalSoap">
+        <xs:sequence>
+          <xs:element name="conTiep" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="onlineDocumentSoapList" nillable="true" type="tns:onlineDocumentSoap"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="onlineDocumentSoap">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="attachmentList" nillable="true" type="tns:onlineAttachmentSoap"/>
+      <xs:element minOccurs="0" name="chuSoHuuHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="diaChiNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element name="gioiTinh" type="xs:int"/>
+      <xs:element minOccurs="0" name="hoTenNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="maDonViTiepNhan" type="xs:string"/>
+      <xs:element minOccurs="0" name="maLoaiHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayDangKyHoSo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySinh" type="xs:string"/>
+      <xs:element name="onlineId" type="xs:long"/>
+      <xs:element minOccurs="0" name="soCmnd" type="xs:string"/>
+      <xs:element minOccurs="0" name="soDtCoDinh" type="xs:string"/>
+      <xs:element minOccurs="0" name="soDtDiDong" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="onlineAttachmentSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tenFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenTaiLieuDinhKem" type="xs:string"/>
+      <xs:element minOccurs="0" name="urlTaiLieuDinhKem" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="countDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:pullerSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="countDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:countDocumentSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="countDocumentSoap">
+    <xs:complexContent>
+      <xs:extension base="tns:responseSignalSoap">
+        <xs:sequence>
+          <xs:element name="countDocument" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.qlhc">
+	<author>LIEMNN</author>
+	<namespace>EGOV</namespace>
+
+	<entity name="QuocGia" local-service="true" remote-service="false"
+		table="CMON_QUOCGIA" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="phienBan" db-name="PHIENBAN" type="int" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Ten" return-type="QuocGia">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MaQuocGia" return-type="QuocGia">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+
+	<entity name="CapDonViHanhChinh" local-service="true"
+		remote-service="false" table="CMON_CAPDONVIHANHCHINH" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="cap" db-name="CAP" type="long" />
+		<column name="phienBan" db-name="PHIENBAN" type="long" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="mota" db-name="MOTA" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="Cap" return-type="Collection">
+			<finder-column name="cap" />
+		</finder>
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MaDonViHanhChinh" return-type="CapDonViHanhChinh">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TenDonViHanhChinh" return-type="CapDonViHanhChinh">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+
+	<entity name="CapCoQuanQuanLy" local-service="true"
+		remote-service="false" table="CMON_CAPCOQUANQUANLY" data-source="egovDataSource">
+		
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="cap" db-name="CAP" type="long" />
+		<column name="chaId" db-name="CHAID" type="Long" convert-null="false"/>
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="phienBan" db-name="PHIENBAN" type="int" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+			
+		</finder>
+		
+		
+		
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+
+	<entity name="DonViHanhChinh" local-service="true"
+		remote-service="false" table="CMON_DONVIHANHCHINH" data-source="egovDataSource">
+		
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="phienBan" db-name="PHIENBAN" type="long" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="capDonViHanhChinhId" db-name="CAPDONVIHANHCHINHID"
+			type="long" />
+		<column name="chaId" db-name="CHAID" type="Long" convert-null="false" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="quocGiaId" db-name="QUOCGIAID" type="long" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="CapDonViHanhChinhId" return-type="Collection">
+			<finder-column name="capDonViHanhChinhId" />
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="ChaId" return-type="Collection">
+			<finder-column name="chaId" />
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="QuocGiaId" return-type="Collection">
+			<finder-column name="quocGiaId" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="MaDVHC" return-type="DonViHanhChinh">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TenDVHC" return-type="DonViHanhChinh">
+			<finder-column name="ten" />
+		</finder>
+        <finder name="ByQuocId" return-type="Collection">
+            <finder-column name="quocGiaId"></finder-column>
+            <finder-column name="capDonViHanhChinhId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+	</entity>
+
+	<entity name="CoQuanQuanLy" local-service="true"
+		remote-service="false" table="CMON_COQUANQUANLY" data-source="egovDataSource">
+		
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="diaChi" db-name="DIACHI" type="String" />
+		<column name="dienThoai" db-name="DIENTHOAI" type="String" />
+		
+		<column name="email" db-name="EMAIL" type="String" />
+		<column name="fax" db-name="FAX" type="String" />
+		<column name="website" db-name="WEBSITE" type="String" />
+		<column name="noiBo" db-name="NOIBO" type="int" />
+		<column name="phienBan" db-name="PHIENBAN" type="long" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		
+		
+		
+		<column name="donViHanhChinhId" db-name="DONVIHANHCHINHID" type="Long" convert-null="false"/>
+			
+		<column name="capCoQuanQuanlyId" db-name="CAPCOQUANQUANLYID" type="Long" convert-null="false"/>
+		<column name="chaId" db-name="CHAID" type="Long" convert-null="false"/>
+		
+		
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />		
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+
+		<!-- Order -->
+        <column name="merchant" type="String" db-name="MERCHANT"></column>
+        <column name="accessCode" type="String" db-name="ACCESSCODE"></column>
+        <column db-name="SECURE_SECRET" type="String" name="secureSecret"></column>
+        <column name="maCapSoBienNhan" db-name="MACAPSOBIENNHAN" type="String" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+		
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Cha" return-type="Collection">
+			<finder-column name="chaId" />
+			<finder-column name="daXoa" />
+		</finder>
+		
+		<finder name="CapCoQuanQuanLy" return-type="Collection">
+			<finder-column name="capCoQuanQuanlyId" />
+			<finder-column name="daXoa" />
+		</finder>
+		
+		<finder name="donViHanhChinhId" return-type="Collection">
+			<finder-column name="donViHanhChinhId" />
+			<finder-column name="daXoa" />
+		</finder>
+
+	</entity>
+	
+	<entity name="ChucVu2VaiTro" local-service="true"
+		remote-service="false" table="CMON_CHUCVU2VAITRO" data-source="egovDataSource">
+		
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="vaiTroId" db-name="VAITROID" type="Long" convert-null="false"/>
+		<column name="coQuanQuanLyId" db-name="COQUANQUANLYID" type="Long" convert-null="false"/>
+		<column name="chucVuId" db-name="CHUCVUID" type="Long" convert-null="false"/>
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<finder name="ChucVu2VaiTro" return-type="ChucVu2VaiTro">
+			<finder-column name="vaiTroId" />
+			<finder-column name="coQuanQuanLyId" />
+			<finder-column name="chucVuId" />
+		</finder>
+		<finder name="VaiTroId" return-type="Collection">
+			<finder-column name="vaiTroId" />
+		</finder>
+		<finder name="CoQuanQuanLyId" return-type="Collection">
+			<finder-column name="coQuanQuanLyId" />
+		</finder>
+		<finder name="ChucVuId" return-type="Collection">
+			<finder-column name="chucVuId" />
+		</finder>
+		
+		<finder name="VaiTroIdAndDaXoa" return-type="Collection">
+			<finder-column name="vaiTroId" />
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="CoQuanQuanLyIdAndDaXoa" return-type="Collection">
+			<finder-column name="coQuanQuanLyId" />
+			<finder-column name="daXoa" />
+		</finder>
+		<finder name="ChucVuIdAndDaXoa" return-type="Collection">
+			<finder-column name="chucVuId" />
+			<finder-column name="daXoa" />
+		</finder>
+		
+		<finder name="ChucVuIdAndCoQuanQuanLyId" return-type="Collection">
+			<finder-column name="chucVuId" />
+			<finder-column name="coQuanQuanLyId" />
+			<finder-column name="daXoa" />
+		</finder>
+		
+		<finder name="DaXoa" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+	
+		<entity name="CoQuanHanhChinhSuNghiep" local-service="true"
+		remote-service="false" table="CMON_COQUANHANHCHINHSUNGHIEP"
+		data-source="egovDataSource">
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="soDTDuongDayNong" db-name="SDTDUONGDAYNONG" type="String" />
+		<column name="noiBo" db-name="NOIBO" type="long" />
+		<column name="chucNang" db-name="CHUCNANG" type="String" />
+		<column name="tongSoCBNV" db-name="TONGSOCBNV" type="long" />
+		<column name="soDT" db-name="SODIENTHOAI" type="String" />
+		<column name="fax" db-name="FAX" type="String" />
+		<column name="email" db-name="EMAIL" type="String" />
+		<column name="tongSoGiuongBenh" db-name="TONGSOGIUONGBENH" type="long" />
+		<column name="viDo" db-name="VIDO" type="String" />
+		<column name="kinhDo" db-name="KINHDO" type="String" />
+		<column name="diaChiCoQuanHCSNXaId" db-name="DIACHICOQUANHCSNXAID" type="long" />
+		<column name="tuyenId" db-name="TUYENID" type="long" />
+		<column name="diaChiCoQuanHCSNTinhId" db-name="DIACHICOQUANHCSNTINHID" type="long" />
+		<column name="nguoiDaiDienId" db-name="NGUOIDAIDIENID" type="long" />
+		<column name="diaChiCoQuanHCSNHuyenId" db-name="DIACHICOQUANHCSNHUYENID" type="long" />
+		<column name="hangId" db-name="HANGID" type="long" />
+		<column name="coQuanQuanLyId" db-name="COQUANQUANLYID" type="String" />
+		<column name="loaiId" db-name="LOAIID" type="String" />
+		
+		<column name="soQdThanhLap" db-name="SOQDTHANHLAP" type="String" />
+		<column name="moTaDiaChi" db-name="MOTADIACHI" type="String" />
+		<column name="tenNguoiDaiDien" db-name="TENNGUOIDAIDIEN" type="String" />								
+		
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="chaId" db-name="CHAID" type="Long" convert-null="false" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />		
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+
+	</entity>
+	
+	
+	
+</service-builder>

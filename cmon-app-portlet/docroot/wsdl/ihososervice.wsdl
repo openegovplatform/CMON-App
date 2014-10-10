@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="HoSoServiceImplService" targetNamespace="http://hoso.provider.bpm.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://hoso.provider.bpm.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://hoso.provider.bpm.sharedservice.dtt.vn/" schemaLocation="ihososervice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="updateYKienTraoDoi">
+    <wsdl:part name="parameters" element="tns:updateYKienTraoDoi">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCapNhatKetQuaResponse">
+    <wsdl:part name="parameters" element="tns:updateCapNhatKetQuaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCapNhatKetQua">
+    <wsdl:part name="parameters" element="tns:addCapNhatKetQua">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="capNhatTrangThaiHoSo">
+    <wsdl:part name="parameters" element="tns:capNhatTrangThaiHoSo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="capNhatTrangThaiHoSoResponse">
+    <wsdl:part name="parameters" element="tns:capNhatTrangThaiHoSoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getYKienTraoDoiTheoId">
+    <wsdl:part name="parameters" element="tns:getYKienTraoDoiTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getYKienTraoDoiTheoHoSoTTHCId">
+    <wsdl:part name="parameters" element="tns:getYKienTraoDoiTheoHoSoTTHCId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCapNhatKetQuaResponse">
+    <wsdl:part name="parameters" element="tns:addCapNhatKetQuaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addYKienTraoDoiResponse">
+    <wsdl:part name="parameters" element="tns:addYKienTraoDoiResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateYKienTraoDoiResponse">
+    <wsdl:part name="parameters" element="tns:updateYKienTraoDoiResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getYKienTraoDoiTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getYKienTraoDoiTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getYKienTraoDoiTheoHoSoTTHCIdResponse">
+    <wsdl:part name="parameters" element="tns:getYKienTraoDoiTheoHoSoTTHCIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addYKienTraoDoi">
+    <wsdl:part name="parameters" element="tns:addYKienTraoDoi">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCapNhatKetQua">
+    <wsdl:part name="parameters" element="tns:updateCapNhatKetQua">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IHoSoService">
+    <wsdl:operation name="addCapNhatKetQua">
+      <wsdl:input name="addCapNhatKetQua" message="tns:addCapNhatKetQua">
+    </wsdl:input>
+      <wsdl:output name="addCapNhatKetQuaResponse" message="tns:addCapNhatKetQuaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCapNhatKetQua">
+      <wsdl:input name="updateCapNhatKetQua" message="tns:updateCapNhatKetQua">
+    </wsdl:input>
+      <wsdl:output name="updateCapNhatKetQuaResponse" message="tns:updateCapNhatKetQuaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKienTraoDoiTheoHoSoTTHCId">
+      <wsdl:input name="getYKienTraoDoiTheoHoSoTTHCId" message="tns:getYKienTraoDoiTheoHoSoTTHCId">
+    </wsdl:input>
+      <wsdl:output name="getYKienTraoDoiTheoHoSoTTHCIdResponse" message="tns:getYKienTraoDoiTheoHoSoTTHCIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="capNhatTrangThaiHoSo">
+      <wsdl:input name="capNhatTrangThaiHoSo" message="tns:capNhatTrangThaiHoSo">
+    </wsdl:input>
+      <wsdl:output name="capNhatTrangThaiHoSoResponse" message="tns:capNhatTrangThaiHoSoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addYKienTraoDoi">
+      <wsdl:input name="addYKienTraoDoi" message="tns:addYKienTraoDoi">
+    </wsdl:input>
+      <wsdl:output name="addYKienTraoDoiResponse" message="tns:addYKienTraoDoiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateYKienTraoDoi">
+      <wsdl:input name="updateYKienTraoDoi" message="tns:updateYKienTraoDoi">
+    </wsdl:input>
+      <wsdl:output name="updateYKienTraoDoiResponse" message="tns:updateYKienTraoDoiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKienTraoDoiTheoId">
+      <wsdl:input name="getYKienTraoDoiTheoId" message="tns:getYKienTraoDoiTheoId">
+    </wsdl:input>
+      <wsdl:output name="getYKienTraoDoiTheoIdResponse" message="tns:getYKienTraoDoiTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HoSoServiceImplServiceSoapBinding" type="tns:IHoSoService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addCapNhatKetQua">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addCapNhatKetQua">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addCapNhatKetQuaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="capNhatTrangThaiHoSo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="capNhatTrangThaiHoSo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="capNhatTrangThaiHoSoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKienTraoDoiTheoHoSoTTHCId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getYKienTraoDoiTheoHoSoTTHCId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getYKienTraoDoiTheoHoSoTTHCIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCapNhatKetQua">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCapNhatKetQua">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCapNhatKetQuaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addYKienTraoDoi">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addYKienTraoDoi">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addYKienTraoDoiResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKienTraoDoiTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getYKienTraoDoiTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getYKienTraoDoiTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateYKienTraoDoi">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateYKienTraoDoi">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateYKienTraoDoiResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HoSoServiceImplService">
+    <wsdl:port name="HoSoServiceImplPort" binding="tns:HoSoServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/HoSoServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

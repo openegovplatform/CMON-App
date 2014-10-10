@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+.header-block{max-height:47px; }
+.title-header{background:#11b4f3 url(../images/bgbred.png) repeat-x top left; padding:5px 10px; max-height:45px; text-align:center}
+.title-header h4{margin:2px 0; font-size:22px; text-transform:uppercase; color:#fff; font-weight:500;}
+.form-block{width:60%; margin:0 auto; padding:0; position:relative; overflow:hidden; margin-top:60px}
+.input-form{width:55%; float:left; margin-right:1%; text-align:center; margin-top:35px}
+.input-form img{margin-bottom:7px}
+.input-form input[type="text"]{width:100%; height:44px; padding:5px 10px; font-size:25px; border-radius:8px; border:solid 3px #ccc; margin-bottom:10px;}
+.input-form input[type="button"], .input-form input[type="reset"]{background:#1298c2 url(../images/tracuu.png) repeat-x left top; border:solid 2px #80d9f5; border-radius:3px; font-size:18px; line-height:27px; text-transform:uppercase; color:#fff; padding:3px 18px; margin:3px; text-shadow:none; font-weight:normal}
+.input-form input[type="button"]:hover, .input-form input[type="reset"]:hover{background:#ff0201 url(../images/reset.png) repeat-x left top; color:#fff;border:solid 2px #80d9f5}
+.keyboard-form{width:44%; float:left;}
+.keyboard-form ul{list-style:none; margin:0; padding:0}
+.keyboard-form ul li{width:23%;float:left; margin-left:5px; margin-bottom:6px}
+.keyboard-form ul li span{display:block; text-indent:-90000px; width:70px; height:69px}
+span.s0{ background:url(../images/so0.png) no-repeat center center;}
+span.s1{ background:url(../images/so1.png) no-repeat center center;}
+span.s2{ background:url(../images/so2.png) no-repeat center center;}
+span.s3{ background:url(../images/so3.png) no-repeat center center;}
+span.s4{ background:url(../images/so4.png) no-repeat center center;}
+span.s5{ background:url(../images/so5.png) no-repeat center center;}
+span.s6{ background:url(../images/so6.png) no-repeat center center;}
+span.s7{ background:url(../images/so7.png) no-repeat center center;}
+span.s8{ background:url(../images/so8.png) no-repeat center center;}
+span.s9{ background:url(../images/so9.png) no-repeat center center;}
+span.dot{ background:url(../images/dot.png) no-repeat center center;}
+span.delete{ background:url(../images/delete.png) no-repeat center center;}
+span.s0:hover{ background:url(../images/h0.png) no-repeat center center;}
+span.s1:hover{ background:url(../images/h1.png) no-repeat center center;}
+span.s2:hover{ background:url(../images/h2.png) no-repeat center center;}
+span.s3:hover{ background:url(../images/h3.png) no-repeat center center;}
+span.s4:hover{ background:url(../images/h4.png) no-repeat center center;}
+span.s5:hover{ background:url(../images/h5.png) no-repeat center center;}
+span.s6:hover{ background:url(../images/h6.png) no-repeat center center;}
+span.s7:hover{ background:url(../images/h7.png) no-repeat center center;}
+span.s8:hover{ background:url(../images/h8.png) no-repeat center center;}
+span.s9:hover{ background:url(../images/h9.png) no-repeat center center;}
+span.dot:hover{ background:url(../images/hdot.png) no-repeat center center;}
+span.delete:hover{ background:url(../images/hdelete.png) no-repeat center center;}
+#keyboard li:hover {position: relative;top: 1px;left: 1px;border-color: #e5e5e5;cursor: pointer;}
+
+@media (max-width: 979px) {
+	.form-block{width:80%;}
+}
+@media (max-width:760px){
+	.form-block{width:90%;}
+}
+@media (max-width:480px){
+	.form-block{width:100%;}
+	.input-form{width:100%; float:left}
+	.keyboard-form{width:100%; float:left}
+}

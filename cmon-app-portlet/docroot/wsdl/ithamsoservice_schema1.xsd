@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://thamso.provider.cmon.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://thamso.provider.cmon.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="getAnhXa" type="tns:getAnhXa"/>
+<xs:element name="getAnhXaResponse" type="tns:getAnhXaResponse"/>
+<xs:element name="getAnhXas" type="tns:getAnhXas"/>
+<xs:element name="getAnhXasResponse" type="tns:getAnhXasResponse"/>
+<xs:element name="getValue" type="tns:getValue"/>
+<xs:element name="getValueResponse" type="tns:getValueResponse"/>
+<xs:element name="getValues" type="tns:getValues"/>
+<xs:element name="getValuesResponse" type="tns:getValuesResponse"/>
+<xs:complexType name="getValues">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getValuesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAnhXas">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="tns:anhXaInput"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="anhXaInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="table" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAnhXasResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:anhXaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="anhXaSoap">
+    <xs:sequence>
+      <xs:element name="daXoa" type="xs:int"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="maDNG" type="xs:string"/>
+      <xs:element minOccurs="0" name="maKhac" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngaySua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nguoiSua" type="xs:string"/>
+      <xs:element minOccurs="0" name="nguoiTao" type="xs:string"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="tenBang" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenDNG" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenKhac" type="xs:string"/>
+      <xs:element name="ungDungId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAnhXa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:anhXaInput"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAnhXaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:anhXaSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

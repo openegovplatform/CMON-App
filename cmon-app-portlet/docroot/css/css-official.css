@@ -1,0 +1,16 @@
+/*----- Tabs -----*/
+#wd-tab-data .wd-list-item{list-style:none;overflow:hidden;margin-bottom:-1px;z-index:10;position:relative}
+#wd-tab-data .wd-list-item li{float:left;margin-right:2px}
+#wd-tab-data .wd-list-item li a{float:left;font-weight:bolder;padding:10px 20px;border:1px solid #e3ebed;border-bottom:none;color:#000;font-size:15px;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0}
+#wd-tab-data .wd-list-item li a.wd-current,#wd-tab-data .wd-list-item li a:hover{background-color:#fff;border:1px solid #d1d9da;border-bottom:none;color:#3a88cb}
+#wd-tab-data .wd-data-item{padding:15px;border:1px solid #d1d9da;background-color:#fff;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}
+/*----- Accordion -----*/
+.wd-accordion .wd-content {background-color:#fff;padding:0 0 5px 0}
+.wd-accordion h4 {background:#48566f url(../images/accordion-close.png) no-repeat right center;border-bottom:#fff solid 2px;color:#fff;cursor:pointer;line-height:19px;overflow:hidden;padding:10px 75px 10px 10px;display:block;text-transform:uppercase}
+.wd-accordion h4.ui-state-hover,.wd-accordion h4.ui-state-active{background-color:#3a88cb}
+.wd-accordion h4.ui-state-active{background:#3a88cb url(../images/accordion-open.png) no-repeat right center;border-bottom:none}
+.wd-accordion .ui-icon {float:left;background:url(../images/accordion-title.png) no-repeat;width:13px;height:13px;margin:3px 10px 0 0}
+.wd-accordion table.wd-table-content{width:100%;background-color:#d3d3d3}
+.wd-accordion table.wd-table-content td.wd-table-34{width:24px;text-align:center}
+.wd-accordion table.wd-table-content td{padding:6px 9px;background-color:#fff}
+.wd-accordion table.wd-table-content td a:hover{text-decoration:underline;color:#1977c7}

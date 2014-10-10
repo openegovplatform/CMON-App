@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TraCuuHoSoImplService" targetNamespace="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/" schemaLocation="tracuuhosoimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getHoSoTTHCCongByMaSoBienNhanResponse">
+    <wsdl:part name="parameters" element="tns:getHoSoTTHCCongByMaSoBienNhanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHoSoTTHCCongByMaSoBienNhan">
+    <wsdl:part name="parameters" element="tns:getHoSoTTHCCongByMaSoBienNhan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TraCuuHoSoService">
+    <wsdl:operation name="getHoSoTTHCCongByMaSoBienNhan">
+      <wsdl:input name="getHoSoTTHCCongByMaSoBienNhan" message="tns:getHoSoTTHCCongByMaSoBienNhan">
+    </wsdl:input>
+      <wsdl:output name="getHoSoTTHCCongByMaSoBienNhanResponse" message="tns:getHoSoTTHCCongByMaSoBienNhanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TraCuuHoSoImplServiceSoapBinding" type="tns:TraCuuHoSoService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getHoSoTTHCCongByMaSoBienNhan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getHoSoTTHCCongByMaSoBienNhan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHoSoTTHCCongByMaSoBienNhanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TraCuuHoSoImplService">
+    <wsdl:port name="TraCuuHoSoImplPort" binding="tns:TraCuuHoSoImplServiceSoapBinding">
+      <soap:address location="http://localhost:9090/TraCuuHoSoImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

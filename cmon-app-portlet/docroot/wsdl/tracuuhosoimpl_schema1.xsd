@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/" elementFormDefault="unqualified" targetNamespace="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/" version="1.0">
+<xs:element name="getHoSoTTHCCongByMaSoBienNhan" type="tns:getHoSoTTHCCongByMaSoBienNhan"/>
+<xs:element name="getHoSoTTHCCongByMaSoBienNhanResponse" type="tns:getHoSoTTHCCongByMaSoBienNhanResponse"/>
+<xs:complexType name="getHoSoTTHCCongByMaSoBienNhan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getHoSoTTHCCongByMaSoBienNhanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:traCuuHoSoTTHCCongSoap"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="traCuuHoSoTTHCCongSoap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chuSoHuu" type="xs:string"/>
+      <xs:element minOccurs="0" name="diaChiThuongTruNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="emailNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="hoTenNguoiNopHoSo" type="xs:string"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="lePhi" type="xs:int"/>
+      <xs:element name="loaiHoSo" type="xs:int"/>
+      <xs:element minOccurs="0" name="maSoBienNhan" type="xs:string"/>
+      <xs:element minOccurs="0" name="ngayHenTraKetQua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayKetThucXuLy" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayNhanHoSo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ngayTraKetQua" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="nhomThuTucHanhChinhTen" type="xs:string"/>
+      <xs:element name="phiHoSo" type="xs:int"/>
+      <xs:element name="primaryKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="soDienThoaiCoDinhNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="soDienThoaiDiDongNguoiNop" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenCoQuanTiepNhan" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenThuTucHanhChinh" type="xs:string"/>
+      <xs:element minOccurs="0" name="trangThaiHoSoTen" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

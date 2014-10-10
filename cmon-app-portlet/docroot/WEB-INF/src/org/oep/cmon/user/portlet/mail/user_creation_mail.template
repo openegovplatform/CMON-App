@@ -1,0 +1,9 @@
+Chào bạn $citizen_name !
+
+Thông tin về công dân điện tử của bạn đã được lưu vào hệ thống của chúng tôi.
+Đồng thời tài khoản để dùng các dịch vụ công trực tuyến cũng đã được tạo với thông tin như sau:
+Tên người dùng: $user_name
+Mật khẩu: $user_password
+Khi đăng nhập lần đầu bạn sẽ phải đổi mật khẩu
+
+Đường dẫn đến cổng dịch vụ công trực tuyến: $url

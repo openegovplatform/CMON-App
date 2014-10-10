@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.hosolienthong">
+	<author>hoangtrung.nguyen</author>
+	<namespace>EGOV</namespace>
+	<entity name="HoSoLienThong" local-service="true" remote-service="false"
+		table="CMON_HOSOLIENTHONG" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long"  primary="true"/>
+		<column name="hoSoId" db-name="HOSOID" type="long"/>
+		<column name="coQuanGuiId" db-name="COQUANGUIID" type="long"/>
+		<column name="coQuanNhanId" db-name="COQUANNHANID" type="long"/>
+		<column name="thuTucGuiId" db-name="THUTUCGUIID" type="long"/>
+		<column name="thuTucNhanId" db-name="THUTUCNHANID" type="long"/>
+		<column name="maSoBienNhanLucGui" db-name="MASOBIENNHANGUI" type="String"/>
+		<column name="maSoBienNhanLucNhan" db-name="MASOBIENNHANNHAN" type="String"/>
+		<column name="canBoGuiId" db-name="CANBOGUIID" type="long"/>
+		<column name="canBoNhanId" db-name="CANBONHANID" type="Long" convert-null="false"/>
+		<column name="ngayGui" db-name="NGAYGUI" type="Date" />
+		<column name="ngayNhan" db-name="NGAYNHAN" type="Date" />
+		<column name="hoTenCanBoGui" db-name="HOTENCANBOGUI" type="String"/>
+		<column name="hoTenCanBoNhan" db-name="HOTENCANBONHAN" type="String"/>
+		<column name="canBoNopHoSoGiayId" db-name="CANBONOPHOSOGIAYID" type="Long" convert-null="false"/>
+		<column name="hoTenCanBoNopHoSoGiay" db-name="HOTENCANBONOPHOSOGIAY" type="String"/>
+		<column name="trangThaiLienThong" db-name="TRANGTHAILIENTHONG" type="int"/>
+		<column name="ghiChuGuiLienThong" db-name="GHICHUGUILIENTHONG" type="String"/>
+		<column name="hoTenCongDanNop" db-name="HOTENCONGDANNOP" type="String"/>
+		<column name="diaChiDayDuCongDanNop" db-name="DIACHIDAYDUCONGDANNOP" type="String"/>
+		<column name="ngayTuChoi" db-name="NGAYTUCHOI" type="Date"/>
+		<column name="ngayNoiNhanTraKetQua" db-name="NGAYNOINHANTRAKETQUA" type="Date"/>
+		<column name="ngayNoiGuiNhanKetQua" db-name="NGAYNOIGUINHANKETQUA" type="Date"/>
+		<column name="canBoTiepNhanNoiGuiId" db-name="CANBOTIEPNHANNOIGUIID" type="long"/>
+		<column name="hoTenCanBoTiepNhanNoiGui" db-name="HOTENCANBOTIEPNHANNOIGUI" type="String"/>
+		<column name="tenCoQuanGui" db-name="TENCOQUANGUI" type="String"/>
+		<column name="tenThuTucGui" db-name="TENTHUTUCGUI" type="String"/>
+		<column name="tenCoQuanNhan" db-name="TENCOQUANNHAN" type="String"/>
+		<column name="tenThuTucNhan" db-name="TENTHUTUCNHAN" type="String"/>
+		<column name="thuTuLienThong" db-name="THUTULIENTHONG" type="int"/>
+		<column name="ngayNoiNhanHenTra" db-name="NGAYNOINHANHENTRA" type="Date"/>
+		<column name="soNgayNoiNhanXuLyDuKien" db-name="SONGAYNOINHANXULYDUKIEN" type="int"/>
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		
+		<finder return-type="Collection" name="HoSoId" where="daXoa = 0">
+			<finder-column name="hoSoId"/>
+		</finder>
+		
+		<finder return-type="HoSoLienThong" name="MaSoBienNhanLucGui" where="daXoa = 0">
+			<finder-column name="maSoBienNhanLucGui"/>
+		</finder>
+	</entity>
+</service-builder>

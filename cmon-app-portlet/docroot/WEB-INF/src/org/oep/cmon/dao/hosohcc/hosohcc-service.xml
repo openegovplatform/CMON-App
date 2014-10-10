@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.hosohcc">
+	<author>LIEMNn</author>
+	<namespace>EGOV</namespace>
+
+	<entity name="HoSoTTHCCong" local-service="true" remote-service="true"
+		table="CMON_HOSOTTHCCONG"  data-source="egovDataSource" cache-enabled="false">
+		<column name="id" db-name="ID" type="long"  primary="true"/>
+		<column name="maSoHoSo"                      db-name="MASOHOSO"                           type="String" convert-null="false"/>
+		<column name="ngayNopHoSo"                   db-name="NGAYNOPHOSO"                        type="Date"/> 
+		<column name="ngayNhanHoSo"                  db-name="NGAYNHANHOSO"                       type="Date"/> 
+		<column name="tenCoQuanTiepNhan"             db-name="TENCOQUANTIEPNHAN"                  type="String" convert-null="false"/>
+		<column name="tenThuTucHanhChinh"            db-name="TENTHUTUCHANHCHINH"                 type="String" convert-null="false"/>
+		<column name="ngayHenTraKetQua"              db-name="NGAYHENTRAKETQUA"                   type="Date"/> 
+		<column name="ngayTraKetQua"                 db-name="NGAYTRAKETQUA"                      type="Date"/> 
+		<column name="ngayNopHoSoGoc"                db-name="NGAYNOPHOSOGOC"                     type="Date"/> 
+		<column name="ngayHenNopHoSoGoc"             db-name="NGAYHENNOPHOSOGOC"                  type="Date"/> 
+		<column name="tenCanBoTiepNhan"              db-name="TENCANBOTIEPNHAN"                   type="String" convert-null="false"/>
+		<column name="chucVuCanBoTiepNhan"           db-name="CHUCVUCANBOTIEPNHAN"                type="String" convert-null="false"/>
+		<column name="hoTenNguoiNopHoSo"             db-name="HOTENNGUOINOPHOSO"                  type="String" convert-null="false"/>
+		<column name="diaChiThuongTruNguoiNop"       db-name="DIACHITHUONGTRUNGUOINOP"            type="String" convert-null="false"/>
+		<column name="soDienThoaiCoDinhNguoiNop"     db-name="SODIENTHOAICODINHNGUOINOP"          type="String" convert-null="false"/>
+		<column name="tenCanBoTraKetQua"             db-name="TENCANBOTRAKETQUA"                  type="String" convert-null="false"/>
+		<column name="chucVuCanBoTraKetQua"          db-name="CHUCVUCANBOTRAKETQUA"               type="String" convert-null="false"/>
+		<column name="hoTenNguoiNhanKetQua"          db-name="HOTENNGUOINHANKETQUA"               type="String" convert-null="false"/>
+		<column name="diaChiThuongTruNguoiNhanKQ"    db-name="DIACHITHUONGTRUNGUOINHANKQ"         type="String" convert-null="false"/>
+		<column name="soDienThoaiNguoiNhan"          db-name="SODIENTHOAINGUOINHAN"               type="String" convert-null="false"/>
+		<column name="ngayCap"                       db-name="NGAYCAP"                            type="Date"/> 
+		<column name="lanCap"                        db-name="LANCAP"                             type="long"/> 
+		<column name="tenCoQuanCap"                  db-name="TENCOQUANCAP"                       type="String" convert-null="false"/>
+		<column name="hieuLucTuNgay"                 db-name="HIEULUCTUNGAY"                      type="Date"/> 
+		<column name="hieuLucDenNgay"                db-name="HIEULUCDENNGAY"                     type="Date"/> 
+		<column name="trangThaiHoSo"                 db-name="TRANGTHAIHOSO"                      type="int" />  
+		<column name="daXoa"                         db-name="DAXOA"                              type="int"/>  
+		<column name="nguoiTao"                      db-name="NGUOITAO"                           type="String" convert-null="false"/>
+		<column name="ngayTao"                       db-name="NGAYTAO"                            type="Date"/> 
+		<column name="nguoiSua"                      db-name="NGUOISUA"                           type="String" convert-null="false"/>
+		<column name="ngaySua"                       db-name="NGAYSUA"                            type="Date"/> 
+		<column name="thuTucHanhChinhId"             db-name="THUTUCHANHCHINHID"                  type="Long"  convert-null="false"/>
+		<column name="congDanNopId"                  db-name="CONGDANNOPID"                       type="Long"  convert-null="false"/> 
+		<column name="diaChiThuongTruNguoiNhanKQId"  db-name="DIACHITHUONGTRUNGUOINHANKQID"       type="Long"  convert-null="false"/>
+		<column name="coQuanTiepNhanId"              db-name="COQUANTIEPNHANID"                   type="Long"  convert-null="false"/>
+		<column name="canBoTraKetQuaId"              db-name="CANBOTRAKETQUAID"                   type="Long"  convert-null="false"/>
+		<column name="canBoTiepNhanId"               db-name="CANBOTIEPNHANID"                    type="Long"  convert-null="false"/> 
+		<column name="diaChiThuongTruNguoiNopId"     db-name="DIACHITHUONGTRUNGUOINOPID"          type="Long"  convert-null="false"/>
+		<column name="soDienThoaiDiDongNguoiNop"     db-name="SODIENTHOAIDIDONGNGUOINOP"          type="String" convert-null="false"/>
+		<column name="phongBanXuLyHienThoiId"        db-name="PHONGBANXULYHIENTHOIID"             type="Long"  convert-null="false"/> 
+		<column name="tenPhongBanXuLyHienThoi"       db-name="TENPHONGBANXULYHIENTHOI"            type="String" convert-null="false"/>
+		<column name="canBoXuLyHienThoiId"           db-name="CANBOXULYHIENTHOIID"                type="Long"  convert-null="false"/> 
+		<column name="tenCanBoXuLyHienThoi"          db-name="TENCANBOXULYHIENTHOI"               type="String" convert-null="false"/>
+		<column name="danhGiaKetQua"                 db-name="DANHGIAKETQUA"                      type="int"/>  
+		<column name="ghiChu"                        db-name="GHICHU"                             type="String" convert-null="false"/>
+		<column name="ngayKetThucXuLy"               db-name="NGAYKETTHUCXULY"                    type="Date"/> 
+		<column name="loaiHoSo"                      db-name="LOAIHOSO"                           type="int"/>  
+		<column name="yeuCauHuyHoSo"                 db-name="YEUCAUHUYHOSO"                      type="int"/>  
+		<column name="maSoBienNhan"                  db-name="MASOBIENNHAN"                       type="String" convert-null="false"/>
+		<column name="tenBangChuaHoSo"               db-name="TENBANGCHUAHOSO"                    type="String" convert-null="false"/>
+		<column name="chuSoHuu"                      db-name="CHUSOHUU"                           type="String" convert-null="false"/>
+		<column name="soBoHoSo"                      db-name="SOBOHOSO"                           type="int"/>  
+		<column name="lePhi"                         db-name="LEPHI"                              type="int"/>  
+		<column name="phiHoSo"                       db-name="PHIHOSO"                            type="int"/>  
+		<column name="trichYeu"                      db-name="TRICHYEU"                           type="String" convert-null="false"/>
+		<column name="ngayHenTBThue"                 db-name="NGAYHENTBTHUE"                      type="Date"/>
+		<column name="emailNguoiNop"                 db-name="EMAILNGUOINOP"                      type="String" convert-null="false"/>
+		<column name="maUngDung"                     db-name="MAUNGDUNG"                          type="String" convert-null="false"/>
+		<column name="daGuiGiayHen"                  db-name="DAGUIGIAYHEN"                       type="int"/>
+		<column name="nguoiDaiDienPhapLuat"          db-name="NGUOIDAIDIENPHAPLUAT"               type="String" convert-null="false"/>
+		<column name="nguoiDaiDienPhapLuatId"        db-name="NGUOIDAIDIENPHAPLUATID"             type="Long" convert-null="false"/>
+		<column name="chuyenSangMotCua"              db-name="CHUYENSANGMOTCUA"                   type="int"/>
+		<column name="doiTuongCanXuLyId"             db-name="DOITUONGCANXULYID"                  type="Long" convert-null="false"/>
+		<column name="lyDo"            				 db-name="LYDO"                  			  type="String"/>
+		<column name="moTaThanhPhanHoSo"             db-name="MOTATHANHPHANHOSO"                  type="String"/>
+		<column name="lienKetThanhPhanHoSo"          db-name="LIENKETTHANHPHANHOSO"               type="String"/>
+		<column name="soNgayXuLy"                    db-name="SONGAYXULY"                  type="Long" />
+		<column name="daTraKetQuaTrucTuyen"             db-name="DATRAKETQUATRUCTUYEN"                  type="Long" />
+		
+		<column name="eMailNguoiNhan"                db-name="EMAILNGUOINHAN"               type="String"/>
+		<column name="ngaySinhNguoiNhan"             db-name="NGAYSINHNGUOINHAN"               type="Date"/>
+		<column name="dienThoiCoDinhNguoiNhan"       db-name="DIENTHOAICODINHNGUOINHAN"               type="String"/>
+		<column name="cmndNguoiNhan"                 db-name="CMNDNGUOINHAN"               type="String"/>
+		<column name="gioiTinh"                      db-name="GIOITINHNGUOINHAN"               type="int"/>
+		
+        <column db-name="DUNGXULY" name="dungXuLy" type="boolean"></column>
+        <column name="ngayBoSung"                 db-name="NGAYBOSUNG"                      type="Date"/> 
+        <column name="ghiChuGiayToDinhKem"                 db-name="GHICHUGIAYTODINHKEM"                      type="String"/>
+        <column name="daDangKyNhanSMS"                 db-name="DADANGKYNHANSMS"              type="int"/>
+        <column name="daDangKyChuyenPhatNhanh"         db-name="DADANGKYCHUYENPHATNHANH"      type="int"/>
+        <column name="diaChiChuHoSo"                db-name="DIACHICHUHOSO"               type="String"/>
+         
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+		
+		<finder name="maSoBienNhan" return-type="Collection">
+			<finder-column name="maSoBienNhan" />
+		</finder>
+		<finder name="maSoHoSo" return-type="Collection">
+			<finder-column name="maSoHoSo" />
+		</finder>
+		<finder name="DV_PB" return-type="Collection">
+			<finder-column name="tenCoQuanTiepNhan" />
+			<finder-column name="tenPhongBanXuLyHienThoi" />
+		</finder>		
+		
+		<finder name="TenThuTucHanhChinh" return-type="Collection">
+			<finder-column name="tenThuTucHanhChinh" />
+		</finder>
+		<finder name="Ten_DT_DD" return-type="Collection">
+			<finder-column name="hoTenNguoiNopHoSo" />
+			<finder-column name="soDienThoaiDiDongNguoiNop" />
+			<finder-column name="soDienThoaiCoDinhNguoiNop" />
+		</finder>
+		<finder name="CongDanNopId" return-type="Collection">
+			<finder-column name="congDanNopId" />
+		</finder>
+		<finder name="ThuTuc_CongDan" return-type="Collection">
+			<finder-column name="thuTucHanhChinhId" />
+			<finder-column name="congDanNopId" />
+			
+		</finder>
+		<finder name="CongDanNopId_TrangThai" return-type="Collection">
+			<finder-column name="congDanNopId" />
+			<finder-column name="trangThaiHoSo" />
+		</finder>
+		<finder name="LoaiHoSo" return-type="Collection">
+			<finder-column name="loaiHoSo" />
+		</finder>				
+		
+		
+		
+		<finder name="TrangThaiHoSo" return-type="Collection">
+			<finder-column name="trangThaiHoSo" />
+			<finder-column name="daXoa" />
+			<finder-column name="coQuanTiepNhanId" />
+			
+						
+		</finder>
+		
+		
+		
+	</entity>
+	
+	<entity name="FileDinhKem" local-service="true" remote-service="true"
+		table="CMON_GIAYTODINHKEMHOSO" data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long"  primary="true"/>
+
+		<column name="soBanGiay" db-name="SOBANGIAY" type="long" />
+		<column name="daDoiChieu" db-name="DADOICHIEU" type="int" />
+		<column name="trangThaiHoSoTaiThoiDiemDinhKem" db-name="TTHSTAITHOIDIEMDINHKEM" type="int" />
+		<column name="noiLuuTruTaiLieuId" db-name="NOILUUTRUTAILIEUID" type="Long" convert-null="false"/>
+		<column name="canBoId" db-name="CANBOID" type="Long" convert-null="false"/>
+		<column name="hoSoTTHCCongId" db-name="HOSOTTHCCONGID" type="Long" convert-null="false"/>
+		<column name="thuTuc2GiayToId" db-name="THUTUC2GIAYTOID" type="Long" convert-null="false"/>
+		<column name="danhMucGiayToId" db-name="DANHMUCGIAYTOID" type="Long" convert-null="false"/>
+		<column name="ngayUpload" db-name="NGAYUPLOAD" type="Date" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="nguoiUpload" db-name="NGUOIUPLOAD" type="String" />
+		<column name="maLoaiTaiLieuDuocThayThe" db-name="MALOAITAILIEUDUOCTHAYTHE" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="xoa" db-name="DAXOA" type="int" /> 
+		<column name="daTra" db-name="DATRA" type="int" />
+		<column name="banChinh" db-name="BANCHINH" type="long" />
+		<column name="ghiChu" db-name="GHICHU" type="String" />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+	</entity>
+	<entity name="TrangThaiHoSo" local-service="true" remote-service="false"
+		table="CMON_TRANGTHAIHOSO"  data-source="egovDataSource">
+		<column name="id" db-name="ID" type="long"  primary="true"/>
+		<column name="trangThai"  db-name="TRANGTHAI" type="String"  />
+		<column name="nguoiTao"   db-name="NGUOITAO"       type="String"/>
+		<column name="ngayTao"    db-name="NGAYTAO"      type="Date"/> 
+		<column name="nguoiSua"   db-name="NGUOISUA"      type="String"/>
+		<column name="ngaySua"     db-name="NGAYSUA"      type="Date"/>
+		<column name="daXoa" db-name="DAXOA" type="int" /> 
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+		
+		<!-- Finder methods -->
+		<finder name="Id" return-type="TrangThaiHoSo">
+			<finder-column name="id" />
+		</finder>
+		<finder name="TrangThaiHoSo" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+		
+	</entity>
+	<entity name="YKienTraoDoi" local-service="true" remote-service="false" table = "CMON_YKIENTRAODOI" data-source="egovDataSource" > 
+
+		<!-- PK fields -->
+
+		 <column name="id"                  db-name="ID"                     type="long"       primary="true"  />
+		 <column name="tieuDe"              db-name="TIEUDE"                 type="String"      />
+		 <column name="noiDungYKien"        db-name="NOIDUNGYKIEN"              type="String"      />
+		 <column name="thoiGianGuiYKien"    db-name="THOIGIANGUIYKIEN"            type="Date"      />
+		 <column name="trangThai"     		db-name="TRANGTHAI"      type="long"      />
+		 <column name="hoSoTTHCCongId"      db-name="HOSOTTHCCONGID"              type="Long" convert-null="false"   />
+		 <column name="nguoiNhanId"     	db-name="NGUOINHANID"      type="Long" convert-null="false"       />
+		 <column name="nguoiGuiId"          db-name="NGUOIGUIID"                   type="Long" convert-null="false"       />
+		 <column name="chaiId"              db-name="CHAID"                  type="Long" convert-null="false"      />
+		 <column name="noiLuuTruId"             db-name="NOILUUTRUID"                  type="Long" convert-null="false"      />
+		  <column name="loai"              db-name="LOAI"                  type="long"      />
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="id" />
+			
+		</order>
+
+		<!-- Finder methods -->
+	<!--	<finder name="HoSoTTHCCongId" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+		</finder> 
+		
+		<finder name="HoSoTTHCCongIdAndLoai" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+			<finder-column name="loai" />
+		</finder>
+		
+				
+	   <finder name="HoSoTTHCCongIdAndDownLoad" return-type="YKienTraoDoi">
+			<finder-column name="hoSoTTHCCongId" />
+		</finder>	
+	
+		<finder name="ThongTinPhanHoi" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+			<finder-column name="nguoiNhanId" />
+		</finder>
+		<finder name="ThongTinPhanHoi_TT" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+			<finder-column name="nguoiNhanId" />
+			<finder-column name="trangThai" />
+		</finder>
+		-->
+		<finder name="Loai" return-type="Collection">
+			<finder-column name="loai" />
+		</finder>
+			<finder name="TrangThai" return-type="Collection">
+			<finder-column name="trangThai" />
+		</finder>
+
+		
+	</entity>
+	
+	<entity name="HoSoAnhXa" local-service="true" remote-service="false"
+        table="CMON_HOSOANHXA"  data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long"  primary="true"/>
+        <column name="hoSoTTHCCongId"  db-name="HOSOTTHCCONGID" type="long"  />
+        <column name="maHoSo"   db-name="MAHOSO"       type="String"/>
+        <column name="trangThai"   db-name="TRANGTHAI"      type="int"/>
+        <column name="ngaySua"    db-name="NGAYSUA"      type="Date"/> 
+        <column name="ngayTao"     db-name="NGAYTAO"      type="Date"/>
+        
+        <!-- Order -->
+        <order by="asc">
+            <order-column name="id" />
+        </order>
+        
+        <!-- Finder methods -->
+        <finder name="Id" return-type="HoSoAnhXa">
+            <finder-column name="id" />
+        </finder>
+        <finder name="HoSoTTHCCongId" return-type="HoSoAnhXa">
+            <finder-column name="hoSoTTHCCongId" />
+        </finder>
+        <finder name="MaHoSo" return-type="Collection">
+            <finder-column name="maHoSo" />
+        </finder>
+    </entity>
+	
+	<exceptions>
+		<exception>NoSuchHoSoTTHCCong</exception>
+	</exceptions>
+
+</service-builder>

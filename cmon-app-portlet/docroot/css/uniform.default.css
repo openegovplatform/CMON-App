@@ -1,0 +1,45 @@
+.selector, 
+.radio, 
+.checker, 
+.uploader, 
+.selector *, 
+.radio *, 
+.checker *, 
+.uploader *{
+margin: 0;
+padding: 0;
+}
+div.selector {
+height: 32px;
+background:#91a0a5;
+}
+div.selector span {
+height: 32px;
+line-height: 32px;
+}
+
+div.selector select {
+top: 0px;
+left: 0px;
+}
+div.selector {
+float:left
+}
+div.selector select {
+/* width:128px; */font-family:Tahoma, Geneva, sans-serif;font-size: 11px;}
+div.selector span {padding: 0px 10px 0px 35px;color: #fff;
+/* width:95px; */}
+div.selector select:hover{cursor: pointer;}
+div.selector.disabled span {color: #bbb;}
+.selector select:focus, .radio input:focus, .checker input:focus, uploader input:focus {outline: 0;}
+/* Select */
+div.selector {position: relative;/* padding-left: 10px; */overflow: hidden;text-align:left}
+div.selector span {display: block;float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+div.selector select {position: absolute;opacity: 0;height: 31px;border: none;background: none;}
+div.selector select option{padding:3px 5px;background:#720101;color:#ffcbcb;border:none}
+/*  */
+div.selector{border:1px solid #e0e0e0 !important;float:none !important;height:37px;border-radius:3px}
+div.selector span{background:url(../images/arrow-down.png) no-repeat right center !important;padding:3px 10px;color:#000;margin-bottom:2px}
+div.selector select option{color:#000;border:none}
+
+

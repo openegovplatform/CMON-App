@@ -1,0 +1,11 @@
+Chào bạn $citizen_name !
+
+Mật khẩu của bạn vừa mới được thay đổi.
+Tài khoản đăng nhập của bạn là :$citizen_email 
+Mật khẩu mới của bạn là :$citizen_matKhau
+
+Đường dẫn đến cổng dịch vụ công trực tuyến: $uri để bạn đăng nhập tài khoản.
+
+Lưu ý: Cấm reply mail này dưới mọi hình thức
+
+Chính quyền điện tử Đà Nẵng.

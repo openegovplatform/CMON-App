@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="KiosImplService" targetNamespace="http://kios.touchscreen.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://kios.touchscreen.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://kios.touchscreen.sharedservice.dtt.vn/" schemaLocation="kiosimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getDanhSachHoSoResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachHoSoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachCoQuanResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachCoQuanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachCoQuan">
+    <wsdl:part name="parameters" element="tns:getDanhSachCoQuan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachThongKeResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachThongKeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachThongKe">
+    <wsdl:part name="parameters" element="tns:getDanhSachThongKe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachHoSo">
+    <wsdl:part name="parameters" element="tns:getDanhSachHoSo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="KiosService">
+    <wsdl:operation name="getDanhSachHoSo">
+      <wsdl:input name="getDanhSachHoSo" message="tns:getDanhSachHoSo">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachHoSoResponse" message="tns:getDanhSachHoSoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachThongKe">
+      <wsdl:input name="getDanhSachThongKe" message="tns:getDanhSachThongKe">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachThongKeResponse" message="tns:getDanhSachThongKeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachCoQuan">
+      <wsdl:input name="getDanhSachCoQuan" message="tns:getDanhSachCoQuan">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachCoQuanResponse" message="tns:getDanhSachCoQuanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KiosImplServiceSoapBinding" type="tns:KiosService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getDanhSachHoSo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachHoSo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachHoSoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachThongKe">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachThongKe">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachThongKeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachCoQuan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachCoQuan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachCoQuanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KiosImplService">
+    <wsdl:port name="KiosImplPort" binding="tns:KiosImplServiceSoapBinding">
+      <soap:address location="http://localhost:9090/KiosImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+.process-completed-icon{background:url("../images/ico-finish.png") no-repeat center;}
+#paginationTrans .taglib-page-iterator .search-pages .delta-selector{display: none;}
+
+#wd-fancy-configuration-template fieldset .wd-submit{padding:18px 0;text-align:center}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button{background:#f58634;cursor:pointer;color:#fff !important;text-transform:uppercase;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:10px;padding:10px 10px;text-shadow:0 0 #fff}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button:hover{background:#48689a}
+#wd-fancy-configuration-template fieldset .wd-submit .wd-button-reset{width:115px;margin:0 !important}
+
+#thongTinPhanHoiDetails table tr td {
+	border: 0; 
+	text-align: left;
+}

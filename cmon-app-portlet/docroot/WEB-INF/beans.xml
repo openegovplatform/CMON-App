@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<jaxws:endpoint xmlns:tns="http://citizen.provider.cmon.sharedservice.dtt.vn/"
+		id="citizenservice" implementor="vn.dtt.sharedservice.cmon.provider.citizen.CitizenServiceImpl"
+		wsdlLocation="wsdl/icitizenservice.wsdl" endpointName="tns:CitizenServiceImplPort"
+		serviceName="tns:CitizenServiceImplService" address="/CitizenServiceImplPort">
+
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://form.provider.cmon.sharedservice.dtt.vn/"
+		id="formservice" implementor="vn.dtt.sharedservice.cmon.provider.form.FormServiceImpl"
+		wsdlLocation="wsdl/iformservice.wsdl" endpointName="tns:FormServiceImplPort"
+		serviceName="tns:FormServiceImplService" address="/FormServiceImplPort">
+
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://document.provider.cmon.sharedservice.dtt.vn/"
+		id="documentservice" implementor="vn.dtt.sharedservice.cmon.provider.document.DocumentServiceImpl"
+		wsdlLocation="wsdl/idocumentservice.wsdl" endpointName="tns:DocumentServiceImplPort"
+		serviceName="tns:DocumentServiceImplService" address="/DocumentServiceImplPort">
+
+	</jaxws:endpoint>
+
+
+	<jaxws:endpoint xmlns:tns="http://hoso.provider.bpm.sharedservice.dtt.vn/"
+		id="hososervice" implementor="vn.dtt.sharedservice.bpm.provider.hoso.HoSoServiceImpl"
+		wsdlLocation="wsdl/ihososervice.wsdl" endpointName="tns:HoSoServiceImplPort"
+		serviceName="tns:HoSoServiceImplService" address="/HoSoServiceImplPort">
+
+	</jaxws:endpoint>
+
+	<jaxws:endpoint xmlns:tns="http://hoso.provider.exch.sharedservice.dtt.vn/"
+		id="exchdocumentservice" implementor="vn.dtt.sharedservice.exch.provider.hoso.ExchDocumentServiceImpl"
+		wsdlLocation="wsdl/iexchdocumentservice.wsdl" endpointName="tns:ExchDocumentServiceImplPort"
+		serviceName="tns:ExchDocumentServiceImplService" address="/ExchDocumentServiceImplPort">
+
+	</jaxws:endpoint>
+
+	<jaxws:endpoint id="officerservice"
+		implementor="vn.dtt.sharedservice.cmon.provider.officer.OfficerServiceImpl"
+		wsdlLocation="wsdl/iofficerservice.wsdl" address="/officerservice">
+
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://thamso.provider.cmon.sharedservice.dtt.vn/"
+		id="thamsoservice" implementor="vn.dtt.sharedservice.cmon.provider.thamso.ThamSoServiceImpl"
+		wsdlLocation="wsdl/ithamsoservice.wsdl" endpointName="tns:ThamSoServiceImplPort"
+		serviceName="tns:ThamSoServiceImplService" address="/ThamSoServiceImplPort">
+
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://tracuuhoso.touchscreen.sharedservice.dtt.vn/"
+		id="tracuuhoso" implementor="vn.dtt.sharedservice.touchscreen.tracuuhoso.TraCuuHoSoImpl"
+		wsdlLocation="wsdl/tracuuhosoimpl.wsdl" endpointName="tns:TraCuuHoSoImplPort"
+		serviceName="tns:TraCuuHoSoImplService" address="/TraCuuHoSoImplPort">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://tracuutthc.touchscreen.sharedservice.dtt.vn/"
+		id="tracuutthc" implementor="vn.dtt.sharedservice.touchscreen.tracuutthc.TraCuuTTHCImpl"
+		wsdlLocation="wsdl/tracuutthcimpl.wsdl" endpointName="tns:TraCuuTTHCImplPort"
+		serviceName="tns:TraCuuTTHCImplService" address="/TraCuuTTHCImplPort">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://kios.touchscreen.sharedservice.dtt.vn/"
+		id="kios" implementor="vn.dtt.sharedservice.touchscreen.kios.KiosImpl"
+		wsdlLocation="wsdl/kiosimpl.wsdl" endpointName="tns:KiosImplPort"
+		serviceName="tns:KiosImplService" address="/KiosImplPort">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+</beans>

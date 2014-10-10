@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.nsd">
+	<author>Liemnn</author>
+	<namespace>EGOV</namespace>
+
+
+	<entity name="NhomNguoiDung" local-service="true"
+		remote-service="false" table="CMON_NHOM"  data-source="egovDataSource">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="moTa" db-name="MOTA" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="trangThai" db-name="TRANGTHAI" type="int" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+
+	<entity name="TaiKhoanNguoiDung" local-service="true"
+		remote-service="false" table="CMON_TAIKHOANNGUOIDUNG" data-source="egovDataSource" cache-enabled="false">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="tenDangNhap" db-name="TENDANGNHAP" type="String" />
+		<column name="matKhau" db-name="MATKHAU" type="String" />
+		<column name="tenNguoiDung" db-name="TENNGUOIDUNG" type="String" />
+		<column name="cauHoiMatKhau" db-name="CAUHOIMATKHAU" type="String" />
+		<column name="cauTraLoiMatKhau" db-name="CAUTRALOIMATKHAU"
+			type="String" />
+		<column name="email" db-name="EMAIL" type="String" />
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="trangThai" db-name="TRANGTHAI" type="int" />
+		<column name="loaiDoiTuongId" db-name="LOAIDOITUONGID" type="Long" convert-null="false"/>		
+		<column name="taiKhoanNguoiDungId" db-name="TAIKHOANNGUOIDUNGID" type="Long" convert-null="false"/>
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TenDangNhap" return-type="TaiKhoanNguoiDung">
+			<finder-column name="tenDangNhap" />
+		</finder>
+		<finder name="TenNguoiDung" return-type="Collection">
+			<finder-column name="tenNguoiDung" />
+		</finder>
+		<finder name="Email" return-type="Collection">
+			<finder-column name="email" />
+		</finder>
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+ 		<finder name="TaiKhoanNguoiDung" return-type="Collection">
+			<finder-column name="taiKhoanNguoiDungId" />
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+
+
+		<entity name="VaiTro" local-service="true" remote-service="false"
+		table="CMON_VAITRO"  data-source="egovDataSource">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="ma" db-name="MA" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="moTa" db-name="MOTA" type="String" />
+		
+		<column name="ngayTao" db-name="NGAYTAO" type="Date" />
+		<column name="daXoa" db-name="DAXOA" type="int" />
+		<column name="nguoiTao" db-name="NGUOITAO" type="String" />
+		<column name="ngaySua" db-name="NGAYSUA" type="Date" />
+		<column name="nguoiSua" db-name="NGUOISUA" type="String" />
+		<column name="trangThai" db-name="TRANGTHAI" type="int" />
+		<column name="ungDungId" db-name="DANHMUCUNGDUNGID" type="Long" convert-null="false"/>
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ma" return-type="Collection">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MoTa" return-type="Collection">
+			<finder-column name="moTa" />
+		</finder>
+		
+		<finder name="ByMa" return-type="VaiTro">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="ByTen" return-type="VaiTro">
+			<finder-column name="ten" />
+		</finder>
+		
+		<finder name="TrangThai" return-type="Collection">
+			<finder-column name="daXoa" />
+		</finder>
+	</entity>
+    <entity name="TaiNguyen" local-service="true" remote-service="false" table="CMON_TAINGUYEN" cache-enabled="false" data-source="egovDataSource">
+        <column name="id" type="long" primary="true" db-name="ID"></column>
+        <column name="ten" type="String" db-name="TEN"></column>
+        <column name="moTa" type="String" db-name="MOTA"></column>
+        <column name="loai" type="int" db-name="LOAI"></column>
+        <column name="giaTri" type="String" db-name="TAINGUYEN"></column>
+        <column name="trangThai" type="int" db-name="TRANGTHAI"></column>
+        <column name="ngayTao" type="Date" db-name="NGAYTAO"></column>
+        <column name="nguoiTao" type="String" db-name="NGUOITAO"></column>
+        <column name="ngaySua" type="Date" db-name="NGAYSUA"></column>
+        <column name="nguoiSua" type="String" db-name="NGUOISUA"></column>
+        <column name="daXoa" type="int" db-name="DAXOA"></column>
+        <column name="ungDungId" type="Long" db-name="UNGDUNGID"  convert-null="false"></column>
+        <column name="heThongId" type="Long" db-name="HETHONGID" convert-null="false"></column>
+        <order by="asc">
+            <order-column name="ten" order-by="asc"></order-column>
+        </order>
+        <finder name="Ten" return-type="TaiNguyen">
+            <finder-column name="ten"></finder-column>
+            <finder-column name="loai"></finder-column>
+            <finder-column name="giaTri"></finder-column>
+            <finder-column name="ungDungId"></finder-column>
+            <finder-column name="heThongId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+    </entity>
+    <entity name="TaiNguyen2VaiTro" table="CMON_TAINGUYEN2VAITRO" cache-enabled="false" local-service="true" remote-service="false" data-source="egovDataSource">
+        <column name="id" type="long" primary="true" db-name="ID"></column>
+        <column name="taiNguyenId" type="Long" db-name="TAINGUYENID" convert-null="false"></column>
+        <column name="vaiTroId" type="Long" db-name="VAITROID" convert-null="false"></column>
+        <column name="hanhDong" type="int" db-name="HANHDONG"></column>
+        <column name="ngayTao" type="Date" db-name="NGAYTAO"></column>
+        <column name="nguoiTao" type="String" db-name="NGUOITAO"></column>
+        <column name="ngaySua" type="Date" db-name="NGAYSUA"></column>
+        <column name="nguoiSua" type="String" db-name="NGUOISUA"></column>
+        <column name="daXoa" type="int" db-name="DAXOA"></column>
+        
+        <finder name="VaiTroID" return-type="Collection">
+            <finder-column name="vaiTroId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+    </entity>
+    
+    
+     <entity name="NguoiDung2VaiTro" table="CMON_NGUOIDUNG2VAITRO" cache-enabled="false" local-service="true" remote-service="false" data-source="egovDataSource">
+        <column name="id" type="long" primary="true" db-name="ID"></column>
+        <column name="vaiTroId" type="Long" db-name="VAITROID" convert-null="false"></column>
+        <column name="taiKhoanNguoiDungId" type="Long" db-name="TAIKHOANNGUOIDUNGID" convert-null="false"></column>
+        <column name="ngayTao" type="Date" db-name="NGAYTAO"></column>
+        <column name="nguoiTao" type="String" db-name="NGUOITAO"></column>
+        <column name="daXoa" type="int" db-name="DAXOA"></column>
+        
+        <finder name="VaiTroID" return-type="Collection">
+            <finder-column name="vaiTroId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+        <finder name="VaiTroIDAndTaiKhoanNguoiDungId" return-type="NguoiDung2VaiTro">
+            <finder-column name="vaiTroId"></finder-column>
+             <finder-column name="taiKhoanNguoiDungId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+        <finder name="TaiKhoanNguoiDungId" return-type="Collection">
+            <finder-column name="taiKhoanNguoiDungId"></finder-column>
+            <finder-column name="daXoa"></finder-column>
+        </finder>
+    </entity>
+    
+</service-builder>

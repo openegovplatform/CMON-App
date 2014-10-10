@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CitizenServiceImplService" targetNamespace="http://citizen.provider.cmon.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://citizen.provider.cmon.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://citizen.provider.cmon.sharedservice.dtt.vn/" schemaLocation="icitizenservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getCoQuanQuanLyTheoChaIdResponse">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoChaIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCongChucTheoUserIdResponse">
+    <wsdl:part name="parameters" element="tns:getCongChucTheoUserIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGioiTinh">
+    <wsdl:part name="parameters" element="tns:getDSGioiTinh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTrinhDoHocVanTheoId">
+    <wsdl:part name="parameters" element="tns:getTrinhDoHocVanTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhsachDVHC">
+    <wsdl:part name="parameters" element="tns:getDanhsachDVHC">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenByUser">
+    <wsdl:part name="parameters" element="tns:getCitizenByUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyTheoUserIdResponse">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoUserIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSLoaiDoiTuong">
+    <wsdl:part name="parameters" element="tns:getDSLoaiDoiTuong">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCapDonViHanhChinhTheoId">
+    <wsdl:part name="parameters" element="tns:getCapDonViHanhChinhTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTonGiaoTheoId">
+    <wsdl:part name="parameters" element="tns:getTonGiaoTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChucVuTheoId">
+    <wsdl:part name="parameters" element="tns:getChucVuTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCoQuanQuanLyTheoTTHC">
+    <wsdl:part name="parameters" element="tns:getDSCoQuanQuanLyTheoTTHC">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDVHCResponse">
+    <wsdl:part name="parameters" element="tns:getDVHCResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQuocGiaTheoId">
+    <wsdl:part name="parameters" element="tns:getQuocGiaTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCongChucTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getCongChucTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCoQuanQLTheoCapCoQuanQLId">
+    <wsdl:part name="parameters" element="tns:getDSCoQuanQLTheoCapCoQuanQLId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDonViHanhChinhTheoUserIdResponse">
+    <wsdl:part name="parameters" element="tns:getDonViHanhChinhTheoUserIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTaiKhoanNguoiDungTheoUserIdResponse">
+    <wsdl:part name="parameters" element="tns:getTaiKhoanNguoiDungTheoUserIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSQuanHeGiaDinh">
+    <wsdl:part name="parameters" element="tns:getDSQuanHeGiaDinh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCoQuanQLTheoCapCoQuanQLIdResponse">
+    <wsdl:part name="parameters" element="tns:getDSCoQuanQLTheoCapCoQuanQLIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyTheoChaId">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoChaId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChucVuTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getChucVuTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachDanTocResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachDanTocResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTonGiao">
+    <wsdl:part name="parameters" element="tns:getDSTonGiao">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSDVHCTheoCapDVHCId">
+    <wsdl:part name="parameters" element="tns:getDSDVHCTheoCapDVHCId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachNganhNgheKinhDoanh">
+    <wsdl:part name="parameters" element="tns:getDanhSachNganhNgheKinhDoanh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDonViHanhChinhTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getDonViHanhChinhTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSGioiTinhResponse">
+    <wsdl:part name="parameters" element="tns:getDSGioiTinhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachQuocGiaResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachQuocGiaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQuocGiaTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getQuocGiaTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCapDonViHanhChinhTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getCapDonViHanhChinhTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyTheoUserId">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoUserId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSDonViHanhChinhTheoChaId">
+    <wsdl:part name="parameters" element="tns:getDSDonViHanhChinhTheoChaId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCapCoQuanQuanLyTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getCapCoQuanQuanLyTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachNganhNgheKinhDoanhResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachNganhNgheKinhDoanhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCongChuc">
+    <wsdl:part name="parameters" element="tns:getDSCongChuc">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTinhTrangHonNhan">
+    <wsdl:part name="parameters" element="tns:getDSTinhTrangHonNhan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenByCode">
+    <wsdl:part name="parameters" element="tns:getCitizenByCode">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenByUserResponse">
+    <wsdl:part name="parameters" element="tns:getCitizenByUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTrinhDoHocVanTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getTrinhDoHocVanTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQuanHeGiaDinhTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getQuanHeGiaDinhTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhsachDVHCResponse">
+    <wsdl:part name="parameters" element="tns:getDanhsachDVHCResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanTocTheoId">
+    <wsdl:part name="parameters" element="tns:getDanTocTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAutoIncrement">
+    <wsdl:part name="parameters" element="tns:getAutoIncrement">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCongChucTheoUserId">
+    <wsdl:part name="parameters" element="tns:getCongChucTheoUserId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAutoIncrementResponse">
+    <wsdl:part name="parameters" element="tns:getAutoIncrementResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTrinhDoChuyenMon">
+    <wsdl:part name="parameters" element="tns:getDSTrinhDoChuyenMon">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachThucTucHanhChinh">
+    <wsdl:part name="parameters" element="tns:getDanhSachThucTucHanhChinh">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDVHC">
+    <wsdl:part name="parameters" element="tns:getDVHC">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNganhNgheKinhDoanhTheoMa">
+    <wsdl:part name="parameters" element="tns:getNganhNgheKinhDoanhTheoMa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCongChucResponse">
+    <wsdl:part name="parameters" element="tns:getDSCongChucResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTinhTrangHonNhanResponse">
+    <wsdl:part name="parameters" element="tns:getDSTinhTrangHonNhanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSQuanHeGiaDinhResponse">
+    <wsdl:part name="parameters" element="tns:getDSQuanHeGiaDinhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTinhTrangHonNhanTheoId">
+    <wsdl:part name="parameters" element="tns:getTinhTrangHonNhanTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDonViHanhChinhTheoId">
+    <wsdl:part name="parameters" element="tns:getDonViHanhChinhTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachQuocGia">
+    <wsdl:part name="parameters" element="tns:getDanhSachQuocGia">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTrinhDoChuyenMonTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getTrinhDoChuyenMonTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenId">
+    <wsdl:part name="parameters" element="tns:getCitizenId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTrinhDoHocVan">
+    <wsdl:part name="parameters" element="tns:getDSTrinhDoHocVan">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDonViHanhChinhTheoUserId">
+    <wsdl:part name="parameters" element="tns:getDonViHanhChinhTheoUserId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanTocTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getDanTocTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTrinhDoChuyenMonTheoId">
+    <wsdl:part name="parameters" element="tns:getTrinhDoChuyenMonTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSLoaiDoiTuongResponse">
+    <wsdl:part name="parameters" element="tns:getDSLoaiDoiTuongResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCapCoQuanQuanLyTheoId">
+    <wsdl:part name="parameters" element="tns:getCapCoQuanQuanLyTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCongChucTheoId">
+    <wsdl:part name="parameters" element="tns:getCongChucTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenByCodeResponse">
+    <wsdl:part name="parameters" element="tns:getCitizenByCodeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSDonViHanhChinhTheoChaIdResponse">
+    <wsdl:part name="parameters" element="tns:getDSDonViHanhChinhTheoChaIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNganhNgheKinhDoanhTheoMaResponse">
+    <wsdl:part name="parameters" element="tns:getNganhNgheKinhDoanhTheoMaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTonGiaoTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getTonGiaoTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTrinhDoChuyenMonResponse">
+    <wsdl:part name="parameters" element="tns:getDSTrinhDoChuyenMonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachThucTucHanhChinhResponse">
+    <wsdl:part name="parameters" element="tns:getDanhSachThucTucHanhChinhResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTinhTrangHonNhanTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getTinhTrangHonNhanTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenIdResponse">
+    <wsdl:part name="parameters" element="tns:getCitizenIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTonGiaoResponse">
+    <wsdl:part name="parameters" element="tns:getDSTonGiaoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDanhSachDanToc">
+    <wsdl:part name="parameters" element="tns:getDanhSachDanToc">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQuanHeGiaDinhTheoId">
+    <wsdl:part name="parameters" element="tns:getQuanHeGiaDinhTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSTrinhDoHocVanResponse">
+    <wsdl:part name="parameters" element="tns:getDSTrinhDoHocVanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoQuanQuanLyTheoId">
+    <wsdl:part name="parameters" element="tns:getCoQuanQuanLyTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenByIdResponse">
+    <wsdl:part name="parameters" element="tns:getCitizenByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTaiKhoanNguoiDungTheoUserId">
+    <wsdl:part name="parameters" element="tns:getTaiKhoanNguoiDungTheoUserId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSCoQuanQuanLyTheoTTHCResponse">
+    <wsdl:part name="parameters" element="tns:getDSCoQuanQuanLyTheoTTHCResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGioiTinhTheoIdResponse">
+    <wsdl:part name="parameters" element="tns:getGioiTinhTheoIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCitizenById">
+    <wsdl:part name="parameters" element="tns:getCitizenById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDSDVHCTheoCapDVHCIdResponse">
+    <wsdl:part name="parameters" element="tns:getDSDVHCTheoCapDVHCIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGioiTinhTheoId">
+    <wsdl:part name="parameters" element="tns:getGioiTinhTheoId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ICitizenService">
+    <wsdl:operation name="getDVHC">
+      <wsdl:input name="getDVHC" message="tns:getDVHC">
+    </wsdl:input>
+      <wsdl:output name="getDVHCResponse" message="tns:getDVHCResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenById">
+      <wsdl:input name="getCitizenById" message="tns:getCitizenById">
+    </wsdl:input>
+      <wsdl:output name="getCitizenByIdResponse" message="tns:getCitizenByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapDonViHanhChinhTheoId">
+      <wsdl:input name="getCapDonViHanhChinhTheoId" message="tns:getCapDonViHanhChinhTheoId">
+    </wsdl:input>
+      <wsdl:output name="getCapDonViHanhChinhTheoIdResponse" message="tns:getCapDonViHanhChinhTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChucVuTheoId">
+      <wsdl:input name="getChucVuTheoId" message="tns:getChucVuTheoId">
+    </wsdl:input>
+      <wsdl:output name="getChucVuTheoIdResponse" message="tns:getChucVuTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonViHanhChinhTheoUserId">
+      <wsdl:input name="getDonViHanhChinhTheoUserId" message="tns:getDonViHanhChinhTheoUserId">
+    </wsdl:input>
+      <wsdl:output name="getDonViHanhChinhTheoUserIdResponse" message="tns:getDonViHanhChinhTheoUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDVHCTheoCapDVHCId">
+      <wsdl:input name="getDSDVHCTheoCapDVHCId" message="tns:getDSDVHCTheoCapDVHCId">
+    </wsdl:input>
+      <wsdl:output name="getDSDVHCTheoCapDVHCIdResponse" message="tns:getDSDVHCTheoCapDVHCIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCongChuc">
+      <wsdl:input name="getDSCongChuc" message="tns:getDSCongChuc">
+    </wsdl:input>
+      <wsdl:output name="getDSCongChucResponse" message="tns:getDSCongChucResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrinhDoHocVanTheoId">
+      <wsdl:input name="getTrinhDoHocVanTheoId" message="tns:getTrinhDoHocVanTheoId">
+    </wsdl:input>
+      <wsdl:output name="getTrinhDoHocVanTheoIdResponse" message="tns:getTrinhDoHocVanTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTrinhDoChuyenMon">
+      <wsdl:input name="getDSTrinhDoChuyenMon" message="tns:getDSTrinhDoChuyenMon">
+    </wsdl:input>
+      <wsdl:output name="getDSTrinhDoChuyenMonResponse" message="tns:getDSTrinhDoChuyenMonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCongChucTheoUserId">
+      <wsdl:input name="getCongChucTheoUserId" message="tns:getCongChucTheoUserId">
+    </wsdl:input>
+      <wsdl:output name="getCongChucTheoUserIdResponse" message="tns:getCongChucTheoUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapCoQuanQuanLyTheoId">
+      <wsdl:input name="getCapCoQuanQuanLyTheoId" message="tns:getCapCoQuanQuanLyTheoId">
+    </wsdl:input>
+      <wsdl:output name="getCapCoQuanQuanLyTheoIdResponse" message="tns:getCapCoQuanQuanLyTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCoQuanQLTheoCapCoQuanQLId">
+      <wsdl:input name="getDSCoQuanQLTheoCapCoQuanQLId" message="tns:getDSCoQuanQLTheoCapCoQuanQLId">
+    </wsdl:input>
+      <wsdl:output name="getDSCoQuanQLTheoCapCoQuanQLIdResponse" message="tns:getDSCoQuanQLTheoCapCoQuanQLIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSQuanHeGiaDinh">
+      <wsdl:input name="getDSQuanHeGiaDinh" message="tns:getDSQuanHeGiaDinh">
+    </wsdl:input>
+      <wsdl:output name="getDSQuanHeGiaDinhResponse" message="tns:getDSQuanHeGiaDinhResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanTocTheoId">
+      <wsdl:input name="getDanTocTheoId" message="tns:getDanTocTheoId">
+    </wsdl:input>
+      <wsdl:output name="getDanTocTheoIdResponse" message="tns:getDanTocTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenId">
+      <wsdl:input name="getCitizenId" message="tns:getCitizenId">
+    </wsdl:input>
+      <wsdl:output name="getCitizenIdResponse" message="tns:getCitizenIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTinhTrangHonNhanTheoId">
+      <wsdl:input name="getTinhTrangHonNhanTheoId" message="tns:getTinhTrangHonNhanTheoId">
+    </wsdl:input>
+      <wsdl:output name="getTinhTrangHonNhanTheoIdResponse" message="tns:getTinhTrangHonNhanTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCoQuanQuanLyTheoTTHC">
+      <wsdl:input name="getDSCoQuanQuanLyTheoTTHC" message="tns:getDSCoQuanQuanLyTheoTTHC">
+    </wsdl:input>
+      <wsdl:output name="getDSCoQuanQuanLyTheoTTHCResponse" message="tns:getDSCoQuanQuanLyTheoTTHCResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachThucTucHanhChinh">
+      <wsdl:input name="getDanhSachThucTucHanhChinh" message="tns:getDanhSachThucTucHanhChinh">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachThucTucHanhChinhResponse" message="tns:getDanhSachThucTucHanhChinhResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTaiKhoanNguoiDungTheoUserId">
+      <wsdl:input name="getTaiKhoanNguoiDungTheoUserId" message="tns:getTaiKhoanNguoiDungTheoUserId">
+    </wsdl:input>
+      <wsdl:output name="getTaiKhoanNguoiDungTheoUserIdResponse" message="tns:getTaiKhoanNguoiDungTheoUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachNganhNgheKinhDoanh">
+      <wsdl:input name="getDanhSachNganhNgheKinhDoanh" message="tns:getDanhSachNganhNgheKinhDoanh">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachNganhNgheKinhDoanhResponse" message="tns:getDanhSachNganhNgheKinhDoanhResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenByUser">
+      <wsdl:input name="getCitizenByUser" message="tns:getCitizenByUser">
+    </wsdl:input>
+      <wsdl:output name="getCitizenByUserResponse" message="tns:getCitizenByUserResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getQuanHeGiaDinhTheoId">
+      <wsdl:input name="getQuanHeGiaDinhTheoId" message="tns:getQuanHeGiaDinhTheoId">
+    </wsdl:input>
+      <wsdl:output name="getQuanHeGiaDinhTheoIdResponse" message="tns:getQuanHeGiaDinhTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachQuocGia">
+      <wsdl:input name="getDanhSachQuocGia" message="tns:getDanhSachQuocGia">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachQuocGiaResponse" message="tns:getDanhSachQuocGiaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoUserId">
+      <wsdl:input name="getCoQuanQuanLyTheoUserId" message="tns:getCoQuanQuanLyTheoUserId">
+    </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoUserIdResponse" message="tns:getCoQuanQuanLyTheoUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCongChucTheoId">
+      <wsdl:input name="getCongChucTheoId" message="tns:getCongChucTheoId">
+    </wsdl:input>
+      <wsdl:output name="getCongChucTheoIdResponse" message="tns:getCongChucTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGioiTinh">
+      <wsdl:input name="getDSGioiTinh" message="tns:getDSGioiTinh">
+    </wsdl:input>
+      <wsdl:output name="getDSGioiTinhResponse" message="tns:getDSGioiTinhResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGioiTinhTheoId">
+      <wsdl:input name="getGioiTinhTheoId" message="tns:getGioiTinhTheoId">
+    </wsdl:input>
+      <wsdl:output name="getGioiTinhTheoIdResponse" message="tns:getGioiTinhTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTrinhDoHocVan">
+      <wsdl:input name="getDSTrinhDoHocVan" message="tns:getDSTrinhDoHocVan">
+    </wsdl:input>
+      <wsdl:output name="getDSTrinhDoHocVanResponse" message="tns:getDSTrinhDoHocVanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachDanToc">
+      <wsdl:input name="getDanhSachDanToc" message="tns:getDanhSachDanToc">
+    </wsdl:input>
+      <wsdl:output name="getDanhSachDanTocResponse" message="tns:getDanhSachDanTocResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenByCode">
+      <wsdl:input name="getCitizenByCode" message="tns:getCitizenByCode">
+    </wsdl:input>
+      <wsdl:output name="getCitizenByCodeResponse" message="tns:getCitizenByCodeResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTrinhDoChuyenMonTheoId">
+      <wsdl:input name="getTrinhDoChuyenMonTheoId" message="tns:getTrinhDoChuyenMonTheoId">
+    </wsdl:input>
+      <wsdl:output name="getTrinhDoChuyenMonTheoIdResponse" message="tns:getTrinhDoChuyenMonTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuocGiaTheoId">
+      <wsdl:input name="getQuocGiaTheoId" message="tns:getQuocGiaTheoId">
+    </wsdl:input>
+      <wsdl:output name="getQuocGiaTheoIdResponse" message="tns:getQuocGiaTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLoaiDoiTuong">
+      <wsdl:input name="getDSLoaiDoiTuong" message="tns:getDSLoaiDoiTuong">
+    </wsdl:input>
+      <wsdl:output name="getDSLoaiDoiTuongResponse" message="tns:getDSLoaiDoiTuongResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDonViHanhChinhTheoChaId">
+      <wsdl:input name="getDSDonViHanhChinhTheoChaId" message="tns:getDSDonViHanhChinhTheoChaId">
+    </wsdl:input>
+      <wsdl:output name="getDSDonViHanhChinhTheoChaIdResponse" message="tns:getDSDonViHanhChinhTheoChaIdResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTonGiaoTheoId">
+      <wsdl:input name="getTonGiaoTheoId" message="tns:getTonGiaoTheoId">
+    </wsdl:input>
+      <wsdl:output name="getTonGiaoTheoIdResponse" message="tns:getTonGiaoTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonViHanhChinhTheoId">
+      <wsdl:input name="getDonViHanhChinhTheoId" message="tns:getDonViHanhChinhTheoId">
+    </wsdl:input>
+      <wsdl:output name="getDonViHanhChinhTheoIdResponse" message="tns:getDonViHanhChinhTheoIdResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTinhTrangHonNhan">
+      <wsdl:input name="getDSTinhTrangHonNhan" message="tns:getDSTinhTrangHonNhan">
+    </wsdl:input>
+      <wsdl:output name="getDSTinhTrangHonNhanResponse" message="tns:getDSTinhTrangHonNhanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTonGiao">
+      <wsdl:input name="getDSTonGiao" message="tns:getDSTonGiao">
+    </wsdl:input>
+      <wsdl:output name="getDSTonGiaoResponse" message="tns:getDSTonGiaoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAutoIncrement">
+      <wsdl:input name="getAutoIncrement" message="tns:getAutoIncrement">
+    </wsdl:input>
+      <wsdl:output name="getAutoIncrementResponse" message="tns:getAutoIncrementResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoId">
+      <wsdl:input name="getCoQuanQuanLyTheoId" message="tns:getCoQuanQuanLyTheoId">
+    </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoIdResponse" message="tns:getCoQuanQuanLyTheoIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoChaId">
+      <wsdl:input name="getCoQuanQuanLyTheoChaId" message="tns:getCoQuanQuanLyTheoChaId">
+    </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoChaIdResponse" message="tns:getCoQuanQuanLyTheoChaIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNganhNgheKinhDoanhTheoMa">
+      <wsdl:input name="getNganhNgheKinhDoanhTheoMa" message="tns:getNganhNgheKinhDoanhTheoMa">
+    </wsdl:input>
+      <wsdl:output name="getNganhNgheKinhDoanhTheoMaResponse" message="tns:getNganhNgheKinhDoanhTheoMaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhsachDVHC">
+      <wsdl:input name="getDanhsachDVHC" message="tns:getDanhsachDVHC">
+    </wsdl:input>
+      <wsdl:output name="getDanhsachDVHCResponse" message="tns:getDanhsachDVHCResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CitizenServiceImplServiceSoapBinding" type="tns:ICitizenService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCapDonViHanhChinhTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCapDonViHanhChinhTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCapDonViHanhChinhTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCitizenById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCitizenByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDVHC">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDVHC">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDVHCResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChucVuTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getChucVuTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getChucVuTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonViHanhChinhTheoUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDonViHanhChinhTheoUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDonViHanhChinhTheoUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCongChuc">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSCongChuc">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSCongChucResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDVHCTheoCapDVHCId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSDVHCTheoCapDVHCId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSDVHCTheoCapDVHCIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrinhDoHocVanTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTrinhDoHocVanTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTrinhDoHocVanTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCongChucTheoUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCongChucTheoUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCongChucTheoUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTrinhDoChuyenMon">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSTrinhDoChuyenMon">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSTrinhDoChuyenMonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapCoQuanQuanLyTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCapCoQuanQuanLyTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCapCoQuanQuanLyTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCoQuanQLTheoCapCoQuanQLId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSCoQuanQLTheoCapCoQuanQLId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSCoQuanQLTheoCapCoQuanQLIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSQuanHeGiaDinh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSQuanHeGiaDinh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSQuanHeGiaDinhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanTocTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanTocTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanTocTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCitizenId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCitizenIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTinhTrangHonNhanTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTinhTrangHonNhanTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTinhTrangHonNhanTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSCoQuanQuanLyTheoTTHC">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSCoQuanQuanLyTheoTTHC">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSCoQuanQuanLyTheoTTHCResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachThucTucHanhChinh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachThucTucHanhChinh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachThucTucHanhChinhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTaiKhoanNguoiDungTheoUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTaiKhoanNguoiDungTheoUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTaiKhoanNguoiDungTheoUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachNganhNgheKinhDoanh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachNganhNgheKinhDoanh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachNganhNgheKinhDoanhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenByUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCitizenByUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCitizenByUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCoQuanQuanLyTheoUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachQuocGia">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachQuocGia">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachQuocGiaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getQuanHeGiaDinhTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getQuanHeGiaDinhTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getQuanHeGiaDinhTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCongChucTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCongChucTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCongChucTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSGioiTinh">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSGioiTinh">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSGioiTinhResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGioiTinhTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getGioiTinhTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGioiTinhTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTrinhDoHocVan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSTrinhDoHocVan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSTrinhDoHocVanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhSachDanToc">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhSachDanToc">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhSachDanTocResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitizenByCode">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCitizenByCode">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCitizenByCodeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTrinhDoChuyenMonTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTrinhDoChuyenMonTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTrinhDoChuyenMonTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuocGiaTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getQuocGiaTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getQuocGiaTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSDonViHanhChinhTheoChaId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSDonViHanhChinhTheoChaId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSDonViHanhChinhTheoChaIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLoaiDoiTuong">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSLoaiDoiTuong">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSLoaiDoiTuongResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTonGiaoTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTonGiaoTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTonGiaoTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonViHanhChinhTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDonViHanhChinhTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDonViHanhChinhTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTinhTrangHonNhan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSTinhTrangHonNhan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSTinhTrangHonNhanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAutoIncrement">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAutoIncrement">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAutoIncrementResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSTonGiao">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDSTonGiao">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDSTonGiaoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCoQuanQuanLyTheoId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoQuanQuanLyTheoChaId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCoQuanQuanLyTheoChaId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoQuanQuanLyTheoChaIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNganhNgheKinhDoanhTheoMa">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getNganhNgheKinhDoanhTheoMa">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNganhNgheKinhDoanhTheoMaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDanhsachDVHC">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDanhsachDVHC">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDanhsachDVHCResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CitizenServiceImplService">
+    <wsdl:port name="CitizenServiceImplPort" binding="tns:CitizenServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/CitizenServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

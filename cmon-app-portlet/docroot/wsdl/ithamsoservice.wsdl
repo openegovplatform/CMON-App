@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ThamSoServiceImplService" targetNamespace="http://thamso.provider.cmon.sharedservice.dtt.vn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://thamso.provider.cmon.sharedservice.dtt.vn/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://thamso.provider.cmon.sharedservice.dtt.vn/" schemaLocation="ithamsoservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getValueResponse">
+    <wsdl:part name="parameters" element="tns:getValueResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getValue">
+    <wsdl:part name="parameters" element="tns:getValue">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAnhXasResponse">
+    <wsdl:part name="parameters" element="tns:getAnhXasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAnhXas">
+    <wsdl:part name="parameters" element="tns:getAnhXas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAnhXaResponse">
+    <wsdl:part name="parameters" element="tns:getAnhXaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getValues">
+    <wsdl:part name="parameters" element="tns:getValues">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getValuesResponse">
+    <wsdl:part name="parameters" element="tns:getValuesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAnhXa">
+    <wsdl:part name="parameters" element="tns:getAnhXa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IThamSoService">
+    <wsdl:operation name="getValues">
+      <wsdl:input name="getValues" message="tns:getValues">
+    </wsdl:input>
+      <wsdl:output name="getValuesResponse" message="tns:getValuesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnhXas">
+      <wsdl:input name="getAnhXas" message="tns:getAnhXas">
+    </wsdl:input>
+      <wsdl:output name="getAnhXasResponse" message="tns:getAnhXasResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValue">
+      <wsdl:input name="getValue" message="tns:getValue">
+    </wsdl:input>
+      <wsdl:output name="getValueResponse" message="tns:getValueResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnhXa">
+      <wsdl:input name="getAnhXa" message="tns:getAnhXa">
+    </wsdl:input>
+      <wsdl:output name="getAnhXaResponse" message="tns:getAnhXaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ThamSoServiceImplServiceSoapBinding" type="tns:IThamSoService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getValues">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getValues">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getValuesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnhXas">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAnhXas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAnhXasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnhXa">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAnhXa">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAnhXaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValue">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getValue">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getValueResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ThamSoServiceImplService">
+    <wsdl:port name="ThamSoServiceImplPort" binding="tns:ThamSoServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost%3A8080/services/ThamSoServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

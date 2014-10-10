@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.1.0//EN" "http://www.liferay.com/dtd/liferay-display_6_1_0.dtd">
+
+<display>
+
+	<category name="DTT">
+		<category name="Admin">
+			<portlet id="Congchuc"></portlet>
+		</category>
+		<category name="BRMS">
+			<portlet id="Xacthucdoanhnghiep"></portlet>
+			<portlet id="QuanLyTaiKhoanPortlet"></portlet>
+		</category>
+		<portlet id="transactionportlet"></portlet>
+		<portlet id="cmon_menuportlet"></portlet>
+		<portlet id="userendorseportlet"></portlet>
+		<portlet id="ipmslistportlet"></portlet>
+		<portlet id="AdminPortlet"></portlet>
+		<portlet id="User registration portlet"></portlet>
+		<portlet id="Citizen Profile Portlet"></portlet>
+		<portlet id="settingdocument"></portlet>
+		<portlet id="timhosoaction"></portlet>
+		<portlet id="thutuchanhchinh"></portlet>
+		<portlet id="citizendocument"></portlet>
+		<portlet id="officerdocument"></portlet>
+		<portlet id="thamsoportlet"></portlet>
+		<portlet id="quanlyvaitroportlet"></portlet>
+		<portlet id="tainguyen"></portlet>
+		<portlet id="mappingportlet"></portlet>
+		<portlet id="HoSoTrucTiepPortlet"></portlet>
+		<portlet id="thongtinthanhtoanportlet"></portlet>
+		<portlet id="CanBo2NhomThuTucPortlet"></portlet>
+		<portlet id="HoSoLienThongPortlet"></portlet>
+		<portlet id="taocongdan"></portlet>
+		<portlet id="HoSoChungThucPortlet"></portlet>
+		<portlet id="systemresourceportlet" />
+		<portlet id="Report"></portlet>
+		<portlet id="ReportAdmin"></portlet>
+		<portlet id="Tracuumanhinhcamung"></portlet>
+		<portlet id="Dichvucongmanhinhtrunggian"></portlet>
+		<portlet id="TraCuuHoSoPortlet"></portlet>
+		
+	</category>
+
+</display>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.csms">
+	<author>NAM</author>
+	<namespace>CZ</namespace>	
+    <entity name="YeuCauDangKyCongDan" local-service="true" remote-service="false"
+     table="csms_yeucaudangkycongdan" data-source="egovDataSource">
+        <column name="id" db-name="ID" type="long" primary="true"></column>
+        <column name="NgayYeuCau" db-name="NGAYYEUCAU" type="Date"></column>
+       <column name="SoCmnd" db-name="SOCMND" type="String" ></column>
+		<column name="NgayCapCmnd" db-name="NGAYCAPCMND" type="Date" ></column>
+		<column name="IDNoiCapCmnd" db-name="IDNOICAPCMND" type="long" ></column>
+		<column name="GhiChuCmnd" db-name="GHICHUCMND" type="String" ></column>
+		<column name="Email" db-name="EMAIL" type="String" ></column>
+		<column name="HoCongDan" db-name="HOCONGDAN" type="String" ></column>
+		<column name="TenDem" db-name="TENDEM" type="String" ></column>
+		<column name="TenCongDan" db-name="TENCONGDAN" type="String" ></column>
+		<column name="NgaySinh" db-name="NGAYSINH" type="Date" ></column>
+		<column name="GioiTinh" db-name="GIOITINH" type="int" ></column>
+		<column name="IDDanToc" db-name="IDDANTOC" type="long" ></column>
+		<column name="IDQuocTich" db-name="IDQUOCTICH" type="long" ></column>
+		<column name="IDTonGiao" db-name="IDTONGIAO" type="long" ></column>
+		<column name="DienThoaiCoDinh" db-name="DIENTHOAICODINH" type="String" ></column>
+		<column name="DienThoaiDiDong" db-name="DIENTHOAIDIDONG" type="String" ></column>
+		<column name="IDTrinhDoHocVan" db-name="IDTRINHDOHOCVAN" type="long" ></column>
+		<column name="SoHoChieu" db-name="SOHOCHIEU" type="String" ></column>
+		<column name="NgayCapHoChieu" db-name="NGAYCAPHOCHIEU" type="Date" ></column>
+		<column name="IDNoiCapHoChieu" db-name="IDNOICAPHOCHIEU" type="long" ></column>
+		<column name="NgayHetHanHoChieu" db-name="NGAYHETHANHOCHIEU" type="Date" ></column>
+		<column name="GhiChuHoChieu" db-name="GHICHUHOCHIEU" type="String" ></column>
+		<column name="SoBaoHiemYte" db-name="SOBAOHIEMYTE" type="String" ></column>
+		<column name="MaSoThueCaNhan" db-name="MASOTHUECANHAN" type="String" ></column>
+		<column name="IDNgheNghiep" db-name="IDNGHENGHIEP" type="long" ></column>
+		<column name="IDTrinhDoChuyenMon" db-name="IDTRINHDOCHUYENMON" type="long" ></column>
+		<column name="TinhTrangHonNhan" db-name="TINHTRANGHONNHAN" type="long" ></column>
+		<column name="HoVaTenCha" db-name="HOVATENCHA" type="String" ></column>
+		<column name="HoVaTenMe" db-name="HOVATENME" type="String" ></column>
+		<column name="HoVaTenVoChong" db-name="HOVATENVOCHONG" type="String" ></column>
+		<column name="SoHoKhau" db-name="SOHOKHAU" type="String" ></column>
+		<column name="ChuHo" db-name="CHUHO" type="int" ></column>
+		<column name="IDQuanHe" db-name="IDQUANHE" type="long" ></column>
+		<column name="IDTinhThanhNoiSinh" db-name="IDTINHTHANHNOISINH" type="long" ></column>
+		<column name="IDQuanHuyenNoiSinh" db-name="IDQUANHUYENNOISINH" type="long" ></column>
+		<column name="IDPhuongXaNoiSinh" db-name="IDPHUONGXANOISINH" type="long" ></column>
+		<column name="MoTaDiaChiNoiSinh" db-name="MOTADIACHINOISINH" type="String" ></column>
+		<column name="IDTinhThanhThuongTru" db-name="IDTINHTHANHTHUONGTRU" type="long" ></column>
+		<column name="IDQuanHuyenThuongTru" db-name="IDQUANHUYENTHUONGTRU" type="long" ></column>
+		<column name="IDPhuongXaThuongTru" db-name="IDPHUONGXATHUONGTRU" type="long" ></column>
+		<column name="MoTaDiaChiThuongTru" db-name="MOTADIACHITHUONGTRU" type="String" ></column>
+		<column name="IDTinhThanhHienTai" db-name="IDTINHTHANHHIENTAI" type="long" ></column>
+		<column name="IDQuanHuyenHienTai" db-name="IDQUANHUYENHIENTAI" type="long" ></column>
+		<column name="IDPhuongXaHienTai" db-name="IDPHUONGXAHIENTAI" type="long" ></column>
+		<column name="MoTaDiaChiHienTai" db-name="MOTADIACHIHIENTAI" type="String" ></column>
+		<column name="MaXacNhan" db-name="MAXACNHAN" type="String" ></column>
+		<column name="NgayChungThuc" db-name="NGAYCHUNGTHUC" type="Date" ></column>
+		<column name="NguoiChungThuc" db-name="NGUOICHUNGTHUC" type="String" ></column>
+		<column name="MaCongDanCha" db-name="MACONGDANCHA" type="String" ></column>
+		<column name="MaCongDanMe" db-name="MACONGDANME" type="String" ></column>
+		<column name="MaCongDanVoChong" db-name="MACONGDANVOCHONG" type="String" ></column>
+		<column name="MaCongDan" db-name="MACONGDAN" type="String" ></column>
+		<column name="LoaiYeuCau" db-name="LOAIYEUCAU" type="int" ></column>
+		<column name="TrangThaiYeuCau" db-name="TRANGTHAIYEUCAU" type="int" ></column>
+		<column name="NgayTao" db-name="NGAYTAO" type="Date" ></column>
+		<column name="NgaySua" db-name="NGAYSUA" type="Date" ></column>
+		<column name="NguoiTao" db-name="NGUOITAO" type="String" ></column>
+		<column name="NguoiSua" db-name="NGUOISUA" type="String" ></column>
+		<column name="Xoa" db-name="XOA" type="int" ></column>
+		
+		<finder name="SoCmnd" return-type="Collection">
+			<finder-column name="SoCmnd" />
+		</finder>
+		<finder name="MaXacNhan" return-type="Collection">
+			<finder-column name="MaXacNhan" />
+		</finder>
+    </entity>
+</service-builder>

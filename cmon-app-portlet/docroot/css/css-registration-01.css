@@ -1,0 +1,138 @@
+/*----- Screen register business form 1 -----*/
+#wd-register-business{width:100%;border:1px solid #cfcfcf;background:#fff}
+#wd-register-business ul{background:#e7e7e7;list-style:none;overflow:hidden}
+#wd-register-business ul li{float:left;padding:9px 20px;font-weight:bold;font-size:18px}
+#wd-register-business ul li.wd-title-form-01{color:#fff;background:#3a87cb url(../images/bg-title-form-1.png) no-repeat right 0}
+#wd-register-business ul li.wd-title-form-01 span{background:url(../images/img-1.png) no-repeat;width:28px;height:26px;float:left;margin-right:8px}
+#wd-register-business ul li.wd-title-form-02{color:#a2a2a2}
+#wd-register-business ul li.wd-title-form-02 span{background:url(../images/img-2.png) no-repeat;width:28px;height:26px;float:left;margin-right:8px}
+#wd-register-business .wd-register-form-01{margin:0 auto;font-family:Tahoma;background:#fff;padding:42px 5px 5 5px;width:600px;}
+#wd-register-business .wd-register-form-01 .table-form{margin-top: 50px;}
+#wd-register-business .wd-register-form-01 .table-form tr td{background:#fff;padding:0px;}
+#wd-register-business .wd-register-form-01 input{padding-right:15px;height:20px;}
+
+#wd-register-business .wd-register-form-01 .wd-input{float:left;padding-right:15px;font-size:14px;}
+#wd-register-business .wd-register-form-01 p{text-align:center;font-size:12px;margin:0}
+#wd-register-business .wd-register-form-01 p.fs18{font-size:18px;font-family:Times New Roman;font-weight:bold}
+#wd-register-business .wd-register-form-01 h2.fs20{color:#000;text-transform:uppercase;font-size:20px;font-weight:bold;text-align:center;margin-top:35px}
+#wd-register-business .wd-register-form-01 p.fs14{color:#000;font-size:14px;text-align:center;padding-bottom:15px}
+#wd-register-business .wd-register-form-01 p.fs16{color:#000;font-size:16px;text-align:left;font-weight:bold;padding:20px 0 0 0;clear:both}
+#wd-register-business .wd-register-form-01 p.tlleft{font-size:12px;text-align:left;padding:9px 0}
+#wd-register-business .wd-register-form-01 fieldset{background:#fff;padding:0}
+#wd-register-business .wd-register-form-01 fieldset label{color:#010101;font-size:11px;font-weight:bold;display:block;padding:7px 0 4px 0;line-height:22px;margin:0 !important}
+#wd-register-business .wd-register-form-01 fieldset label span{font-weight:normal}
+#wd-register-business .wd-register-form-01 fieldset label em{font-size:12px}
+#wd-register-business .wd-register-form-01 input[type=text]{border:1px solid #e0e0e0;padding:8px;}
+#wd-register-business .wd-register-form-01 input[type=text]:focus{border:1px solid #f58634}
+#wd-register-business .wd-register-form-01 fieldset input[type=text]{border:1px solid #e0e0e0;width:576px;padding:8px;}
+#wd-register-business .wd-register-form-01 fieldset input[type=text]:focus{border:1px solid #f58634}
+
+#wd-register-business .wd-register-form-01 fieldset .wd-input-fwidth-01 input[type=text]{width:433px}
+#wd-register-business .wd-register-form-01 fieldset .wd-input-fwidth-02 input[type=text]{width:167px}
+#wd-register-business .wd-register-form-01 fieldset .wd-input-fwidth-03 input[type=text]{width:270px}
+#wd-register-business .wd-register-form-01 fieldset .wd-input-fwidth-04 input[type=text]{width:365px}
+#wd-register-business .wd-register-form-01 fieldset select{border:1px solid #e0e0e0 !important;width:376px;height:38px;padding:10px;background:#fff !important}
+#wd-register-business .wd-register-form-01 fieldset .wd-input-fwidth-01 select{width:125px}
+#wd-register-business .wd-register-form-01 fieldset select option{background:#fff}
+#wd-register-business .wd-register-form-01 fieldset div.selector{background:#fff;width:124px}
+#wd-register-business .wd-register-form-01 div.selector span{width:97px}
+#wd-register-business .wd-register-form-01 fieldset .wd-submit{padding:18px 0;clear:both;text-align:center}
+#wd-register-business .wd-register-form-01 fieldset .wd-submit .wd-button{ height:50px;background:#f58634;cursor:pointer;color:#fff !important;border:none;font-weight:bold;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;font-size:15px;text-transform:uppercase;padding:13px 10px;width:186px;margin-right:14px;text-shadow:0 0 #fff}
+#wd-register-business .wd-register-form-01 fieldset .wd-submit .wd-button:hover{background:#48689a}
+#wd-register-business .wd-register-form-01 fieldset .wd-submit .wd-button-reset{width:171px;margin:0 !important}
+#wd-register-business .wd-register-form-01 .wd-checkbox{margin-bottom:11px}
+#wd-register-business .wd-register-form-01 .wd-checkbox input{margin-right:5px}
+#wd-register-business .wd-register-form-01 .wd-accept{font-weight:bold}
+#wd-register-business .wd-register-form-01 .wd-terms{padding:10px 20px;border:1px solid #abd4f0;background:#dff2ff;clear:both}
+#wd-register-business .wd-register-form-01 .wd-terms p{text-align:left;padding:5px 0;line-height:20px}
+.wd-calendar{background:url(../images/ico-calendar.png) no-repeat right center !important}
+/*----- Screen register business form 2 -----*/
+#wd-register-business ul.bg-ul{background:#3a87cb}
+#wd-register-business ul li.wd-title-form-03{color:#fff;background:#e7e7e7}
+#wd-register-business ul li.wd-title-form-03 span{background:url(../images/img-1.png) no-repeat 1px -27px;width:28px;height:26px;float:left;margin-right:8px}
+#wd-register-business ul li.wd-title-form-04{color:#fff;background:#3a87cb url(../images/bg-title-form-2.png) no-repeat left 0}
+#wd-register-business ul li.wd-title-form-04 span{background:url(../images/img-2.png) no-repeat 1px -26px;width:28px;height:26px;float:left;margin-right:8px}
+/* table */
+#wd-register-business .wd-register-form-02{width:auto !important;margin-left:70px;margin-right:70px;}
+#wd-register-business .wd-register-form-02 table{border:1px solid #d3d3d3;border-collapse:collapse;width:100%;margin:20px 0 10px 0;font-size:12px}
+#wd-register-business .wd-register-form-02 table tr td{border:1px solid #d3d3d3;padding:5px 10px;text-align:center}
+#wd-register-business .wd-register-form-02 table thead{background:#5c677b;color:#fff;font-size:11px;font-weight:bold;text-align:center}
+#wd-register-business .wd-register-form-02 table .wd-tl-left{text-align:left}
+#wd-register-business .wd-register-form-02 fieldset .wd-submit .wd-button-upload{width:115px}
+#wd-register-business .wd-register-form-02 fieldset .wd-submit .wd-button-finish{width:158px}
+#wd-register-business .wd-register-form-02 fieldset .wd-submit .wd-button-back{width:188px}
+
+/*----- Screen register business review -----*/
+.wd-register-business-review{font-family:Times New Roman !important;width:660px !important}
+.wd-register-business-review p.wd-tl-right{text-align:right !important;margin-top:24px !important}
+.wd-register-form-review{padding:20px 0}
+.wd-register-form-review label{float:left;font-size:14px;padding-right:3px;color:#5b5b5b}
+.wd-register-form-review .wd-group-p{clear:both;overflow:hidden;padding:2px 0}
+.wd-register-form-review p{text-align:left !important}
+.wd-register-form-review p.wd-tl-center{text-align:center !important;font-size:18px !important;font-weight:bold}
+.wd-register-form-review .w160,.wd-register-form-review .w216,.wd-register-form-review .w327,.wd-register-form-review .w525{float:left;margin-right:6px}
+.wd-register-form-review .w160{width:160px}
+.wd-register-form-review .w216{width:216px}
+.wd-register-form-review .w327{width:327px}
+.wd-register-form-review .w525{width:525px}
+.wd-register-form-review .wd-fcolor{color:#333333;font-size:14px !important}
+.wd-register-form-review .wd-title-section{font-weight:bold;font-size:14px !important;padding:20px 0 5px 0}
+.wd-register-form-review .wd-title-section-2{color:#000 !important;font-weight:bold;font-size:14px !important;padding:5px 2px 4px 0}
+.wd-register-form-review .wd-terms-review p{line-height:20px;font-size:14px !important;padding:0 0 7px 0}
+.wd-register-form-review p.bg-dotted,span.bg-dotted{background:url(../images/bg-dotted.png) repeat-x bottom;font-size:16px !important;font-weight:bold;overflow:hidden;text-align:left !important;line-height:17px;padding-top:2px}
+.wd-register-form-review p.fpadding-top{padding-top:7px}
+.wd-register-form-review .wd-signature{overflow:hidden;padding:10px 0 50px 0;font-size:14px !important}
+.wd-register-form-review .wd-signature p em{font-size:14px !important}
+.wd-register-form-review .wd-signature p.bg-dotted{font-size:12px !important;padding:8px 0 0 0}
+.wd-register-form-review .wd-signature-left{float:left}
+.wd-register-form-review .wd-signature-right{float:right;text-align:center}
+.wd-register-form-review .wd-signature-right p{text-align:center !important;font-size:14px !important;font-weight:bold}
+.wd-register-form-review .wd-signature-right p em{font-weight:normal}
+.wd-register-form-review .wd-signature-right p.wd-name{margin-top:50px !important;font-size:16px !important}
+/*----- cancel business -----*/
+.wd-cancel-business .wd-input-date{float:right;margin-top:15px}
+.wd-cancel-business .wd-fieldset-date{margin-top:40px}
+.wd-cancel-business h2.fs20,.wd-modify-business h2.fs20{margin-top:28px !important;font-size:25px !important}
+.wd-cancel-business .wd-input-date .wd-input input{width:110px !important}
+.wd-cancel-business .wd-input-date .wd-input-day,.wd-cancel-business .wd-input-date .wd-input-month{margin:0 2px}
+.wd-cancel-business .wd-input-date .wd-input-day input, .wd-cancel-business .wd-input-date .wd-input-month input{width:17px !important}
+.wd-cancel-business .wd-input-date .wd-input-year{margin-right:2px}
+.wd-cancel-business .wd-input-date .wd-input-year input{width:31px !important}
+.wd-cancel-business .wd-input-date .wd-input label{float:left}
+.wd-cancel-business .wd-input-fwidth-04 .wd-calendar,.wd-modify-business .wd-input-fwidth-04 .wd-calendar{width:175px !important}
+.wd-cancel-business .wd-checkbox,.wd-modify-business .wd-checkbox{margin-top:16px}
+/*----- modify business -----*/
+.wd-modify-business .wd-input textarea{width:577px !important;height:115px !important;padding:10px}
+.wd-modify-business .wd-terms p{font-weight:bold;line-height:17px !important}
+.wd-modify-business .wd-terms p em{font-weight:normal}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fpadding-right{padding-right:0 !important}
+.fmargin-right{margin-right:0 !important}
+/*----- datepicker -----*/
+.ui-datepicker{font-size:13px !important}
+.ui-datepicker th,.ui-datepicker .ui-datepicker-buttonpane{padding:0 !important;margin:0 !important}
+.ui-datepicker td span, .ui-datepicker td a{padding:1px !important}
+.ui-icon{background:url(../images/ui-icons_ffffff_256x240.png) no-repeat !important}
+.ui-icon-circle-triangle-w{background-position:-80px -193px !important}
+.ui-icon-circle-triangle-e{background-position:-48px -193px !important}
+
+.wd-register-form-review em{
+	clear:inherit;
+ 	font-style: normal;	
+}

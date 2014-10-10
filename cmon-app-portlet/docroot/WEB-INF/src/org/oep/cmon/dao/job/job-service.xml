@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="org.oep.cmon.dao.job">
+	<author>BinhNT</author>
+	<namespace>EGOV</namespace>
+	<entity name="LogMail" local-service="true" remote-service="false"
+		table="JOB_LOGMAIL"  data-source="egovDataSource">
+
+		<!-- PK fields -->
+
+		<column name="id" db-name="ID" type="long" primary="true" />
+		<column name="type"         db-name="TYPE"         type="String"  />
+		<column name="hoSoTTHCCongId"      db-name="HOSOTTHCCONGID"      type="long"    />
+		<column name="createTime"    db-name="CREATETIME"    type="Date"    />
+		<column name="status"      db-name="STATUS"      type="int"     />
+		<column name="description"   db-name="DESCRIPTION"   type="String"  />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="ByHoSoTTHCCongId" return-type="Collection">
+			<finder-column name="hoSoTTHCCongId" />
+		</finder>
+		<finder name="ByStatus" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+		<finder name="ByCreateTime" return-type="Collection">
+			<finder-column name="createTime" />
+		</finder>
+		
+	</entity>
+	<entity name="TrangThaiJob" local-service="true" remote-service="false"  table="JOB_TRANGTHAIJOB"  data-source="egovDataSource">
+		<column name="ID" db-name="ID" type="long" primary="true"></column>
+		<column name="JobId" db-name="JobId" type="int"></column>
+		<column name="JobName" db-name="JobName" type="String"></column>
+		<column name="StartTime" db-name="StartTime" type="Date"></column>
+		<column name="EndTime" db-name="EndTime" type="Date"></column>
+		<column name="Status" db-name="Status" type="int"></column>
+		<column name="RunMode" db-name="RunMode" type="int"></column>
+		<column name="Message" db-name="Message" type="String"></column>
+        <order by="desc">
+            <order-column name="ID"></order-column>
+        </order>
+		
+		<finder name="JobId" return-type="Collection">
+			<finder-column name="JobId" />
+		</finder>		
+	</entity>
+	
+	<entity name="DanhSachJob" local-service="true" remote-service="false"  table="JOB_DANHSACHJOB"  data-source="egovDataSource">	
+		<column name="ID" db-name="ID" type="long" primary = "true"></column>
+		<column name="JobClass" db-name="JobClass" type="String"></column>
+		<column name="JobId" db-name="JobId" type="int"></column>
+		<column name="JobName" db-name="JobName" type="String"></column>
+		<column name="Description" db-name="Description" type="String"></column>
+		
+		<finder name="JobClass" return-type="DanhSachJob">
+			<finder-column name="JobClass" />
+		</finder>
+		
+		<finder name="JobId" return-type="DanhSachJob">
+			<finder-column name="JobId" />
+		</finder>
+				
+	</entity>
+	
+</service-builder>

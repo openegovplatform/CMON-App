@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="vn.dtt.dlms.dao.chitietgplx">
+	<author>hunghq</author>
+	<namespace>dlms</namespace>
+	<entity name="ChiTietGPLX" local-service="true" remote-service="false"
+		table="DLMS_CHITIETGPLX"  data-source="egovDataSource" cache-enabled="false">
+		<column name="id" 							db-name="ID" 					type="long"  primary="true"/>
+		<column name="idGPLX"             		db-name="GPLXID"               type="long"   />
+		<column name="soGPLX"                   	db-name="SOGIAYPHEPLAIXE"                     type="String"/>
+		<column name="idHangGPLX"                   db-name="HANGGIAYPHEPLAIXEID"                     type="long"/>
+		<column name="idNoiCapGPLX"                    	db-name="NOICAPGPLXID"                      type="long"/>
+		<column name="idNoiCapGPLXNuocNgoai"                    	db-name="NOICAPGPLXNUOCNGOAIID"                      type="long"/>
+		<column name="ngayCapGPLX"                     db-name="NGAYCAPGPLX"                        type="Date"/>                                                           
+		<column name="ngayTrungTuyen"                	db-name="NGAYTRUNGTUYEN"                  type="Date"/>
+  		<column name="ngayHetHan"               db-name="NGAYHETHAN"                  type="Date"/>
+		<column name="idNoiHocLaiXe"                	db-name="NOIHOCLAIXEID"                  type="long"/>
+		<column name="idNoiHocLaiXeNuocNgoai"                	db-name="NOIHOCLAIXENUOCNGOAIID"                  type="long"/>
+		<column name="namHocLaiXe"                  	db-name="NAMHOCLAIXE"                    type="long"/>
+
+		<column name="noiHocLaiXeNuocNgoai"           			db-name="NOIHOCLAIXENUOCNGOAI"             		type="String"/>
+		<column name="noiHocLaiXe"           			db-name="NOIHOCLAIXE"             		type="String"/>
+		<column name="noiCapGPLXNuocNgoai"           			db-name="NOICAPGPLXNUOCNGOAI"             		type="String"/>
+		<column name="noiCapGPLX"           			db-name="NOICAPGPLX"             		type="String"/>
+		<column name="ngayTao"                      db-name="NGAYTAO"                 type="Date"/>
+		<column name="ngaySua"                      db-name="NGAYSUA"                 type="Date"/>
+		<column name="nguoiTao"                     db-name="NGUOITAO"                type="String"/>
+		<column name="nguoiSua"                     db-name="NGUOISUA"                type="String"/>
+		
+		<finder name="GPLX" return-type="Collection">
+			<finder-column name="idGPLX" />
+		</finder>
+		
+	</entity>
+			
+</service-builder>
